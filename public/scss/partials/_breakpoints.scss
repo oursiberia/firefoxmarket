@@ -1,0 +1,24 @@
+@mixin breakpoint( $breakpoint-name )
+{
+	@if $breakpoint-name == "iphone-portrait"
+	{ 
+		@media ( max-width: 320px )
+		{ 
+			@content;
+		}
+	}
+
+	@if $breakpoint-name == "iphone-landscape"
+	{
+		@media (max-width: 1024){
+			@content;
+		}
+	}
+
+	@if $breakpoint-name == "ipad-portrait"
+	{
+		@media(max-width: 768){
+			@content;
+		}
+	}
+}

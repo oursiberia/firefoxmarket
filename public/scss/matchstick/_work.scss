@@ -1,0 +1,13 @@
+.work-item{
+  @include transition((color,background-color));
+  background:none;
+  color:#333333;
+}
+
+.workhover{
+  cursor: pointer;
+  @include transition((color,background-color));
+  background-color: $darkblue;
+  border-left: solid 10px $maincolor;
+  color:white;
+}

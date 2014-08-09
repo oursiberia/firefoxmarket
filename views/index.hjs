@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="siberia">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no"/>
+    <title>Siberia</title>
+
+    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+</head>
+<body ng-controller="main">
+
+
+
+ <header>
+     <nav>
+         <ul>
+             <li><a href="#build"> How We Build</a></li>
+             <li><a href="#build"> What We Do</a></li>
+             <li id="logo"><img src="/img/logo.svg" alt="siberialogo"/> </li>
+             <li><a href="#build"> Who We Are</a></li>
+             <li><a href="#build"> Where we exist </a></li>
+         </ul>
+     </nav>
+ </header>
+
+<div id="landing">
+    <div id="mountains">
+        <div id="company">
+            <h1>siberia</h1>
+            <p>A experience design firm</p>
+        </div>
+    </div>
+</div>
+
+
+ <div ng-include="'templates/make.html'"></div>
+
+
+ <script type="text/javascript" src="//use.typekit.net/stl7txu.js"></script>
+ <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+ <script src="/build/libs.min.js"></script>
+ <script src="/build/all.min.js"></script>
+ <script src="//localhost:35729/livereload.js"></script>
+</body>
+</html>

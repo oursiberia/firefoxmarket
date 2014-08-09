@@ -1,0 +1,25 @@
+
+/**
+ *  Applies transitions to a list of properties.
+ *  @param{List} a sass list of all the properties you'd like to apply a transition to
+ *  @param{Number} a number for the duration of the transition (defaults to 0.5)
+ *  @param{String} a string of the type of easing you'd like to apply to the transition
+ */
+@mixin transition($props,$duration:0.5s,$ease:ease){
+  @each $item in $props{
+    -webkit-transition: $item $duration $ease;
+    -moz-transition:$item $duration $ease;
+    -o-transition:$item $duration $ease;
+    transition:$item $duration $ease;
+  }
+}
+
+/**
+ *  Centers stuff vertically in the browser
+ */
+@mixin verticalCenter(){
+  position: relative;
+  top:50%;
+  -webkit-transform:translateY(-50%);
+  -moz-transform:translateY(-50%);
+}

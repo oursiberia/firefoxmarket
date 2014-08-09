@@ -1,0 +1,17 @@
+{
+    "name":"FirefoxMarketBeta",
+    "description":"Beta for firefox market for desktop",
+    "package_path":"http://localhost:3000/package.zip",
+    "launch_path":"/",
+    "icons":{
+        "128":"/img/icon-128"
+    },
+    "developer":{
+        "name":"siberia"
+    },
+    "permissions":{
+        "desktop-notification":{
+            "description":"blah blah blah blah"
+        }
+    }
+}

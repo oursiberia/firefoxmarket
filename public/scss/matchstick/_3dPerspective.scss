@@ -1,0 +1,23 @@
+
+@mixin createViewport($perspective:400){
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-perspective: $perspective;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+@mixin createWorld($width:512,$height:512){
+  $widthHalved:#{$width / 2}px;
+  $heightHalved:#{$height / 2}px;
+
+  height: #{$height}px;
+  margin-left: -$widthHalved;
+  margin-top: -$heightHalved;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  width: #{$width}px;
+
+}

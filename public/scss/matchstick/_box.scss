@@ -1,0 +1,312 @@
+
+/**
+  This mixin helps create a box.
+  @param{Number} $boxsize the overall size of the box
+  @param{String} $facename the name of the class for the face.
+
+  The sort of structure needed for this to work is
+
+  <div class="container">
+      <div id="box">
+          <div class="face front"></div>
+          <div class="face back"></div>
+          <div class="face left" ></div>
+          <div class="face right"></div>
+          <div class="face top"></div>
+          <div class="face bottom"></div>
+      </div>
+  </div>
+
+
+  for the "container" element"
+  .container {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto 40px;
+  border: 1px solid #CCC;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  -o-perspective: 1000px;
+  perspective: 1000px;
+}
+
+
+
+*/
+@mixin box($boxsize:100,$facename:"face",$backface:false){
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+
+  /**
+    Do we need to cull the fulstrum?
+   */
+  @if $backface == true{
+    & .#{$facename} {
+      -webkit-backface-visibility:display;
+      -moz-backface-visibility: display;
+      -o-backface-visibility: display;
+      backface-visibility: display;
+    }
+  }@else if($backface != true){
+    & .#{$facename}{
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -o-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+  }
+
+  //general styles for the face of the box
+  & .#{$facename}{
+    display: block;
+    position: absolute;
+    width: #{$boxsize}px;
+    height: #{$boxsize}px;
+    border: 2px solid black;
+    line-height: 196px;
+    font-size: 120px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+
+
+  //to get faces positioned correctly, it's width / 2
+  $translate:#{$boxsize/2}px;
+
+
+  & .#{$facename}.front  {
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: translateZ( $translate );
+    -moz-transform: translateZ( $translate  );
+    -o-transform: translateZ( $translate  );
+    transform: translateZ( $translate );
+  }
+  & .#{$facename}.back   {
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: rotateX( -180deg ) translateZ( $translate  );
+    -moz-transform: rotateX( -180deg ) translateZ( $translate );
+    -o-transform: rotateX( -180deg ) translateZ( $translate  );
+    transform: rotateX( -180deg ) translateZ( $translate  );
+  }
+  & .#{$facename}.right {
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: rotateY(   90deg ) translateZ($translate );
+    -moz-transform: rotateY(   90deg ) translateZ($translate  );
+    -o-transform: rotateY(   90deg ) translateZ( $translate  );
+    transform: rotateY(   90deg ) translateZ($translate  );
+  }
+  & .#{$facename}.left {
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: rotateY(  -90deg ) translateZ( $translate  );
+    -moz-transform: rotateY(  -90deg ) translateZ( $translate  );
+    -o-transform: rotateY(  -90deg ) translateZ( $translate  );
+    transform: rotateY(  -90deg ) translateZ( $translate  );
+  }
+  & .#{$facename}.top {
+    -webkit-transform: rotateX(   90deg ) translateZ($translate );
+    -moz-transform: rotateX(   90deg ) translateZ($translate  );
+    -o-transform: rotateX(   90deg ) translateZ( $translate );
+    transform: rotateX(   90deg ) translateZ( $translate );
+  }
+  & .#{$facename}.bottom {
+    -webkit-transform: rotateX(  -90deg ) translateZ($translate  );
+    -moz-transform: rotateX(  -90deg ) translateZ( $translate );
+    -o-transform: rotateX(  -90deg ) translateZ( $translate );
+    transform: rotateX(  -90deg ) translateZ($translate  );
+  }
+
+
+
+  &.show-front {
+    -webkit-transform: translateZ( -100px );
+    -moz-transform: translateZ( -100px );
+    -o-transform: translateZ( -100px );
+    transform: translateZ( -100px );
+  }
+  &.show-back {
+    -webkit-transform: translateZ( -100px ) rotateX( -180deg );
+    -moz-transform: translateZ( -100px ) rotateX( -180deg );
+    -o-transform: translateZ( -100px ) rotateX( -180deg );
+    transform: translateZ( -100px ) rotateX( -180deg );
+  }
+  &.show-right {
+    -webkit-transform: translateZ( -100px ) rotateY(  -90deg );
+    -moz-transform: translateZ( -100px ) rotateY(  -90deg );
+    -o-transform: translateZ( -100px ) rotateY(  -90deg );
+    transform: translateZ( -100px ) rotateY(  -90deg );
+  }
+  &.show-left {
+    -webkit-transform: translateZ( -100px ) rotateY(   90deg );
+    -moz-transform: translateZ( -100px ) rotateY(   90deg );
+    -o-transform: translateZ( -100px ) rotateY(   90deg );
+    transform: translateZ( -100px ) rotateY(   90deg );
+  }
+  &.show-top {
+    -webkit-transform: translateZ( -100px ) rotateX(  -90deg );
+    -moz-transform: translateZ( -100px ) rotateX(  -90deg );
+    -o-transform: translateZ( -100px ) rotateX(  -90deg );
+    transform: translateZ( -100px ) rotateX(  -90deg );
+  }
+  &.show-bottom {
+    -webkit-transform: translateZ( -100px ) rotateX(   90deg );
+    -moz-transform: translateZ( -100px ) rotateX(   90deg );
+    -o-transform: translateZ( -100px ) rotateX(   90deg );
+    transform: translateZ( -100px ) rotateX(   90deg );
+  }
+
+}
+
+
+
+/**
+ *  Similar to box, but shows is able to show a more rectangular shape
+ */
+@mixin rect($width:1024,$height:768,$facename:"face",$backface:false) {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-transition: -moz-transform 1s;
+  -o-transition: -o-transform 1s;
+  transition: transform 1s;
+
+  /**
+    Do we need to cull the fulstrum?
+   */
+  @if $backface == true{
+    & .#{$facename} {
+      -webkit-backface-visibility:display;
+      -moz-backface-visibility: display;
+      -o-backface-visibility: display;
+      backface-visibility: display;
+    }
+  }@else if($backface != true){
+    & .#{$facename}{
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
+      -o-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+  }
+
+  //general styles for the face of the box
+  & .#{$facename}{
+    display: block;
+    position: absolute;
+    width: #{$width}px;
+    height: #{$height}px;
+  //  border: 2px solid black;
+    line-height: 196px;
+    font-size: 120px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+  }
+
+
+  //to get faces positioned correctly, it's width / 2
+  $translate:#{$width/2}px;
+
+
+  & .#{$facename}.front  {
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: translateZ( $translate );
+    -moz-transform: translateZ( $translate  );
+    -o-transform: translateZ( $translate  );
+    transform: translateZ( $translate );
+  }
+  & .#{$facename}.back   {
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: rotateX( -180deg ) translateZ( $translate  );
+    -moz-transform: rotateX( -180deg ) translateZ( $translate );
+    -o-transform: rotateX( -180deg ) translateZ( $translate  );
+    transform: rotateX( -180deg ) translateZ( $translate  );
+  }
+  & .#{$facename}.right {
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: rotateY(   90deg ) translateZ($translate );
+    -moz-transform: rotateY(   90deg ) translateZ($translate  );
+    -o-transform: rotateY(   90deg ) translateZ( $translate  );
+    transform: rotateY(   90deg ) translateZ($translate  );
+  }
+  & .#{$facename}.left {
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: rotateY(  -90deg ) translateZ( $translate  );
+    -moz-transform: rotateY(  -90deg ) translateZ( $translate  );
+    -o-transform: rotateY(  -90deg ) translateZ( $translate  );
+    transform: rotateY(  -90deg ) translateZ( $translate  );
+  }
+/*  & .#{$facename}.top {
+    -webkit-transform: rotateX(   90deg ) translateZ($translate );
+    -moz-transform: rotateX(   90deg ) translateZ($translate  );
+    -o-transform: rotateX(   90deg ) translateZ( $translate );
+    transform: rotateX(   90deg ) translateZ( $translate );
+  }
+  & .#{$facename}.bottom {
+    -webkit-transform: rotateX(  -90deg ) translateZ($translate  );
+    -moz-transform: rotateX(  -90deg ) translateZ( $translate );
+    -o-transform: rotateX(  -90deg ) translateZ( $translate );
+    transform: rotateX(  -90deg ) translateZ($translate  );
+  }
+
+
+*/
+  &.show-front {
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: translateZ( -100px );
+    -moz-transform: translateZ( -100px );
+    -o-transform: translateZ( -100px );
+    transform: translateZ( -100px );
+  }
+  &.show-back {
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: translateZ( -400px ) rotateX( -180deg );
+    -moz-transform: translateZ( -100px ) rotateX( -180deg );
+    -o-transform: translateZ( -100px ) rotateX( -180deg );
+    transform: translateZ( -100px ) rotateX( -180deg );
+  }
+  &.show-right {
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: translateZ( -100px ) rotateY(  -90deg );
+    -moz-transform: translateZ( -100px ) rotateY(  -90deg );
+    -o-transform: translateZ( -100px ) rotateY(  -90deg );
+    transform: translateZ( -100px ) rotateY(  -90deg );
+  }
+  &.show-left {
+    -webkit-transform-origin:50% 50%;
+    -webkit-transform: translateZ( -100px ) rotateY(   90deg );
+    -moz-transform: translateZ( -100px ) rotateY(   90deg );
+    -o-transform: translateZ( -100px ) rotateY(   90deg );
+    transform: translateZ( -100px ) rotateY(   90deg );
+  }
+
+
+  /** &.show-top {
+    -webkit-transform: translateZ( -100px ) rotateX(  -90deg );
+    -moz-transform: translateZ( -100px ) rotateX(  -90deg );
+    -o-transform: translateZ( -100px ) rotateX(  -90deg );
+    transform: translateZ( -100px ) rotateX(  -90deg );
+  }
+  &.show-bottom {
+    -webkit-transform: translateZ( -100px ) rotateX(   90deg );
+    -moz-transform: translateZ( -100px ) rotateX(   90deg );
+    -o-transform: translateZ( -100px ) rotateX(   90deg );
+    transform: translateZ( -100px ) rotateX(   90deg );
+  }*/
+
+}
