@@ -21,4 +21,24 @@ You'll also need to run
   bower install
 ```
 
-from within the public directory as the site uses Angular for very basic client side management.
+from within the public directory as the site uses Angular for very client side management.
+
+run 
+```javascript
+node app.js
+```
+from within the root of the project. The server will start at localhost:3000
+
+
+To run as Open Web App
+============
+With the exception of the install.hjs file thats in the views folder, in order to create a Open Web App, all thats really needed are the files within the public folder. The Node backend is really more of a shell for testing.
+
+To compile everything as a Open Web App, run the compile.sh script inside of the public folder. That will produce a package.zip file.
+
+To install the app, open up Firefox and from within Firefox, navigate to localhost:3000/install and you should be prompted to install the "FirefoxMarketBeta" app in Firefox.
+
+
+TODOs
+==========
+- test package update and/or uninstall
