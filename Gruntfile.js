@@ -21,8 +21,8 @@ module.exports = function(grunt){
      * Libraries we're using
      */
     var libs = [
-        base + "app/bower_components/angular/angular.js",
-        base + "app/bower_components/angular-ui-router/release/angular-ui-router.js",
+        base + "bower_components/angular/angular.js",
+        base + "bower_components/angular-ui-router/release/angular-ui-router.js",
 
         jsdir + "/libs/plugins/CSSPlugin.js",
         jsdir + "libs/TweenMax.js"
@@ -99,7 +99,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-compass');
 
     //builds everything
-    grunt.registerTask( 'default', ['uglify:dev','uglify:libs','compass:dist']);
+    grunt.registerTask( 'default', ['uglify:dev','compass:dist']);
     grunt.registerTask('libs',['uglify:libs']);
 
 

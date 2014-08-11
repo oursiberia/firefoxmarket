@@ -3,12 +3,17 @@ var app = angular.module("FireFoxMarket",[
 ]);
 
 
-app.config(function($stateProvider){
+app.config(function($stateProvider,$urlRouterProvider){
+    $urlRouterProvider.otherwise("/");
 
+    $stateProvider.state("home",{
+        url:"/",
+        templateUrl:"/templates/home.html"
+    });
 });
 
 
-app.controller("main",function($window,$rootScope){
+app.controller("main",function($window,$rootScope,API){
 
 
 });

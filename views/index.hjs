@@ -11,31 +11,6 @@
 
 
 
- <header>
-     <nav>
-         <ul>
-             <li><a href="#build"> How We Build</a></li>
-             <li><a href="#build"> What We Do</a></li>
-             <li id="logo"><img src="/img/logo.svg" alt="siberialogo"/> </li>
-             <li><a href="#build"> Who We Are</a></li>
-             <li><a href="#build"> Where we exist </a></li>
-         </ul>
-     </nav>
- </header>
-
-<div id="landing">
-    <div id="mountains">
-        <div id="company">
-            <h1>siberia</h1>
-            <p>A experience design firm</p>
-        </div>
-    </div>
-</div>
-
-
- <div ng-include="'templates/make.html'"></div>
-
-
  <script type="text/javascript" src="//use.typekit.net/stl7txu.js"></script>
  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
  <script src="/build/libs.min.js"></script>

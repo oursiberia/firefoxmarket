@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Packages the app up into a zip file for installation
+# currently, it seems that things don't work in a local enviroment, so for now, this doesn't matter
+
 #make a temp folder
 mkdir compile_temp
 
