@@ -48,4 +48,16 @@ app.controller("main",function($window,$rootScope,API,localStorageService){
 
     }; //end login
 
+
+    /**
+     * This hides the loader once content has been loaded.
+     * @param delay
+     */
+    $rootScope.loaded = function(delay){
+        delay = delay || 1;
+        TweenMax.to(document.querySelector("#loader"),delay,{
+            opacity:0
+        });
+    }
+
 });

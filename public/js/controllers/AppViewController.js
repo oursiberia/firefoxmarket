@@ -1,4 +1,4 @@
-app.controller("AppViewController",["$window","API","$scope",function($window,API,$scope){
+app.controller("AppViewController",["$window","API","$scope","$rootScope",function($window,API,$scope,$rootScope){
 
     //get the app id out of the url
     var id = $window.location.href.split("/");
@@ -31,7 +31,7 @@ app.controller("AppViewController",["$window","API","$scope",function($window,AP
         $scope.tags = data.tags;
         $scope.versions = data.versions;
 
-        console.log(data);
+        $rootScope.loaded();
 
     });
 
