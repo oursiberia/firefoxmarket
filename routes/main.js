@@ -12,7 +12,7 @@ var routes = {
     "collections_detail":"/api/v2/feed/collections/",
 
     //list of featured apps
-    "featured":"/api/v1/fireplace/search/featured/",
+    "featured":"/api/v1/fireplace/search/featured/?limit=100",
 
     /**============ NOTE : CORS NOT ENABLED==============*/
     //app detail
@@ -40,7 +40,9 @@ router.get("/marketplaceAPI/:route",function(req,res){
     var path = base + routes[route[0]];
 
     if(route.length > 1){
-        path += "/" + route[1];
+        if(route[1] !== "undefined"){
+            path += "/" + route[1];
+        }
     }
 
     console.log(path);
