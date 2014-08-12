@@ -1,14 +1,16 @@
-@import "partials/reset";
-@import "partials/variables";
-@import "partials/breakpoints";
-@import "partials/mixins";
-
-@import "partials/base";
 @import "matchstick/functions";
 
 
+*{
+	margin:0;
+	padding:0;
+}
 
 body{
 	font-size: 100%;
 	overflow-x: hidden;
+}
+
+ul,li{
+	list-style: none;
 }

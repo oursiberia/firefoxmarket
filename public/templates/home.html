@@ -1,6 +1,15 @@
 <section id="HOME" ng-controller="home">
-
     <div id="featured">
-
+        <div class="apps">
+            <ul>
+                <li ng-repeat="app in featured_apps">
+                    <div class="app-box">
+                        <a ng-href="/app/{{app.safename}}"><img ng-src="{{app.icon}}" alt="app-icon"/></a>
+                        <h2 class="app-title">{{app.name}}</h2>
+                        <p class="app-author">{{app.author}}</p>
+                    </div><!-- end app box-->
+                </li>
+            </ul>
+        </div>
     </div>
 </section>

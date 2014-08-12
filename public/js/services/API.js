@@ -1,7 +1,7 @@
 /**
  * Service to interact with the Firefox Marketplace API
  */
-app.factory("API",["Utils","$http",function(Utils,$http){
+app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$timeout){
     var routes = {
         //TAKEN FROM FIREPLACE
         'app': '/api/v1/fireplace/app/{0}/?cache=1&vary=0',
@@ -31,71 +31,82 @@ app.factory("API",["Utils","$http",function(Utils,$http){
         "collections":"/api/v2/feed/collections/",
         "collections_detail":"/api/v2/feed/collections/-id",
 
-        "featured":"/api/v1/fireplace/search/featured/?cache=1&cat=&lang=en-US&limit=25&region=restofworld&vary=0"
+        "featured":"/api/v1/fireplace/search/featured/"
     };
 
+    //base path for the api
     var base = "https://marketplace.firefox.com";
-   // var base = "https://marketplace.cdn.mozilla.net";
+
+   // CDN path but not CORS complient var base = "https://marketplace.cdn.mozilla.net";
     /**
      * Makes a request to the API
      * @param endpoint the enpoint in the "routes" object to hit
      * @param params any parameters should be in string format like (/93280/)
      * @param callback callback functino to run once the request goes through
+     *
+     * Uses a promises based form to handle async-ness
      */
     function request(endpoint,callback,parameters){
-        for(var i in routes){
-            if(i === endpoint){
+        var deferred = $q.defer();
 
-                var request_url = "";
 
-                //append the main url
-                request_url += base +=routes[endpoint];
+        $timeout(function(){
+            for(var i in routes){
+                if(i === endpoint){
 
-                /**
-                 * If there is a dash in the url, we know we need a
-                 * param. Check params.
-                 */
-                if(request_url.search("-") !== -1){
-                    if(parameters === undefined){
-                        var params = routes[endpoint].split("-");
+                    var request_url = "";
 
-                        var needed_param = "";
-                        switch(params.length){
-                            case 2:
-                                needed_param = params[1];
-                                break;
+                    //append the main url
+                    request_url += base +=routes[endpoint];
+
+                    /**
+                     * If there is a dash in the url, we know we need a
+                     * param. Check params.
+                     */
+                    if(request_url.search("-") !== -1){
+                        if(parameters === undefined){
+                            var params = routes[endpoint].split("-");
+
+                            var needed_param = "";
+                            switch(params.length){
+                                case 2:
+                                    needed_param = params[1];
+                                    break;
+                            }
+
+                            console.error("The selected route requires a parameter of : " + needed_param);
+
+
+                            return false;
+
+                        }else{
+                            var url = request_url.split("-");
+                            var temp = url[0];
+                            request_url = temp  + parameters;
+
                         }
-
-                        console.error("The selected route requires a parameter of : " + needed_param);
-
-
-                        return false;
-
-                    }else{
-                        var url = request_url.split("-");
-                        var temp = url[0];
-                        request_url = temp  + parameters;
-
                     }
+                    $http({
+                        method:"GET",
+                        url:request_url
+                    })
+                        .success(function(data,status,headers,config){
+                            if(data){
+                          //      callback(data,status,headers,config);
+                                deferred.resolve(data,status,headers,config);
+                            }
+                        })
+                        .error(function(data,status,headers,config){
+                            deferred.resolve(data,status,headers,config);
+                        });
                 }
-
-
-                $http({
-                    method:"GET",
-                    url:request_url
-                })
-                .success(function(data,status,headers,config){
-                    if(data){
-                        callback(data,status,headers,config);
-                    }
-                })
-                .error(function(data,status,headers,config){
-                    console.error("Issue with HTTP request");
-                    console.log(data,status,headers,config);
-                });
             }
-        }
 
+
+        },100);
+
+
+        return deferred.promise;
 
 
     }
