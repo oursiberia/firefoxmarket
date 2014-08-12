@@ -23,6 +23,7 @@ module.exports = function(grunt){
     var libs = [
         base + "bower_components/angular/angular.js",
         base + "bower_components/angular-ui-router/release/angular-ui-router.js",
+            base + "bower_components/angular-local-storage/LocalStorage.js",
 
         jsdir + "/libs/plugins/CSSPlugin.js",
         jsdir + "libs/TweenMax.js"

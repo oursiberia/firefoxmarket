@@ -1,6 +1,9 @@
-
-app.factory("API",["Utils",function(Utils){
+/**
+ * Service to interact with the Firefox Marketplace API
+ */
+app.factory("API",["Utils","$http",function(Utils,$http){
     var routes = {
+        //TAKEN FROM FIREPLACE
         'app': '/api/v1/fireplace/app/{0}/?cache=1&vary=0',
         'app/privacy': '/api/v1/apps/app/{0}/privacy/?cache=1&vary=0',
         'category': '/api/v1/fireplace/search/featured/?cat={0}&cache=1&vary=0',
@@ -22,48 +25,80 @@ app.factory("API",["Utils",function(Utils){
         'features': '/api/v1/apps/features/',
 
         'prepare_nav_pay': '/api/v1/webpay/prepare/',
-        'payments_status': '/api/v1/webpay/status/{0}/'
+        'payments_status': '/api/v1/webpay/status/{0}/',
+
+        //KNOWN TO WORK
+        "collections":"/api/v2/feed/collections/",
+        "collections_detail":"/api/v2/feed/collections/-id"
     };
 
-    var re = /\{([^}]+)\}/g;
-    function format(s, args) {
-        if (!s) {
-            throw "Format string is empty!";
+    var base = "https://marketplace.firefox.com";
+
+    /**
+     * Makes a request to the API
+     * @param endpoint the enpoint in the "routes" object to hit
+     * @param params any parameters should be in string format like (/93280/)
+     * @param callback callback functino to run once the request goes through
+     */
+    function request(endpoint,callback,parameters){
+        for(var i in routes){
+            if(i === endpoint){
+
+                var request_url = "";
+
+                //append the main url
+                request_url += base +=routes[endpoint];
+
+                /**
+                 * If there is a dash in the url, we know we need a
+                 * param. Check params.
+                 */
+                if(request_url.search("-") !== -1){
+                    if(parameters === undefined){
+                        var params = routes[endpoint].split("-");
+
+                        var needed_param = "";
+                        switch(params.length){
+                            case 2:
+                                needed_param = params[1];
+                                break;
+                        }
+
+                        console.error("The selected route requires a parameter of : " + needed_param);
+
+
+                        return false;
+
+                    }else{
+                        var url = request_url.split("-");
+                        var temp = url[0];
+                        request_url = temp  + parameters;
+
+                    }
+                }
+
+
+                $http({
+                    method:"GET",
+                    url:request_url
+                })
+                .success(function(data,status,headers,config){
+                    if(data){
+                        callback(data,status,headers,config);
+                    }
+                })
+                .error(function(data,status,headers,config){
+                    console.error("Issue with HTTP request");
+                    console.log(data,status,headers,config);
+                });
+            }
         }
-        if (!args) return;
-        if (!(args instanceof Array || args instanceof Object))
-            args = Array.prototype.slice.call(arguments, 1);
-        return s.replace(re, function(_, match){ return args[match]; });
+
+
+
     }
-    function template(s) {
-        if (!s) {
-            throw "Template string is empty!";
-        }
-        return function(args) { return format(s, args); };
-    }
+
     return {
-        format: format,
-        template: template
-    };
-
-    function api(endpoint, args, params) {
-        if (!(endpoint in routes)) {
-            console.error('Invalid API endpoint: ' + endpoint);
-            return '';
-        }
-
-        var path = format.format(api_endpoints[endpoint], args || []);
-        var url = apiHost(path) + path;
-
-        if (params) {
-            return Utils.urlparams(url, params);
-        }
-        return url;
-    }
-
-
-
-    return {
-        request:api
+        request:request
     };
 }]);
