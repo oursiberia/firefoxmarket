@@ -29,11 +29,13 @@ app.factory("API",["Utils","$http",function(Utils,$http){
 
         //KNOWN TO WORK
         "collections":"/api/v2/feed/collections/",
-        "collections_detail":"/api/v2/feed/collections/-id"
+        "collections_detail":"/api/v2/feed/collections/-id",
+
+        "featured":"/api/v1/fireplace/search/featured/?cache=1&cat=&lang=en-US&limit=25&region=restofworld&vary=0"
     };
 
     var base = "https://marketplace.firefox.com";
-
+   // var base = "https://marketplace.cdn.mozilla.net";
     /**
      * Makes a request to the API
      * @param endpoint the enpoint in the "routes" object to hit
