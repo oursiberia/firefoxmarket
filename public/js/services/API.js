@@ -31,6 +31,7 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
         "collections":"/api/v2/feed/collections/",
         "collections_detail":"/api/v2/feed/collections/-id",
 
+        //list of featured apps
         "featured":"/api/v1/fireplace/search/featured/"
     };
 
@@ -41,7 +42,7 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
     /**
      * Makes a request to the API
      * @param endpoint the enpoint in the "routes" object to hit
-     * @param params any parameters should be in string format like (/93280/)
+     * @param params any parameters should be in string format like (/93280/ or ?app=test)
      * @param callback callback functino to run once the request goes through
      *
      * Uses a promises based form to handle async-ness
@@ -86,6 +87,7 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
 
                         }
                     }
+
                     $http({
                         method:"GET",
                         url:request_url

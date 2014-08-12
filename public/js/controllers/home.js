@@ -4,6 +4,7 @@ app.controller("home",["$rootScope","API","$scope","$window","$location",functio
      * Load featured apps
      */
     API.request("featured").then(function(data){
+        console.log(data);
         var apps = [];
         for(var i = 0;i<data.objects.length;++i){
             var name = data.objects[i].name["en-US"];
@@ -14,6 +15,7 @@ app.controller("home",["$rootScope","API","$scope","$window","$location",functio
                 var obj = {
                     icon:data.objects[i].icons["64"],
                     name:data.objects[i].name["en-US"],
+                    id:data.objects[i].id,
                     safename:name,
                     author:data.objects[i].author
                 };
@@ -23,6 +25,7 @@ app.controller("home",["$rootScope","API","$scope","$window","$location",functio
                     icon:data.objects[i].icons["64"],
                     name:data.objects[i].name["en-US"],
                     author:data.objects[i].author,
+                    id:data.objects[i].id,
                     safename:"/app/notfound"
                 };
             }
