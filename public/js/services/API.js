@@ -32,7 +32,11 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
         "collections_detail":"/api/v2/feed/collections/-id",
 
         //list of featured apps
-        "featured":"/api/v1/fireplace/search/featured/"
+        "featured":"/api/v1/fireplace/search/featured/",
+
+        /**============ NOTE : CORS NOT ENABLED==============*/
+        //app detail
+        "app_detail":"/api/v1/apps/app/-id"
     };
 
     //base path for the api
@@ -47,9 +51,8 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
      *
      * Uses a promises based form to handle async-ness
      */
-    function request(endpoint,callback,parameters){
+    function request(endpoint,parameters){
         var deferred = $q.defer();
-
 
         $timeout(function(){
             for(var i in routes){
@@ -65,6 +68,7 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
                      * param. Check params.
                      */
                     if(request_url.search("-") !== -1){
+
                         if(parameters === undefined){
                             var params = routes[endpoint].split("-");
 
@@ -85,12 +89,18 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
                             var temp = url[0];
                             request_url = temp  + parameters;
 
+
                         }
+
+
                     }
+
+                    //TODO temporaryily sending to server to resolve CORS issues.
+                    request_url = request_url.replace("https://marketplace.firefox.com","");
 
                     $http({
                         method:"GET",
-                        url:request_url
+                        url:"/marketplaceAPI/" + endpoint + " " + parameters
                     })
                         .success(function(data,status,headers,config){
                             if(data){

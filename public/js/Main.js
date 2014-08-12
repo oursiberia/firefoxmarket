@@ -4,7 +4,7 @@ var app = angular.module("FireFoxMarket",[
 ]);
 
 
-app.config(function($stateProvider,$urlRouterProvider,$locationProvider){
+app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpProvider){
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(true);
 
@@ -24,7 +24,9 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider){
             return "/templates/apps/appview.html"
         },
         controller:"AppViewController"
-    })
+    });
+
+    delete $httpProvider.defaults.headers.common["X-Requested-Width"];
 });
 
 
