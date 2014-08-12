@@ -1,4 +1,7 @@
-app.controller("home",["$rootScope","API","$scope","$window","$location",function($rootScope,API,$scope,$window,$location){
+/**
+ * Controller for the home page/view
+ */
+app.controller("home",["$rootScope","API","$scope",function($rootScope,API,$scope){
 
     /**
      * Load featured apps

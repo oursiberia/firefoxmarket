@@ -1,3 +1,12 @@
 <section class="app">
-    <h1>APP VIEW BITCHES</h1>
+
+    <h1>{{name}}</h1>
+    <h3>{{author}}</h3>
+    
+    <ul class="app-categories">
+        <li ng-repeat="category in categories">
+            <p>{{category}}</p>
+        </li>
+    </ul>
+
 </section>
