@@ -6,9 +6,10 @@ var router = express.Router();
 /**
  * Loads the homepage / template
  */
-router.get('/', function(req, res) {
-    res.render('index', { title: 'Express' });
+router.get('/:name', function(req, res) {
+   res.sendfile('./public/index.html');
 });
+
 
 
 /**
