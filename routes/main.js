@@ -19,19 +19,30 @@ var routes = {
     //app detail
     "app_detail":"/api/v1/apps/app/",
     "marketplace_login":"/api/v1/account/login",
-    "categories":"/api/v1/apps/category"
+
+    //note url for category api will be moving.
+    "categories":"/api/v1/apps/category",
+    "apps_in_category":"/api/v1/apps/search/?cat="
 }
 
 /**
  * Loads the homepage / template
  */
+router.get("/app/:id",function(req,res){
+    res.sendfile('./public/index.html');
+});
+
+router.get("/category/:id",function(req,res){
+    res.sendfile('./public/index.html');
+});
+
+router.get("/test/:id",function(req,res){
+    res.sendfile('./public/index.html');
+})
 router.get('/:name', function(req, res) {
     res.sendfile('./public/index.html');
 });
 
-router.get("/app/:id",function(req,res){
-   res.sendfile('./public/index.html');
-});
 
 
 router.post("/loginassert",function(req,res){
@@ -74,17 +85,24 @@ router.get("/marketplaceAPI/:route",function(req,res){
     var route = req.params.route;
     route = route.split(" ");
 
+
     var base = "https://marketplace.firefox.com/";
 
     var path = base + routes[route[0]];
 
+
+
     console.log("running" + path);
     if(route.length > 1){
         if(route[1] !== "undefined"){
-            path += "/" + route[1];
+           if(routes[route[0]].search("=") !== -1){
+               path += route[1];
+           }else{
+               path += "/" + route[1];
+           }
         }
     }
-
+    console.log(path);
 
     request(path,function(error,response,body){
         if(!error && response.statusCode == 200){

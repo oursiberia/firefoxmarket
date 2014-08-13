@@ -63,16 +63,13 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
             $http({
                 method:"GET",
                 url:"/marketplaceAPI/" + endpoint + " " + parameters
-            })
-                .success(function(data,status,headers,config){
-                    if(data){
-                        //      callback(data,status,headers,config);
-                        deferred.resolve(data,status,headers,config);
-                    }
-                })
-                .error(function(data,status,headers,config){
+            }).success(function(data,status,headers,config){
+                if(data){
                     deferred.resolve(data,status,headers,config);
-                });
+                }
+            }).error(function(data,status,headers,config){
+                deferred.resolve(data,status,headers,config);
+            });
 
         },100);
 

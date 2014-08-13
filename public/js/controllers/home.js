@@ -1,37 +1,17 @@
 /**
  * Controller for the home page/view
  */
-app.controller("home",["$rootScope","API","$scope",function($rootScope,API,$scope){
+app.controller("home",["$rootScope","API","$scope","$filter",function($rootScope,API,$scope,$filter){
 
     /**
      * Load featured apps
      */
     API.request("featured").then(function(data){
 
-        var apps = [];
-        for(var i = 0;i<data.objects.length;++i){
-            var name = data.objects[i].name["en-US"];
+        //var apps = $rootScope.processData(data);
+        var apps = $filter("DesktopApps")(data);
+        console.log(apps);
 
-
-            var obj = {
-                icon:data.objects[i].icons["64"],
-                name:data.objects[i].name["en-US"],
-                id:data.objects[i].id,
-                author:data.objects[i].author
-            };
-
-
-
-            for(var a = 0;a<data.objects[i].device_types;++a){
-                if(data.objects[i].device_types[a] ==="desktop"){
-                    obj["device"] = "desktop";
-                }
-            }
-
-
-
-            apps.push(obj);
-        }
         $scope.featured_apps = apps;
 
         $rootScope.loaded();

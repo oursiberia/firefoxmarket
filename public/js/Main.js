@@ -26,6 +26,14 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
         controller:"AppViewController"
     });
 
+    $stateProvider.state("CategoryView",{
+        url:"/category/:name",
+        templateUrl:function(urlattr){
+            return "/templates/apps/catview.html"
+        },
+        controller:"CategoryViewController"
+    });
+
     delete $httpProvider.defaults.headers.common["X-Requested-Width"];
 });
 
@@ -59,5 +67,6 @@ app.controller("main",function($window,$rootScope,API,localStorageService){
             opacity:0
         });
     }
+
 
 });
