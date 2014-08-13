@@ -17,9 +17,6 @@ app.directive("login",["$http",function($http){
              * Logs user in
              */
             $scope.login = function(){
-                //get the email address
-                var email = document.querySelector("#loginemail").getAttribute("value");
-                currentUser = email;
                 navigator.id.request();
             };
 
@@ -43,9 +40,10 @@ app.directive("login",["$http",function($http){
                  */
                 onlogin:function(assertation){
                     //verify assertation
-                    $http.post("https://marketplace.firefox.com/api/v1/account/login",{
+                    $http.post("/loginassert",{
                          assertation:assertation,
                         audience:window.location.href
+
                      })
                      .success(function(data,status,headers,config){
                         console.log(data);

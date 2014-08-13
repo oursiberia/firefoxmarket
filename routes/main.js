@@ -2,6 +2,7 @@ var express = require('express');
 var fs = require("fs");
 var router = express.Router();
 var request = require("request");
+var https = require("https");
 
 /**
  * Possible API routes
@@ -16,20 +17,57 @@ var routes = {
 
     /**============ NOTE : CORS NOT ENABLED==============*/
     //app detail
-    "app_detail":"/api/v1/apps/app/"
+    "app_detail":"/api/v1/apps/app/",
+    "marketplace_login":"/api/v1/account/login"
 }
 
 /**
  * Loads the homepage / template
  */
-/*router.get('/:name', function(req, res) {
- res.sendfile('./public/index.html');
- });
+router.get('/:name', function(req, res) {
+    res.sendfile('./public/index.html');
+});
 
- router.get("/app/:id",function(req,res){
- res.sendfile('./public/index.html');
- })*/
+router.get("/app/:id",function(req,res){
+   res.sendfile('./public/index.html');
+});
 
+
+router.post("/loginassert",function(req,res){
+    var assertation = req.body.assertation;
+    var audience = req.body.audience;
+    var base = "https://marketplace.firefox.com/";
+
+    var options = {
+        host:"marketplace.firefox.com",
+        path:routes["marketplace_login"],
+        method:"POST",
+        form:{
+            assertation:assertation,
+            audience:audience
+        }
+    };
+
+    console.log(options.host + options.path);
+    var req = https.request(options,function(response){
+        var chunk = "";
+
+        response.on("data",function(str){
+            chunk += str;
+        });
+
+        response.on("end",function(){
+            console.log(chunk);
+
+        });
+    });
+
+
+
+    req.end();
+
+
+});
 
 router.get("/marketplaceAPI/:route",function(req,res){
     var route = req.params.route;
@@ -45,7 +83,6 @@ router.get("/marketplaceAPI/:route",function(req,res){
         }
     }
 
-    console.log(path);
 
     request(path,function(error,response,body){
         if(!error && response.statusCode == 200){

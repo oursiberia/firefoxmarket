@@ -2,7 +2,7 @@ var express = require("express");
 var app = express();
 var debug = require("debug");
 var path = require("path");
-
+var bodyParser = require("body-parser");
 
 //set the port
 app.set('port', process.env.PORT || 3000);
@@ -16,6 +16,10 @@ var server = app.listen(app.get('port'), function() {
 //setup routing
 var routes = require('./routes/main');
 //define the modules to use
+
+app.use(bodyParser.json());
+
+
 app.use('/', routes);
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hjs');
@@ -23,8 +27,6 @@ app.set('view engine', 'hjs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'views')));
 app.use(express.static(path.join(__dirname, 'views/proto')));
-
-
 
 
 /// catch 404 and forward to error handler

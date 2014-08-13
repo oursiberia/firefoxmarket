@@ -96,11 +96,11 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
                     }
 
                     //TODO temporaryily sending to server to resolve CORS issues.
-                    //request_url = request_url.replace("https://marketplace.firefox.com","");
+                    request_url = request_url.replace("https://marketplace.firefox.com","");
 
                     $http({
                         method:"GET",
-                        url:request_url
+                        url:"/marketplaceAPI/" + endpoint + " " + parameters
                     })
                         .success(function(data,status,headers,config){
                             if(data){
