@@ -22,13 +22,13 @@ var routes = {
 /**
  * Loads the homepage / template
  */
-router.get('/:name', function(req, res) {
-   res.sendfile('./public/index.html');
-});
+/*router.get('/:name', function(req, res) {
+ res.sendfile('./public/index.html');
+ });
 
-router.get("/app/:id",function(req,res){
-    res.sendfile('./public/index.html');
-})
+ router.get("/app/:id",function(req,res){
+ res.sendfile('./public/index.html');
+ })*/
 
 
 router.get("/marketplaceAPI/:route",function(req,res){

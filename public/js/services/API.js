@@ -29,14 +29,14 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
 
         //KNOWN TO WORK
         "collections":"/api/v2/feed/collections/",
-        "collections_detail":"/api/v2/feed/collections/-id",
+        "collections_detail":"/api/v2/feed/collections/",
 
         //list of featured apps
-        "featured":"/api/v1/fireplace/search/featured/",
+        "featured":"/api/v1/fireplace/search/featured/?limit=100",
 
         /**============ NOTE : CORS NOT ENABLED==============*/
         //app detail
-        "app_detail":"/api/v1/apps/app/-id"
+        "app_detail":"/api/v1/apps/app/"
     };
 
     //base path for the api
@@ -96,11 +96,11 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
                     }
 
                     //TODO temporaryily sending to server to resolve CORS issues.
-                    request_url = request_url.replace("https://marketplace.firefox.com","");
+                    //request_url = request_url.replace("https://marketplace.firefox.com","");
 
                     $http({
                         method:"GET",
-                        url:"/marketplaceAPI/" + endpoint + " " + parameters
+                        url:request_url
                     })
                         .success(function(data,status,headers,config){
                             if(data){
