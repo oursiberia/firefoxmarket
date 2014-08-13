@@ -7,7 +7,7 @@ app.controller("home",["$rootScope","API","$scope",function($rootScope,API,$scop
      * Load featured apps
      */
     API.request("featured").then(function(data){
-        console.log(data);
+
         var apps = [];
         for(var i = 0;i<data.objects.length;++i){
             var name = data.objects[i].name["en-US"];
@@ -34,7 +34,7 @@ app.controller("home",["$rootScope","API","$scope",function($rootScope,API,$scop
         }
         $scope.featured_apps = apps;
 
-
+        $rootScope.loaded();
     });
 
 
