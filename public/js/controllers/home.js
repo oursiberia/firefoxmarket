@@ -38,7 +38,12 @@ app.controller("home",["$rootScope","API","$scope",function($rootScope,API,$scop
     });
 
 
-
+    /**
+     * Load list of categories
+     */
+    API.request("categories").then(function(data){
+        $scope.categories = data.objects;
+    });
 
 
 

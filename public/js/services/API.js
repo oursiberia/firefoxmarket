@@ -53,67 +53,26 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
      */
     function request(endpoint,parameters){
         var deferred = $q.defer();
+        console.log("Need to run : " + endpoint);
 
         $timeout(function(){
-            for(var i in routes){
-                if(i === endpoint){
 
-                    var request_url = "";
+            //TODO temporaryily sending to server to resolve CORS issues.
+          //  request_url = request_url.replace("https://marketplace.firefox.com","");
 
-                    //append the main url
-                    request_url += base +=routes[endpoint];
-
-                    /**
-                     * If there is a dash in the url, we know we need a
-                     * param. Check params.
-                     */
-                    if(request_url.search("-") !== -1){
-
-                        if(parameters === undefined){
-                            var params = routes[endpoint].split("-");
-
-                            var needed_param = "";
-                            switch(params.length){
-                                case 2:
-                                    needed_param = params[1];
-                                    break;
-                            }
-
-                            console.error("The selected route requires a parameter of : " + needed_param);
-
-
-                            return false;
-
-                        }else{
-                            var url = request_url.split("-");
-                            var temp = url[0];
-                            request_url = temp  + parameters;
-
-
-                        }
-
-
+            $http({
+                method:"GET",
+                url:"/marketplaceAPI/" + endpoint + " " + parameters
+            })
+                .success(function(data,status,headers,config){
+                    if(data){
+                        //      callback(data,status,headers,config);
+                        deferred.resolve(data,status,headers,config);
                     }
-
-                    //TODO temporaryily sending to server to resolve CORS issues.
-                    request_url = request_url.replace("https://marketplace.firefox.com","");
-
-                    $http({
-                        method:"GET",
-                        url:"/marketplaceAPI/" + endpoint + " " + parameters
-                    })
-                        .success(function(data,status,headers,config){
-                            if(data){
-                          //      callback(data,status,headers,config);
-                                deferred.resolve(data,status,headers,config);
-                            }
-                        })
-                        .error(function(data,status,headers,config){
-                            deferred.resolve(data,status,headers,config);
-                        });
-                }
-            }
-
+                })
+                .error(function(data,status,headers,config){
+                    deferred.resolve(data,status,headers,config);
+                });
 
         },100);
 

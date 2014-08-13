@@ -18,7 +18,8 @@ var routes = {
     /**============ NOTE : CORS NOT ENABLED==============*/
     //app detail
     "app_detail":"/api/v1/apps/app/",
-    "marketplace_login":"/api/v1/account/login"
+    "marketplace_login":"/api/v1/account/login",
+    "categories":"/api/v1/apps/category"
 }
 
 /**
@@ -77,6 +78,7 @@ router.get("/marketplaceAPI/:route",function(req,res){
 
     var path = base + routes[route[0]];
 
+    console.log("running" + path);
     if(route.length > 1){
         if(route[1] !== "undefined"){
             path += "/" + route[1];
