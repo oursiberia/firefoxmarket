@@ -36,12 +36,17 @@ router.get("/category/:id",function(req,res){
     res.sendfile('./public/index.html');
 });
 
-router.get("/test/:id",function(req,res){
+router.get("/collection/:name",function(req,res){
     res.sendfile('./public/index.html');
-})
+});
+
+
+
 router.get('/:name', function(req, res) {
     res.sendfile('./public/index.html');
 });
+
+
 
 
 

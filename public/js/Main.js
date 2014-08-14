@@ -34,6 +34,18 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
         controller:"CategoryViewController"
     });
 
+    $stateProvider.state("CollectionView",{
+        url:"/collection",
+        templateUrl:"/templates/apps/collectionview.html",
+        controller:"CollectionViewController"
+    });
+
+    $stateProvider.state("CollectionDetailView",{
+        url:"/collection/:id",
+        templateUrl:"/templates/apps/collectionsDetail.html",
+        controller:"CollectionDetailView"
+    });
+
     delete $httpProvider.defaults.headers.common["X-Requested-Width"];
 });
 
