@@ -15,3 +15,20 @@ body{
 ul,li{
 	list-style: none;
 }
+
+header{
+	width:100%;
+	background: #333;
+	padding:10px;
+	color:#fff;
+}
+
+
+#searchterm{
+	position:relative;
+	#searchresults{
+		position:absolute;
+		background:red;
+		width:100%;
+	}
+}
