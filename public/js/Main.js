@@ -42,7 +42,9 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
 
     $stateProvider.state("CollectionDetailView",{
         url:"/collection/:id",
-        templateUrl:"/templates/apps/collectionsDetail.html",
+        templateUrl:function(urlattr){
+            return "/templates/apps/collectionDetail.html"
+        },
         controller:"CollectionDetailView"
     });
 

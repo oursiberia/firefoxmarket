@@ -37,6 +37,7 @@ router.get("/category/:id",function(req,res){
 });
 
 router.get("/collection/:name",function(req,res){
+
     res.sendfile('./public/index.html');
 });
 

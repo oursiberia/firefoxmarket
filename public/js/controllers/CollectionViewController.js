@@ -10,7 +10,7 @@ app.controller("CollectionViewController",["$scope","API",function($scope,API){
     API.request("collections").then(function(data){
         var collections = [];
         var len = data.objects.length;
-
+        console.log(data);
         for(var i = 0;i<len;++i){
             var collection = data.objects[i];
 

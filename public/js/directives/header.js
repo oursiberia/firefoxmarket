@@ -4,7 +4,7 @@
 app.directive("header",function(){
 
     return {
-        templateUrl:"templates/header.html",
+        templateUrl:"/templates/header.html",
         controller:function($scope){
 
         },
