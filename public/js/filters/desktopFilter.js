@@ -8,10 +8,18 @@ app.filter("DesktopApps",function(){
     /**
      * Does the filtering.
      * @param{Object} data the object that's passed back from the API query.
+     * @param{number} length the number of items to return from the query
      */
-    return function(data) {
+    return function(data,length) {
         var apps = [];
-        for (var i = 0; i < data.objects.length; ++i) {
+        var limit = 0;
+        if(length){
+            limit = length;
+        }else{
+            limit = data.objects.length;
+        }
+
+        for (var i = 0; i < limit; ++i) {
             var name = data.objects[i].name["en-US"];
 
 

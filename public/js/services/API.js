@@ -34,6 +34,8 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
         //list of featured apps
         "featured":"/api/v1/fireplace/search/featured/?limit=100",
 
+        "search":"/api/v1/apps/search/",
+
         /**============ NOTE : CORS NOT ENABLED==============*/
         //app detail
         "app_detail":"/api/v1/apps/app/"
@@ -79,7 +81,46 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
 
     }
 
+    function clientRequest(endpoint,parameters){
+        var deferred = $q.defer();
+        console.log("Need to run : " + endpoint);
+
+        $timeout(function(){
+
+            for(var i in routes){
+                if(endpoint === i){
+                    var url = base + routes[endpoint];
+
+                    /**
+                     * to keep things simple, just manually
+                     * add on all require parameters in a  string
+                     */
+                    if(parameters){
+                        url += parameters;
+                    }
+
+                    $http({
+                        method:"GET",
+                        url:url
+                    }).success(function(data,status,headers,config){
+                        if(data){
+                            deferred.resolve(data,status,headers,config);
+                        }
+                    }).error(function(data,status,headers,config){
+                        deferred.resolve(data,status,headers,config);
+                    });
+                }
+            }
+
+        },100);
+
+
+        return deferred.promise;
+
+    }
+
     return {
+        clientRequest:clientRequest,
         request:request
     };
 }]);

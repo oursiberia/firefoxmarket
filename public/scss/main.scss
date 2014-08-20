@@ -1,6 +1,6 @@
 @import "matchstick/functions";
 @import "loader";
-
+@import "home";
 
 *{
 	margin:0;
@@ -9,6 +9,7 @@
 
 body{
 	font-size: 100%;
+	font-family: proxima-nova,sans-serif;
 	overflow-x: hidden;
 }
 
@@ -23,7 +24,50 @@ header{
 	color:#fff;
 }
 
+.flex{
+	/* basic styling */
 
+	border: 1px solid #555;
+	font: 14px Arial;
+
+	/* flexbox setup */
+	display: -webkit-flex;
+	-webkit-flex-direction: row;
+	display: flex;
+	flex-direction: row;
+	padding:0;
+	div{
+		max-width: 300px;
+		flex: 1 1 auto;
+
+		padding:5px;
+		-webkit-transition: width 0.7s ease-out;
+		transition: width 0.7s ease-out;
+	}
+	div:last-child{
+
+
+	}
+}
+
+/**
+ *	References sections that are loading in content via AJAX
+ */
+
+
+.section{
+	opacity: 1;
+	@include transition((opacity));
+	&.ajax{
+		opacity: 0;
+		@include transition((opacity));
+	}
+}
+
+/**======= SEARCH =============*/
+#search{
+	float:right;
+}
 #searchterm{
 	position:relative;
 	#searchresults{
@@ -32,3 +76,4 @@ header{
 		width:100%;
 	}
 }
+
