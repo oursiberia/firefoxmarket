@@ -14,15 +14,15 @@ var routes = {
 
     //list of featured apps
     "featured":"/api/v1/fireplace/search/featured/?limit=100",
-
+    "apps_in_category":"/api/v1/apps/search/?cat=",
     /**============ NOTE : CORS NOT ENABLED==============*/
     //app detail
     "app_detail":"/api/v1/apps/app/",
     "marketplace_login":"/api/v1/account/login",
 
     //note url for category api will be moving.
-    "categories":"/api/v1/apps/category",
-    "apps_in_category":"/api/v1/apps/search/?cat="
+    "categories":"/api/v1/apps/category"
+
 }
 
 /**
@@ -36,12 +36,18 @@ router.get("/category/:id",function(req,res){
     res.sendfile('./public/index.html');
 });
 
-router.get("/test/:id",function(req,res){
+router.get("/collection/:name",function(req,res){
+
     res.sendfile('./public/index.html');
-})
+});
+
+
+
 router.get('/:name', function(req, res) {
     res.sendfile('./public/index.html');
 });
+
+
 
 
 

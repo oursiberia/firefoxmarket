@@ -1,0 +1,45 @@
+.apps{
+	ul{
+		li{
+			display: inline-block;
+			vertical-align: top;
+			.app-box{
+				border:solid 1px red;
+				width: 200px;
+				height: 200px;
+				padding: 30px;
+
+			}
+		}
+	}
+}
+
+#categories{
+
+	.wrap{
+		width:1024px;
+		height:100%;
+		margin:0 auto;
+		background: red;
+		position: relative;
+		#category-list{
+			background: #607d8b;
+			width:300px;
+			li{
+				padding:30px;
+			}
+		}
+	}
+
+	#category-preview{
+		height:100%;
+		width:71%;
+		position: absolute;
+		top:0;
+		right:0;
+		background:yellow;
+		.category-wrap{
+			opacity: 0;
+		}
+	}
+}

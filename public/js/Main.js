@@ -34,6 +34,20 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
         controller:"CategoryViewController"
     });
 
+    $stateProvider.state("CollectionView",{
+        url:"/collection",
+        templateUrl:"/templates/apps/collectionview.html",
+        controller:"CollectionViewController"
+    });
+
+    $stateProvider.state("CollectionDetailView",{
+        url:"/collection/:id",
+        templateUrl:function(urlattr){
+            return "/templates/apps/collectionDetail.html"
+        },
+        controller:"CollectionDetailView"
+    });
+
     delete $httpProvider.defaults.headers.common["X-Requested-Width"];
 });
 
@@ -61,12 +75,19 @@ app.controller("main",function($window,$rootScope,API,localStorageService){
      * This hides the loader once content has been loaded.
      * @param delay
      */
-    $rootScope.loaded = function(delay){
-        delay = delay || 1;
-        TweenMax.to(document.querySelector("#loader"),delay,{
-            opacity:0
+    $rootScope.loaded = function(callback){
+
+        //get rid of the loader
+        TweenMax.to(document.querySelector("#loader"),0.2,{
+            opacity:0,
+            onComplete:function(){
+                callback();
+            }
         });
-    }
+
+
+    };
+
 
 
 });

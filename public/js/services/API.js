@@ -29,14 +29,18 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
 
         //KNOWN TO WORK
         "collections":"/api/v2/feed/collections/",
-        "collections_detail":"/api/v2/feed/collections/",
 
         //list of featured apps
         "featured":"/api/v1/fireplace/search/featured/?limit=100",
+        //app detail
+        "app_detail":"/api/v1/apps/app/",
+
+        "search":"/api/v1/apps/search/",
 
         /**============ NOTE : CORS NOT ENABLED==============*/
-        //app detail
-        "app_detail":"/api/v1/apps/app/"
+        "login":"",
+        "collections_detail":"/api/v2/feed/collections/"
+
     };
 
     //base path for the api
@@ -79,7 +83,46 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
 
     }
 
+    function clientRequest(endpoint,parameters){
+        var deferred = $q.defer();
+        console.log("Need to run : " + endpoint);
+
+        $timeout(function(){
+
+            for(var i in routes){
+                if(endpoint === i){
+                    var url = base + routes[endpoint];
+                    console.log(url);
+                    /**
+                     * to keep things simple, just manually
+                     * add on all require parameters in a  string
+                     */
+                    if(parameters){
+                        url += parameters;
+                    }
+
+                    $http({
+                        method:"GET",
+                        url:url
+                    }).success(function(data,status,headers,config){
+                        if(data){
+                            deferred.resolve(data,status,headers,config);
+                        }
+                    }).error(function(data,status,headers,config){
+                        deferred.resolve(data,status,headers,config);
+                    });
+                }
+            }
+
+        },100);
+
+
+        return deferred.promise;
+
+    }
+
     return {
+        clientRequest:clientRequest,
         request:request
     };
 }]);
