@@ -7,7 +7,7 @@ app.controller("CollectionViewController",["$scope","API",function($scope,API){
 
 
 
-    API.request("collections").then(function(data){
+    API.clientRequest("collections").then(function(data){
         var collections = [];
         var len = data.objects.length;
         console.log(data);
