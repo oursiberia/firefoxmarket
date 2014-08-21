@@ -1,5 +1,5 @@
 
-app.directive("appsearch",["$http",function($http){
+app.directive("appsearch",["$http","$rootScope",function($http,$rootScope){
 
     return {
         templateUrl:"/templates/searchbox.html",
@@ -9,6 +9,19 @@ app.directive("appsearch",["$http",function($http){
         },
 
         link:function($scope,$el,$attrs){
+
+
+            $scope.search = function(){
+
+
+                 TweenMax.to(document.getElementById("searchresults"),1,{
+                     top:0,
+                     ease:"Power3.easeInOut",
+                     onComplete:function(){
+                        $rootScope.lockBody();
+                     }
+                 });
+            };
 
 
             /**

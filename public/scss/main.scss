@@ -7,7 +7,7 @@
 	padding:0;
 }
 
-body{
+body,html{
 	font-size: 100%;
 	font-family: proxima-nova,sans-serif;
 	overflow-x: hidden;
@@ -20,13 +20,23 @@ ul,li{
 header{
 	width:100%;
 	background: #333;
-	padding:10px;
 	color:#fff;
+
+	div{
+		vertical-align: middle;
+	}
+	div:first-child{
+		display: inline-block;
+
+	}
+
+	div:last-child{
+		display: inline-block;
+	}
 }
 
 .flex{
 	/* basic styling */
-
 	border: 1px solid #555;
 	font: 14px Arial;
 
@@ -65,15 +75,3 @@ header{
 }
 
 /**======= SEARCH =============*/
-#search{
-	float:right;
-}
-#searchterm{
-	position:relative;
-	#searchresults{
-		position:absolute;
-		background:red;
-		width:100%;
-	}
-}
-

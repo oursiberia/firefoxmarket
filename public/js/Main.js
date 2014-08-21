@@ -8,16 +8,26 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(true);
 
+    /**
+     * Home page
+     */
     $stateProvider.state("home",{
         url:"/",
         templateUrl:"/templates/home.html"
     });
 
+
+    /**
+     * 404 page
+     */
     $stateProvider.state("AppNotFound",{
         url:"/app/notfound",
         templateUrl:"/templates/apps/404.html"
     });
 
+    /**
+     * Detail view of the app
+     */
     $stateProvider.state("AppView",{
         url:"/app/:name",
         templateUrl:function(urlattr){
@@ -26,6 +36,9 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
         controller:"AppViewController"
     });
 
+    /**
+     * TODO decide what this ought to do? Was thinking it'd just show all the categories
+     */
     $stateProvider.state("CategoryView",{
         url:"/category/:name",
         templateUrl:function(urlattr){
@@ -34,12 +47,18 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
         controller:"CategoryViewController"
     });
 
+    /**
+     * TODO decide what this shoudl show? Was thinking it would just show all the collections
+     */
     $stateProvider.state("CollectionView",{
         url:"/collection",
         templateUrl:"/templates/apps/collectionview.html",
         controller:"CollectionViewController"
     });
 
+    /**
+     * Shows the detail view for a particular collection
+     */
     $stateProvider.state("CollectionDetailView",{
         url:"/collection/:id",
         templateUrl:function(urlattr){
@@ -67,7 +86,6 @@ app.controller("main",function($window,$rootScope,API,localStorageService){
      */
     $rootScope.login = function(){
 
-
     }; //end login
 
 
@@ -88,6 +106,18 @@ app.controller("main",function($window,$rootScope,API,localStorageService){
 
     };
 
+
+    /**
+     * For some things, like bringing down the search pane,
+     * we need to prevent scrolling
+     */
+    $rootScope.lockBody = function(){
+        document.getElementsByTagName("html")[0].style.overflow = "hidden";
+    }
+
+    $rootScope.unlockBody = function(){
+        document.getElementsByTagName("html")[0].style.overflow = "scroll";
+    }
 
 
 });

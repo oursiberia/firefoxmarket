@@ -43,3 +43,49 @@
 		}
 	}
 }
+
+#searchresults{
+	position: absolute;
+	min-width:100%;
+	min-height: 100%;
+	background:rgba(3,169,244,0.9);
+	left:0;
+	top:-99990px;
+	z-index: 99;
+	.search-wrap{
+		display: block;
+		padding:30px;
+		margin:0 auto;
+
+		#searchterm{
+			background: none;
+			border:none;
+			border-bottom:solid 1px #fff;
+			width:100%;
+			color:#fff;
+			font-size:40px;
+
+			&:focus{
+				outline: 0;
+			}
+
+		}
+	}
+
+
+	#results{
+		overflow-x: hidden;
+		overflow-y: scroll;
+		max-width: 100%;
+		position: relative;
+		top:10px;
+
+		.searchresult{
+			border:solid 1px red;
+			width: 200px;
+			height: 200px;
+			padding: 30px;
+			display: inline-block;
+		}
+	}
+}

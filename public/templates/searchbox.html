@@ -1,21 +1,31 @@
 <section id="search">
     <div id="searchform">
-        <input id="searchterm" type="text" name="search" ng-model="searchbox" ng-change="searchApp()">
-
-        </input>
-        <button ng-click="searchApp()">Search</button>
+        <button ng-click="search()">Search</button>
     </div>
 
-    <!--
 
-     <div id="searchresults">
-        <h1>Search reults</h1>
-        <div class="searchresult" ng-repeat="result in results">
-            <a ng-href="/app/{{result.id}}"><img ng-src="{{result.icon}}" alt="result-icon"/></a>
-            <h2 class="result-title">{{result.name}}</h2>
-            <p class="result-author">{{result.author}}</p>
-        </div>
+
+
+
+    <script type="text/template" id="results-template">
+
+    </script>
+
+    <div id="searchresults">
+       <div class="search-wrap">
+           <h1>Search</h1>
+           <input id="searchterm" type="text" name="search" ng-model="searchbox" ng-change="searchApp()">
+
+           </input>
+           <div class="search-divider"></div>
+          <div id="results">
+              <div class="searchresult" ng-repeat="result in results">
+                  <a ng-href="/app/{{result.id}}"><img ng-src="{{result.icon}}" alt="result-icon"/></a>
+                  <h2 class="result-title">{{result.name}}</h2>
+                  <p class="result-author">{{result.author}}</p>
+              </div>
+          </div>
+       </div>
     </div>
-
-    -->
 </section>
+
