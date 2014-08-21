@@ -6,9 +6,9 @@ app.directive("backforward_buttons",["$location","$window",function($location,$w
         templateUrl:"/templates/ui/buttons.html",
         controller:function($scope){
 
-
         },
 
+        
         link:function($scope,$el,$attrs){
             /**
              * What happens when we click the back button
