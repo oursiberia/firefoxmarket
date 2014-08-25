@@ -1,40 +1,46 @@
 <section id="HOME" ng-controller="home" class="section ajax">
-    <div id="featured">
-        <h1>Featured apps</h1>
-        <div class="apps">
-            <ul>
-                <li ng-repeat="app in featured_apps">
-                    <div class="app-box">
-                        <a ng-href="/app/{{app.id}}"><img ng-src="{{app.icon}}" alt="app-icon"/></a>
-                        <a ng-href="/app/{{app.id}}"><h2 class="app-title">{{app.name}}</h2></a>
-                        <p class="app-author">{{app.author}}</p>
-                    </div><!-- end app box-->
-                </li>
-            </ul>
-        </div>
-    </div>
+  <div class="wrap">
+      <div id="featured">
+          <h1>Featured apps</h1>
+          <div class="apps">
+
+                  <div class="{{app.classname}}" ng-repeat="app in featured_apps">
+                      <div>
+                          <a ng-href="/app/{{app.id}}"><img ng-src="{{app.icon}}" alt="app-icon"/></a>
+                          <a ng-href="/app/{{app.id}}"><h2 class="app-title">{{app.name}}</h2></a>
+                          <p class="app-author">{{app.author}}</p>
+                      </div><!-- end app box-->
+                  </div>
 
 
-    <div id="categories">
-        <div class="wrap">
-            <ul id="category-list">
-                <li ng-repeat="category in categories">
-                   <h1 ng-click="showCategory($event)" data-slug="{{category.slug}}">{{category.name}}</h1>
-                </li>
-            </ul>
+          </div>
+      </div>
 
 
-            <div id="category-preview">
-                <div class="category-wrap">
-                   <div ng-repeat="app in category_apps">
-                       <h1>{{app.name}}</h1>
-                   </div>
-                </div>
-            </div>
-        </div>
 
-
-    </div><!--end categories-->
-
+  </div>
 
 </section>
+
+
+
+        <!--<div id="categories">
+          <div class="wrap">
+              <ul id="category-list">
+                  <li ng-repeat="category in categories">
+                      <h1 ng-click="showCategory($event)" data-slug="{{category.slug}}">{{category.name}}</h1>
+                  </li>
+              </ul>
+
+
+              <div id="category-preview">
+                  <div class="category-wrap">
+                      <div ng-repeat="app in category_apps">
+                          <h1>{{app.name}}</h1>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+
+      </div><!--end categories-->

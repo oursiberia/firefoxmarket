@@ -24,7 +24,9 @@ var routes = {
     "categories":"/api/v1/apps/category"
 
 }
-
+router.get("/test",function(req,res){
+    res.render("index",{});
+})
 /**
  * Loads the homepage / template
  */
@@ -46,6 +48,7 @@ router.get("/collection/:name",function(req,res){
 router.get('/:name', function(req, res) {
     res.sendfile('./public/index.html');
 });
+
 
 
 

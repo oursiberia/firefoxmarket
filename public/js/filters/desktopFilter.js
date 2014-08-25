@@ -27,7 +27,8 @@ app.filter("DesktopApps",function(){
                 icon: data.objects[i].icons["64"],
                 name: data.objects[i].name["en-US"],
                 id: data.objects[i].id,
-                author: data.objects[i].author
+                author: data.objects[i].author,
+                classname:"app"
             };
 
 

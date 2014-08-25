@@ -71,7 +71,7 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
 });
 
 
-app.controller("main",function($window,$rootScope,API,localStorageService){
+app.controller("main",function($window,$rootScope,API,localStorageService,$http){
 
     /**
      * Check to see if the user is logged in

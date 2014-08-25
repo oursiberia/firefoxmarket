@@ -22,6 +22,8 @@ module.exports = function(grunt){
      * Libraries we're using
      */
     var libs = [
+        jsdir + "libs/Jquery.js",
+        jsdir + "libs/Isotope.js",
         base + "bower_components/angular/angular.js",
         base + "bower_components/angular-ui-router/release/angular-ui-router.js",
             base + "bower_components/angular-local-storage/LocalStorage.js",

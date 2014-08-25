@@ -5,7 +5,7 @@ app.controller("AppViewController",["$window","API","$scope","$rootScope",functi
     id = id[id.length - 1];
 
     /** TODO /api/v1/apps/app/:id is still not CORS enabled */
-    API.request("app_detail",id).then(function(data){
+    API.clientRequest("app_detail",id).then(function(data){
         $scope.author = data.author;
         $scope.categories = data.categories;
         $scope.content_ratings = data.content_ratings;

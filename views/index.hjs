@@ -1,20 +1,56 @@
 <!DOCTYPE html>
-<html ng-app="siberia">
-<head lang="en">
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, user-scalable=no"/>
-    <title>Siberia</title>
-
-    <link rel="stylesheet" type="text/css" href="/css/main.css"/>
+<html>
+<head>
+    <title></title>
 </head>
-<body ng-controller="main">
+<body>
+
+<button onclick="runLoginTest()">Click to run login test</button>
+<button onclick="runCategoryTest()">Click to run Category test</button>
 
 
 
- <script type="text/javascript" src="//use.typekit.net/stl7txu.js"></script>
- <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
- <script src="/build/libs.min.js"></script>
- <script src="/build/all.min.js"></script>
- <script src="//localhost:35729/livereload.js"></script>
+
+<script src="https://login.persona.org/include.js"></script>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script>
+
+    navigator.id.watch({
+        loggedInUser:"joseph@siberia.io",
+
+        onlogin:function(assertation){
+            $.ajax({
+                type:"POST",
+                url:"https://marketplace.firefox.com/api/v1/account/login",
+                data:{
+                    assertation:assertation,
+                    audience:"http://localhost:3000"
+                },
+
+                success:function(){
+                    console.log("success")
+                }
+            });
+        },
+
+
+        onlogout:function(){
+            currentUser = null;
+        }
+    })
+
+
+    function runCategoryTest(){
+        $.getJSON("https://marketplace.firefox.com/api/v1/apps/category",function(){
+
+        });
+    }
+
+
+    function runLoginTest(){
+        navigator.id.request();
+    }
+</script>
+
 </body>
 </html>

@@ -1,7 +1,7 @@
 /**
  * Controller for the home page/view
  */
-app.controller("home",["$rootScope","API","$scope","$filter",function($rootScope,API,$scope,$filter){
+app.controller("home",["$rootScope","API","$scope","$filter","$http",function($rootScope,API,$scope,$filter,$http){
 
     //the current category we're showing in the viewbox
     var current_category = "";
@@ -14,21 +14,59 @@ app.controller("home",["$rootScope","API","$scope","$filter",function($rootScope
         //var apps = $rootScope.processData(data);
         var apps = $filter("DesktopApps")(data,10);
 
+        //pick one to highlight at random
+        var index = Math.floor(Math.random() * apps.length);
+        var featured = apps[index];
+        featured["classname"] = featured.classname + " " + "highlighted";
+
+
+        //shift featured to the beginning of the array so it's first in the grid
+        for(var i = 0;i<apps.length;++i){
+            if(i === index){
+                var temp = apps[0];
+                apps[0] = apps[index];
+                apps[index] = temp;
+            }
+        }
+
 
         $scope.featured_apps = apps;
+
+
+        $http({
+            method:"GET",
+            url:"https://angularjs.org/greet.php?callback=JSON_CALLBACK&name=Super%20Hero"
+        }).success(function(data, status, headers, config){
+            console.log(data);
+        }).error(function(data, status, headers, config){
+            console.log(data);
+        })
 
         $rootScope.loaded(function(){
             var parent = document.getElementById("HOME");
             angular.element(parent).removeClass("ajax");
 
+            console.log("done rendering");
+            //isotope all things
+            var container = document.querySelector(".apps");
+            var iso = new Isotope(container,{
+                itemSelector: '.app',
+                columnWidth:30,
+                masonry: {
+                    columnWidth: 50,
+                    gutter:30
+                }
+            });
+
         });
     });
+
 
 
     /**
      * Load list of categories
      */
-    API.request("categories").then(function(data){
+    API.clientRequest("categories").then(function(data){
         $scope.categories = data.objects;
     });
 

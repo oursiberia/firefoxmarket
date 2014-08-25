@@ -35,6 +35,8 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
         //app detail
         "app_detail":"/api/v1/apps/app/",
 
+        "apps_in_category":"/api/v1/apps/search/?cat=",
+
         "search":"/api/v1/apps/search/",
 
         /**============ NOTE : CORS NOT ENABLED==============*/
