@@ -9,7 +9,7 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
     /**
      * Load featured apps
      */
-    API.clientRequest("featured").then(function(data){
+    API.request("featured").then(function(data){
 
         //var apps = $rootScope.processData(data);
         var apps = $filter("DesktopApps")(data,10);
@@ -33,14 +33,7 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
         $scope.featured_apps = apps;
 
 
-        $http({
-            method:"GET",
-            url:"https://marketplace.firefox.com/api/v1/apps/app/473617/"
-        }).success(function(data, status, headers, config){
-            console.log(data);
-        }).error(function(data, status, headers, config){
-            console.log(data);
-        })
+
 
         $rootScope.loaded(function(){
             var parent = document.getElementById("HOME");
@@ -62,12 +55,6 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
 
 
 
-    /**
-     * Load list of categories
-     */
-    API.clientRequest("categories").then(function(data){
-        $scope.categories = data.objects;
-    });
 
 
     /**

@@ -4,7 +4,7 @@ app.controller("CollectionDetailView",["$window","API",function($window,API){
     var id = $window.location.href.split("/");
     id = id[id.length - 1];
 
-    API.clientRequest("collections_detail", id).then(function(data){
+    API.request("collections_detail", id).then(function(data){
         console.log(data);
 
 
