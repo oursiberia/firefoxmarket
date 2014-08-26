@@ -1,0 +1,23 @@
+@import "vars";
+
+
+#category-banner{
+	width:100%;
+	padding-top:100px;
+	padding-bottom: 100px;
+	background: #607d8b;
+
+	#category-title{
+		color:#fff;
+		font-size:50px;
+	}
+
+	#featured-category-apps{
+		float:right;
+		background:#333;
+		height:150px;
+		position: relative;
+		top:-100px;
+		width:300px;
+	}
+}

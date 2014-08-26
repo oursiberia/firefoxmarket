@@ -1,6 +1,8 @@
 @import "matchstick/functions";
 @import "loader";
 @import "home";
+@import "category";
+
 @import "fonts";
 
 
@@ -96,6 +98,10 @@ header{
 
 				.identification{
 					float:right;
+
+					img{
+						margin-left:10px;
+					}
 				}
 				&.open{
 					@include transition((background));

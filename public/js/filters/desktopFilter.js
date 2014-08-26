@@ -21,26 +21,43 @@ app.filter("DesktopApps",function(){
 
         for (var i = 0; i < limit; ++i) {
             var name = data.objects[i].name["en-US"];
+            var obj = {};
 
 
-            var obj = {
-                icon: data.objects[i].icons["64"],
-                name: data.objects[i].name["en-US"],
-                id: data.objects[i].id,
-                author: data.objects[i].author,
-                classname:"app"
-            };
+           for(var a = 0;a<data.objects[i].device_types.length;++a){
+               if(data.objects[i].device_types[a] === "desktop"){
+                   obj["icon"] = data.objects[i].icons["64"];
+                   obj["name"] =  data.objects[i].name["en-US"];
+                   obj["id"] = data.objects[i].id;
+                   obj["author"] = data.objects[i].author;
+                   obj["classname"] = "app";
+
+                   obj["device"] = "desktop";
+
+                   console.log(obj);
+                   apps.push(obj);
+               }
+           };
 
 
-            for (var a = 0; a < data.objects[i].device_types; ++a) {
-                if (data.objects[i].device_types[a] === "desktop") {
-                    obj["device"] = "desktop";
-                }
-            }
 
 
-            apps.push(obj);
         }
+
+        /*
+         obj["icon"] = data.objects[i].icons["64"];
+         obj["name"] =  data.objects[i].name["en-US"];
+         obj["id"] = data.objects[i].id;
+         obj["author"] = data.objects[i].author;
+         obj["classname"] = "app";
+
+         obj["device"] = "desktop";
+
+         console.log(obj);
+         apps.push(obj);
+         */
+
+        console.log(apps);
         return apps;
     }
 });

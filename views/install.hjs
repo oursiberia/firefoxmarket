@@ -8,8 +8,10 @@
 
 <script>
     // This URL must be a full url.
+  // var req = navigator.mozApps.installPackage("{{installURL}}/manifest.webapp");
     var req = navigator.mozApps.install("{{installURL}}/manifest.webapp");
     req.onsuccess = function() {
+        console.log(this);
         console.log(this.result);
         alert(this.result.origin);
     };

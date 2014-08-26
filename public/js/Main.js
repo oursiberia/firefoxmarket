@@ -74,7 +74,7 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
 });
 
 
-app.controller("main",function($window,$rootScope,API,localStorageService,$http){
+app.controller("main",function($window,$rootScope,API,localStorageService,$http,$scope){
     $rootScope.menuOpen = false;
     /**
      * Check to see if the user is logged in
@@ -87,10 +87,60 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http)
     /**
      * Starts the login process.
      */
-    $rootScope.login = function(){
-
+    $scope.login = function(){
+       navigator.id.request();
     }; //end login
 
+
+    navigator.id.watch({
+        loggedInUser:"",
+
+        onlogin:function(assertation){
+
+            //TODO change to angular method?
+            $.post("https://marketplace.firefox.com/api/v1/account/login/",{
+                assertion:assertation,
+                audience: window.location.origin
+            },function(data){
+                $rootScope.USER = data;
+                console.log(data);
+
+                var username = document.querySelector("#username");
+
+                TweenMax.to(username,1,{
+                    opacity:0,
+                    onComplete:function(){
+                        //change the username
+                        username.innerHTML = data.settings.display_name;
+
+                        TweenMax.to(username,1, {
+                            opacity: 1
+                        });
+                    }
+                })
+
+
+            })
+        },
+        onlogout:function(){
+            $rootScope.USER = null;
+        }
+    });
+
+    /**
+     *  $.ajax({
+                type:"POST",
+                url:"https://marketplace.firefox.com/api/v1/account/login",
+                data:{
+                    assertation:assertation,
+                    audience:"http://localhost:3000"
+                },
+
+                success:function(){
+                    console.log("success")
+                }
+            });
+     */
 
     /**
      * This hides the loader once content has been loaded.

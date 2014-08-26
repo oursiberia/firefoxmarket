@@ -24,6 +24,25 @@ var routes = {
     "categories":"/api/v1/apps/category"
 
 }
+
+
+/**
+ * Triggers installation
+ */
+router.get('/install', function(req, res) {
+    res.render('install', {
+        title: 'Install Marketplace',
+        installURL:req.protocol + "://" + req.get("host")
+
+    });
+});
+
+router.get("/manifest.webapp",function(req,res){
+    fs.readFile("./public/manifest.webapp",function(err,data){
+       res.end(new Buffer(data).toString());
+    });
+});
+
 router.get("/test",function(req,res){
     res.render("index",{});
 })
@@ -121,14 +140,5 @@ router.get("/marketplaceAPI/:route",function(req,res){
     })
 });
 
-/**
- * Triggers installation
- */
-router.get('/install', function(req, res) {
-    res.render('install', {
-        title: 'Install Marketplace',
-        installURL:req.protocol + "://" + req.get("host")
 
-    });
-});
 module.exports = router;

@@ -16,7 +16,7 @@
 <script>
 
     navigator.id.watch({
-        loggedInUser:"joseph@siberia.io",
+        loggedInUser:"",
 
         onlogin:function(assertation){
             $.ajax({

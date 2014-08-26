@@ -1,6 +1,34 @@
 <section id="category-page">
-    <div ng-repeat="app in apps">
-        {{app.name}}
+    <div id="category-banner">
+        <div class="wrap">
+
+            <div id="featured-category-apps">
+                <div class="wrap">
+
+                    <div class="category in-view-featured">
+
+                    </div>
+
+
+                    <div style="display: none" class="category featured-apps">
+                        <div class="category featured-app" ng-repeat="app in apps">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 id="category-title"></h1>
+
+
+        </div>
     </div>
+
+   <div class="wrap">
+
+       <div ng-repeat="app in apps">
+           {{app.name}}
+       </div>
+
+   </div><!--end wrap-->
 
 </section>
