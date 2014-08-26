@@ -12,7 +12,7 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
     API.request("featured").then(function(data){
 
         //var apps = $rootScope.processData(data);
-        var apps = $filter("DesktopApps")(data,10);
+        var apps = $filter("DesktopApps")(data,4);
 
         //pick one to highlight at random
         var index = Math.floor(Math.random() * apps.length);
