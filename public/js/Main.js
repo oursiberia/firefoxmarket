@@ -3,7 +3,6 @@ var app = angular.module("FireFoxMarket",[
     "LocalStorageModule"
 ]);
 
-
 app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpProvider){
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(true);
@@ -103,7 +102,9 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http)
         TweenMax.to(document.querySelector("#loader"),0.2,{
             opacity:0,
             onComplete:function(){
-                callback();
+                if(callback){
+                    callback();
+                }
             }
         });
 
