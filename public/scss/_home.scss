@@ -1,33 +1,18 @@
+@import "vars";
+
+#featured{
+	margin-top:44px;
+}
 .apps{
-	&:after{
-		content:"";
-		display: block;
-		clear:both;
-	}
+
 	.app{
-//		border:solid 1px red;
-		float:left;
-		padding: 30px;
-		margin-bottom: 20px;
-		position: relative;
-
-
-		.app-icon{
-			width:64px;
-			margin:0 auto;
-			display: block;
-		}
-
-		.app-details{
-			position: relative;
-			z-index:2;
-		}
+		border-radius: 5px;
 
 		//////// FEATURED //////////////
 		.curve{
 			height: 100px;
 			width: 222px;
-			background: rgba(25,160,79,0.8);
+			background: $green;
 			position: absolute;
 			bottom: 0;
 			left: 71px;
@@ -36,9 +21,11 @@
 			z-index: 1;
 		}
 		&.featured{
-			background:rgba(135,207,62,1.0);
+			margin-top:8px;
+			background:$greenSecondary;
 			overflow: hidden;
 			width: 300px;
+			height: 137px;
 			height: 137px;
 
 			a{
@@ -87,48 +74,40 @@
 	}
 }
 
-#searchresults{
-	position: absolute;
-	min-width:100%;
-	min-height: 100%;
-	background:rgba(3,169,244,0.9);
-	left:0;
-	top:-99990px;
-	z-index: 99;
-	.search-wrap{
-		display: block;
-		padding:30px;
-		margin:0 auto;
+.all-trigger{
+	float:right;
+	font-size:12px;
+	position:relative;
+	top:8px;
 
-		#searchterm{
+	@include transition((color));
+	color:#333;
+
+	&:hover{
+		@include transition((color));
+		color:#42cafe;
+		cursor:pointer;
+	}
+}
+
+#search-home{
+	height:130px;
+	width:100%;
+	background: $blue;
+
+	div.wrap{
+		padding:20px;
+		padding-top:30px;
+		#homesearch{
+			outline: none;
+			padding:4px;
 			background: none;
 			border:none;
 			border-bottom:solid 1px #fff;
 			width:100%;
 			color:#fff;
 			font-size:40px;
-
-			&:focus{
-				outline: 0;
-			}
-
 		}
 	}
+}//end #search-home
 
-
-	#results{
-		overflow-x: hidden;
-		overflow-y: scroll;
-		max-width: 100%;
-		position: relative;
-		top:10px;
-
-		.searchresult{
-			border:solid 1px red;
-			width: 200px;
-			height: 200px;
-			padding: 30px;
-			display: inline-block;
-		}
-	}
-}

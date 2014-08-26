@@ -1,5 +1,15 @@
 <section id="HOME" ng-controller="home" class="section ajax">
-  <div class="wrap">
+    <div id="search-home">
+
+        <div class="wrap">
+            <input id="homesearch" type="text" name="search" ng-model="searchbox" ng-change="searchApp()">
+
+        </div>
+    </div>
+
+    <div class="wrap">
+
+
       <div id="featured">
           <p class="all-trigger" data-type="featured">View all</p>
           <h1>Featured apps</h1>

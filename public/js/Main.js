@@ -3,7 +3,6 @@ var app = angular.module("FireFoxMarket",[
     "LocalStorageModule"
 ]);
 
-
 app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpProvider){
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(true);
@@ -76,7 +75,7 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
 
 
 app.controller("main",function($window,$rootScope,API,localStorageService,$http){
-
+    $rootScope.menuOpen = false;
     /**
      * Check to see if the user is logged in
      */
@@ -103,13 +102,74 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http)
         TweenMax.to(document.querySelector("#loader"),0.2,{
             opacity:0,
             onComplete:function(){
-                callback();
+                if(callback){
+                    callback();
+                }
             }
         });
 
 
     };
 
+    /**
+     * opens the user menu
+     */
+    $rootScope.openMenu = function(e){
+      // if(localStorageService.getItem("loggedin") != "true"){
+         if($rootScope.menuOpen === false){
+           if(e.target.tagName == "DIV"){
+               var el = e.target.children[0];
+               TweenMax.to(el,1,{
+                   css:{
+                       rotation:180
+                   }
+               });
+           }else{
+               var el = e.target;
+               TweenMax.to(el,1,{
+                   css:{
+                       rotation:180
+                   }
+               });
+           }
+
+
+           var menu = document.querySelector("#user-details");
+           menu.className = "open";
+           TweenMax.to(menu,1,{
+               height:500
+           });
+
+             $rootScope.menuOpen = true;
+       }else{
+             if(e.target.tagName == "DIV"){
+                 var el = e.target.children[0];
+                 TweenMax.to(el,1,{
+                     css:{
+                         rotation:-180
+                     }
+                 });
+             }else{
+                 var el = e.target;
+                 TweenMax.to(el,1,{
+                     css:{
+                         rotation:-180
+                     }
+                 });
+             }
+
+
+             var menu = document.querySelector("#user-details");
+             menu.className = "";
+             TweenMax.to(menu,1,{
+                 height:45
+             });
+
+
+             $rootScope.menuOpen = false;
+
+       }
+    };
 
     /**
      * For some things, like bringing down the search pane,

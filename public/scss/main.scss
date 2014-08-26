@@ -30,10 +30,6 @@ ul,li{
 	font-family: "FiraLight";
 }
 
-.all-trigger{
-	float:right;
-}
-
 a{
 	text-decoration: none;
 	color:#000;
@@ -87,8 +83,24 @@ header{
 			}
 
 			#user-details{
-				position: relative;
-				right:50px;
+				position: absolute;
+				height: 45px;
+				width: 300px;
+				background: $grey;
+				padding: 20px;
+				z-index: 99;
+				top: 0px;
+				overflow: hidden;
+				right:153px;
+				@include transition((background));
+
+				.identification{
+					float:right;
+				}
+				&.open{
+					@include transition((background));
+					background: $green;
+				}
 			}
 			#menu-trigger{
 				&:hover{
@@ -124,3 +136,75 @@ header{
 	}
 }
 
+#searchresults{
+	position: absolute;
+	min-width:100%;
+	min-height: 100%;
+	background:rgba(3,169,244,0.9);
+	left:0;
+	top:-99990px;
+	z-index: 99;
+	.search-wrap{
+		display: block;
+		padding:30px;
+		margin:0 auto;
+
+		#searchterm{
+			background: none;
+			border:none;
+			border-bottom:solid 1px #fff;
+			width:100%;
+			color:#fff;
+			font-size:40px;
+
+			&:focus{
+				outline: 0;
+			}
+
+		}
+	}
+
+
+	#results{
+		overflow-x: hidden;
+		overflow-y: scroll;
+		max-width: 100%;
+		position: relative;
+		top:10px;
+
+		.searchresult{
+			border:solid 1px red;
+			width: 200px;
+			height: 200px;
+			padding: 30px;
+			display: inline-block;
+		}
+	}
+}
+
+//apps
+.apps{
+	&:after{
+		content:"";
+		display: block;
+		clear:both;
+	}
+	.app {
+		//border:solid 1px red;
+		float: left;
+		padding: 30px;
+		margin-bottom: 20px;
+		position: relative;
+
+		.app-icon {
+			width: 64px;
+			margin: 0 auto;
+			display: block;
+		}
+
+		.app-details {
+			position: relative;
+			z-index: 2;
+		}
+	}
+}
