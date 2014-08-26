@@ -11,11 +11,11 @@
 
 
       <div id="featured">
-          <p class="all-trigger" data-type="featured">View all</p>
+          <p class="all-trigger" data-type="featured" ng-click="loadAll()">View all</p>
           <h1>Featured apps</h1>
           <div class="apps">
 
-                  <div class="{{app.classname}} featured" ng-repeat="app in featured_apps">
+                  <div class="{{app.classname}} featured {{app.showfirst}}" ng-repeat="app in featured_apps">
                       <div>
                           <div class="curve"></div>
 

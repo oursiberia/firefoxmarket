@@ -2,6 +2,8 @@
  * Controller for the home page/view
  */
 app.controller("home",["$rootScope","API","$scope","$filter","$http",function($rootScope,API,$scope,$filter,$http){
+    //Isotope reference
+    var iso;
 
     //the current category we're showing in the viewbox
     var current_category = "";
@@ -12,7 +14,7 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
     API.request("featured").then(function(data){
 
         //var apps = $rootScope.processData(data);
-        var apps = $filter("DesktopApps")(data,4);
+        var apps = $filter("DesktopApps")(data);
 
         //pick one to highlight at random
         var index = Math.floor(Math.random() * apps.length);
@@ -21,18 +23,30 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
 
 
         //shift featured to the beginning of the array so it's first in the grid
-        for(var i = 0;i<apps.length;++i){
-            if(i === index){
-                var temp = apps[0];
-                apps[0] = apps[index];
-                apps[index] = temp;
-            }
+       /* for(var i = 0;i<apps.length;++i){
+        if(i === index){
+        var temp = apps[0];
+        apps[0] = apps[index];
+        apps[index] = temp;
         }
+        }*/
+
+        //hide everything in the beginning cept first 4 apps
+        var first = [];
+        for(var i = 0;i<4;++i){
+            apps[i].showfirst = "showfirst";
+        }
+
 
 
         $scope.featured_apps = apps;
 
 
+        $scope.loadAll = function(){
+            iso.arrange({
+                filter:".app"
+            })
+        };
 
 
         $rootScope.loaded(function(){
@@ -40,15 +54,18 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
             angular.element(parent).removeClass("ajax");
 
             console.log("done rendering");
+
             //isotope all things
             var container = document.querySelector(".apps");
-            var iso = new Isotope(container,{
+            iso = new Isotope(container,{
                 itemSelector: '.app',
+                filter:".showfirst",
                 masonry: {
-
                     gutter:20
                 }
             });
+
+
 
         });
     });
