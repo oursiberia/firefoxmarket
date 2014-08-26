@@ -1,14 +1,20 @@
 <section id="HOME" ng-controller="home" class="section ajax">
   <div class="wrap">
       <div id="featured">
+          <p class="all-trigger" data-type="featured">View all</p>
           <h1>Featured apps</h1>
           <div class="apps">
 
-                  <div class="{{app.classname}}" ng-repeat="app in featured_apps">
+                  <div class="{{app.classname}} featured" ng-repeat="app in featured_apps">
                       <div>
-                          <a ng-href="/app/{{app.id}}"><img ng-src="{{app.icon}}" alt="app-icon"/></a>
-                          <a ng-href="/app/{{app.id}}"><h2 class="app-title">{{app.name}}</h2></a>
-                          <p class="app-author">{{app.author}}</p>
+                          <div class="curve"></div>
+
+                          <div class="app-details">
+                              <a ng-href="/app/{{app.id}}"><img class="app-icon" ng-src="{{app.icon}}" alt="app-icon"/></a>
+
+                              <a ng-href="/app/{{app.id}}"><h2 class="app-title">{{app.name}}</h2></a>
+                              <p class="app-author">{{app.author}}</p>
+                          </div>
                       </div><!-- end app box-->
                   </div>
 

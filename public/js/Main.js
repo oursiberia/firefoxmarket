@@ -8,6 +8,10 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
     $urlRouterProvider.otherwise("/");
     $locationProvider.html5Mode(true);
 
+    //Enable cross domain calls
+   // $httpProvider.defaults.useXDomain = true;
+   // delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
     /**
      * Home page
      */

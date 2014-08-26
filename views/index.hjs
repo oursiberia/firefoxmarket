@@ -39,6 +39,17 @@
         }
     })
 
+    $.ajax({
+        url:"https://marketplace.firefox.com/api/v1/apps/app/473617/",
+        method:"GET",
+        success:function(data,err){
+            console.log(data);
+            console.log("success")
+        },
+        error:function(){
+
+        }
+    })
 
     function runCategoryTest(){
         $.getJSON("https://marketplace.firefox.com/api/v1/apps/category",function(){

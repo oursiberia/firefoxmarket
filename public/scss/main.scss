@@ -26,6 +26,18 @@ ul,li{
 	color:rgba(68,71,75,1.0);
 }
 
+.thin{
+	font-family: "FiraLight";
+}
+
+.all-trigger{
+	float:right;
+}
+
+a{
+	text-decoration: none;
+	color:#000;
+}
 
 
 header{
@@ -92,12 +104,10 @@ header{
 
 	}//end header:wrap
 
-
-
 }
 
 .wrap{
-	max-width: 1400px;
+	max-width: 1500px;
 	margin: 0 auto;
 }
 

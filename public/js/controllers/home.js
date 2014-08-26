@@ -35,7 +35,7 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
 
         $http({
             method:"GET",
-            url:"https://angularjs.org/greet.php?callback=JSON_CALLBACK&name=Super%20Hero"
+            url:"https://marketplace.firefox.com/api/v1/apps/app/473617/"
         }).success(function(data, status, headers, config){
             console.log(data);
         }).error(function(data, status, headers, config){
@@ -51,10 +51,9 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
             var container = document.querySelector(".apps");
             var iso = new Isotope(container,{
                 itemSelector: '.app',
-                columnWidth:30,
                 masonry: {
-                    columnWidth: 50,
-                    gutter:30
+
+                    gutter:20
                 }
             });
 
