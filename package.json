@@ -16,6 +16,7 @@
       "grunt-contrib-uglify": "*",
       "grunt-contrib-watch": "*",
       "grunt-contrib-copy": "*",
-      "grunt-preprocess": "*"
+      "grunt-preprocess": "*",
+      "grunt-contrib-jade":"*"
   }
 }

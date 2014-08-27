@@ -64,6 +64,22 @@ module.exports = function(grunt){
 
         },
 
+        jade:{
+            compile:{
+                options:{
+                    client:false,
+                    pretty:true
+                },
+                files:[{
+                    cwd:__dirname + "/public/templates",
+                    src:"**/*.jade",
+                    dest:__dirname + "/public/build/templates",
+                    expand:true,
+                    ext:".html"
+                }]
+            }
+        },
+
         compass: {
             dist: {
                 options: {
@@ -101,6 +117,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks("grunt-contrib-uglify");
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
     grunt.loadNpmTasks('grunt-contrib-compass');
+    grunt.loadNpmTasks('grunt-contrib-jade');
 
     //builds everything
     grunt.registerTask( 'default', ['uglify:dev','compass:dist']);

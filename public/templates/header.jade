@@ -1,0 +1,19 @@
+header
+    div.wrap
+        div
+            img(src="/img/marketplace.png" alt="marketplace-logo")
+            h1
+                span.dark Firefox
+                span.thin Market
+
+        div
+            div#user
+                div#user-details
+                    div.identification
+                        p#username(ng-click="login()") Sign in
+                        img(src="/img/test_user.svg")
+
+
+
+                div#menu-trigger(ng-click="openMenu($event)")
+                    img(src="/img/menu_gear.png")
