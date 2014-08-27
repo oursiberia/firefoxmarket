@@ -18,6 +18,30 @@
     </div>
 
     <div class="wrap">
+        <style>
+            .column.main{
+                background:url('/img/collection-test.png');
+            }
+            .light{
+                font-family: "FiraThin";
+            }
+        </style>
+        <div class="home-main">
+            <h3>Categories</h3>
+            <div class="column main">
+
+            </div>
+
+            <div class="column secondary">
+
+            </div>
+
+            <div class="column third">
+                <div class="inner-box"></div>
+                <div class="inner-box"></div>
+            </div>
+
+        </div>
 
 
       <div id="featured">
@@ -41,6 +65,27 @@
 
           </div>
       </div>
+
+
+
+        <div id="popular">
+            <div class="category popular" id="popular-in-category">
+                <h3>Popular | <span class="light">New</span></h3>
+                <div class="category app-set" ng-repeat="app in popularapps">
+                    <div class="app">
+                       <a ng-href="/app/{{app.id}}"> <img ng-src="{{app.icon}}"/></a>
+                        <div class="app-details">
+                            <h4>{{app.name}}</h4>
+                            <p>{{app.author}}</p>
+
+                        </div>
+                        <div class="install-button">Free</div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
 
 
 

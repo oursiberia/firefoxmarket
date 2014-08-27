@@ -50,8 +50,6 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
         var apps = $filter("DesktopApps")(data.objects);
         $scope.popularapps = apps;
 
-        console.log(apps);
-
         //fade the loader
         $rootScope.loaded();
     });
@@ -62,7 +60,7 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
      */
     var timer = setInterval(function(){
 
-        //swapApp();
+        swapApp();
     },2000);
 
 

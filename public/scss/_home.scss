@@ -125,3 +125,34 @@
 		display: inline-block;
 	}
 }
+
+.home-main{
+	margin-top:50px;
+	.column{
+		height:40px;
+		width:40px;
+		display: inline-block;
+		vertical-align: top;
+		background: #333;
+		margin-right:21px;
+
+		&.main{
+			width:620px;
+			height:366px;
+		}
+
+		&.secondary{
+			width:300px;
+			height:366px;
+		}
+
+		&.third{
+			.inner-box{
+				width:300px;
+				height:173px;
+				background: $green;
+				margin-bottom: 20px;
+			}
+		}
+	}
+}

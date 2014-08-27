@@ -48,6 +48,20 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
             })
         };
 
+        /**
+         * Get all the apps in this category
+         */
+        API.request("featured").then(function(data){
+
+            var apps = $filter("DesktopApps")(data.objects);
+            $scope.popularapps = apps;
+
+            console.log(apps);
+
+            //fade the loader
+            $rootScope.loaded();
+        });
+
 
         $rootScope.loaded(function(){
             var parent = document.getElementById("HOME");
