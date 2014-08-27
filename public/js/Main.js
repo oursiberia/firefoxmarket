@@ -16,7 +16,7 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
      */
     $stateProvider.state("home",{
         url:"/",
-        templateUrl:"/templates/home.html"
+        templateUrl:"/build/templates/home.html"
     });
 
 
@@ -45,7 +45,7 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
     $stateProvider.state("CategoryView",{
         url:"/category/:name",
         templateUrl:function(urlattr){
-            return "/templates/apps/catview.html"
+            return "/build/templates/apps/catview.html"
         },
         controller:"CategoryViewController"
     });

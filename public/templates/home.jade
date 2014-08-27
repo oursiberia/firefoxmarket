@@ -1,0 +1,23 @@
+section#HOME(ng-controller="home",class="section ajax")
+    div#search-home
+        div.wrap
+            input#homesearch(type="text",name="search",ng-model="searchbox",placeholder="Search",ng-change="searchApp()")
+        div#search-home-result
+            div.wrap
+                div.searchresult(ng-repeat="result in results")
+                    a(ng-href="/app/{{result.id}}")
+                        img(ng-src="{{result.icon}}")
+                    h2.result-title {{result.name}}
+                    p.result-author {{result.author}}
+
+
+    div.wrap
+        div.home-main
+            h3 Categories
+            div(class="column main")
+
+            div(class="column secondary")
+
+            div(class="collumn third")
+                div.inner-box
+                div.inner-box

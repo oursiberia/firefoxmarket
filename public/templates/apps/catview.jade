@@ -1,0 +1,36 @@
+section#category-page
+    div#category-banner
+
+        div#banner
+        div.wrap
+            div#featured-category-apps
+                div.wrap
+                    div#in-view-featured(class="category in-view-featured")
+
+                    div(class="category featuredapps",style="display:none")
+                        div(class="category featured-app",ng-repeat="fapp in featuredapps")
+                            img(ng-src="{{fapp.icon}}")
+                            h1 {{fapp.name}}
+                            h3 {{fapp.author}}
+
+
+            div#category-details
+                img(src="/img/category-icon.png")
+                div.category-copy
+                    h1#category-title
+                    p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis risus viverra, placerat ante ut.
+
+
+    div.wrap
+        div#popular-in-category(class="category popular")
+            h3 Popular |
+                span.light New
+            div(class="category app-set",ng-repeat="app in popularapps")
+                div.app
+                    img(ng-src="{{app.icon}}")
+                    div.app-details
+                        h4 {{app.name}}
+                        p {{app.author}}
+
+
+                    div.install-button Free
