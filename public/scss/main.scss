@@ -74,7 +74,7 @@ header{
 				height:40px;
 				border-radius: 4px;
 				position: relative;
-				left:-200px;
+				left:-200px; 
 			}
 
 			#user{
@@ -93,7 +93,7 @@ header{
 				z-index: 99;
 				top: 0px;
 				overflow: hidden;
-				right:210px;
+				right:255px;
 				@include transition((background));
 
 				.identification{

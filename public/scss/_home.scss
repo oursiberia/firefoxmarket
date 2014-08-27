@@ -94,7 +94,7 @@
 	height:130px;
 	width:100%;
 	background: $blue;
-
+	position: relative;
 	div.wrap{
 		padding:20px;
 		padding-top:30px;
@@ -109,5 +109,19 @@
 			font-size:40px;
 		}
 	}
+
+	#search-home-result{
+		height:0px;
+		width:100%;
+		background: $blue;
+		position: absolute;
+		top:130px;
+		z-index: 99;
+	}
 }//end #search-home
 
+#search-home-result{
+	.searchresult{
+		display: inline-block;
+	}
+}

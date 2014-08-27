@@ -37,7 +37,7 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
 
         $scope.featuredapps = fapps;
 
-        swapApp(true);
+        swapApp();
     });
 
 
@@ -46,8 +46,11 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
      * Get all the apps in this category
      */
     API.request("apps_in_category",category).then(function(data){
+
         var apps = $filter("DesktopApps")(data.objects);
-        $scope.apps = apps;
+        $scope.popularapps = apps;
+
+        console.log(apps);
 
         //fade the loader
         $rootScope.loaded();
@@ -59,7 +62,7 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
      */
     var timer = setInterval(function(){
 
-        swapApp();
+        //swapApp();
     },2000);
 
 
@@ -87,13 +90,6 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
                         currentIndex = 0;
                     }
                     app = fapps[currentIndex];
-
-
-
-
-
-                    console.log("currentIndex is now : " + currentIndex);
-
 
 
                     var img = new Image();

@@ -2,8 +2,18 @@
     <div id="search-home">
 
         <div class="wrap">
-            <input id="homesearch" type="text" name="search" ng-model="searchbox" ng-change="searchApp()">
+            <input id="homesearch" type="text" name="search" ng-model="searchbox" placeholder="Search" ng-change="searchApp()">
 
+        </div>
+
+        <div id="search-home-result">
+            <div class="wrap">
+                <div class="searchresult" ng-repeat="result in results">
+                    <a ng-href="/app/{{result.id}}"><img ng-src="{{result.icon}}" alt="result-icon"/></a>
+                    <h2 class="result-title">{{result.name}}</h2>
+                    <p class="result-author">{{result.author}}</p>
+                </div>
+            </div>
         </div>
     </div>
 
