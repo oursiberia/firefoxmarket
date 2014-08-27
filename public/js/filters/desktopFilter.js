@@ -16,25 +16,23 @@ app.filter("DesktopApps",function(){
         if(length){
             limit = length;
         }else{
-            limit = data.objects.length;
+            limit = data.length;
         }
 
         for (var i = 0; i < limit; ++i) {
-            var name = data.objects[i].name["en-US"];
+            var name = data[i].name["en-US"];
             var obj = {};
 
 
-           for(var a = 0;a<data.objects[i].device_types.length;++a){
-               if(data.objects[i].device_types[a] === "desktop"){
-                   obj["icon"] = data.objects[i].icons["64"];
-                   obj["name"] =  data.objects[i].name["en-US"];
-                   obj["id"] = data.objects[i].id;
-                   obj["author"] = data.objects[i].author;
+           for(var a = 0;a<data[i].device_types.length;++a){
+               if(data[i].device_types[a] === "desktop"){
+                   obj["icon"] = data[i].icons["64"];
+                   obj["name"] =  data[i].name["en-US"];
+                   obj["id"] = data[i].id;
+                   obj["author"] = data[i].author;
                    obj["classname"] = "app";
 
                    obj["device"] = "desktop";
-
-                   console.log(obj);
                    apps.push(obj);
                }
            };
@@ -45,10 +43,10 @@ app.filter("DesktopApps",function(){
         }
 
         /*
-         obj["icon"] = data.objects[i].icons["64"];
-         obj["name"] =  data.objects[i].name["en-US"];
-         obj["id"] = data.objects[i].id;
-         obj["author"] = data.objects[i].author;
+         obj["icon"] = data[i].icons["64"];
+         obj["name"] =  data[i].name["en-US"];
+         obj["id"] = data[i].id;
+         obj["author"] = data[i].author;
          obj["classname"] = "app";
 
          obj["device"] = "desktop";
@@ -57,7 +55,7 @@ app.filter("DesktopApps",function(){
          apps.push(obj);
          */
 
-        console.log(apps);
+
         return apps;
     }
 });

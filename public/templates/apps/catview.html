@@ -5,13 +5,18 @@
             <div id="featured-category-apps">
                 <div class="wrap">
 
-                    <div class="category in-view-featured">
+                    <div class="category in-view-featured" id="in-view-featured">
 
                     </div>
 
 
-                    <div style="display: none" class="category featured-apps">
+                    <div style="display: none" class="category featuredapps">
                         <div class="category featured-app" ng-repeat="app in apps">
+
+                            <img ng-src="{{app.icon}}"/>
+                            <h1>{{app.name}}</h1>
+                            <h3>{{app.author}}</h3>
+
 
                         </div>
                     </div>
