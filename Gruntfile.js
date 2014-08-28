@@ -95,6 +95,10 @@ module.exports = function(grunt){
                 livereload: true
             },
 
+            jade:{
+                files:__dirname + "/public/templates/**/*.jade",
+                tasks:['jade:compile']
+            },
             js:{
                 files: [
                     files,
@@ -120,7 +124,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-jade');
 
     //builds everything
-    grunt.registerTask( 'default', ['uglify:dev','compass:dist']);
+    grunt.registerTask( 'default', ['uglify:dev','compass:dist','jade:compile']);
     grunt.registerTask('libs',['uglify:libs']);
 
 
