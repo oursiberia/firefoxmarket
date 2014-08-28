@@ -1,0 +1,40 @@
+section#HOME(ng-controller="home",class="section ajax")
+    div#search-home
+        div.wrap
+            input#homesearch(type="text",name="search",ng-model="searchbox",placeholder="Search",ng-change="searchApp()")
+        div#search-home-result
+            div.wrap
+                div.searchresult(ng-repeat="result in results")
+                    a(ng-href="/app/{{result.id}}")
+                        img(ng-src="{{result.icon}}")
+                    h2.result-title {{result.name}}
+                    p.result-author {{result.author}}
+
+
+    div.wrap
+        div.home-main
+            h3 Categories
+            div(class="column main")
+
+            div(class="column secondary")
+
+            div(class="collumn third")
+                div.inner-box
+
+                div.inner-box
+
+
+        div#featured
+            p.all-trigger(data-type="featured",ng-click="loadAll()") View All
+            h1 Featured Apps
+            div.apps
+                div(class="{{app.classname}} featured {{app.showfirst}}",ng-repeat="app in featured_apps")
+                    div
+                        div.curve
+                        div.app-details
+                            a(ng-href="/app/{{app.id}}")
+                                img.app-icon(ng-src="{{app.icon}}")
+                            a(ng-href="/app/{{app.id}}")
+                                h2.app-title {{app.name}}
+                            p.app-author {{app.author}}
+

@@ -1,0 +1,19 @@
+
+<section id="search">
+  <div id="searchform">
+    <button ng-click="search()" id="searchbutton">Search</button>
+    <div id="searchresults">
+      <div class="search-wrap">
+        <h1>Search</h1>
+        <input id="searchterm" type="text" name="search" ng-model="searchbox" ng-change="searchApp()"/>
+        <div class="search-divider"></div>
+        <div id="results">
+          <div ng-repeat="result in results" class="searchresult"><a ng-href="/app/{{result.id}}"><img ng-src="{{result.icon}}" alt="result-icon"/></a>
+            <h2 class="result-title">{{result.name}}</h2>
+            <p class="result-author">{{result.author}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

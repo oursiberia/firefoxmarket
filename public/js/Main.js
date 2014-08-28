@@ -16,7 +16,7 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
      */
     $stateProvider.state("home",{
         url:"/",
-        templateUrl:"/templates/home.html"
+        templateUrl:"/build/templates/home.html"
     });
 
 
@@ -25,7 +25,7 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
      */
     $stateProvider.state("AppNotFound",{
         url:"/app/notfound",
-        templateUrl:"/templates/apps/404.html"
+        templateUrl:"/templates/apps/404.jade"
     });
 
     /**
@@ -34,7 +34,7 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
     $stateProvider.state("AppView",{
         url:"/app/:name",
         templateUrl:function(urlattr){
-            return "/templates/apps/appview.html"
+            return "/build/templates/apps/appview.html"
         },
         controller:"AppViewController"
     });
@@ -45,30 +45,11 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
     $stateProvider.state("CategoryView",{
         url:"/category/:name",
         templateUrl:function(urlattr){
-            return "/templates/apps/catview.html"
+            return "/build/templates/apps/catview.html"
         },
         controller:"CategoryViewController"
     });
 
-    /**
-     * TODO decide what this shoudl show? Was thinking it would just show all the collections
-     */
-    $stateProvider.state("CollectionView",{
-        url:"/collection",
-        templateUrl:"/templates/apps/collectionview.html",
-        controller:"CollectionViewController"
-    });
-
-    /**
-     * Shows the detail view for a particular collection
-     */
-    $stateProvider.state("CollectionDetailView",{
-        url:"/collection/:id",
-        templateUrl:function(urlattr){
-            return "/templates/apps/collectionDetail.html"
-        },
-        controller:"CollectionDetailView"
-    });
 
     delete $httpProvider.defaults.headers.common["X-Requested-Width"];
 });

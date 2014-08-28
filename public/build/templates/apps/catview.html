@@ -1,0 +1,39 @@
+
+<section id="category-page">
+  <div id="category-banner">
+    <div id="banner"></div>
+    <div class="wrap">
+      <div id="featured-category-apps">
+        <div class="wrap">
+          <div id="in-view-featured" class="category in-view-featured"></div>
+          <div style="display:none" class="category featuredapps">
+            <div ng-repeat="fapp in featuredapps" class="category featured-app"><img ng-src="{{fapp.icon}}"/>
+              <h1>{{fapp.name}}</h1>
+              <h3>{{fapp.author}}</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="category-details"><img src="/img/category-icon.png"/>
+        <div class="category-copy">
+          <h1 id="category-title"></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis risus viverra, placerat ante ut.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div id="popular-in-category" class="category popular">
+      <h3>Popular |<span class="light">New</span></h3>
+      <div ng-repeat="app in popularapps" class="category app-set">
+        <div class="app"><img ng-src="{{app.icon}}"/>
+          <div class="app-details">
+            <h4>{{app.name}}</h4>
+            <p>{{app.author}}</p>
+          </div>
+          <div class="install-button">Free</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
