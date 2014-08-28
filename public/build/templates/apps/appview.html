@@ -3,8 +3,6 @@
 -->
 <section class="app">
   <div class="wrap">
-    <h1>{{name}}</h1>
-    <h3>{{author}}</h3>
     <div class="app-content-container">
       <div class="app-meta">
         <div class="img-rating"><img src="{{icon}}"/>
@@ -19,7 +17,33 @@
         </div>
         <div class="govt-rating"><img src="/img/esbrrating.png"/></div>
       </div>
-      <div class="app-information"></div>
+      <div class="app-information">
+        <div class="name-author">
+          <div class="download">
+            <h3>Free</h3>
+          </div>
+          <h1>{{name}}</h1><span class="divider">|</span>
+          <h3>{{author}}</h3>
+        </div>
+        <div class="tabs">
+          <ul>
+            <li>
+              <div data-tabname="description" data-content="{{app.description}}" ng-click="changeTabContent($event)" class="tab-trigger">
+                <h4>description</h4>
+              </div>
+              <div data-tabname="screenshots" ng-click="changeTabContent($event)" class="tab-trigger">
+                <h4>Screenshots</h4>
+              </div>
+              <div data-tabname="releasenotes" data-content="{{app.releaseNotes}}" ng-click="changeTabContent($event)" class="tab-trigger">
+                <h4>release notes</h4>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div id="tab-content">
+          <h1>TEST</h1>
+        </div>
+      </div>
     </div>
   </div>
 </section>

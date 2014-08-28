@@ -5,7 +5,7 @@ $borderColor:rgb(211,211,211);
 	background: rgb(246,246,246);
 	border-radius: 4px;
 	border:solid 1px rgb(211,211,211);
-
+	position: relative;
 	.app-meta{
 		padding-top:21px;
 
@@ -50,6 +50,51 @@ $borderColor:rgb(211,211,211);
 	}
 
 
+	.app-information{
+
+		position: absolute;
+		width:100%;
+		.download{
+			float:right;
+			width:100px;
+			height:30px;
+			border:solid 1px blue;
+		}
+		.name-author{
+			border-bottom:solid 1px $borderColor;
+			padding:21px;
+			width:100%;
+			h1,h3,.divider{
+				display: inline-block;
+				vertical-align: middle;
+			}
+		}
+
+		.tabs{
+			ul{
+				li{
+					div.tab-trigger{
+						h4{
+							font-size: 13px;
+						}
+						padding: 30px;
+						width: 189px;
+						text-align: center;
+						display: inline-block;
+						text-transform: uppercase;
+						font-family: "FiraLight";
+					}
+				}
+			}
+		}
+
+
+		#tab-content{
+			border-top:solid 1px $borderColor;
+			width:100%;
+			padding:19px;
+		}
+	}//end .app-information
 
 	.app-information,.app-meta{
 		display: inline-block;

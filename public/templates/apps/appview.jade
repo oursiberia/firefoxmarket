@@ -2,8 +2,7 @@
    Created by sortofsleepy on 8/28/14.
 section.app
     div.wrap
-        h1 {{name}}
-        h3 {{author}}
+
 
         div.app-content-container
             div.app-meta
@@ -23,4 +22,25 @@ section.app
 
 
             div.app-information
+                div.name-author
+                    div.download
+                        h3 Free
+                    h1 {{name}}
+                    span.divider |
+                    h3 {{author}}
+                div.tabs
+                    ul
+                        li
+                            div.tab-trigger(data-tabname="description", data-content="{{app.description}}",ng-click="changeTabContent($event)")
+                                h4 description
 
+                            div.tab-trigger(data-tabname="screenshots",ng-click="changeTabContent($event)")
+                                h4 Screenshots
+
+                            div.tab-trigger(data-tabname="releasenotes",data-content="{{app.releaseNotes}}",ng-click="changeTabContent($event)")
+                                h4 release notes
+
+
+
+                div#tab-content
+                    h1 TEST

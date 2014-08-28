@@ -29,6 +29,7 @@ app.controller("AppViewController",["$window","API","$scope","$rootScope",functi
             previews.push(preview);
         }
 
+        $scope.description = data.description[navigator.language];
         $scope.previews = previews;
         $scope.privacy = "http://marketplace.firefox.com" + data.privacy_policy
 
@@ -41,5 +42,23 @@ app.controller("AppViewController",["$window","API","$scope","$rootScope",functi
 
     });
 
+
+    $scope.changeTabContent = function(e){
+        var content = document.querySelector("#tab-content");
+
+        switch(e.target.getAttribute("tabname")){
+            case "description":
+                content.innerHTML = $scope.description;
+                break;
+
+            case "screenshots":
+                
+                break;
+
+            case "releasenotes":
+
+                break;
+        }
+    };
 
 }]);
