@@ -1,0 +1,18 @@
+
+
+section#search
+    div#searchform
+        button(ng-click="search()" id="searchbutton") Search
+
+        div#searchresults
+            div.search-wrap
+                h1 Search
+                input#searchterm(type="text",name="search",ng-model="searchbox" ng-change="searchApp()")
+
+                div.search-divider
+                div#results
+                    div.searchresult(ng-repeat="result in results")
+                        a(ng-href="/app/{{result.id}}")
+                            img(ng-src="{{result.icon}}",alt="result-icon")
+                        h2.result-title {{result.name}}
+                        p.result-author {{result.author}}
