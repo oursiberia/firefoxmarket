@@ -5,10 +5,21 @@
   <div class="wrap">
     <h1>{{name}}</h1>
     <h3>{{author}}</h3>
-    <ul class="app-categories">
-      <li ng-repeat="category in categories">
-        <p><a ng-href="/category/{{category}}">{{category}}</a></p>
-      </li>
-    </ul>
+    <div class="app-content-container">
+      <div class="app-meta">
+        <div class="img-rating"><img src="{{icon}}"/>
+          <div StarRating="StarRating" data-rating="3.5"></div>
+          <p>5480 reviews</p>
+        </div>
+        <div class="updates">
+          <h3>Updated</h3>
+          <p>May 14, 2014</p>
+          <p class="latest">Latest version</p>
+          <p class="version">0.2</p>
+        </div>
+        <div class="govt-rating"><img src="/img/esbrrating.png"/></div>
+      </div>
+      <div class="app-information"></div>
+    </div>
   </div>
 </section>

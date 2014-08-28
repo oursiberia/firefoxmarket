@@ -4,7 +4,23 @@ section.app
     div.wrap
         h1 {{name}}
         h3 {{author}}
-        ul.app-categories
-            li(ng-repeat="category in categories")
-                p
-                    a(ng-href="/category/{{category}}") {{category}}
+
+        div.app-content-container
+            div.app-meta
+                div.img-rating
+                    img(src="{{icon}}")
+                    div(StarRating,data-rating="3.5")
+                    p 5480 reviews
+                div.updates
+                    h3 Updated
+                    p May 14, 2014
+
+                    p.latest Latest version
+                    p.version 0.2
+
+                div.govt-rating
+                    img(src="/img/esbrrating.png")
+
+
+            div.app-information
+

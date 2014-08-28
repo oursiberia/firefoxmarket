@@ -1,0 +1,58 @@
+$borderColor:rgb(211,211,211);
+.app-content-container{
+	width:938px;
+	height:400px;
+	background: rgb(246,246,246);
+	border-radius: 4px;
+	border:solid 1px rgb(211,211,211);
+
+	.app-meta{
+		padding-top:21px;
+
+		border-right:solid 1px rgb(211,211,211);
+
+		.img-rating{
+			padding-right: 21px;
+			padding-left: 21px;
+			padding-bottom: 21px;
+			img{
+				width: 97%;
+			}
+		}
+
+		.updates{
+			border-top:solid 1px $borderColor;
+			padding-right: 21px;
+			padding-left: 21px;
+			border-bottom: solid 1px $borderColor;
+			text-align: center;
+			padding-top:21px;
+			padding-bottom:18px;
+			h3{
+				font-size:13px;
+			}
+			p{
+				font-size: 12px;
+
+
+			}
+		}
+
+		.govt-rating{
+			padding-top:21px;
+			padding-bottom: 21px;
+			img{
+				display: block;
+				max-width: 100%;
+				margin:0 auto;
+			}
+		}
+	}
+
+
+
+	.app-information,.app-meta{
+		display: inline-block;
+		vertical-align: top;
+	}
+}// end .app-content-container

@@ -9,11 +9,14 @@ app.controller("AppViewController",["$window","API","$scope","$rootScope",functi
 
     /** TODO /api/v1/apps/app/:id is still not CORS enabled */
     API.request("app_detail",id + "/").then(function(data){
+        console.log(data);
         $scope.author = data.author;
         $scope.categories = data.categories;
         $scope.content_ratings = data.content_ratings;
+        $scope.rating = data.content_ratings["rating"];
         $scope.name = data.name[navigator.language];
 
+        $scope.icon = data.icons["64"];
 
         //parse out previews
         var previews = [];
