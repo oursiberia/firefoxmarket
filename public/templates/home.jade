@@ -20,4 +20,21 @@ section#HOME(ng-controller="home",class="section ajax")
 
             div(class="collumn third")
                 div.inner-box
+
                 div.inner-box
+
+
+        div#featured
+            p.all-trigger(data-type="featured",ng-click="loadAll()") View All
+            h1 Featured Apps
+            div.apps
+                div(class="{{app.classname}} featured {{app.showfirst}}",ng-repeat="app in featured_apps")
+                    div
+                        div.curve
+                        div.app-details
+                            a(ng-href="/app/{{app.id}}")
+                                img.app-icon(ng-src="{{app.icon}}")
+                            a(ng-href="/app/{{app.id}}")
+                                h2.app-title {{app.name
+                            p.app-author {{app.author}}
+
