@@ -32,7 +32,7 @@ app.directive("starrating",function(){
                     console.log(decimals);
                 }
 
-                if(parseInt(decimals[1]) >= 5){
+                if(parseInt(decimals[0]) >= 5){
 
                     rating = parseInt(stars) + 1;
                 }else{
@@ -41,7 +41,7 @@ app.directive("starrating",function(){
 
             }//end else clause
 
-          
+
             /**
              * loop through and replace the unfilled stars
              * with the filled stars as needed
