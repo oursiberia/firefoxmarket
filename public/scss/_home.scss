@@ -1,48 +1,5 @@
 @import "vars";
 
-#featured{
-	margin-top:44px;
-}
-.apps{
-
-	.app{
-		border-radius: 5px;
-
-		//////// FEATURED //////////////
-		.curve{
-			height: 100px;
-			width: 222px;
-			background: $green;
-			position: absolute;
-			bottom: 0;
-			left: 71px;
-			border-radius: 86px / 37px;
-			transform: scale(2, 2);
-			z-index: 1;
-		}
-		&.featured{
-			margin-top:8px;
-			background:$greenSecondary;
-			overflow: hidden;
-			width: 300px;
-			height: 137px;
-			height: 137px;
-
-			a{
-				font-size:12px;
-				color:#fff;
-			}
-			p{
-				color:#fff;
-				font-size:10px;
-			}
-		}
-
-		&.highlighted{
-
-		}
-	}
-}
 
 #categories{
 

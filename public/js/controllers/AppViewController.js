@@ -33,30 +33,60 @@ app.controller("AppViewController",["$window","API","$scope","$rootScope",functi
         $scope.previews = previews;
         $scope.privacy = "http://marketplace.firefox.com" + data.privacy_policy
 
+
+
+        //support stuff;
         $scope.support_email = data.support_email[navigator.language];
         $scope.support_url = data.support_url[navigator.language];
-        $scope.tags = data.tags;
+
+
+
+
+        //versions of the app published.
         $scope.versions = data.versions;
+
+        //release notes
+        $scope.release_notes = data.release_notes;
+
+        //used to trigger download
+        $scope.manifest = data.manifest_url;
 
         $rootScope.loaded();
 
     });
 
 
+    /**
+     * What happens when we click on a tab trigger
+     * @param e
+     */
     $scope.changeTabContent = function(e){
         var content = document.querySelector("#tab-content");
 
-        switch(e.target.getAttribute("tabname")){
+        switch(e.target.getAttribute("data-tabname")){
             case "description":
+                console.log($scope.description);
                 content.innerHTML = $scope.description;
                 break;
 
             case "screenshots":
-                
+                console.log(screenshots);
+                content.innerHTML = "";
+                var previews = $scope.previews;
+                for(var i = 0;i<previews.length;++i){
+                    var image = new Image();
+                    image.src = previews[i].thumbnail_url;
+                    image.setAttribute("large",previvews[i].image_url);
+                    content.appendChild(image);
+
+
+                }
                 break;
 
             case "releasenotes":
-
+                if($scope.release_notes === null){
+                    content.innerHTML = "No release notes available";
+                }
                 break;
         }
     };

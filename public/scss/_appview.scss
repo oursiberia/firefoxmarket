@@ -1,3 +1,4 @@
+@import "matchstick/functions";
 $borderColor:rgb(211,211,211);
 .app-content-container{
 	width:938px;
@@ -53,7 +54,7 @@ $borderColor:rgb(211,211,211);
 	.app-information{
 
 		position: absolute;
-		width:100%;
+		width:81%;
 		.download{
 			float:right;
 			width:100px;
@@ -73,16 +74,37 @@ $borderColor:rgb(211,211,211);
 		.tabs{
 			ul{
 				li{
+
+					div:first-child.tab-trigger{
+						border-right:solid 1px $borderColor;
+					}
+
+					div:last-child.tab-trigger{
+						border-left: solid 1px $borderColor;
+					}
+
 					div.tab-trigger{
+						padding:30px;
 						h4{
 							font-size: 13px;
+							@include transition((color));
+							color:#333;
 						}
-						padding: 30px;
+
 						width: 189px;
 						text-align: center;
 						display: inline-block;
 						text-transform: uppercase;
 						font-family: "FiraLight";
+
+						&:hover{
+							cursor: pointer;
+
+							h4{
+								@include transition((color));
+								color:$blue;
+							}
+						}
 					}
 				}
 			}

@@ -13,19 +13,35 @@ app.directive("starrating",function(){
             var stars = $attr.rating;
             stars = stars.split(".");
 
-            var starratings = document.getElementById("rating").children;
+            var starratings = $el[0].children[0].children[0].children;
+
+
 
 
             /**
              * if it's above a .5, upp the rating,
              * otherwise just floor it.
              */
-            if(parseInt(stars[1]) >= 5){
-                rating = parseInt(stars) + 1;
-            }else{
-                rating = parseInt(stars);
-            }
 
+            if(stars.length == 1){
+                rating = stars[0];
+            }else{
+
+                if(stars[1] !== undefined){
+                    var decimals = stars[1].split("");
+                    console.log(decimals);
+                }
+
+                if(parseInt(decimals[1]) >= 5){
+
+                    rating = parseInt(stars) + 1;
+                }else{
+                    rating = Math.floor(parseInt(stars));
+                }
+
+            }//end else clause
+
+          
             /**
              * loop through and replace the unfilled stars
              * with the filled stars as needed

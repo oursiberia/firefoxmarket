@@ -14,7 +14,7 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
     API.request("featured").then(function(data){
         console.log(data);
         //var apps = $rootScope.processData(data);
-        var apps = $filter("DesktopApps")(data.objects);
+        var apps = $filter("DesktopApps")(data.objects,40);
 
         //pick one to highlight at random
         var index = Math.floor(Math.random() * apps.length);
@@ -48,19 +48,6 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
             })
         };
 
-        /**
-         * Get all the apps in this category
-         */
-        API.request("featured").then(function(data){
-
-            var apps = $filter("DesktopApps")(data.objects);
-            $scope.popularapps = apps;
-
-            console.log(apps);
-
-            //fade the loader
-            $rootScope.loaded();
-        });
 
 
         $rootScope.loaded(function(){
@@ -165,7 +152,7 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
         //load up some apps from that category
         API.clientRequest("search",params ).then(function(data){
             var apps = $filter("DesktopApps")(data,10);
-            console.log(apps);
+
             $scope.category_apps = apps;
             if(is_showing_category === false){
                 TweenMax.to(document.querySelector(".category-wrap"),1,{

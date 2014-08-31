@@ -13,7 +13,7 @@ $grey:#e9e9e9;
 	padding:0;
 }
 
-#rating{
+.rating{
 	li{
 		float:left;
 
@@ -198,30 +198,36 @@ header{
 		}
 	}
 }
-
-//apps
+//general styling for app boxes
 .apps{
-	&:after{
-		content:"";
-		display: block;
-		clear:both;
-	}
-	.app {
-		//border:solid 1px red;
-		float: left;
-		padding: 30px;
-		margin-bottom: 20px;
-		position: relative;
-
-		.app-icon {
-			width: 64px;
-			margin: 0 auto;
-			display: block;
+	.app{
+		width:300px;
+		height:193px;
+		background:#F8F8F8;
+		border:solid 1px #D6D6D6;
+		padding:20px;
+		.app-icon{
+			width:60px;
+			height:60px;
 		}
 
-		.app-details {
-			position: relative;
-			z-index: 2;
-		}
+		.app-details{
+			.app-image,.app-copy{
+				display: inline-block;
+				vertical-align: top;
+			}
+
+			.app-copy{
+				a{
+					h2{
+						font-size: 16px;
+					}
+					p{
+						font-size:12px;
+						font-family: "FiraLight";
+					}
+				}
+			}
+		}// end .app-details
 	}
 }
