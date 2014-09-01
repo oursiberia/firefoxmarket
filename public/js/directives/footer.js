@@ -4,7 +4,7 @@
 app.directive("footer",function(){
 
     return {
-        templateUrl:"templates/footer.html",
+        templateUrl:"/build/templates/footer.html",
         controller:function($scope){
 
         },
