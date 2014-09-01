@@ -32,11 +32,12 @@ app.filter("DesktopApps",function(){
                    obj["author"] = data[i].author;
                    obj["classname"] = "app";
                    obj["rating"] = data[i].ratings["average"];
-                 //  obj["description"] = data.description[navigator.language];
-                   if(data.description !== undefined){
-                       obj["description"] = data.description[navigator.language];
+                   if(data[i].hasOwnProperty("description")){
+                       obj["description"] = data[i].description[navigator.language];
+
                    }
                    obj["device"] = "desktop";
+                   console.log(obj);
                    apps.push(obj);
                }
            };

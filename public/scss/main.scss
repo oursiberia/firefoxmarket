@@ -136,7 +136,7 @@ header{
 }
 
 .wrap{
-	max-width: 1500px;
+	max-width: 1400px;
 	margin: 0 auto;
 }
 
@@ -205,19 +205,41 @@ header{
 		height:193px;
 		background:#F8F8F8;
 		border:solid 1px #D6D6D6;
-		padding:20px;
+		overflow: hidden;
+		margin-right:20px;
 		.app-icon{
 			width:60px;
 			height:60px;
 		}
 
 		.app-details{
+			border-bottom: solid 1px #D6D6D6;
+			padding-bottom: 20px;
 			.app-image,.app-copy{
 				display: inline-block;
 				vertical-align: top;
 			}
 
 			.app-copy{
+				overflow: hidden;
+				position:relative;
+				width:190px;
+				.app-download-button{
+					position:absolute;
+					right:0;
+					bottom:0;
+					width:65px;
+					height:25px;
+					border-radius: 4px;
+					background: #333;
+					color:#fff;
+					p{
+						text-align: center;
+						font-size:13px;
+					}
+				}
+
+
 				a{
 					h2{
 						font-size: 16px;
@@ -229,5 +251,11 @@ header{
 				}
 			}
 		}// end .app-details
+
+		.app-description{
+			font-size:14px;
+			font-family: "FiraLight";
+			overflow: hidden;
+		}
 	}
 }

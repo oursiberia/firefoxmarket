@@ -34,19 +34,15 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
         //hide everything in the beginning cept first 4 apps
         var first = [];
         for(var i = 0;i<4;++i){
-            apps[i].showfirst = "showfirst";
+            first.push(apps[i]);
         }
 
 
 
-        $scope.featured_apps = apps;
+        $scope.featured_apps = first;
 
 
-        $scope.loadAll = function(){
-            iso.arrange({
-                filter:".app"
-            })
-        };
+
 
 
 
@@ -57,14 +53,14 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
             console.log("done rendering");
 
             //isotope all things
-            var container = document.querySelector(".apps");
+           /* var container = document.querySelector(".apps");
             iso = new Isotope(container,{
-                itemSelector: '.app',
-                filter:".showfirst",
-                masonry: {
-                    gutter:20
-                }
-            });
+            itemSelector: '.app',
+            filter:".showfirst",
+            masonry: {
+            gutter:20
+            }
+            });*/
 
 
 

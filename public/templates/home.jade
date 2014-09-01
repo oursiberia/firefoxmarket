@@ -1,7 +1,7 @@
 section#HOME(ng-controller="home",class="section ajax")
-    div#search-home
-        div.wrap
-            input#homesearch(type="text",name="search",ng-model="searchbox",placeholder="Search",ng-change="searchApp()")
+        div#search-home
+            div.wrap
+                input#homesearch(type="text",name="search",ng-model="searchbox",placeholder="Search",ng-change="searchApp()")
         div#search-home-result
             div.wrap
                 div.searchresult(ng-repeat="result in results")
@@ -12,18 +12,91 @@ section#HOME(ng-controller="home",class="section ajax")
 
 
         div#featured
-            p.all-trigger(data-type="featured",ng-click="loadAll()") View All
-            h1 Featured Apps
-            div.apps
-                div(class="{{app.classname}} featured {{app.showfirst}}",ng-repeat="app in featured_apps")
-                    div.app-wrap
-                        div.app-details
-                            div.app-image
-                                a(ng-href="/app/{{app.id}}")
-                                    img.app-icon(ng-src="{{app.icon}}")
+            div.wrap
+                h1 Featured Apps
+                div.apps(class="home-apps")
+                    div(class="{{app.classname}} featured {{app.showfirst}}",ng-repeat="app in featured_apps")
 
-                            div.app-copy
-                                a(ng-href="/app/{{app.id}}")
-                                    h2.app-title {{app.name}}
-                                    p.app-author {{app.author}}
-                                    div(starrating,data-rating="{{app.rating}}")
+                        div.app-wrap
+                            div.app-details
+                                div.app-image
+                                    a(ng-href="/app/{{app.id}}")
+                                        img.app-icon(ng-src="{{app.icon}}")
+
+                                div.app-copy
+                                    div.app-download-button
+                                        p Free
+                                    a(ng-href="/app/{{app.id}}")
+                                        h2.app-title {{app.name}}
+                                        p.app-author {{app.author}}
+                                        div(starrating,data-rating="{{app.rating}}")
+
+
+                            div.app-description
+                                p(ng-bind-html="app.description | htmlRender ")
+
+
+        div#ecollections(class="home-collections")
+            div.wrap
+                div.collections
+                    div.collection
+                        div.layerbackground
+                        div.collection-apps
+                            div.collection-app
+                            div.collection-app
+                            div.collection-app
+
+                        div.collection-copy
+                            h2 Our Staff Picks
+                            p fiehsoifheoisfhoesifheosifhoeishfoeishfo
+
+                    div.collection
+                        div.layerbackground
+                        div.collection-apps
+                            div.collection-app
+                            div.collection-app
+                            div.collection-app
+                        div.collection-copy
+                            h2 Top three Games
+                            p fiehsoifheoisfhoesifheosifhoeishfoeishfo
+                    div.collection
+                        div.layerbackground
+                        div.collection-apps
+                            div.collection-app
+                            div.collection-app
+                            div.collection-app
+                        div.collection-copy
+                            h2 Great Apps for the workplace
+                            p fiehsoifheoisfhoesifheosifhoeishfoeishfo
+
+
+        div#categories
+            div.wrap
+                div.category
+                    div.category-title
+                        div.title-wrap
+                            div.icon
+                            div.title-copy
+                                h3 Apple
+                                p mapple
+                div.category
+                    div.category-title
+                        div.title-wrap
+                            div.icon
+                            div.title-copy
+                                h3 Apple
+                                p mapple
+                div.category
+                    div.category-title
+                        div.title-wrap
+                            div.icon
+                            div.title-copy
+                                h3 Apple
+                                p mapple
+                div.category
+                    div.category-title
+                        div.title-wrap
+                            div.icon
+                            div.title-copy
+                                h3 Apple
+                                p mapple
