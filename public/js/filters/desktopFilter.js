@@ -18,7 +18,7 @@ app.filter("DesktopApps",function(){
         }else{
             limit = data.length;
         }
-        console.log(limit);
+
         for (var i = 0; i < limit; ++i) {
             var name = data[i].name["en-US"];
             var obj = {};

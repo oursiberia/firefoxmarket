@@ -14,6 +14,7 @@ app.directive("appreviews",["API","$filter",function(API,$filter){
                     var review = data.objects[i];
 
                     review.body = $filter("LongCopyFilter")(review.body);
+
                     //set the values
                     $scope.copy = review.body;
                     $scope.rating = review.rating;
