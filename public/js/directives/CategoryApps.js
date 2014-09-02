@@ -33,6 +33,7 @@ app.directive("categoryapps",["API",function(API){
                         id:app.id,
                         category_name:app.categories,
                         author:app.author,
+                        name:app.name[navigator.language],
                         rating:app.ratings["average"]
                     });
 
