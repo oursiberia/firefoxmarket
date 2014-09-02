@@ -17,18 +17,13 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
 
     //these are the apps that will get featured
     var fapps = [];
-
     API.request("featured","&cat=" + category).then(function(data) {
-
         /**
         TODO fix this so it actually features featured apps. The DB query seems to be a little weak and returns only one result
-         var apps = $filter("DesktopApps")(data.featured);
-
+         var apps = $filter("DesktopApps")(data.objects);
          */
 
         var apps = $filter("DesktopApps")(data.objects);
-
-
 
         //limit to 4
         for(var i = 0;i<4;++i){
@@ -36,13 +31,12 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
         }
 
         $scope.featuredapps = fapps;
-
         swapApp();
     });
 
 
 
-        /**
+    /**
      * Get all the apps in this category
      */
     API.request("apps_in_category",category).then(function(data){
@@ -55,11 +49,11 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
     });
 
 
+    /**==================== FUNCTIONS ===========================*/
     /**
      * This swaps out the featured apps
      */
     var timer = setInterval(function(){
-
         swapApp();
     },2000);
 

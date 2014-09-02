@@ -95,44 +95,7 @@
 	}
 }
 
-.home-collections{
-	.collections{
 
-		.collection{
-			width:400px;
-			height:230px;
-			background:#42cafe;
-			display: inline-block;
-			vertical-align: top;
-			margin-right:31px;
-			position:relative;
-
-			.collection-apps{
-				max-width: 256px;
-				margin:0 auto;
-				margin-top:20px;
-				.collection-app{
-					height:70px;
-					width:70px;
-					background: #333;
-					display: inline-block;
-					vertical-align: top;
-					position:relative;
-					z-index: 2;
-					margin-right:12px;
-				}
-			}
-		}
-	}
-
-	.layerbackground{
-		width:100%;
-		height:64px;
-		background:red;
-		position:absolute;
-		top:0;
-	}
-}
 
 #category-list{
 	.category{

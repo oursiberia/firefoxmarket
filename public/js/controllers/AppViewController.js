@@ -1,3 +1,7 @@
+/**
+ * Controller for the single App view.
+ * displays app info
+ */
 app.controller("AppViewController",["$window","API","$scope","$rootScope",function($window,API,$scope,$rootScope){
 
     //get the app id out of the url

@@ -22,6 +22,73 @@
       </div>
     </div>
   </div>
+  <div class="editorial-collections">
+    <div class="wrap">
+      <div class="collections">
+        <div class="collection">
+          <div class="layerbackground"></div>
+          <div class="collection-apps">
+            <div class="collection-app"></div>
+            <div class="collection-app"></div>
+            <div class="collection-app"></div>
+          </div>
+          <div class="collection-copy">
+            <h2>Our Staff Picks</h2>
+            <p>fiehsoifheoisfhoesifheosifhoeishfoeishfo</p>
+          </div>
+        </div>
+        <div class="collection">
+          <div class="layerbackground"></div>
+          <div class="collection-apps">
+            <div class="collection-app"></div>
+            <div class="collection-app"></div>
+            <div class="collection-app"></div>
+          </div>
+          <div class="collection-copy">
+            <h2>Top three Games</h2>
+            <p>fiehsoifheoisfhoesifheosifhoeishfoeishfo</p>
+          </div>
+        </div>
+        <div class="collection">
+          <div class="layerbackground"></div>
+          <div class="collection-apps">
+            <div class="collection-app"></div>
+            <div class="collection-app"></div>
+            <div class="collection-app"></div>
+          </div>
+          <div class="collection-copy">
+            <h2>Great Apps for the workplace</h2>
+            <p>fiehsoifheoisfhoesifheosifhoeishfoeishfo</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="featured">
+    <div class="wrap">
+      <h1>Featured Apps</h1>
+      <div class="apps home-apps">
+        <div ng-repeat="app in featuredapps" class="{{app.classname}} featured {{app.showfirst}} with-description">
+          <div class="app-wrap">
+            <div class="app-details">
+              <div class="app-image"><a ng-href="/app/{{app.id}}"><img ng-src="{{app.icon}}" class="app-icon"/></a></div>
+              <div class="app-copy">
+                <div class="app-download-button">
+                  <p>Free</p>
+                </div><a ng-href="/app/{{app.id}}">
+                  <h2 class="app-title">{{app.name}}</h2>
+                  <p class="app-author">{{app.author}}</p>
+                  <div starrating="starrating" data-rating="{{app.rating}}"></div></a>
+              </div>
+            </div>
+            <div class="app-description">
+              <div appreviews="appreviews" data-appid="{{app.id}}"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="wrap">
     <div id="popular-in-category" class="category popular">
       <h3>Popular |<span class="light">New</span></h3>

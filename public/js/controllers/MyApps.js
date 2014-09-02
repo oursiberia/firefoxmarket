@@ -1,10 +1,9 @@
 /**
- * For the app listing page
+ * For User page. Lists apps currently used.
  */
 app.controller("MyApps",function(){
 
     //get apps that are installed.
     var r = navigator.mozApps.getInstalled();
 
-    /** TODO api endpoint for login still doesn't have CORS enabled */
 });
