@@ -54,7 +54,11 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
      * This swaps out the featured apps
      */
     var timer = setInterval(function(){
-        swapApp();
+        if(window.location.href.search("category") !== -1){
+            swapApp();
+        }else{
+            clearInterval(timer);
+        }
     },2000);
 
 
