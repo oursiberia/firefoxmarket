@@ -17,7 +17,7 @@
     <div class="wrap">
       <h1>Featured Apps</h1>
       <div class="apps home-apps">
-        <div ng-repeat="app in featured_apps" class="{{app.classname}} featured {{app.showfirst}}">
+        <div ng-repeat="app in featured_apps" class="{{app.classname}} featured {{app.showfirst}} with-description">
           <div class="app-wrap">
             <div class="app-details">
               <div class="app-image"><a ng-href="/app/{{app.id}}"><img ng-src="{{app.icon}}" class="app-icon"/></a></div>
@@ -80,51 +80,18 @@
       </div>
     </div>
   </div>
-  <div id="categories">
+  <div id="category-list">
     <div class="wrap">
-      <div class="category">
-        <div class="category-title">
+      <div ng-repeat="item in appcategories" class="category">
+        <div data-name="{{item.name}}" class="category-title">
           <div class="title-wrap">
             <div class="icon"></div>
             <div class="title-copy">
-              <h3>Apple</h3>
-              <p>mapple</p>
+              <h3>{{item.name}}</h3>
             </div>
           </div>
         </div>
-      </div>
-      <div class="category">
-        <div class="category-title">
-          <div class="title-wrap">
-            <div class="icon"></div>
-            <div class="title-copy">
-              <h3>Apple</h3>
-              <p>mapple</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="category">
-        <div class="category-title">
-          <div class="title-wrap">
-            <div class="icon"></div>
-            <div class="title-copy">
-              <h3>Apple</h3>
-              <p>mapple</p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="category">
-        <div class="category-title">
-          <div class="title-wrap">
-            <div class="icon"></div>
-            <div class="title-copy">
-              <h3>Apple</h3>
-              <p>mapple</p>
-            </div>
-          </div>
-        </div>
+        <div categoryapps="categoryapps" data-categoryname="{{item.slug}}"></div>
       </div>
     </div>
   </div>

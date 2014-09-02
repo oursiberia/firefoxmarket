@@ -15,7 +15,7 @@ section#HOME(ng-controller="home",class="section ajax")
             div.wrap
                 h1 Featured Apps
                 div.apps(class="home-apps")
-                    div(class="{{app.classname}} featured {{app.showfirst}}",ng-repeat="app in featured_apps")
+                    div(class="{{app.classname}} featured {{app.showfirst}} with-description",ng-repeat="app in featured_apps")
 
                         div.app-wrap
                             div.app-details
@@ -70,33 +70,14 @@ section#HOME(ng-controller="home",class="section ajax")
                             p fiehsoifheoisfhoesifheosifhoeishfoeishfo
 
 
-        div#categories
+        div#category-list
             div.wrap
-                div.category
-                    div.category-title
+                div.category(ng-repeat="item in appcategories")
+                    div.category-title(data-name="{{item.name}}")
                         div.title-wrap
                             div.icon
                             div.title-copy
-                                h3 Apple
-                                p mapple
-                div.category
-                    div.category-title
-                        div.title-wrap
-                            div.icon
-                            div.title-copy
-                                h3 Apple
-                                p mapple
-                div.category
-                    div.category-title
-                        div.title-wrap
-                            div.icon
-                            div.title-copy
-                                h3 Apple
-                                p mapple
-                div.category
-                    div.category-title
-                        div.title-wrap
-                            div.icon
-                            div.title-copy
-                                h3 Apple
-                                p mapple
+                                h3 {{item.name}}
+
+
+                    div(categoryapps,data-categoryname="{{item.slug}}")

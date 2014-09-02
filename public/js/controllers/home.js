@@ -12,7 +12,7 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
      * Load featured apps
      */
     API.request("featured").then(function(data){
-        console.log(data);
+
         //var apps = $rootScope.processData(data);
         var apps = $filter("DesktopApps")(data.objects,40);
 
@@ -37,37 +37,20 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
             first.push(apps[i]);
         }
 
-
-
         $scope.featured_apps = first;
-
-
-
 
 
 
         $rootScope.loaded(function(){
             var parent = document.getElementById("HOME");
             angular.element(parent).removeClass("ajax");
-
-            console.log("done rendering");
-
-            //isotope all things
-           /* var container = document.querySelector(".apps");
-            iso = new Isotope(container,{
-            itemSelector: '.app',
-            filter:".showfirst",
-            masonry: {
-            gutter:20
-            }
-            });*/
-
-
-
         });
     });
 
 
+    /**
+     * Does the searching. Tween to open up
+     */
     $scope.searchApp = function(){
         var selector = document.querySelector("#search-home-result");
         TweenMax.to(selector,1,{
@@ -79,6 +62,10 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
         })
     };
 
+    /**
+     * Runs the search query
+     * @returns {boolean}
+     */
     function query(){
         //get the search term;
         var term = document.getElementById("homesearch");
@@ -147,7 +134,7 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
         }
         //load up some apps from that category
         API.clientRequest("search",params ).then(function(data){
-            var apps = $filter("DesktopApps")(data,10);
+            var apps = $filter("DesktopApps")(data,4);
 
             $scope.category_apps = apps;
             if(is_showing_category === false){
@@ -157,11 +144,45 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
 
                 is_showing_category = true;
             }
-
-
         });
 
     };
 
 
+    /**
+     * Get a random list of categories
+     */
+    API.request("categories").then(function(data){
+        var categories = [];
+
+        //objects to be displayed
+        var display_objects = [];
+
+        /**
+         * pick some random categories
+         */
+        for(var i = 0;i<4;++i){
+            var obj = {};
+            var rand = Math.floor(Math.random()*data.objects.length);
+            var cat = data.objects[rand];
+
+
+            categories.push(cat);
+        }
+
+
+        $scope.appcategories = categories;
+
+
+
+        /**
+         * Pull up some apps from those categories.
+         * Empty arrays somehow get passed in when trying to use the filter so
+         * we need to filter out apps manually,
+         * @type {string}
+         */
+
+
+
+    });
 }]);

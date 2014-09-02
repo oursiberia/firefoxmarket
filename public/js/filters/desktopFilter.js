@@ -37,7 +37,6 @@ app.filter("DesktopApps",function(){
 
                    }
                    obj["device"] = "desktop";
-                   console.log(obj);
                    apps.push(obj);
                }
            };

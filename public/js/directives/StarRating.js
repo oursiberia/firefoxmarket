@@ -29,7 +29,6 @@ app.directive("starrating",function(){
 
                 if(stars[1] !== undefined){
                     var decimals = stars[1].split("");
-                    console.log(decimals);
                 }
 
                 if(parseInt(decimals[0]) >= 5){
