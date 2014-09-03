@@ -39,6 +39,7 @@ app.controller("AppViewController",["$window","API","$scope","$rootScope","$filt
         }
 
         $scope.description = data.description[navigator.language];
+
         $scope.previews = previews;
 
         //TODO come up with actual page or modal for privacy policy
@@ -127,7 +128,6 @@ app.controller("AppViewController",["$window","API","$scope","$rootScope","$filt
                         id:oapp.id
                     });
 
-
             }
 
             $scope.relatedapps = relatedapps;
@@ -143,26 +143,39 @@ app.controller("AppViewController",["$window","API","$scope","$rootScope","$filt
      * @param e
      */
     $scope.changeTabContent = function(e){
-        var content = document.querySelector("#tab-content");
 
-        switch(e.target.getAttribute("data-tabname")){
+        var content = document.querySelector("#tab-content");
+        content.innerHTML = "";
+        var target = e.target;
+        if(e.target.tagName === "H4"){
+            target = e.target.parentNode;
+        }
+
+
+        switch(target.getAttribute("data-tabname")){
             case "description":
                 console.log($scope.description);
                 content.innerHTML = $scope.description;
                 break;
 
             case "screenshots":
-                console.log(screenshots);
+
                 content.innerHTML = "";
+                var previewWrap = document.createElement("div");
+                previewWrap.className = "screenshots";
+
                 var previews = $scope.previews;
+                console.log(previews);
                 for(var i = 0;i<previews.length;++i){
                     var image = new Image();
-                    image.src = previews[i].thumbnail_url;
-                    image.setAttribute("large",previvews[i].image_url);
-                    content.appendChild(image);
+                    image.src = previews[i].thumb;
+                    image.setAttribute("large",previews[i].image);
+                    previewWrap.appendChild(image);
 
 
                 }
+
+                content.appendChild(previewWrap);
                 break;
 
             case "releasenotes":
