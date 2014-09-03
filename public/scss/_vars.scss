@@ -10,7 +10,8 @@ $blueSecondary:#42cafe;
 $greenSecondary:#66d071;
 $yellowSecondary:#ffe26e;
 $redSecondary:#ff6c70;
-
+$panelBackground:rgb(246,246,246);
+$panelBorder:rgb(211,211,211);
 
 //collections
 @mixin feedColor($color,$opacity:1.0){
@@ -27,4 +28,14 @@ $redSecondary:#ff6c70;
 	}@else if $color == "amethyst"{
 		color:rgba(90,25,126,$opacity);
 	}
+}
+
+/**
+ *	Main panel styling
+ */
+@mixin panel{
+	background: rgb(246,246,246);
+	border-radius: 4px;
+	border:solid 1px rgb(211,211,211);
+	position: relative;
 }
