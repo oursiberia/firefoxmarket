@@ -75,6 +75,7 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
          */
         if(term.value == ""){
             console.log("no search term entered");
+            closeSearch();
             // alert("please enter a search term");
             return false;
         }
@@ -116,6 +117,28 @@ app.controller("home",["$rootScope","API","$scope","$filter","$http",function($r
     }
 
 
+    /**
+     * Closes the search panel
+     */
+    function closeSearch(){
+        var selector = document.querySelector("#search-home-result");
+        TweenMax.to(selector,0.5,{
+            opacity:0,
+            onComplete:function(){
+                TweenMax.to(selector,0.5,{
+                    height:0,
+                    onComplete:function(){
+
+                        $rootScope.unlockBody();
+                    }
+
+                })
+                selector.innerHTML = "";
+            }
+        })
+
+
+    }
 
     /**
      * Category preview trigger

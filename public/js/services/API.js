@@ -10,7 +10,10 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
         "search":"/api/v1/apps/search/",
         "collections_detail":"/api/v2/feed/collections/",
         "categories":"/api/v1/apps/category/",
-        "ratings":"/api/v1/apps/rating/"
+        "ratings":"/api/v1/apps/rating/",
+
+
+        "abuse":"/api/v1/abuse/app/" ////TODO not wired up for beta right now
     }; //end routes
 
 

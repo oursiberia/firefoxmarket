@@ -364,3 +364,32 @@ header{
 	}
 
 }
+
+/**
+ *	General App Download BUtton
+ */
+
+.app-download-button{
+	width:65px;
+	height:25px;
+	border-radius: 4px;
+	position: relative;
+	background: #333;
+
+	/**
+	 *	For containers that are smaller(ie app view in the other applications category)
+	 */
+	&.mini-container{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	p{
+		position: absolute;
+		top:2px;
+		left:19px;
+		font-size: 13px;
+		color:#fff;
+		color:#fff;
+		font-family: "FiraRegular";
+	}
+}
