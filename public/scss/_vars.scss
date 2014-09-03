@@ -39,3 +39,11 @@ $panelBorder:rgb(211,211,211);
 	border:solid 1px rgb(211,211,211);
 	position: relative;
 }
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
