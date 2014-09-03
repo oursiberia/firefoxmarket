@@ -19,14 +19,15 @@
 }
 
 #search-home{
-	height:130px;
+	height:200px;
 	width:100%;
-	background: $blue;
+	background: $dark_gray;
 	position: relative;
 	div.wrap{
 		padding:20px;
-		padding-top:30px;
+		padding-top:40px;
 		#homesearch{
+			font-family: "FiraThin";
 			outline: none;
 			padding:4px;
 			background: none;
@@ -34,7 +35,8 @@
 			border-bottom:solid 1px #fff;
 			width:100%;
 			color:#fff;
-			font-size:40px;
+			font-size:60px;
+			letter-spacing: -1.5px;
 		}
 	}
 
@@ -106,11 +108,18 @@
 		display: inline-block;
 		vertical-align: top;
 		margin-right:20px;
+		-webkit-border-top-left-radius: 4px;
+		-webkit-border-top-right-radius: 4px;
+		-moz-border-radius-topleft: 4px;
+		-moz-border-radius-topright: 4px;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
 
 		.category-title{
 			background:#fff;
 			width:100%;
 			height:103px;
+
 			.title-wrap{
 				padding:20px;
 				.icon,.title-copy{
