@@ -1,8 +1,7 @@
-div.rating
-    div(starrating,data-rating="{{rating}}")
+div.review(data-rating="{{rating}}")
+    div(class="review-rating", starrating, data-rating="{{rating}}", data-review="true")
     br
     div.rating-copy
         p {{copy}}
-    br
     div.username
         p {{username}}

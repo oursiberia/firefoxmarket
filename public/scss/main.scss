@@ -241,6 +241,10 @@ header{
 			height:193px;
 		}
 
+		&.with-review{
+			height:255px;
+		}
+
 		height:100%;
 		background:#F8F8F8;
 		border:solid 1px #D6D6D6;
@@ -345,4 +349,17 @@ header{
 		position:absolute;
 		top:0;
 	}
+}
+
+/**
+ *	Ratings
+ */
+.review{
+	text-align: center;
+
+	.review-rating{
+		max-width: 100px;
+		margin:0 auto;
+	}
+
 }

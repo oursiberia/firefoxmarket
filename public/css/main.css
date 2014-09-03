@@ -765,28 +765,32 @@ header .wrap div:last-child #menu-trigger img {
 .apps .app.with-description {
   height: 193px;
 }
-/* line 249, ../scss/main.scss */
+/* line 244, ../scss/main.scss */
+.apps .app.with-review {
+  height: 255px;
+}
+/* line 253, ../scss/main.scss */
 .apps .app .app-icon {
   width: 60px;
   height: 60px;
 }
-/* line 254, ../scss/main.scss */
+/* line 258, ../scss/main.scss */
 .apps .app .app-details {
   border-bottom: solid 1px #D6D6D6;
   padding-bottom: 20px;
 }
-/* line 257, ../scss/main.scss */
+/* line 261, ../scss/main.scss */
 .apps .app .app-details .app-image, .apps .app .app-details .app-copy {
   display: inline-block;
   vertical-align: top;
 }
-/* line 262, ../scss/main.scss */
+/* line 266, ../scss/main.scss */
 .apps .app .app-details .app-copy {
   overflow: hidden;
   position: relative;
   width: 190px;
 }
-/* line 266, ../scss/main.scss */
+/* line 270, ../scss/main.scss */
 .apps .app .app-details .app-copy .app-download-button {
   position: absolute;
   right: 0;
@@ -797,21 +801,21 @@ header .wrap div:last-child #menu-trigger img {
   background: #333;
   color: #fff;
 }
-/* line 275, ../scss/main.scss */
+/* line 279, ../scss/main.scss */
 .apps .app .app-details .app-copy .app-download-button p {
   text-align: center;
   font-size: 13px;
 }
-/* line 283, ../scss/main.scss */
+/* line 287, ../scss/main.scss */
 .apps .app .app-details .app-copy a h2 {
   font-size: 14px;
 }
-/* line 286, ../scss/main.scss */
+/* line 290, ../scss/main.scss */
 .apps .app .app-details .app-copy a p {
   font-size: 12px;
   font-family: "FiraLight";
 }
-/* line 294, ../scss/main.scss */
+/* line 298, ../scss/main.scss */
 .apps .app .app-description {
   font-size: 14px;
   font-family: "FiraLight";
@@ -824,7 +828,7 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	Editorial content
  */
-/* line 314, ../scss/main.scss */
+/* line 318, ../scss/main.scss */
 .editorial-collections .collections .collection {
   width: 400px;
   height: 230px;
@@ -834,13 +838,13 @@ header .wrap div:last-child #menu-trigger img {
   margin-right: 31px;
   position: relative;
 }
-/* line 323, ../scss/main.scss */
+/* line 327, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps {
   max-width: 256px;
   margin: 0 auto;
   margin-top: 20px;
 }
-/* line 327, ../scss/main.scss */
+/* line 331, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app {
   height: 70px;
   width: 70px;
@@ -851,11 +855,24 @@ header .wrap div:last-child #menu-trigger img {
   z-index: 2;
   margin-right: 12px;
 }
-/* line 341, ../scss/main.scss */
+/* line 345, ../scss/main.scss */
 .editorial-collections .layerbackground {
   width: 100%;
   height: 64px;
   background: red;
   position: absolute;
   top: 0;
+}
+
+/**
+ *	Ratings
+ */
+/* line 357, ../scss/main.scss */
+.review {
+  text-align: center;
+}
+/* line 360, ../scss/main.scss */
+.review .review-rating {
+  max-width: 100px;
+  margin: 0 auto;
 }
