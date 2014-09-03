@@ -4,3 +4,27 @@
 	align-items: center;
 	justify-content: center;
 }
+
+//collections
+@mixin feedColor($color,$opacity:1.0){
+	@if $color == "ruby"{
+		color:rgba(206,0,28,$opacity);
+	}@else if $color == "amber"{
+		color:rgba(246,136,19,$opacity);
+	}@else if $color == "emerald"{
+		color:rgba(0,149,63,$opacity);
+	}@else if $color == "topaz"{
+		color:rgba(0,153,208,$opacity);
+	}@else if $color == "sapphire"{
+		color:rgba(30,30,156,$opacity);
+	}@else if $color == "amethyst"{
+		color:rgba(90,25,126,$opacity);
+	}
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}

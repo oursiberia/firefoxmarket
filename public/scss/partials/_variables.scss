@@ -2,14 +2,19 @@
 
 $white: #FAFCFC;
 $black: #171717;
+$blue:rgba(76,177,255,1.0);
+$green:rgba(100,190,60,1.0);
+$yellow:rgba(255,220,50,1.0);
+$red:rgba(245,75,60,1.0);
 
+$dark_gray:rgba(85,87,92,1.0);
+$gray:rgba(230,230,230,1.0);
+$light_gray:rgba(248,248,248,1.0);
 
-
-
-
-
-
-
+$blueSecondary:#42cafe;
+$greenSecondary:#66d071;
+$yellowSecondary:#ffe26e;
+$redSecondary:#ff6c70;
 
 // Fonts
 
@@ -19,3 +24,28 @@ $helvetica-light: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue
 $helvetica: "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $helvetica-medium: "HelveticaNeue-Medium", "Helvetica Neue Medium", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $helvetica-bold: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+@font-face {
+	font-family: "FiraBold";
+	src: url("/fonts/FiraSans-Heavy.ttf");
+}
+
+@font-face {
+	font-family: "FiraRegular";
+	src: url("/fonts/FiraSans-Medium.ttf");
+}
+
+@font-face {
+	font-family: "FiraThin";
+	src: url("/fonts/FiraSans-Thin.ttf");
+}
+
+@font-face {
+	font-family: "FiraLight";
+	src: url("/fonts/FiraSans-Light.ttf");
+}
+
+@font-face {
+	font-family: "FiraUltraLight";
+	src: url("/fonts/FiraSans-Light.ttf");
+}
