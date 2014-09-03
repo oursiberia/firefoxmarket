@@ -11,6 +11,12 @@ app.directive("header",function(){
 
         link:function($scope,$el,$attrs){
 
+        	// Returns back home
+        	$scope.returnHome = function(){
+        		window.location = "/";
+     		}
+
         }
+
     }
 });
