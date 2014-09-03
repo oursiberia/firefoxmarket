@@ -40,21 +40,23 @@
 		}
 	}
 
-	#search-home-result{
-		height:0px;
-		width:100%;
-		background: $blue;
-		position: absolute;
-		top:130px;
-		z-index: 99;
-	}
+
 }//end #search-home
 
 #search-home-result{
+	height:0px;
+	width:100%;
+	background: $blue;
+	position: absolute;
+	top:307px;
+	z-index: 99;
 	.searchresult{
 		display: inline-block;
+
 	}
 }
+
+
 
 .home-main{
 	margin-top:50px;
