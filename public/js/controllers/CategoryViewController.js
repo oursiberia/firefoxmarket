@@ -1,7 +1,11 @@
 /**
  * Controller for the Category view page
  */
-app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",function($scope,API,$rootScope,$filter){
+app.controller("CategoryViewController",[
+    "$scope",
+    "API",
+    "$rootScope",
+    "$filter",function($scope,API,$rootScope,$filter){
 
     //get the category from the url
     var category = window.location.href.split("/");
@@ -17,11 +21,11 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
 
     //these are the apps that will get featured
     var fapps = [];
-    API.request("featured","&cat=" + category).then(function(data) {
-        /**
-        TODO fix this so it actually features featured apps. The DB query seems to be a little weak and returns only one result
-         var apps = $filter("DesktopApps")(data.objects);
-         */
+
+   /**
+    *   Do a search for featured apps within a category
+    */
+    API.request("featured","&cat=" + category).then(function (data) {
 
         var apps = $filter("DesktopApps")(data.objects);
 
@@ -39,7 +43,7 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
     /**
      * Get all the apps in this category
      */
-    API.request("apps_in_category",category).then(function(data){
+    API.request("apps_in_category",category).then( function(data) {
 
         var apps = $filter("DesktopApps")(data.objects);
         $scope.popularapps = apps;
@@ -53,27 +57,31 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
     /**
      * This swaps out the featured apps
      */
-    var timer = setInterval(function(){
-        if(window.location.href.search("category") !== -1){
+    var timer = setInterval( function() {
+        if (window.location.href.search("category") !== -1) {
             swapApp();
-        }else{
+        } else {
             clearInterval(timer);
         }
     },2000);
 
 
-
-    function swapApp(first){
+   /**
+    * Cycles through the list of featured apps and displays them within the little box
+    * over the banner.
+    * @param first
+    */
+    function swapApp (first) {
         var selector = document.querySelector("#in-view-featured");
         var app = null;
-        if(first){
-            var app = fapps[0];
+        if (first) {
+            app = fapps[0];
             currentIndex = 0;
 
             TweenMax.to(selector,1.5,{
                 opacity:1
             });
-        }else{
+        } else {
 
             TweenMax.to(selector,1,{
                 opacity:0,
@@ -104,9 +112,9 @@ app.controller("CategoryViewController",["$scope","API","$rootScope","$filter",f
 
                     TweenMax.to(selector,1,{
                         opacity:1
-                    })
+                    });
                 }
-            })
+            });
 
 
         }

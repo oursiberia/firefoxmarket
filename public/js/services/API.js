@@ -1,7 +1,11 @@
 /**
  * Service to interact with the Firefox Marketplace API
  */
-app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$timeout){
+app.factory("API",[
+    "Utils",
+    "$http",
+    "$q",
+    "$timeout",function(Utils,$http,$q,$timeout){
 
     var routes = {
         "featured":"/api/v1/fireplace/search/featured/?limit=100",
@@ -11,32 +15,29 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
         "collections_detail":"/api/v2/feed/collections/",
         "categories":"/api/v1/apps/category/",
         "ratings":"/api/v1/apps/rating/",
-
-
         "abuse":"/api/v1/abuse/app/" ////TODO not wired up for beta right now
     }; //end routes
 
 
     var base = "https://marketplace.firefox.com";
 
-
-    function request(endpoint,params,extradata){
+    function request(endpoint,params,extradata) {
         var deferred = $q.defer();
         var extra = null;
-        console.log("Need to run : " + endpoint);
-        if(extradata !== undefined){
+
+        if (extradata !== undefined) {
             extra = extradata;
         }
 
-        $timeout(function(){
-            if(params === undefined){
+        $timeout(function() {
+            if (params === undefined) {
                 params = "";
             }
             $http({
                 method:"GET",
                 url:base + routes[endpoint] + params
             }).success(function(data,status,headers,config){
-                if(data){
+                if (data) {
                     deferred.resolve(data,routes[endpoint] + params);
                 }
             }).error(function(data,status,headers,config){
@@ -54,6 +55,6 @@ app.factory("API",["Utils","$http","$q","$timeout",function(Utils,$http,$q,$time
 
     return {
         request:request
-    }
+    };
 
 }]);

@@ -8,7 +8,7 @@ app.controller("AppViewController",[
     "$scope",
     "$rootScope",
     "$filter",
-    function ($window,API,$scope,$rootScope,$filter) {
+    function($window,API,$scope,$rootScope,$filter) {
 
         //get the app id out of the url
         var id = $window.location.href.split("/");
@@ -153,7 +153,7 @@ app.controller("AppViewController",[
          * Controls the tabbed content for the App view
          * @param e{Event} the click event that happens when you click on a tab button
          */
-        $scope.changeTabContent = function (e) {
+        $scope.changeTabContent = function(e) {
 
             //alias the content section for the panel.
             var content = document.querySelector("#tab-content");

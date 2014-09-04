@@ -24,42 +24,28 @@ app.filter("DesktopApps",function(){
             var obj = {};
 
 
-           for(var a = 0;a<data[i].device_types.length;++a){
-               if(data[i].device_types[a] === "desktop"){
-                   obj["icon"] = data[i].icons["64"];
-                   obj["name"] =  data[i].name["en-US"];
-                   obj["id"] = data[i].id;
-                   obj["author"] = data[i].author;
-                   obj["classname"] = "app";
-                   obj["rating"] = data[i].ratings["average"];
-                   if(data[i].hasOwnProperty("description")){
-                       obj["description"] = data[i].description[navigator.language];
+            for(var a = 0;a<data[i].device_types.length;++a){
+                if(data[i].device_types[a] === "desktop"){
+                    obj.icon = data[i].icons["64"];
+                    obj.name =  data[i].name["en-US"];
+                    obj.id = data[i].id;
+                    obj.author = data[i].author;
+                    obj.classname = "app";
+                    obj.rating = data[i].ratings.average;
+                    if(data[i].hasOwnProperty("description")){
+                        obj.description = data[i].description[navigator.language];
 
-                   }
-                   obj["device"] = "desktop";
-                   apps.push(obj);
-               }
-           };
+                    }
+                    obj.device = "desktop";
+                    apps.push(obj);
+                }
+            }
 
 
 
 
         }
 
-        /*
-         obj["icon"] = data[i].icons["64"];
-         obj["name"] =  data[i].name["en-US"];
-         obj["id"] = data[i].id;
-         obj["author"] = data[i].author;
-         obj["classname"] = "app";
-
-         obj["device"] = "desktop";
-
-         console.log(obj);
-         apps.push(obj);
-         */
-
-
         return apps;
-    }
+    };
 });
