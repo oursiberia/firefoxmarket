@@ -26,12 +26,12 @@ module.exports = function(grunt){
         jsdir + "libs/Isotope.js",
         base + "bower_components/angular/angular.js",
         base + "bower_components/angular-ui-router/release/angular-ui-router.js",
-            base + "bower_components/angular-local-storage/LocalStorage.js",
-
+        base + "bower_components/angular-local-storage/LocalStorage.js",
+        base + "bower_components/angular-gettext/dist/angular-gettext.js",
         jsdir + "/libs/plugins/CSSPlugin.js",
         jsdir + "libs/TweenMax.js"
     ];
-
+    console.log(__dirname + "/public/build/translation.html");
     grunt.initConfig({
         pkg:grunt.file.readJSON("package.json"),
         uglify:{
@@ -90,6 +90,18 @@ module.exports = function(grunt){
 
             }
         },
+
+        /**====== TRANSLATION STUFF =========*/
+        nggettext_extract :{
+            pot:{
+                files:{
+                    "public/po/strings.pot":[
+
+                    ]
+                }
+            }
+        },
+
         watch: {
             options: {
                 livereload: true
@@ -122,6 +134,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks( 'grunt-contrib-watch' );
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-jade');
+    grunt.loadNpmTasks('grunt-angular-gettext');
 
     //builds everything
     grunt.registerTask( 'default', ['uglify:dev','compass:dist','jade:compile']);
