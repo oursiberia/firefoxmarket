@@ -3,21 +3,22 @@
  * one sentence
  */
 
-app.filter("LongCopyFilter",function(){
+app.filter("LongCopyFilter",function() {
 
     /**
      * Does the filtering.
      * @param{Object} data the object that's passed back from the API query.
      * @param{number} length the number of items to return from the query
      */
-    return function(data) {
+    return function(data,delimiter) {
         var charlimit = 90;
+        delimiter = delimiter || " ...";
 
         //split the sentence based on spaces
         var review = data.split(" ");
         var short_review = [];
 
-        for(var i = 0;i<review.length;++i){
+        for (var i = 0;i<review.length;++i) {
             var word = review[i];
             var count = 0;
             /**
@@ -25,15 +26,11 @@ app.filter("LongCopyFilter",function(){
              */
             var len = word.split("").length;
             count += len;
-            if(count < charlimit){
+            if (count < charlimit) {
                 short_review.push(word);
             }
-
-
         }
-
-        short_review = short_review.join(" ")+ " ...";
-
+        short_review = short_review.join(" ")+ delimiter;
         return short_review;
-    }
+    };
 });

@@ -6,18 +6,21 @@
     "start": "node ./bin/www.js"
   },
   "dependencies": {
-      "hjs": "~0.0.6",
-      "express": "~4.2.0",
-      "debug": "~0.7.4",
-      "grunt":"*",
-      "marked":"*",
-      "request":"*",
-      "body-parser":"*",
-      "grunt-contrib-compass": "*",
-      "grunt-contrib-uglify": "*",
-      "grunt-contrib-watch": "*",
-      "grunt-contrib-copy": "*",
-      "grunt-preprocess": "*",
-      "grunt-contrib-jade":"*"
+    "hjs": "~0.0.6",
+    "express": "~4.2.0",
+    "debug": "~0.7.4",
+    "grunt": "*",
+    "marked": "*",
+    "request": "*",
+    "body-parser": "*",
+    "grunt-contrib-compass": "*",
+    "grunt-contrib-uglify": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-copy": "*",
+    "grunt-preprocess": "*",
+    "grunt-contrib-jade": "*"
+  },
+  "devDependencies": {
+    "grunt-angular-gettext": "^0.2.15"
   }
 }

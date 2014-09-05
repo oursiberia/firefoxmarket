@@ -3,7 +3,7 @@
  * general category/status search
  */
 
-app.filter("FeaturedInCategory",function(){
+app.filter("FeaturedInCategory",function() {
 
     /**
      * Does the filtering.
@@ -34,7 +34,7 @@ app.filter("FeaturedInCategory",function(){
 
             for (var a = 0; a < data.objects[i].device_types; ++a) {
                 if (data.objects[i].device_types[a] === "desktop") {
-                    obj["device"] = "desktop";
+                    obj.device = "desktop";
                     apps.push(obj);
                 }
             }
@@ -43,5 +43,5 @@ app.filter("FeaturedInCategory",function(){
 
         }
         return apps;
-    }
+    };
 });

@@ -20,3 +20,13 @@ zip package.zip compile_temp/
 
 #remove temp folder
 rm -rf compile_temp
+
+#create the deploy folder
+rm -rf deploy
+mkdir deploy
+
+cp -rf bower_components deploy/bower_components
+cp -rf build deploy/build
+cp -rf css deploy/css
+cp -rf img deploy/img
+cp -rf index.html deploy/index.html

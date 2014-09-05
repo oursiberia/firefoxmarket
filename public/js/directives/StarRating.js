@@ -25,18 +25,18 @@ app.directive("starrating",function(){
                  * the appropriate number of stars.
                  * @type {number}
                  */
-               var s = setInterval(function(){
-                   if($attr.rating !== ""){
-                       rating = parseInt($attr.rating);
-                       applyStars();
-                       clearInterval(s);
-                   }
-               });
+                var s = setInterval(function(){
+                    if($attr.rating !== ""){
+                        rating = parseInt($attr.rating);
+                        applyStars();
+                        clearInterval(s);
+                    }
+                });
 
             }else{
 
                 //get the number of stars
-                var rating = ""
+                var rating = "";
                 var stars = $attr.rating;
                 stars = stars.split(".");
                 /**
@@ -48,8 +48,10 @@ app.directive("starrating",function(){
                     rating = stars[0];
                 }else{
 
+                    var decimals = 0;
+
                     if(stars[1] !== undefined){
-                        var decimals = stars[1].split("");
+                        decimals = stars[1].split("");
                     }
 
                     if(parseInt(decimals[0]) >= 5){
@@ -65,22 +67,22 @@ app.directive("starrating",function(){
             }
 
 
-          /**
-           * Changes all the stars to be filled if
-           * necessary.
-           */
-           function applyStars(){
-               /**
-                * loop through and replace the unfilled stars
-                * with the filled stars as needed
-                */
-               for(var i = 0;i<starratings.length;++i){
-                   if(i < rating){
-                       starratings[i].children[0].src = "/img/star_filled.png";
-                   }
-               }
-           }
+            /**
+             * Changes all the stars to be filled if
+             * necessary.
+             */
+            function applyStars(){
+                /**
+                 * loop through and replace the unfilled stars
+                 * with the filled stars as needed
+                 */
+                for(var i = 0;i<starratings.length;++i){
+                    if(i < rating){
+                        starratings[i].children[0].src = "/img/star_filled.png";
+                    }
+                }
+            }
 
         }
-    }
+    };
 });

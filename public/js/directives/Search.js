@@ -3,24 +3,24 @@ app.directive("appsearch",["$http","$rootScope",function($http,$rootScope){
 
     return {
         templateUrl:"/templates/searchbox.html",
-        controller:function($scope,$http){
+        controller:function($scope,$http) {
 
 
         },
 
-        link:function($scope,$el,$attrs){
+        link:function($scope,$el,$attrs) {
 
 
-            $scope.search = function(){
+            $scope.search = function() {
 
 
-                 TweenMax.to(document.getElementById("searchresults"),1,{
-                     top:0,
-                     ease:"Power3.easeInOut",
-                     onComplete:function(){
+                TweenMax.to(document.getElementById("searchresults"),1,{
+                    top:0,
+                    ease:"Power3.easeInOut",
+                    onComplete:function() {
                         $rootScope.lockBody();
-                     }
-                 });
+                    }
+                });
             };
 
 
@@ -28,7 +28,7 @@ app.directive("appsearch",["$http","$rootScope",function($http,$rootScope){
              * Run the query.
              * search docs here http://firefox-marketplace-api.readthedocs.org/en/latest/topics/search.html
              */
-            $scope.searchApp = function(){
+            $scope.searchApp = function() {
 
                 //get the search term;
                 var term = document.getElementById("searchterm");
@@ -36,9 +36,9 @@ app.directive("appsearch",["$http","$rootScope",function($http,$rootScope){
                 /**
                  * if theres no search term, reject search attempt.
                  */
-                if(term.value == ""){
+                if(term.value === ""){
                     console.log("no search term entered");
-                   // alert("please enter a search term");
+                    // alert("please enter a search term");
                     return false;
                 }
 
@@ -72,13 +72,13 @@ app.directive("appsearch",["$http","$rootScope",function($http,$rootScope){
                     $scope.results = results;
 
 
-                }).error(function(data, status, headers, config){
+                }).error(function(data, status, headers, config) {
                     console.error("Something went wrong with the search");
-                })
+                });
 
-            }
+            };
         }
-    }
+    };
 
 
 }]);

@@ -3,16 +3,16 @@
  *  The category to search for should be specified as a data attribute using the name
  *  data-categoryname
  */
-app.directive("categoryapps",["API",function(API){
+app.directive("categoryapps",["API",function(API) {
     return{
-       templateUrl:"/build/templates/apps/categoryapps.html",
-        link:function($scope,$el,$attrs){
+        templateUrl:"/build/templates/apps/categoryapps.html",
+        link:function($scope,$el,$attrs) {
             var categoryname = $attrs.categoryname;
             var limit = $attrs.limit || 5;
 
             //run a search
             var params = "?cat=" + categoryname;
-            API.request("search",params).then(function(data){
+            API.request("search",params).then(function(data) {
                 var apps = data.objects;
                 var shown_apps = [];
 
@@ -26,7 +26,7 @@ app.directive("categoryapps",["API",function(API){
                  *
                  * TODO Add filtering for desktop apps once there are enough also, figure out why filter isn't working
                  */
-                for(var i = 0;i<limit;++i){
+                for(var i = 0;i<limit;++i) {
                     var app = apps[i];
                     shown_apps.push({
                         icon:app.icons["64"],
@@ -34,7 +34,7 @@ app.directive("categoryapps",["API",function(API){
                         category_name:app.categories,
                         author:app.author,
                         name:app.name[navigator.language],
-                        rating:app.ratings["average"]
+                        rating:app.ratings.average
                     });
 
                 }
@@ -43,5 +43,5 @@ app.directive("categoryapps",["API",function(API){
 
             });
         }
-    }
+    };
 }]);
