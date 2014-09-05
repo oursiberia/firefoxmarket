@@ -8,8 +8,8 @@ section#category-page
                     div#in-view-featured(class="category in-view-featured")
 
                     div(class="category featuredapps",style="display:none")
-                        div(class="category featured-app",ng-repeat="fapp in featuredapps")
-                            img(ng-src="{{fapp.icon}}")
+                        div(class="category featured-app",data-ng-repeat="fapp in featuredapps")
+                            img(data-ng-src="{{fapp.icon}}")
                             h1 {{fapp.name}}
                             h3 {{fapp.author}}
 
@@ -56,32 +56,32 @@ section#category-page
         div.wrap
             h1 Featured Apps
             div.apps(class="home-apps")
-                div(class="{{app.classname}} featured {{app.showfirst}} with-review",ng-repeat="app in featuredapps")
+                div(class="{{app.classname}} featured {{app.showfirst}} with-review",data-ng-repeat="app in featuredapps")
 
                     div.app-wrap
                         div.app-details
                             div.app-image
-                                a(ng-href="/app/{{app.id}}")
-                                    img.app-icon(ng-src="{{app.icon}}")
+                                a(data-ng-href="/app/{{app.id}}")
+                                    img.app-icon(data-ng-src="{{app.icon}}")
 
                             div.app-copy
                                 div.app-download-button
                                     p Free
-                                a(ng-href="/app/{{app.id}}")
+                                a(data-ng-href="/app/{{app.id}}")
                                     h2.app-title {{app.name}}
                                     p.app-author {{app.author}}
                                     div(starrating,data-rating="{{app.rating}}")
 
 
                         div.app-description
-                            div(appreviews,data-appid="{{app.id}}")
+                            div(data-appreviews,data-appid="{{app.id}}")
     div.wrap
         div#popular-in-category(class="category popular")
             h3 Popular |
                 span.light New
-            div(class="category app-set",ng-repeat="app in popularapps")
+            div(class="category app-set",data-ng-repeat="app in popularapps")
                 div.app
-                    img(ng-src="{{app.icon}}")
+                    img(data-ng-src="{{app.icon}}")
                     div.app-details
                         h4 {{app.name}}
                         p {{app.author}}

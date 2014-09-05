@@ -32,13 +32,13 @@ section.app
                 div.tabs
                     ul
                         li
-                            div.tab-trigger(data-tabname="description", data-content="{{app.description}}",ng-click="changeTabContent($event)")
+                            div.tab-trigger(data-tabname="description", data-content="{{app.description}}",data-ng-click="changeTabContent($event)")
                                 h4 description
 
-                            div.tab-trigger(data-tabname="screenshots",ng-click="changeTabContent($event)")
+                            div.tab-trigger(data-tabname="screenshots",data-ng-click="changeTabContent($event)")
                                 h4 Screenshots
 
-                            div.tab-trigger(data-tabname="releasenotes",data-content="{{app.releaseNotes}}",ng-click="changeTabContent($event)")
+                            div.tab-trigger(data-tabname="releasenotes",data-content="{{app.releaseNotes}}",data-ng-click="changeTabContent($event)")
                                 h4 release notes
 
 
@@ -52,30 +52,30 @@ section.app
                 p.title Additional Information
                 ul
                     li
-                        a(ng-href="mailto:{{support_email}}") Contact Support
+                        a(data-ng-href="mailto:{{support_email}}") Contact Support
 
                     li
-                        a(ng-href="{{support_url}}",target="_blank") Support Site
+                        a(data-ng-href="{{support_url}}",target="_blank") Support Site
 
                     li
-                        a(ng-href="{{privacy}}") Privacy Policy
+                        a(data-ng-href="{{privacy}}") Privacy Policy
 
                     li
-                        a(ng-href="{{report_abuse}}") Report Abuse
+                        a(data-ng-href="{{report_abuse}}") Report Abuse
 
                     li
-                        a(ng-href="{{feedback}}") Send Feedback
+                        a(data-ng-href="{{feedback}}") Send Feedback
 
             div#other-applications
                 h2 Apps By this developer
-                    a(ng-href="#") {{more_other_apps}}
+                    a(data-ng-href="#") {{more_other_apps}}
                 div#other-applications-list
-                    div(ng-repeat="app in other_apps",class="other-app")
-                        img(ng-src="{{app.icon}}")
+                    div(data-ng-repeat="app in other_apps",class="other-app")
+                        img(data-ng-src="{{app.icon}}")
                         div.details
                             h3 {{app.name}}
                             p {{app.author}}
-                            div(starrating,data-rating="{{app.rating}}")
+                            div(data-starrating,data-rating="{{app.rating}}")
                         div.app-download-button.mini-container
                             p Free
 
@@ -90,10 +90,10 @@ section.app
                 h2 Latest Reviews
 
 
-            div(ng-repeat="review in reviews",class="app-review")
+            div(data-ng-repeat="review in reviews",class="app-review")
                 div
                     div.stars
-                        div(class="review-rating", starrating, data-rating="{{review.rating}}", data-review="true")
+                        div(class="review-rating", data-starrating, data-rating="{{review.rating}}", data-review="true")
                     br
                     div.rating-copy
                         p {{review.copy}}
@@ -105,16 +105,16 @@ section.app
             div.wrap
                 h3 Related Apps
                     div.apps
-                        div(class="app",ng-repeat="app in relatedapps")
+                        div(class="app",data-ng-repeat="app in relatedapps")
                             div.app-wrap
                             div.app-details
                                 div.app-image
-                                    a(ng-href="/app/{{app.id}}")
-                                        img.app-icon(ng-src="{{app.icon}}")
+                                    a(data-ng-href="/app/{{app.id}}")
+                                        img.app-icon(data-ng-src="{{app.icon}}")
                                 div.app-copy
                                     div.app-download-button
                                         p Free
                                     a(ng-href="/app/{{app.id}}")
                                         h2.app-title {{app.name}}
                                         p.app-author {{app.author}}
-                                        div(starrating,data-rating="{{app.rating}}")
+                                        div(data-starrating,data-rating="{{app.rating}}")

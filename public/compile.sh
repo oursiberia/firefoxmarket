@@ -1,6 +1,7 @@
 #!/bin/sh
 
-# Packages the app up into a zip file for installation
+# Packages the app up into a zip file for installation and compiles things into a deployable format
+# in the event of needing to host the app.
 # currently, it seems that things don't work in a local enviroment, so for now, this doesn't matter
 
 #make a temp folder
@@ -20,3 +21,15 @@ zip package.zip compile_temp/
 
 #remove temp folder
 rm -rf compile_temp
+
+#create the deploy folder
+rm -rf deploy
+mkdir deploy
+
+cp -rf bower_components deploy/bower_components
+cp -rf build deploy/build
+cp -rf css deploy/css
+cp -rf img deploy/img
+cp -rf index.html deploy/index.html
+
+
