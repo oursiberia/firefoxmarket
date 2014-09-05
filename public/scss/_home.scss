@@ -85,13 +85,13 @@
 	}
 }
 
-#featured{
-	.app{
+#featured {
+	.app {
 		display: inline-block;
 		vertical-align: top;
 	}
-	.app-wrap{
-		padding:20px;
+	.app:last-child {
+		margin: 0;
 	}
 }
 
@@ -99,31 +99,37 @@
 
 #category-list{
 	.category{
-		width:300px;
-		height: 523px;
-		background:#F8F8F8;
-		border:solid 1px #D6D6D6;
+		width: 298px;
+		background: #F8F8F8;
+		border: solid 1px #D6D6D6;
 		display: inline-block;
 		vertical-align: top;
-		margin-right:20px;
-		-webkit-border-top-left-radius: 4px;
-		-webkit-border-top-right-radius: 4px;
-		-moz-border-radius-topleft: 4px;
-		-moz-border-radius-topright: 4px;
-		border-top-left-radius: 4px;
-		border-top-right-radius: 4px;
+		margin-right: 20px;
+		@include border-radius(5px);
 
 		.category-title{
 			background:#fff;
 			width:100%;
 			height:103px;
+			border-bottom: 1px solid #D6D6D6;
+			-webkit-border-top-left-radius: 4px;
+			-webkit-border-top-right-radius: 4px;
+			-moz-border-radius-topleft: 4px;
+			-moz-border-radius-topright: 4px;
+			border-top-left-radius: 4px;
+			border-top-right-radius: 4px;
 
 			.title-wrap{
 				padding:20px;
 				.icon,.title-copy{
 					display: inline-block;
 					vertical-align: middle;
-
+					-webkit-border-top-left-radius: 4px;
+					-webkit-border-top-right-radius: 4px;
+					-moz-border-radius-topleft: 4px;
+					-moz-border-radius-topright: 4px;
+					border-top-left-radius: 4px;
+					border-top-right-radius: 4px;
 				}
 
 				.icon{
@@ -134,5 +140,20 @@
 				}
 			}
 		}
+
+		.app {
+			border: 0;
+			padding: 20px 20px 0 20px;
+			.app-details {
+				padding: 0;
+				border: 0;
+			}
+		}
+		.app:last-child {
+			padding: 20px;
+		}
+	}
+	.category:last-child {
+		margin: 0;
 	}
 }

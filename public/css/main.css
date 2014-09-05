@@ -207,19 +207,29 @@
   vertical-align: top;
 }
 /* line 93, ../scss/_home.scss */
-#featured .app-wrap {
-  padding: 20px;
+#featured .app:last-child {
+  margin: 0;
 }
 
 /* line 101, ../scss/_home.scss */
 #category-list .category {
-  width: 300px;
-  height: 523px;
+  width: 298px;
   background: #F8F8F8;
   border: solid 1px #D6D6D6;
   display: inline-block;
   vertical-align: top;
   margin-right: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 110, ../scss/_home.scss */
+#category-list .category .category-title {
+  background: #fff;
+  width: 100%;
+  height: 103px;
+  border-bottom: 1px solid #D6D6D6;
   -webkit-border-top-left-radius: 4px;
   -webkit-border-top-right-radius: 4px;
   -moz-border-radius-topleft: 4px;
@@ -227,27 +237,45 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 116, ../scss/_home.scss */
-#category-list .category .category-title {
-  background: #fff;
-  width: 100%;
-  height: 103px;
-}
-/* line 121, ../scss/_home.scss */
+/* line 122, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap {
   padding: 20px;
 }
-/* line 123, ../scss/_home.scss */
+/* line 124, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon, #category-list .category .category-title .title-wrap .title-copy {
   display: inline-block;
   vertical-align: middle;
+  -webkit-border-top-left-radius: 4px;
+  -webkit-border-top-right-radius: 4px;
+  -moz-border-radius-topleft: 4px;
+  -moz-border-radius-topright: 4px;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
 }
-/* line 129, ../scss/_home.scss */
+/* line 135, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon {
   height: 65px;
   width: 65px;
   background: #333;
   border-radius: 41px;
+}
+/* line 144, ../scss/_home.scss */
+#category-list .category .app {
+  border: 0;
+  padding: 20px 20px 0 20px;
+}
+/* line 147, ../scss/_home.scss */
+#category-list .category .app .app-details {
+  padding: 0;
+  border: 0;
+}
+/* line 152, ../scss/_home.scss */
+#category-list .category .app:last-child {
+  padding: 20px;
+}
+/* line 156, ../scss/_home.scss */
+#category-list .category:last-child {
+  margin: 0;
 }
 
 /* line 1, ../scss/_category.scss */
@@ -606,23 +634,135 @@
   padding-left: 79px;
 }
 
-/* line 11, ../scss/main.scss */
+/* line 1, ../scss/_apps.scss */
+.app {
+  width: 258px;
+  height: 100%;
+  background: #f8f8f8;
+  margin-right: 20px;
+  padding: 20px;
+  border: solid 1px #D6D6D6;
+  overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 11, ../scss/_apps.scss */
+.app.with-description {
+  height: 153px;
+}
+/* line 15, ../scss/_apps.scss */
+.app.with-review {
+  height: 255px;
+}
+/* line 19, ../scss/_apps.scss */
+.app .app-icon {
+  width: 60px;
+  height: 60px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 25, ../scss/_apps.scss */
+.app .app-details {
+  border-bottom: solid 1px #D6D6D6;
+  padding-bottom: 20px;
+}
+/* line 29, ../scss/_apps.scss */
+.app .app-details .app-image, .app .app-details .app-copy {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 34, ../scss/_apps.scss */
+.app .app-details .app-copy {
+  overflow: hidden;
+  position: relative;
+  margin-left: 6px;
+  width: 188px;
+}
+/* line 39, ../scss/_apps.scss */
+.app .app-details .app-copy .app-download-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 65px;
+  height: 25px;
+  border-radius: 4px;
+  background: #333;
+  color: #fff;
+}
+/* line 48, ../scss/_apps.scss */
+.app .app-details .app-copy .app-download-button p {
+  text-align: center;
+  font-size: 13px;
+}
+/* line 56, ../scss/_apps.scss */
+.app .app-details .app-copy a h1 {
+  font-size: 14px;
+  letter-spacing: -.5px;
+}
+/* line 60, ../scss/_apps.scss */
+.app .app-details .app-copy a h2 {
+  font-size: 12px;
+  letter-spacing: -.5px;
+  font-family: "FiraLight";
+}
+/* line 69, ../scss/_apps.scss */
+.app .app-description {
+  font-size: 14px;
+  font-family: "FiraLight";
+  overflow: hidden;
+}
+
+/**
+ *	General App Download BUtton
+ */
+/* line 84, ../scss/_apps.scss */
+.app-download-button {
+  width: 65px;
+  height: 25px;
+  border-radius: 4px;
+  position: relative;
+  background: #333;
+  /**
+   *	For containers that are smaller(ie app view in the other applications category)
+   */
+}
+/* line 94, ../scss/_apps.scss */
+.app-download-button.mini-container {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 98, ../scss/_apps.scss */
+.app-download-button p {
+  position: absolute;
+  top: 2px;
+  left: 19px;
+  font-size: 13px;
+  color: #fff;
+  color: #fff;
+  font-family: "FiraRegular";
+}
+
+/* line 12, ../scss/main.scss */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* line 17, ../scss/main.scss */
+/* line 18, ../scss/main.scss */
 .rating li {
   float: left;
   margin-right: -5px;
 }
-/* line 20, ../scss/main.scss */
+/* line 21, ../scss/main.scss */
 .rating li img {
   max-width: 75%;
 }
 
-/* line 26, ../scss/main.scss */
+/* line 27, ../scss/main.scss */
 body, html {
   font-size: 100%;
   font-family: "FiraRegular",sans-serif;
@@ -631,96 +771,125 @@ body, html {
 }
 
 /**======= COMMON =============*/
-/* line 34, ../scss/main.scss */
+/* line 35, ../scss/main.scss */
 ul, li {
   list-style: none;
 }
 
-/* line 38, ../scss/main.scss */
+/* line 39, ../scss/main.scss */
 .dark {
   color: #44474b;
 }
 
-/* line 42, ../scss/main.scss */
+/* line 43, ../scss/main.scss */
 .thin {
   font-family: "FiraLight";
 }
 
-/* line 46, ../scss/main.scss */
+/* line 47, ../scss/main.scss */
 a {
   text-decoration: none;
-  color: #000;
+  color: #55575c;
+  cursor: pointer;
 }
 
-/* line 51, ../scss/main.scss */
+/* line 53, ../scss/main.scss */
 footer {
-  background: #EDEDED;
   width: 100%;
-  padding-left: 69px;
-  padding-right: 69px;
-  padding-top: 23px;
-  padding-bottom: 23px;
 }
-/* line 59, ../scss/main.scss */
-footer h2, footer p, footer div {
-  display: inline-block;
-  vertical-align: middle;
+/* line 56, ../scss/main.scss */
+footer#developers {
+  background: #EDEDED;
 }
-/* line 64, ../scss/main.scss */
-footer div#developer-link {
+/* line 58, ../scss/main.scss */
+footer#developers #developer-link {
   width: 300px;
   height: 60px;
   background: #F8F8F8;
   border: solid 1px #A7A7A7;
 }
-
-/* line 72, ../scss/main.scss */
+/* line 66, ../scss/main.scss */
 footer#mozilla {
-  background: none;
+  font-family: "FiraLight";
+  font-size: 10px;
+  color: #55575c;
 }
-/* line 74, ../scss/main.scss */
-footer#mozilla h2, footer#mozilla p, footer#mozilla div {
+/* line 70, ../scss/main.scss */
+footer#mozilla img {
+  height: 20px;
+  width: 78px;
+  margin-right: 30px;
+}
+/* line 75, ../scss/main.scss */
+footer#mozilla p {
+  max-width: 450px;
+}
+/* line 78, ../scss/main.scss */
+footer#mozilla .links {
+  margin-top: 8px;
+}
+/* line 81, ../scss/main.scss */
+footer#mozilla a {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: 1px solid #55575C;
+}
+/* line 86, ../scss/main.scss */
+footer#mozilla a:last-child {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/* line 93, ../scss/main.scss */
+footer .footer-wrapper {
+  max-width: 1260px;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: block;
+}
+/* line 98, ../scss/main.scss */
+footer .footer-wrapper h2, footer .footer-wrapper p, footer .footer-wrapper div, footer .footer-wrapper img {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 79, ../scss/main.scss */
-footer#mozilla div {
-  background: #fff;
+/* line 102, ../scss/main.scss */
+footer .footer-wrapper div {
+  float: right;
 }
 
 /**======= HEADER =============*/
-/* line 85, ../scss/main.scss */
+/* line 111, ../scss/main.scss */
 header {
   width: 100%;
   background: #e9e9e9;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 90, ../scss/main.scss */
+/* line 116, ../scss/main.scss */
 header h1 {
   font-family: "FiraRegular";
 }
-/* line 95, ../scss/main.scss */
+/* line 121, ../scss/main.scss */
 header .wrap div {
   vertical-align: middle;
   cursor: pointer;
 }
-/* line 99, ../scss/main.scss */
+/* line 125, ../scss/main.scss */
 header .wrap div:first-child {
   display: inline-block;
 }
-/* line 102, ../scss/main.scss */
+/* line 128, ../scss/main.scss */
 header .wrap div:first-child img, header .wrap div:first-child h1 {
   vertical-align: middle;
   display: inline-block;
 }
-/* line 110, ../scss/main.scss */
+/* line 136, ../scss/main.scss */
 header .wrap div:last-child {
   float: right;
   display: inline-block;
   /**======= SEARCH =============*/
 }
-/* line 115, ../scss/main.scss */
+/* line 141, ../scss/main.scss */
 header .wrap div:last-child #searchbutton {
   border: solid 1px #333333;
   background: none;
@@ -730,12 +899,12 @@ header .wrap div:last-child #searchbutton {
   position: relative;
   left: -200px;
 }
-/* line 126, ../scss/main.scss */
+/* line 152, ../scss/main.scss */
 header .wrap div:last-child #user img, header .wrap div:last-child #user p {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 132, ../scss/main.scss */
+/* line 158, ../scss/main.scss */
 header .wrap div:last-child #user-details {
   position: absolute;
   height: 45px;
@@ -751,15 +920,15 @@ header .wrap div:last-child #user-details {
   -o-transition: background 0.5s ease;
   transition: background 0.5s ease;
 }
-/* line 144, ../scss/main.scss */
+/* line 170, ../scss/main.scss */
 header .wrap div:last-child #user-details .identification {
   float: right;
 }
-/* line 147, ../scss/main.scss */
+/* line 173, ../scss/main.scss */
 header .wrap div:last-child #user-details .identification img {
   margin-left: 10px;
 }
-/* line 151, ../scss/main.scss */
+/* line 177, ../scss/main.scss */
 header .wrap div:last-child #user-details.open {
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
@@ -767,25 +936,25 @@ header .wrap div:last-child #user-details.open {
   transition: background 0.5s ease;
   background: #64be3c;
 }
-/* line 157, ../scss/main.scss */
+/* line 183, ../scss/main.scss */
 header .wrap div:last-child #menu-trigger:hover {
   cursor: pointer;
 }
-/* line 160, ../scss/main.scss */
+/* line 186, ../scss/main.scss */
 header .wrap div:last-child #menu-trigger img {
   display: inline-block;
 }
 
-/* line 172, ../scss/main.scss */
+/* line 198, ../scss/main.scss */
 .wrap {
-  max-width: 1400px;
+  max-width: 1260px;
   margin: 0 auto;
 }
 
 /**
  *	References sections that are loading in content via AJAX
  */
-/* line 181, ../scss/main.scss */
+/* line 207, ../scss/main.scss */
 .section {
   opacity: 1;
   -webkit-transition: opacity 0.5s ease;
@@ -793,7 +962,7 @@ header .wrap div:last-child #menu-trigger img {
   -o-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-/* line 184, ../scss/main.scss */
+/* line 210, ../scss/main.scss */
 .section.ajax {
   opacity: 0;
   -webkit-transition: opacity 0.5s ease;
@@ -802,7 +971,7 @@ header .wrap div:last-child #menu-trigger img {
   transition: opacity 0.5s ease;
 }
 
-/* line 190, ../scss/main.scss */
+/* line 216, ../scss/main.scss */
 #searchresults {
   position: absolute;
   min-width: 100%;
@@ -812,13 +981,13 @@ header .wrap div:last-child #menu-trigger img {
   top: -99990px;
   z-index: 99;
 }
-/* line 198, ../scss/main.scss */
+/* line 224, ../scss/main.scss */
 #searchresults .search-wrap {
   display: block;
   padding: 30px;
   margin: 0 auto;
 }
-/* line 203, ../scss/main.scss */
+/* line 229, ../scss/main.scss */
 #searchresults .search-wrap #searchterm {
   background: none;
   border: none;
@@ -827,11 +996,11 @@ header .wrap div:last-child #menu-trigger img {
   color: #fff;
   font-size: 40px;
 }
-/* line 211, ../scss/main.scss */
+/* line 237, ../scss/main.scss */
 #searchresults .search-wrap #searchterm:focus {
   outline: 0;
 }
-/* line 219, ../scss/main.scss */
+/* line 245, ../scss/main.scss */
 #searchresults #results {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -839,7 +1008,7 @@ header .wrap div:last-child #menu-trigger img {
   position: relative;
   top: 10px;
 }
-/* line 226, ../scss/main.scss */
+/* line 252, ../scss/main.scss */
 #searchresults #results .searchresult {
   border: solid 1px red;
   width: 200px;
@@ -848,100 +1017,34 @@ header .wrap div:last-child #menu-trigger img {
   display: inline-block;
 }
 
-/* line 237, ../scss/main.scss */
-.apps .app {
-  width: 260px;
-  padding: 20px;
-  height: 100%;
-  background: #F8F8F8;
-  border: solid 1px #D6D6D6;
-  overflow: hidden;
-  margin-right: 20px;
-}
-/* line 240, ../scss/main.scss */
-.apps .app.with-description {
-  height: 193px;
-}
-/* line 244, ../scss/main.scss */
-.apps .app.with-review {
-  height: 255px;
-}
-/* line 253, ../scss/main.scss */
-.apps .app .app-icon {
-  width: 60px;
-  height: 60px;
-}
-/* line 258, ../scss/main.scss */
-.apps .app .app-details {
-  border-bottom: solid 1px #D6D6D6;
-  padding-bottom: 20px;
-}
-/* line 261, ../scss/main.scss */
-.apps .app .app-details .app-image, .apps .app .app-details .app-copy {
-  display: inline-block;
-  vertical-align: top;
-}
-/* line 266, ../scss/main.scss */
-.apps .app .app-details .app-copy {
-  overflow: hidden;
-  position: relative;
-  width: 190px;
-}
-/* line 270, ../scss/main.scss */
-.apps .app .app-details .app-copy .app-download-button {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  width: 65px;
-  height: 25px;
-  border-radius: 4px;
-  background: #333;
-  color: #fff;
-}
-/* line 279, ../scss/main.scss */
-.apps .app .app-details .app-copy .app-download-button p {
-  text-align: center;
-  font-size: 13px;
-}
-/* line 287, ../scss/main.scss */
-.apps .app .app-details .app-copy a h2 {
-  font-size: 14px;
-}
-/* line 290, ../scss/main.scss */
-.apps .app .app-details .app-copy a p {
-  font-size: 12px;
-  font-family: "FiraLight";
-}
-/* line 298, ../scss/main.scss */
-.apps .app .app-description {
-  font-size: 14px;
-  font-family: "FiraLight";
-  overflow: hidden;
-}
-
 /**
  *	Styling for editorial content
  */
 /**
  *	Editorial content
  */
-/* line 318, ../scss/main.scss */
+/* line 274, ../scss/main.scss */
 .editorial-collections .collections .collection {
-  width: 400px;
-  height: 230px;
-  background: #42cafe;
+  width: 338px;
+  height: 185px;
+  background: #e6e6e6;
   display: inline-block;
   vertical-align: top;
-  margin-right: 31px;
+  padding: 30px;
+  margin-right: 26px;
   position: relative;
+  border: 1px solid #D6D6D6;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
 }
-/* line 327, ../scss/main.scss */
+/* line 286, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps {
-  max-width: 256px;
+  max-width: 270px;
   margin: 0 auto;
-  margin-top: 20px;
 }
-/* line 331, ../scss/main.scss */
+/* line 289, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app {
   height: 70px;
   width: 70px;
@@ -950,60 +1053,45 @@ header .wrap div:last-child #menu-trigger img {
   vertical-align: top;
   position: relative;
   z-index: 2;
-  margin-right: 12px;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
+  margin-right: 26px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
 }
-/* line 346, ../scss/main.scss */
-.editorial-collections .layerbackground {
-  width: 100%;
-  height: 64px;
-  background: red;
-  position: absolute;
-  top: 0;
+/* line 300, ../scss/main.scss */
+.editorial-collections .collections .collection .collection-apps .collection-app:last-child {
+  margin: 0;
+}
+/* line 305, ../scss/main.scss */
+.editorial-collections .collections .collection .collection-copy {
+  margin-top: 24px;
+}
+/* line 307, ../scss/main.scss */
+.editorial-collections .collections .collection .collection-copy h1 {
+  font-size: 20px;
+  letter-spacing: -.5px;
+}
+/* line 311, ../scss/main.scss */
+.editorial-collections .collections .collection .collection-copy p {
+  font-family: "FiraLight";
+  font-size: 14px;
+  margin-top: 5px;
+}
+/* line 321, ../scss/main.scss */
+.editorial-collections .collections .collection:last-child {
+  margin: 0;
 }
 
 /**
  *	Ratings
  */
-/* line 358, ../scss/main.scss */
+/* line 330, ../scss/main.scss */
 .review {
   text-align: center;
 }
-/* line 361, ../scss/main.scss */
+/* line 333, ../scss/main.scss */
 .review .review-rating {
   max-width: 100px;
   margin: 0 auto;
-}
-
-/**
- *	General App Download BUtton
- */
-/* line 372, ../scss/main.scss */
-.app-download-button {
-  width: 65px;
-  height: 25px;
-  border-radius: 4px;
-  position: relative;
-  background: #333;
-  /**
-   *	For containers that are smaller(ie app view in the other applications category)
-   */
-}
-/* line 382, ../scss/main.scss */
-.app-download-button.mini-container {
-  display: inline-block;
-  vertical-align: middle;
-}
-/* line 386, ../scss/main.scss */
-.app-download-button p {
-  position: absolute;
-  top: 2px;
-  left: 19px;
-  font-size: 13px;
-  color: #fff;
-  color: #fff;
-  font-family: "FiraRegular";
 }

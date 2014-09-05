@@ -5,6 +5,7 @@
 @import "home";
 @import "category";
 @import "appview";
+@import "apps";
 
 $grey:#e9e9e9;
 
@@ -45,41 +46,66 @@ ul,li{
 
 a{
 	text-decoration: none;
-	color:#000;
+	color: $copy;
+	cursor: pointer;
 }
 
 footer{
-	background:#EDEDED;
 	width:100%;
-	padding-left:69px;
-	padding-right:69px;
-	padding-top:23px;
-	padding-bottom:23px;
 
-	h2,p,div{
-		display: inline-block;
-		vertical-align: middle;
+	&#developers {
+		background:#EDEDED;
+		#developer-link{
+			width:300px;
+			height:60px;
+			background:#F8F8F8;
+			border:solid 1px #A7A7A7;
+		}
 	}
 
-	div#developer-link{
-		width:300px;
-		height:60px;
-		background:#F8F8F8;
-		border:solid 1px #A7A7A7;
+	&#mozilla{
+		font-family: "FiraLight";
+		font-size: 10px;
+		color: $copy;
+		img {
+			height: 20px;
+			width: 78px;
+			margin-right: 30px;
+		}
+		p {
+			max-width: 450px;
+		}
+		.links {
+			margin-top: 8px;
+		}
+		a {
+			margin-right: 10px;
+			padding-right: 10px;
+			border-right: 1px solid #55575C;
+		}
+		a:last-child {
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+	}
+
+	.footer-wrapper {
+		max-width: 1260px;
+		margin: 0 auto;
+		padding: 30px 0;
+		display: block;
+		h2, p, div, img {
+			display: inline-block;
+			vertical-align: middle;
+		}
+		div {
+			float: right;
+		}
 	}
 }
 
-footer#mozilla{
-	background:none;
-	h2,p,div{
-		display: inline-block;
-		vertical-align: middle;
-	}
 
-	div{
-		background:#fff;
-	}
-}
 
 /**======= HEADER =============*/
 header{
@@ -170,7 +196,7 @@ header{
 }
 
 .wrap{
-	max-width: 1400px;
+	max-width: 1260px;
 	margin: 0 auto;
 }
 
@@ -232,76 +258,6 @@ header{
 		}
 	}
 }
-//general styling for app boxes
-.apps{
-	.app{
-		width:260px;
-		padding: 20px;
-		&.with-description{
-			height:193px;
-		}
-
-		&.with-review{
-			height:255px;
-		}
-
-		height:100%;
-		background:#F8F8F8;
-		border:solid 1px #D6D6D6;
-		overflow: hidden;
-		margin-right:20px;
-		.app-icon{
-			width:60px;
-			height:60px;
-		}
-
-		.app-details{
-			border-bottom: solid 1px #D6D6D6;
-			padding-bottom: 20px;
-			.app-image,.app-copy{
-				display: inline-block;
-				vertical-align: top;
-			}
-
-			.app-copy{
-				overflow: hidden;
-				position:relative;
-				width:190px;
-				.app-download-button{
-					position:absolute;
-					right:0;
-					bottom:0;
-					width:65px;
-					height:25px;
-					border-radius: 4px;
-					background: #333;
-					color:#fff;
-					p{
-						text-align: center;
-						font-size:13px;
-					}
-				}
-
-
-				a{
-					h2{
-						font-size: 14px;
-					}
-					p{
-						font-size:12px;
-						font-family: "FiraLight";
-					}
-				}
-			}
-		}// end .app-details
-
-		.app-description{
-			font-size:14px;
-			font-family: "FiraLight";
-			overflow: hidden;
-		}
-	}
-}
 
 /**
  *	Styling for editorial content
@@ -312,43 +268,59 @@ header{
  *	Editorial content
  */
 
-.editorial-collections{
-	.collections{
+.editorial-collections {
+	.collections {
 
-		.collection{
-			width:400px;
-			height:230px;
-			background:#42cafe;
+		.collection {
+			width:338px;
+			height:185px;
+			background: #e6e6e6;
 			display: inline-block;
 			vertical-align: top;
-			margin-right:31px;
+			padding: 30px;
+			margin-right: 26px;
 			position:relative;
+			border: 1px solid #D6D6D6;
+			@include border-radius(5px);
 
-			.collection-apps{
-				max-width: 256px;
-				margin:0 auto;
-				margin-top:20px;
-				.collection-app{
-					height:70px;
-					width:70px;
+			.collection-apps {
+				max-width: 270px;
+				margin: 0 auto;
+				.collection-app {
+					height: 70px;
+					width: 70px;
 					background: #333;
 					display: inline-block;
 					vertical-align: top;
-					position:relative;
+					position: relative;
 					z-index: 2;
-					margin-right:12px;
-					@include border-radius(4px);
+					margin-right: 26px;
+					@include border-radius(5px);
+				}
+				.collection-app:last-child {
+					margin: 0;
 				}
 			}
-		}
-	}
 
-	.layerbackground{
-		width:100%;
-		height:64px;
-		background:red;
-		position:absolute;
-		top:0;
+			.collection-copy {
+				margin-top: 24px;
+				h1 {
+					font-size: 20px;
+					letter-spacing: -.5px;
+				}
+				p {
+					font-family: "FiraLight";
+					font-size: 14px;
+					margin-top: 5px;
+				}
+			}
+
+
+		}
+
+		.collection:last-child {
+			margin: 0;
+		}
 	}
 }
 
@@ -363,33 +335,4 @@ header{
 		margin:0 auto;
 	}
 
-}
-
-/**
- *	General App Download BUtton
- */
-
-.app-download-button{
-	width:65px;
-	height:25px;
-	border-radius: 4px;
-	position: relative;
-	background: #333;
-
-	/**
-	 *	For containers that are smaller(ie app view in the other applications category)
-	 */
-	&.mini-container{
-		display: inline-block;
-		vertical-align: middle;
-	}
-	p{
-		position: absolute;
-		top:2px;
-		left:19px;
-		font-size: 13px;
-		color:#fff;
-		color:#fff;
-		font-family: "FiraRegular";
-	}
 }

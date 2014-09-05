@@ -1,7 +1,7 @@
 
 <header>
   <div class="wrap">
-    <div ng-click="returnHome()"><img src="/img/marketplace.png" alt="marketplace-logo"/>
+    <div data-ng-click="returnHome()"><img src="/img/marketplace.png" alt="marketplace-logo"/>
       <h1><span class="dark">Firefox</span><span class="thin">Market</span></h1>
     </div>
     <div id="searchbutton">Search</div>
@@ -9,10 +9,10 @@
       <div id="user">
         <div id="user-details">
           <div class="identification">
-            <p id="username" ng-click="login()">Sign in</p><img src="/img/test_user.svg"/>
+            <p id="username" data-ng-click="login()">Sign in</p><img src="/img/test_user.svg"/>
           </div>
         </div>
-        <div id="menu-trigger" ng-click="openMenu($event)"><img src="/img/menu_gear.png"/></div>
+        <div id="menu-trigger" data-ng-click="openMenu($event)"><img src="/img/menu_gear.png"/></div>
       </div>
     </div>
   </div>

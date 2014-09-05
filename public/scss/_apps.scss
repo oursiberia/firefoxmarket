@@ -1,0 +1,107 @@
+.app{
+	width: 258px;
+	height: 100%;
+	background: $light_gray;
+	margin-right: 20px;
+	padding: 20px;
+	border: solid 1px #D6D6D6;
+	overflow: hidden;
+	@include border-radius(5px);
+
+	&.with-description{
+		height:153px;
+	}
+
+	&.with-review{
+		height:255px;
+	}
+
+	.app-icon{
+		width:60px;
+		height:60px;
+		@include border-radius(5px);
+	}
+
+	.app-details{
+		border-bottom: solid 1px #D6D6D6;
+		padding-bottom: 20px;
+
+		.app-image,.app-copy{
+			display: inline-block;
+			vertical-align: top;
+		}
+
+		.app-copy{
+			overflow: hidden;
+			position:relative;
+			margin-left: 6px;
+			width:188px;
+			.app-download-button{
+				position:absolute;
+				right:0;
+				bottom:0;
+				width:65px;
+				height:25px;
+				border-radius: 4px;
+				background: #333;
+				color:#fff;
+				p{
+					text-align: center;
+					font-size:13px;
+				}
+			}
+
+
+			a{
+				h1{
+					font-size: 14px;
+					letter-spacing: -.5px;
+				}
+				h2{
+					font-size:12px;
+					letter-spacing: -.5px;
+					font-family: "FiraLight";
+				}
+			}
+		}
+	}// end .app-details
+
+	.app-description{
+		font-size:14px;
+		font-family: "FiraLight";
+		overflow: hidden;
+	}
+}
+
+.app-list {
+
+}
+
+/**
+ *	General App Download BUtton
+ */
+
+.app-download-button{
+	width:65px;
+	height:25px;
+	border-radius: 4px;
+	position: relative;
+	background: #333;
+
+	/**
+	 *	For containers that are smaller(ie app view in the other applications category)
+	 */
+	&.mini-container{
+		display: inline-block;
+		vertical-align: middle;
+	}
+	p{
+		position: absolute;
+		top:2px;
+		left:19px;
+		font-size: 13px;
+		color:#fff;
+		color:#fff;
+		font-family: "FiraRegular";
+	}
+}

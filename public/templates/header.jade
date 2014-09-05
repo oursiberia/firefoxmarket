@@ -1,6 +1,6 @@
 header
     div.wrap
-        div(ng-click="returnHome()")
+        div(data-ng-click="returnHome()")
             img(src="/img/marketplace.png" alt="marketplace-logo")
             h1
                 span.dark Firefox
@@ -12,10 +12,10 @@ header
             div#user
                 div#user-details
                     div.identification
-                        p#username(ng-click="login()") Sign in
+                        p#username(data-ng-click="login()") Sign in
                         img(src="/img/test_user.svg")
 
 
 
-                div#menu-trigger(ng-click="openMenu($event)")
+                div#menu-trigger(data-ng-click="openMenu($event)")
                     img(src="/img/menu_gear.png")
