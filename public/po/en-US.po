@@ -1,0 +1,15 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"PO-Revision-Date: 2014-09-05 17:11-0700\n"
+"Last-Translator: Joseph Chow <EMAIL@ADDRESS>\n"
+"Language-Team: English\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Featured Apps"
+msgstr "Featured Apps"
