@@ -132,21 +132,24 @@ header{
 
 
 		}
-
+		/**======= SEARCH =============*/
+		#searchbutton{
+			border:solid 1px #333333;
+			background: none;
+			width:100px;
+			padding-top:10px;
+			padding-bottom: 10px;
+			border-radius: 4px;
+			position: relative;
+			left:30%;
+			text-align: center;
+			display: inline-block;
+			vertical-align: middle;
+		}
 		div:last-child{
 			float:right;
 			display: inline-block;
 
-			/**======= SEARCH =============*/
-			#searchbutton{
-				border:solid 1px #333333;
-				background: none;
-				width:100px;
-				height:40px;
-				border-radius: 4px;
-				position: relative;
-				left:-200px; 
-			}
 
 			#user{
 				img,p{

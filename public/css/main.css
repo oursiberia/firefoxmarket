@@ -869,6 +869,10 @@ header {
 header h1 {
   font-family: "FiraRegular";
 }
+/* line 119, ../scss/main.scss */
+header .wrap {
+  /**======= SEARCH =============*/
+}
 /* line 121, ../scss/main.scss */
 header .wrap div {
   vertical-align: middle;
@@ -884,27 +888,30 @@ header .wrap div:first-child img, header .wrap div:first-child h1 {
   display: inline-block;
 }
 /* line 136, ../scss/main.scss */
-header .wrap div:last-child {
-  float: right;
-  display: inline-block;
-  /**======= SEARCH =============*/
-}
-/* line 141, ../scss/main.scss */
-header .wrap div:last-child #searchbutton {
+header .wrap #searchbutton {
   border: solid 1px #333333;
   background: none;
   width: 100px;
-  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-radius: 4px;
   position: relative;
-  left: -200px;
+  left: 30%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
 }
-/* line 152, ../scss/main.scss */
+/* line 149, ../scss/main.scss */
+header .wrap div:last-child {
+  float: right;
+  display: inline-block;
+}
+/* line 155, ../scss/main.scss */
 header .wrap div:last-child #user img, header .wrap div:last-child #user p {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 158, ../scss/main.scss */
+/* line 161, ../scss/main.scss */
 header .wrap div:last-child #user-details {
   position: absolute;
   height: 45px;
@@ -920,15 +927,15 @@ header .wrap div:last-child #user-details {
   -o-transition: background 0.5s ease;
   transition: background 0.5s ease;
 }
-/* line 170, ../scss/main.scss */
+/* line 173, ../scss/main.scss */
 header .wrap div:last-child #user-details .identification {
   float: right;
 }
-/* line 173, ../scss/main.scss */
+/* line 176, ../scss/main.scss */
 header .wrap div:last-child #user-details .identification img {
   margin-left: 10px;
 }
-/* line 177, ../scss/main.scss */
+/* line 180, ../scss/main.scss */
 header .wrap div:last-child #user-details.open {
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
@@ -936,16 +943,16 @@ header .wrap div:last-child #user-details.open {
   transition: background 0.5s ease;
   background: #64be3c;
 }
-/* line 183, ../scss/main.scss */
+/* line 186, ../scss/main.scss */
 header .wrap div:last-child #menu-trigger:hover {
   cursor: pointer;
 }
-/* line 186, ../scss/main.scss */
+/* line 189, ../scss/main.scss */
 header .wrap div:last-child #menu-trigger img {
   display: inline-block;
 }
 
-/* line 198, ../scss/main.scss */
+/* line 201, ../scss/main.scss */
 .wrap {
   max-width: 1260px;
   margin: 0 auto;
@@ -954,7 +961,7 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	References sections that are loading in content via AJAX
  */
-/* line 207, ../scss/main.scss */
+/* line 210, ../scss/main.scss */
 .section {
   opacity: 1;
   -webkit-transition: opacity 0.5s ease;
@@ -962,7 +969,7 @@ header .wrap div:last-child #menu-trigger img {
   -o-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-/* line 210, ../scss/main.scss */
+/* line 213, ../scss/main.scss */
 .section.ajax {
   opacity: 0;
   -webkit-transition: opacity 0.5s ease;
@@ -971,7 +978,7 @@ header .wrap div:last-child #menu-trigger img {
   transition: opacity 0.5s ease;
 }
 
-/* line 216, ../scss/main.scss */
+/* line 219, ../scss/main.scss */
 #searchresults {
   position: absolute;
   min-width: 100%;
@@ -981,13 +988,13 @@ header .wrap div:last-child #menu-trigger img {
   top: -99990px;
   z-index: 99;
 }
-/* line 224, ../scss/main.scss */
+/* line 227, ../scss/main.scss */
 #searchresults .search-wrap {
   display: block;
   padding: 30px;
   margin: 0 auto;
 }
-/* line 229, ../scss/main.scss */
+/* line 232, ../scss/main.scss */
 #searchresults .search-wrap #searchterm {
   background: none;
   border: none;
@@ -996,11 +1003,11 @@ header .wrap div:last-child #menu-trigger img {
   color: #fff;
   font-size: 40px;
 }
-/* line 237, ../scss/main.scss */
+/* line 240, ../scss/main.scss */
 #searchresults .search-wrap #searchterm:focus {
   outline: 0;
 }
-/* line 245, ../scss/main.scss */
+/* line 248, ../scss/main.scss */
 #searchresults #results {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -1008,7 +1015,7 @@ header .wrap div:last-child #menu-trigger img {
   position: relative;
   top: 10px;
 }
-/* line 252, ../scss/main.scss */
+/* line 255, ../scss/main.scss */
 #searchresults #results .searchresult {
   border: solid 1px red;
   width: 200px;
@@ -1023,7 +1030,7 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	Editorial content
  */
-/* line 274, ../scss/main.scss */
+/* line 277, ../scss/main.scss */
 .editorial-collections .collections .collection {
   width: 338px;
   height: 185px;
@@ -1039,12 +1046,12 @@ header .wrap div:last-child #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 286, ../scss/main.scss */
+/* line 289, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps {
   max-width: 270px;
   margin: 0 auto;
 }
-/* line 289, ../scss/main.scss */
+/* line 292, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app {
   height: 70px;
   width: 70px;
@@ -1059,26 +1066,26 @@ header .wrap div:last-child #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 300, ../scss/main.scss */
+/* line 303, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app:last-child {
   margin: 0;
 }
-/* line 305, ../scss/main.scss */
+/* line 308, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy {
   margin-top: 24px;
 }
-/* line 307, ../scss/main.scss */
+/* line 310, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy h1 {
   font-size: 20px;
   letter-spacing: -.5px;
 }
-/* line 311, ../scss/main.scss */
+/* line 314, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy p {
   font-family: "FiraLight";
   font-size: 14px;
   margin-top: 5px;
 }
-/* line 321, ../scss/main.scss */
+/* line 324, ../scss/main.scss */
 .editorial-collections .collections .collection:last-child {
   margin: 0;
 }
@@ -1086,11 +1093,11 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	Ratings
  */
-/* line 330, ../scss/main.scss */
+/* line 333, ../scss/main.scss */
 .review {
   text-align: center;
 }
-/* line 333, ../scss/main.scss */
+/* line 336, ../scss/main.scss */
 .review .review-rating {
   max-width: 100px;
   margin: 0 auto;
