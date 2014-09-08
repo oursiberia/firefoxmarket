@@ -30,3 +30,7 @@ cp -rf build deploy/build
 cp -rf css deploy/css
 cp -rf img deploy/img
 cp -rf index.html deploy/index.html
+
+#prepare translation files
+
+
