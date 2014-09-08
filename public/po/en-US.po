@@ -3,13 +3,45 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2014-09-05 17:11-0700\n"
-"Last-Translator: Joseph Chow <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-09-08 14:05-0700\n"
+"Last-Translator: Joseph Chow <sortofsleepy@josephs-macbook-pro.local>\n"
 "Language-Team: English\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid "Develop For Firefox Marketplace"
+msgstr "Develop For Firefox Marketplace"
+
 #: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
 msgid "Featured Apps"
 msgstr "Featured Apps"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Great Apps for the workplace"
+msgstr "Great Apps for the workplace"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid "Lorem ipsum apple mapple bop"
+msgstr "Lorem ipsum apple mapple bop"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Our Staff Picks"
+msgstr "Our Staff Picks"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid "Report Trademark Abuse"
+msgstr "Report Trademark Abuse"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid "Terms of Use"
+msgstr "Terms of Use"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Top three Games"
+msgstr "Top three Games"

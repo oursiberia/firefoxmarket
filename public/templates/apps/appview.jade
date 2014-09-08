@@ -49,25 +49,25 @@ section
 
         div#vendor-information
             div#app-links
-                p.title Additional Information
+                p.title(translate) Additional Information
                 ul
                     li
-                        a(data-ng-href="mailto:{{support_email}}") Contact Support
+                        a(data-ng-href="mailto:{{support_email}}",translate) Contact Support
 
                     li
-                        a(data-ng-href="{{support_url}}",target="_blank") Support Site
+                        a(data-ng-href="{{support_url}}",target="_blank",translate) Support Site
 
                     li
-                        a(data-ng-href="{{privacy}}") Privacy Policy
+                        a(data-ng-href="{{privacy}}",translate) Privacy Policy
 
                     li
-                        a(data-ng-href="{{report_abuse}}") Report Abuse
+                        a(data-ng-href="{{report_abuse}}",translate) Report Abuse
 
                     li
-                        a(data-ng-href="{{feedback}}") Send Feedback
+                        a(data-ng-href="{{feedback}}",translate) Send Feedback
 
             div#other-applications
-                h2 Apps By this developer
+                h2(translate) Apps By this developer
                     a(data-ng-href="#") {{more_other_apps}}
                 div#other-applications-list
                     div(data-ng-repeat="app in other_apps",class="other-app")
@@ -85,9 +85,9 @@ section
 
         div#reviews
             div
-                div.view-all-reviews view all reviews
+                div.view-all-reviews(translate) view all reviews
 
-                h2 Latest Reviews
+                h2(translate) Latest Reviews
 
 
             div(data-ng-repeat="review in reviews",class="app-review")

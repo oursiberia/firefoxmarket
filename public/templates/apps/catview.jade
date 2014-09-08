@@ -30,7 +30,7 @@ section#category-page
                             div.collection-app
                             div.collection-app
                         div.collection-copy
-                            h2 Our Staff Picks
+                            h2(translate) Our Staff Picks
                             p fiehsoifheoisfhoesifheosifhoeishfoeishfo
                     div.collection
                         div.collection-apps
@@ -38,7 +38,7 @@ section#category-page
                             div.collection-app
                             div.collection-app
                         div.collection-copy
-                            h2 Top three Games
+                            h2(translate) Top three Games
                             p fiehsoifheoisfhoesifheosifhoeishfoeishfo
                     div.collection
                         div.collection-apps
@@ -46,12 +46,12 @@ section#category-page
                             div.collection-app
                             div.collection-app
                         div.collection-copy
-                            h2 Great Apps for the workplace
+                            h2(translate) Great Apps for the workplace
                             p fiehsoifheoisfhoesifheosifhoeishfoeishfo
 
     div#featured
         div.wrap
-            h1 Featured Apps
+            h1(translate) Featured Apps
             div.apps(class="home-apps")
                 div(class="{{app.classname}} featured {{app.showfirst}} with-review",data-ng-repeat="app in featuredapps")
 
@@ -74,8 +74,8 @@ section#category-page
                             div(appreviews,data-appid="{{app.id}}")
     div.wrap
         div#popular-in-category(class="category popular")
-            h3 Popular |
-                span.light New
+            h3(translate) Popular |
+                span.light(translate) New
             div(class="category app-set",data-ng-repeat="app in popularapps")
                 div.app
                     img(data-ng-src="{{app.icon}}")
