@@ -93,6 +93,15 @@ module.exports = function(grunt){
             }
         },
 
+        ngdocs:{
+            options:{
+              html5Mode:true
+            },
+            all:[
+               __dirname + "/public/js/**/*.js"
+            ]
+        },
+
         /**====== TRANSLATION STUFF =========*/
         nggettext_extract :{
             pot:{
@@ -148,6 +157,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-angular-gettext');
+    grunt.loadNpmTasks("grunt-ngdocs");
 
     //builds everything
     grunt.registerTask( 'default', ['uglify:dev','compass:dist','jade:compile']);

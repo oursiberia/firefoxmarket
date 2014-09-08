@@ -21,6 +21,7 @@
     "grunt-contrib-jade": "*"
   },
   "devDependencies": {
-    "grunt-angular-gettext": "^0.2.15"
+    "grunt-angular-gettext": "^0.2.15",
+    "grunt-ngdocs": "^0.2.3"
   }
 }
