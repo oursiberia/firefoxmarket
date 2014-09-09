@@ -14,6 +14,7 @@ cp -rf img compile_temp/img
 cp -rf js compile_temp/js
 cp -rf index.html compile_temp/index.html
 cp -rf manifest.webapp compile_temp/manifest.webapp
+cp -rf install.html compile_temp/install.html
 
 #zip it up
 zip package.zip compile_temp/
@@ -30,7 +31,6 @@ cp -rf build deploy/build
 cp -rf css deploy/css
 cp -rf img deploy/img
 cp -rf index.html deploy/index.html
-
-#prepare translation files
-
+cp -rf install.html deploy/install.html
+cp -rf package.zip deploy/package.zip
 
