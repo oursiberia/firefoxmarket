@@ -211,7 +211,35 @@
   margin: 0;
 }
 
-/* line 101, ../scss/_home.scss */
+/* line 102, ../scss/_home.scss */
+#category-list .wrap .controls {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* line 105, ../scss/_home.scss */
+#category-list .wrap .controls h1 {
+  display: inline-block;
+}
+/* line 109, ../scss/_home.scss */
+#category-list .wrap .controls h1:first-child:after {
+  content: "|";
+}
+/* line 113, ../scss/_home.scss */
+#category-list .wrap .controls h1:last-child {
+  font-family: "FiraLight";
+}
+/* line 117, ../scss/_home.scss */
+#category-list .wrap .controls button {
+  float: right;
+  width: 178px;
+  height: 42px;
+  background: #55575C;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  border-radius: 4px;
+}
+/* line 129, ../scss/_home.scss */
 #category-list .category {
   width: 298px;
   background: #F8F8F8;
@@ -224,7 +252,7 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 110, ../scss/_home.scss */
+/* line 138, ../scss/_home.scss */
 #category-list .category .category-title {
   background: #fff;
   width: 100%;
@@ -237,11 +265,11 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 122, ../scss/_home.scss */
+/* line 150, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap {
   padding: 20px;
 }
-/* line 124, ../scss/_home.scss */
+/* line 152, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon, #category-list .category .category-title .title-wrap .title-copy {
   display: inline-block;
   vertical-align: middle;
@@ -252,28 +280,28 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 135, ../scss/_home.scss */
+/* line 163, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon {
   height: 65px;
   width: 65px;
   background: #333;
   border-radius: 41px;
 }
-/* line 144, ../scss/_home.scss */
+/* line 172, ../scss/_home.scss */
 #category-list .category .app {
   border: 0;
   padding: 20px 20px 0 20px;
 }
-/* line 147, ../scss/_home.scss */
+/* line 175, ../scss/_home.scss */
 #category-list .category .app .app-details {
   padding: 0;
   border: 0;
 }
-/* line 152, ../scss/_home.scss */
+/* line 180, ../scss/_home.scss */
 #category-list .category .app:last-child {
   padding: 20px;
 }
-/* line 156, ../scss/_home.scss */
+/* line 184, ../scss/_home.scss */
 #category-list .category:last-child {
   margin: 0;
 }
@@ -900,18 +928,19 @@ header .wrap #searchbutton {
   text-align: center;
   display: inline-block;
   vertical-align: middle;
+  z-index: 999999;
 }
-/* line 149, ../scss/main.scss */
+/* line 150, ../scss/main.scss */
 header .wrap div:last-child {
   float: right;
   display: inline-block;
 }
-/* line 155, ../scss/main.scss */
+/* line 156, ../scss/main.scss */
 header .wrap div:last-child #user img, header .wrap div:last-child #user p {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 161, ../scss/main.scss */
+/* line 162, ../scss/main.scss */
 header .wrap div:last-child #user-details {
   position: absolute;
   height: 45px;
@@ -927,15 +956,15 @@ header .wrap div:last-child #user-details {
   -o-transition: background 0.5s ease;
   transition: background 0.5s ease;
 }
-/* line 173, ../scss/main.scss */
+/* line 174, ../scss/main.scss */
 header .wrap div:last-child #user-details .identification {
   float: right;
 }
-/* line 176, ../scss/main.scss */
+/* line 177, ../scss/main.scss */
 header .wrap div:last-child #user-details .identification img {
   margin-left: 10px;
 }
-/* line 180, ../scss/main.scss */
+/* line 181, ../scss/main.scss */
 header .wrap div:last-child #user-details.open {
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
@@ -943,16 +972,16 @@ header .wrap div:last-child #user-details.open {
   transition: background 0.5s ease;
   background: #64be3c;
 }
-/* line 186, ../scss/main.scss */
+/* line 187, ../scss/main.scss */
 header .wrap div:last-child #menu-trigger:hover {
   cursor: pointer;
 }
-/* line 189, ../scss/main.scss */
+/* line 190, ../scss/main.scss */
 header .wrap div:last-child #menu-trigger img {
   display: inline-block;
 }
 
-/* line 201, ../scss/main.scss */
+/* line 202, ../scss/main.scss */
 .wrap {
   max-width: 1260px;
   margin: 0 auto;
@@ -961,7 +990,7 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	References sections that are loading in content via AJAX
  */
-/* line 210, ../scss/main.scss */
+/* line 211, ../scss/main.scss */
 .section {
   opacity: 1;
   -webkit-transition: opacity 0.5s ease;
@@ -969,7 +998,7 @@ header .wrap div:last-child #menu-trigger img {
   -o-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-/* line 213, ../scss/main.scss */
+/* line 214, ../scss/main.scss */
 .section.ajax {
   opacity: 0;
   -webkit-transition: opacity 0.5s ease;
@@ -978,7 +1007,7 @@ header .wrap div:last-child #menu-trigger img {
   transition: opacity 0.5s ease;
 }
 
-/* line 219, ../scss/main.scss */
+/* line 220, ../scss/main.scss */
 #searchresults {
   position: absolute;
   min-width: 100%;
@@ -988,13 +1017,13 @@ header .wrap div:last-child #menu-trigger img {
   top: -99990px;
   z-index: 99;
 }
-/* line 227, ../scss/main.scss */
+/* line 228, ../scss/main.scss */
 #searchresults .search-wrap {
   display: block;
   padding: 30px;
   margin: 0 auto;
 }
-/* line 232, ../scss/main.scss */
+/* line 233, ../scss/main.scss */
 #searchresults .search-wrap #searchterm {
   background: none;
   border: none;
@@ -1003,11 +1032,11 @@ header .wrap div:last-child #menu-trigger img {
   color: #fff;
   font-size: 40px;
 }
-/* line 240, ../scss/main.scss */
+/* line 241, ../scss/main.scss */
 #searchresults .search-wrap #searchterm:focus {
   outline: 0;
 }
-/* line 248, ../scss/main.scss */
+/* line 249, ../scss/main.scss */
 #searchresults #results {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -1015,7 +1044,7 @@ header .wrap div:last-child #menu-trigger img {
   position: relative;
   top: 10px;
 }
-/* line 255, ../scss/main.scss */
+/* line 256, ../scss/main.scss */
 #searchresults #results .searchresult {
   border: solid 1px red;
   width: 200px;
@@ -1030,7 +1059,7 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	Editorial content
  */
-/* line 277, ../scss/main.scss */
+/* line 278, ../scss/main.scss */
 .editorial-collections .collections .collection {
   width: 338px;
   height: 185px;
@@ -1046,12 +1075,12 @@ header .wrap div:last-child #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 289, ../scss/main.scss */
+/* line 290, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps {
   max-width: 270px;
   margin: 0 auto;
 }
-/* line 292, ../scss/main.scss */
+/* line 293, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app {
   height: 70px;
   width: 70px;
@@ -1066,26 +1095,26 @@ header .wrap div:last-child #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 303, ../scss/main.scss */
+/* line 304, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app:last-child {
   margin: 0;
 }
-/* line 308, ../scss/main.scss */
+/* line 309, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy {
   margin-top: 24px;
 }
-/* line 310, ../scss/main.scss */
+/* line 311, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy h1 {
   font-size: 20px;
   letter-spacing: -.5px;
 }
-/* line 314, ../scss/main.scss */
+/* line 315, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy p {
   font-family: "FiraLight";
   font-size: 14px;
   margin-top: 5px;
 }
-/* line 324, ../scss/main.scss */
+/* line 325, ../scss/main.scss */
 .editorial-collections .collections .collection:last-child {
   margin: 0;
 }
@@ -1093,11 +1122,11 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	Ratings
  */
-/* line 333, ../scss/main.scss */
+/* line 334, ../scss/main.scss */
 .review {
   text-align: center;
 }
-/* line 336, ../scss/main.scss */
+/* line 337, ../scss/main.scss */
 .review .review-rating {
   max-width: 100px;
   margin: 0 auto;

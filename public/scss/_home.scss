@@ -98,6 +98,34 @@
 
 
 #category-list{
+	.wrap{
+		.controls{
+			padding-top:30px;
+			padding-bottom: 30px;
+			h1{
+				display: inline-block;
+			}
+
+			h1:first-child:after{
+				content: "|";
+			}
+
+			h1:last-child{
+				font-family: "FiraLight";
+			}
+
+			button{
+				float:right;
+				width:178px;
+				height:42px;
+				background:#55575C;
+				border:none;
+				padding:10px;
+				color:#fff;
+				border-radius: 4px;
+			}
+		}
+	}
 	.category{
 		width: 298px;
 		background: #F8F8F8;
