@@ -1,5 +1,11 @@
 /**
- * Store common keyboard values
+ *
+ * @ngdoc service
+ * @name FirefoxMarket.service:keys
+ *
+ * @description
+ * Store common keyboard values for clientside use.
+ * Note : currently not being used.
  */
 app.factory("keys",function(){
     // Named key codes. That's the key idea here.

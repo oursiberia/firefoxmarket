@@ -1,4 +1,9 @@
 /**
+ *
+ * @ngdoc directive
+ * @name FirefoxMarket.directive:login
+ *
+ * @description
  * Handles logging in of user.
  * TODO is doing it all clientside a security risk on packaged app?
  */

@@ -1,6 +1,6 @@
 /**
  * @ngdoc directive
- * @name footer
+ * @name FirefoxMarket.directive:footer
  *
  * @description
  * Directive to show footer, really just used as a way to keep things neat and

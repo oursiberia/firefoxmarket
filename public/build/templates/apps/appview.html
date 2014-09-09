@@ -48,17 +48,17 @@
     </div>
     <div id="vendor-information">
       <div id="app-links">
-        <p class="title">Additional Information</p>
+        <p translate="translate" class="title">Additional Information</p>
         <ul>
-          <li><a data-ng-href="mailto:{{support_email}}">Contact Support</a></li>
-          <li><a data-ng-href="{{support_url}}" target="_blank">Support Site</a></li>
-          <li><a data-ng-href="{{privacy}}">Privacy Policy</a></li>
-          <li><a data-ng-href="{{report_abuse}}">Report Abuse</a></li>
-          <li><a data-ng-href="{{feedback}}">Send Feedback</a></li>
+          <li><a data-ng-href="mailto:{{support_email}}" translate="translate">Contact Support</a></li>
+          <li><a data-ng-href="{{support_url}}" target="_blank" translate="translate">Support Site</a></li>
+          <li><a data-ng-href="{{privacy}}" translate="translate">Privacy Policy</a></li>
+          <li><a data-ng-href="{{report_abuse}}" translate="translate">Report Abuse</a></li>
+          <li><a data-ng-href="{{feedback}}" translate="translate">Send Feedback</a></li>
         </ul>
       </div>
       <div id="other-applications">
-        <h2>Apps By this developer<a data-ng-href="#">{{more_other_apps}}</a></h2>
+        <h2 translate="translate">Apps By this developer<a data-ng-href="#">{{more_other_apps}}</a></h2>
         <div id="other-applications-list">
           <div data-ng-repeat="app in other_apps" class="other-app"><img data-ng-src="{{app.icon}}"/>
             <div class="details">
@@ -75,8 +75,8 @@
     </div>
     <div id="reviews">
       <div>
-        <div class="view-all-reviews">view all reviews</div>
-        <h2>Latest Reviews</h2>
+        <div translate="translate" class="view-all-reviews">view all reviews</div>
+        <h2 translate="translate">Latest Reviews</h2>
       </div>
       <div data-ng-repeat="review in reviews" class="app-review">
         <div>

@@ -1,4 +1,9 @@
 /**
+ *
+ * @ngdoc filter
+ * @name FirefoxMarket.filter:LongCopyFilter
+ *
+ * @description
  * temporary tool to filter out overly long reviews and/or descriptions down to
  * one sentence
  */

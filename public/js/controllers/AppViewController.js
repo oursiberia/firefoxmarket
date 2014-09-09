@@ -1,6 +1,9 @@
 /**
- * Controller for the when viewing information about a application.
+ * @ngdoc controller
+ * @name FirefoxMarket.controller:AppViewController
  *
+ * @description
+ * Controller for the when viewing information about a application.
  */
 app.controller("AppViewController",[
     "$window",

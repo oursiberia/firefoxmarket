@@ -1,6 +1,6 @@
 /**
  *  @ngdoc directive
- *  @name categoryapps
+ *  @name FirefoxMarket.directive:categoryapps
  *
  *  @description
  *  Deals with fetching, then displaying apps within categories.

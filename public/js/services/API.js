@@ -1,4 +1,8 @@
 /**
+ * @ngdoc service
+ * @name FirefoxMarket.service:API
+ *
+ * @description
  * Service to interact with the Firefox Marketplace API
  */
 app.factory("API",[

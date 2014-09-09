@@ -1,6 +1,12 @@
 /**
+ * @ngdoc filter
+ * @name FirefoxMarket.filter:FeaturedInCategory
+ *
+ * @description
  * This filters out the desktop apps from a
  * general category/status search
+ *
+ * NOTE: possibly not being used.
  */
 
 app.filter("FeaturedInCategory",function() {

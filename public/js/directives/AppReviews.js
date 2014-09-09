@@ -1,6 +1,6 @@
 /**
  * @ngdoc directive
- * @name appreviews
+ * @name FirefoxMarket.directive:appreviews
  *
  * @description
  * This is a directive responsible for pulling and displaying a review of a

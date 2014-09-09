@@ -1,4 +1,8 @@
 /**
+ * @ngdoc filter
+ * @name FirefoxMarket.filter:DesktopApps
+ *
+ * @description
  * This filters out the desktop apps from a
  * general category/status search
  */

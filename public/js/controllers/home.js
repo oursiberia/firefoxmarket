@@ -1,4 +1,8 @@
 /**
+ * @ngdoc controller
+ * @name FirefoxMarket.controller:Home
+ *
+ * @description
  * Controller for the home page/view
  */
 app.controller("home",[
