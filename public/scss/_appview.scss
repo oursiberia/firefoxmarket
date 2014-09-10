@@ -1,5 +1,8 @@
 $borderColor:rgb(211,211,211);
-
+#appview{
+	position: relative;
+	min-height: 100%;
+}
 .app-content-container,#vendor-information{
 	display: inline-block;
 	vertical-align: top;
@@ -179,16 +182,20 @@ $borderColor:rgb(211,211,211);
 }
 
 #reviews{
+	margin-top:34px;
+	width:104%;
 	.view-all-reviews{
 		float:right;
 	}
 
 	.app-review{
+		margin-top:24px;
 		display: inline-block;
 		vertical-align: top;
-		width:280px;
-		height:160px;
+		width:300px;
+		height:180px;
 		padding:0px;
+		margin-right:23px;
 		@include panel;
 		.stars{
 			max-width:100px;
@@ -208,16 +215,14 @@ $borderColor:rgb(211,211,211);
 	padding-bottom:32px;
 	background:$panelBackground;
 	border-top:solid 1px $panelBorder;
-
+	margin-top:40px;
 	.apps{
-		width:100%;
+		width:106%;
 		background:#333;
 		border:$panelBorder;
 		.app{
 			float:left;
 		}
 	}
-	.wrap{
-		padding-left:79px;
-	}
+
 }
