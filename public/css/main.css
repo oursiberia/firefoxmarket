@@ -162,7 +162,7 @@
   width: 100%;
   background: #4cb1ff;
   position: absolute;
-  top: 307px;
+  top: 286px;
   z-index: 99;
 }
 /* line 49, ../scss/_home.scss */
@@ -818,38 +818,43 @@ body, html {
   color: #47484d;
 }
 
+/* line 38, ../scss/main.scss */
+.thin {
+  font-family: "FiraThin";
+}
+
 /**======= COMMON =============*/
-/* line 39, ../scss/main.scss */
+/* line 43, ../scss/main.scss */
 ul, li {
   list-style: none;
 }
 
-/* line 43, ../scss/main.scss */
+/* line 47, ../scss/main.scss */
 .dark {
   color: #44474b;
 }
 
-/* line 47, ../scss/main.scss */
+/* line 51, ../scss/main.scss */
 .thin {
   font-family: "FiraLight";
 }
 
-/* line 51, ../scss/main.scss */
+/* line 55, ../scss/main.scss */
 a {
   text-decoration: none;
   color: #55575c;
   cursor: pointer;
 }
 
-/* line 57, ../scss/main.scss */
+/* line 61, ../scss/main.scss */
 footer {
   width: 100%;
 }
-/* line 60, ../scss/main.scss */
+/* line 64, ../scss/main.scss */
 footer#developers {
   background: #EDEDED;
 }
-/* line 62, ../scss/main.scss */
+/* line 66, ../scss/main.scss */
 footer#developers #developer-link {
   width: 300px;
   height: 30px;
@@ -861,92 +866,92 @@ footer#developers #developer-link {
   text-align: center;
   border: solid 1px #A7A7A7;
 }
-/* line 75, ../scss/main.scss */
+/* line 79, ../scss/main.scss */
 footer#mozilla {
   font-family: "FiraLight";
   font-size: 10px;
   color: #55575c;
 }
-/* line 79, ../scss/main.scss */
+/* line 83, ../scss/main.scss */
 footer#mozilla img {
   height: 20px;
   width: 78px;
   margin-right: 30px;
 }
-/* line 84, ../scss/main.scss */
+/* line 88, ../scss/main.scss */
 footer#mozilla p {
   max-width: 450px;
 }
-/* line 87, ../scss/main.scss */
+/* line 91, ../scss/main.scss */
 footer#mozilla .links {
   margin-top: 8px;
 }
-/* line 90, ../scss/main.scss */
+/* line 94, ../scss/main.scss */
 footer#mozilla a {
   margin-right: 10px;
   padding-right: 10px;
   border-right: 1px solid #55575C;
 }
-/* line 95, ../scss/main.scss */
+/* line 99, ../scss/main.scss */
 footer#mozilla a:last-child {
   margin: 0;
   padding: 0;
   border: 0;
 }
-/* line 102, ../scss/main.scss */
+/* line 106, ../scss/main.scss */
 footer .footer-wrapper {
   max-width: 1260px;
   margin: 0 auto;
   padding: 30px 0;
   display: block;
 }
-/* line 107, ../scss/main.scss */
+/* line 111, ../scss/main.scss */
 footer .footer-wrapper h2, footer .footer-wrapper p, footer .footer-wrapper div, footer .footer-wrapper img {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 112, ../scss/main.scss */
+/* line 116, ../scss/main.scss */
 footer .footer-wrapper p {
   position: relative;
   left: 40px;
   font-size: 14px;
 }
-/* line 118, ../scss/main.scss */
+/* line 122, ../scss/main.scss */
 footer .footer-wrapper div {
   float: right;
 }
 
 /**======= HEADER =============*/
-/* line 127, ../scss/main.scss */
+/* line 131, ../scss/main.scss */
 header {
   width: 100%;
   background: #e9e9e9;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 132, ../scss/main.scss */
+/* line 136, ../scss/main.scss */
 header h1 {
   font-family: "FiraRegular";
 }
-/* line 135, ../scss/main.scss */
+/* line 139, ../scss/main.scss */
 header .wrap {
   /**======= SEARCH =============*/
 }
-/* line 137, ../scss/main.scss */
+/* line 141, ../scss/main.scss */
 header .wrap div {
   vertical-align: middle;
   cursor: pointer;
 }
-/* line 141, ../scss/main.scss */
+/* line 145, ../scss/main.scss */
 header .wrap div:first-child {
   display: inline-block;
 }
-/* line 144, ../scss/main.scss */
+/* line 148, ../scss/main.scss */
 header .wrap div:first-child img, header .wrap div:first-child h1 {
   vertical-align: middle;
   display: inline-block;
 }
-/* line 152, ../scss/main.scss */
+/* line 156, ../scss/main.scss */
 header .wrap #searchbutton {
   border: solid 1px #333333;
   background: none;
@@ -961,17 +966,17 @@ header .wrap #searchbutton {
   vertical-align: middle;
   z-index: 999999;
 }
-/* line 166, ../scss/main.scss */
+/* line 170, ../scss/main.scss */
 header .wrap div:last-child {
   float: right;
   display: inline-block;
 }
-/* line 172, ../scss/main.scss */
+/* line 176, ../scss/main.scss */
 header .wrap div:last-child #user img, header .wrap div:last-child #user p {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 178, ../scss/main.scss */
+/* line 182, ../scss/main.scss */
 header .wrap div:last-child #user-details {
   position: absolute;
   height: 45px;
@@ -987,15 +992,15 @@ header .wrap div:last-child #user-details {
   -o-transition: background 0.5s ease;
   transition: background 0.5s ease;
 }
-/* line 190, ../scss/main.scss */
+/* line 194, ../scss/main.scss */
 header .wrap div:last-child #user-details .identification {
   float: right;
 }
-/* line 193, ../scss/main.scss */
+/* line 197, ../scss/main.scss */
 header .wrap div:last-child #user-details .identification img {
   margin-left: 10px;
 }
-/* line 197, ../scss/main.scss */
+/* line 201, ../scss/main.scss */
 header .wrap div:last-child #user-details.open {
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
@@ -1003,16 +1008,16 @@ header .wrap div:last-child #user-details.open {
   transition: background 0.5s ease;
   background: #64be3c;
 }
-/* line 203, ../scss/main.scss */
+/* line 207, ../scss/main.scss */
 header .wrap div:last-child #menu-trigger:hover {
   cursor: pointer;
 }
-/* line 206, ../scss/main.scss */
+/* line 210, ../scss/main.scss */
 header .wrap div:last-child #menu-trigger img {
   display: inline-block;
 }
 
-/* line 218, ../scss/main.scss */
+/* line 222, ../scss/main.scss */
 .wrap {
   max-width: 1260px;
   margin: 0 auto;
@@ -1021,7 +1026,7 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	References sections that are loading in content via AJAX
  */
-/* line 227, ../scss/main.scss */
+/* line 231, ../scss/main.scss */
 .section {
   opacity: 1;
   -webkit-transition: opacity 0.5s ease;
@@ -1029,7 +1034,7 @@ header .wrap div:last-child #menu-trigger img {
   -o-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-/* line 230, ../scss/main.scss */
+/* line 234, ../scss/main.scss */
 .section.ajax {
   opacity: 0;
   -webkit-transition: opacity 0.5s ease;
@@ -1038,7 +1043,7 @@ header .wrap div:last-child #menu-trigger img {
   transition: opacity 0.5s ease;
 }
 
-/* line 236, ../scss/main.scss */
+/* line 240, ../scss/main.scss */
 #searchresults {
   position: absolute;
   min-width: 100%;
@@ -1048,13 +1053,13 @@ header .wrap div:last-child #menu-trigger img {
   top: -99990px;
   z-index: 99;
 }
-/* line 244, ../scss/main.scss */
+/* line 248, ../scss/main.scss */
 #searchresults .search-wrap {
   display: block;
   padding: 30px;
   margin: 0 auto;
 }
-/* line 249, ../scss/main.scss */
+/* line 253, ../scss/main.scss */
 #searchresults .search-wrap #searchterm {
   background: none;
   border: none;
@@ -1063,11 +1068,11 @@ header .wrap div:last-child #menu-trigger img {
   color: #fff;
   font-size: 40px;
 }
-/* line 257, ../scss/main.scss */
+/* line 261, ../scss/main.scss */
 #searchresults .search-wrap #searchterm:focus {
   outline: 0;
 }
-/* line 265, ../scss/main.scss */
+/* line 269, ../scss/main.scss */
 #searchresults #results {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -1075,7 +1080,7 @@ header .wrap div:last-child #menu-trigger img {
   position: relative;
   top: 10px;
 }
-/* line 272, ../scss/main.scss */
+/* line 276, ../scss/main.scss */
 #searchresults #results .searchresult {
   border: solid 1px red;
   width: 200px;
@@ -1090,7 +1095,7 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	Editorial content
  */
-/* line 294, ../scss/main.scss */
+/* line 298, ../scss/main.scss */
 .editorial-collections .collections .collection {
   width: 338px;
   height: 185px;
@@ -1106,12 +1111,12 @@ header .wrap div:last-child #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 306, ../scss/main.scss */
+/* line 310, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps {
   max-width: 270px;
   margin: 0 auto;
 }
-/* line 309, ../scss/main.scss */
+/* line 313, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app {
   height: 70px;
   width: 70px;
@@ -1126,26 +1131,26 @@ header .wrap div:last-child #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 320, ../scss/main.scss */
+/* line 324, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app:last-child {
   margin: 0;
 }
-/* line 325, ../scss/main.scss */
+/* line 329, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy {
   margin-top: 24px;
 }
-/* line 327, ../scss/main.scss */
+/* line 331, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy h1 {
   font-size: 20px;
   letter-spacing: -.5px;
 }
-/* line 331, ../scss/main.scss */
+/* line 335, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy p {
   font-family: "FiraLight";
   font-size: 14px;
   margin-top: 5px;
 }
-/* line 341, ../scss/main.scss */
+/* line 345, ../scss/main.scss */
 .editorial-collections .collections .collection:last-child {
   margin: 0;
 }
@@ -1153,11 +1158,11 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	Ratings
  */
-/* line 350, ../scss/main.scss */
+/* line 354, ../scss/main.scss */
 .review {
   text-align: center;
 }
-/* line 353, ../scss/main.scss */
+/* line 357, ../scss/main.scss */
 .review .review-rating {
   max-width: 100px;
   margin: 0 auto;
