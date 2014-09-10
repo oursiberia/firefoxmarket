@@ -1,3 +1,10 @@
+/**
+ * @ngdoc directive
+ * @name FirefoxMarket.directive:appsearch
+ *
+ * @description
+ * Deals with pinging the API for search queries.
+ */
 
 app.directive("appsearch",["$http","$rootScope",function($http,$rootScope){
 

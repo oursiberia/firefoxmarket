@@ -3,16 +3,16 @@ header
         div(data-ng-click="returnHome()")
             img(src="/img/marketplace.png" alt="marketplace-logo")
             h1
-                span.dark Firefox
-                span.thin Market
+                span.dark(translate) Firefox
+                span.thin(translate) Market
 
-        div#searchbutton Search
+        div#searchbutton(translate) Search
 
         div
             div#user
                 div#user-details
                     div.identification
-                        p#username(data-ng-click="login()") Sign in
+                        p#username(data-ng-click="login()",translate) Sign in
                         img(src="/img/test_user.svg")
 
 

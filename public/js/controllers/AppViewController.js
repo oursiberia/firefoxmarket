@@ -1,6 +1,9 @@
 /**
- * Controller for the when viewing information about a application.
+ * @ngdoc controller
+ * @name FirefoxMarket.controller:AppViewController
  *
+ * @description
+ * Controller for the when viewing information about a application.
  */
 app.controller("AppViewController",[
     "$window",
@@ -87,7 +90,7 @@ app.controller("AppViewController",[
                 var objects = odata.objects;
                 var apps = [];
 
-                if (objects.length > 0) {
+                if ((objects.length > 0)  && (apps.length < 2)){
                     for(var i = 0;i<objects.length;++i){
                         var oapp = objects[i];
 

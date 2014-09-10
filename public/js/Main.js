@@ -1,4 +1,8 @@
-var app = angular.module("FireFoxMarket",[
+/**
+ * the main initialization file for the app.
+ */
+
+var app = angular.module("FirefoxMarket",[
     "ui.router",
     "LocalStorageModule"
 ]);

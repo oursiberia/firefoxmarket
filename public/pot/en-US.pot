@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid "Develop For Firefox Marketplace"
+msgstr ""
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Featured Apps"
+msgstr ""
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Great Apps for the workplace"
+msgstr ""
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid "Lorem ipsum apple mapple bop"
+msgstr ""
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Our Staff Picks"
+msgstr ""
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid "Privacy Policy"
+msgstr ""
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid "Report Trademark Abuse"
+msgstr ""
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid "Terms of Use"
+msgstr ""
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Top three Games"
+msgstr ""

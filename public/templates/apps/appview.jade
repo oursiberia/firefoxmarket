@@ -1,6 +1,6 @@
 //
    Created by sortofsleepy on 8/28/14.
-section
+section#appview
     div.wrap
         h3 Category
             span  {{category}}
@@ -8,7 +8,7 @@ section
         div.app-content-container
             div.app-meta
                 div.img-rating
-                    img(src="{{icon}}")
+                    img(src="{{icon}}",alt="app-image")
                     div(StarRating,data-rating="3.5")
                     p {{ratings}}
                 div.updates
@@ -29,6 +29,7 @@ section
                     h1 {{name}}
                     span.divider |
                     h3 {{author}}
+
                 div.tabs
                     ul
                         li
@@ -47,27 +48,28 @@ section
                     h1 TEST
 
 
+
         div#vendor-information
             div#app-links
-                p.title Additional Information
+                p.title(translate) Additional Information
                 ul
                     li
-                        a(data-ng-href="mailto:{{support_email}}") Contact Support
+                        a(data-ng-href="mailto:{{support_email}}",translate) Contact Support
 
                     li
-                        a(data-ng-href="{{support_url}}",target="_blank") Support Site
+                        a(data-ng-href="{{support_url}}",target="_blank",translate) Support Site
 
                     li
-                        a(data-ng-href="{{privacy}}") Privacy Policy
+                        a(data-ng-href="{{privacy}}",translate) Privacy Policy
 
                     li
-                        a(data-ng-href="{{report_abuse}}") Report Abuse
+                        a(data-ng-href="{{report_abuse}}",translate) Report Abuse
 
                     li
-                        a(data-ng-href="{{feedback}}") Send Feedback
+                        a(data-ng-href="{{feedback}}",translate) Send Feedback
 
             div#other-applications
-                h2 Apps By this developer
+                h2(translate) Apps By this developer
                     a(data-ng-href="#") {{more_other_apps}}
                 div#other-applications-list
                     div(data-ng-repeat="app in other_apps",class="other-app")
@@ -85,9 +87,9 @@ section
 
         div#reviews
             div
-                div.view-all-reviews view all reviews
+                div.view-all-reviews(translate) view all reviews
 
-                h2 Latest Reviews
+                h2(translate) Latest Reviews
 
 
             div(data-ng-repeat="review in reviews",class="app-review")
@@ -100,21 +102,24 @@ section
                     div.username
                         p {{review.username}}
 
+div#related-apps
+   div.wrap
+       h3 Related Apps
+       div.apps
+           div(class="app",data-ng-repeat="app in relatedapps")
+               div.app-wrap
+               div.app-details
+                   div.app-image
+                       a(data-ng-href="/app/{{app.id}}")
+                           img.app-icon(ng-src="{{app.icon}}")
+                   div.app-copy
+                       div.app-download-button
+                           p Free
+                       a(data-ng-href="/app/{{app.id}}")
+                           h2.app-title {{app.name}}
+                           p.app-author {{app.author}}
+                           div(starrating,data-rating="{{app.rating}}")
 
-        div#related-apps
-            div.wrap
-                h3 Related Apps
-                    div.apps
-                        div(class="app",data-ng-repeat="app in relatedapps")
-                            div.app-wrap
-                            div.app-details
-                                div.app-image
-                                    a(data-ng-href="/app/{{app.id}}")
-                                        img.app-icon(ng-src="{{app.icon}}")
-                                div.app-copy
-                                    div.app-download-button
-                                        p Free
-                                    a(data-ng-href="/app/{{app.id}}")
-                                        h2.app-title {{app.name}}
-                                        p.app-author {{app.author}}
-                                        div(starrating,data-rating="{{app.rating}}")
+
+
+

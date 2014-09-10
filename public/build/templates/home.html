@@ -15,7 +15,7 @@
   </div>
   <div id="featured">
     <div class="wrap">
-      <h1>Featured Apps</h1>
+      <h1 translate="translate">Featured Apps</h1>
       <div class="home-apps">
         <div data-ng-repeat="app in featured_apps" class="{{app.classname}} featured {{app.showfirst}} with-description">
           <div class="app-wrap">
@@ -48,7 +48,7 @@
             <div class="collection-app"></div>
           </div>
           <div class="collection-copy">
-            <h1>Our Staff Picks</h1>
+            <h1 translate="translate">Our Staff Picks</h1>
             <p>Each week we compile the five most popular apps according to you—the Mozilla community—and list them here.</p>
           </div>
         </div>
@@ -59,7 +59,7 @@
             <div class="collection-app"></div>
           </div>
           <div class="collection-copy">
-            <h1>Top three Games</h1>
+            <h1 translate="translate">Top three Games</h1>
             <p>Each week we compile the five most popular apps according to you—the Mozilla community—and list them here.</p>
           </div>
         </div>
@@ -70,7 +70,7 @@
             <div class="collection-app"></div>
           </div>
           <div class="collection-copy">
-            <h1>Great Apps for the workplace</h1>
+            <h1 translate="translate">Great Apps for the workplace</h1>
             <p>Each week we compile the five most popular apps according to you—the Mozilla community—and list them here.</p>
           </div>
         </div>
@@ -79,9 +79,9 @@
   </div>
   <div id="category-list">
     <div class="wrap">
-      <div>
+      <div class="controls">
         <h1>Most Popular</h1>
-        <h1>Recently Released</h1>
+        <h1 class="thin">Recently Released</h1>
         <button>View All Categories</button>
       </div>
       <div data-ng-repeat="item in appcategories" class="category">

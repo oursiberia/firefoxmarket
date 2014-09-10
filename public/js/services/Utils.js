@@ -1,3 +1,13 @@
+/**
+ *
+ * @ngdoc service
+ * @name FirefoxMarket.service:Utils
+ *
+ * @description
+ * Common functionality that could be useful across a wide variety of contexts.
+ * Currently not used.
+ */
+
 app.factory("Utils",function(){
 
 

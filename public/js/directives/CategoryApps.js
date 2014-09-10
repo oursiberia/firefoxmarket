@@ -1,4 +1,8 @@
 /**
+ *  @ngdoc directive
+ *  @name FirefoxMarket.directive:categoryapps
+ *
+ *  @description
  *  Deals with fetching, then displaying apps within categories.
  *  The category to search for should be specified as a data attribute using the name
  *  data-categoryname

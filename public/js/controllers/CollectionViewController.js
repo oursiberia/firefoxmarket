@@ -1,3 +1,13 @@
+/**
+ * @ngdoc controller
+ * @name FirefoxMarket.controller:CollectionViewController
+ *
+ * @description
+ * The controller responsible for dealing with collection views.
+ *
+ */
+
+
 app.controller("CollectionViewController",["$scope","API",function($scope,API){
 
     //get the app collection out of the url

@@ -1,4 +1,8 @@
 /**
+ * @ngdoc controller
+ * @name FirefoxMarket.controller:CategoryViewController
+ *
+ * @description
  * Controller for the Category view page
  */
 app.controller("CategoryViewController",[

@@ -1,5 +1,10 @@
 /**
- * Retrives reviews of a app
+ * @ngdoc directive
+ * @name FirefoxMarket.directive:appreviews
+ *
+ * @description
+ * This is a directive responsible for pulling and displaying a review of a
+ * application.
  */
 app.directive("appreviews",["API","$filter",function(API,$filter) {
 

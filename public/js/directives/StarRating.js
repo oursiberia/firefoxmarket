@@ -1,3 +1,14 @@
+/**
+ * @ngdoc directive
+ * @name FirefoxMarket.directive:starrating
+ *
+ * @description
+ * This deals with handling the display of a application's star rating.
+ * The rating is based on the average rating of the app.
+ *
+ * If the rating is fractional and the value is at or above .5, the number will be rounded
+ * up, if not, then the number is rounded down.
+ */
 app.directive("starrating",function(){
 
     return {

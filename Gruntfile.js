@@ -11,6 +11,7 @@ module.exports = function(grunt){
      */
     var files = [
         jsdir + "/Main.js",
+        base + "translations/translations.js",
         jsdir + "/services/*.js",
         jsdir + "/directives/*.js",
         jsdir + "/controllers/*.js",
@@ -26,6 +27,7 @@ module.exports = function(grunt){
         jsdir + "libs/Isotope.js",
         base + "bower_components/angular/angular.js",
         base + "bower_components/angular-ui-router/release/angular-ui-router.js",
+
         base + "bower_components/angular-local-storage/LocalStorage.js",
         base + "bower_components/angular-gettext/dist/angular-gettext.js",
         jsdir + "/libs/plugins/CSSPlugin.js",
@@ -91,15 +93,35 @@ module.exports = function(grunt){
             }
         },
 
+        ngdocs:{
+            options:{
+              html5Mode:true
+            },
+            all:[
+               __dirname + "/public/js/**/*.js"
+            ]
+        },
+
         /**====== TRANSLATION STUFF =========*/
         nggettext_extract :{
             pot:{
                 files:{
-                    "public/po/strings.pot":[
-
+                    "public/pot/en-US.pot":[
+                        __dirname + "/public/build/templates/*.html"
                     ]
+
                 }
             }
+        },
+
+        nggettext_compile:{
+          all:{
+              files:{
+                  'public/translations/translations.js':[
+                      __dirname + "/public/po/*.po"
+                  ]
+              }
+          }
         },
 
         watch: {
@@ -135,6 +157,7 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-jade');
     grunt.loadNpmTasks('grunt-angular-gettext');
+    grunt.loadNpmTasks("grunt-ngdocs");
 
     //builds everything
     grunt.registerTask( 'default', ['uglify:dev','compass:dist','jade:compile']);

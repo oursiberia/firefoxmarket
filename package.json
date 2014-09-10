@@ -1,16 +1,12 @@
 {
-  "name": "theblvd",
+  "name": "FirefoxMarket",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www.js"
-  },
   "dependencies": {
     "hjs": "~0.0.6",
     "express": "~4.2.0",
     "debug": "~0.7.4",
     "grunt": "*",
-    "marked": "*",
     "request": "*",
     "body-parser": "*",
     "grunt-contrib-compass": "*",
@@ -21,6 +17,10 @@
     "grunt-contrib-jade": "*"
   },
   "devDependencies": {
-    "grunt-angular-gettext": "^0.2.15"
+    "grunt-angular-gettext": "^0.2.15",
+    "grunt-ngdocs": "^0.2.3",
+    "karma": "^0.12.23",
+    "karma-chrome-launcher": "^0.1.4",
+    "karma-jasmine": "^0.1.5"
   }
 }

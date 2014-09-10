@@ -1,5 +1,9 @@
 /**
- * Directive to show header
+ * @ngdoc directive
+ * @name FirefoxMarket.directive:header
+ *
+ * @description
+ * Directive to show header.
  */
 app.directive("header",function() {
 

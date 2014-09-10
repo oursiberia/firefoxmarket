@@ -162,7 +162,7 @@
   width: 100%;
   background: #4cb1ff;
   position: absolute;
-  top: 307px;
+  top: 286px;
   z-index: 99;
 }
 /* line 49, ../scss/_home.scss */
@@ -211,7 +211,35 @@
   margin: 0;
 }
 
-/* line 101, ../scss/_home.scss */
+/* line 102, ../scss/_home.scss */
+#category-list .wrap .controls {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* line 105, ../scss/_home.scss */
+#category-list .wrap .controls h1 {
+  display: inline-block;
+}
+/* line 109, ../scss/_home.scss */
+#category-list .wrap .controls h1:first-child:after {
+  content: "|";
+}
+/* line 113, ../scss/_home.scss */
+#category-list .wrap .controls h1:last-child {
+  font-family: "FiraLight";
+}
+/* line 117, ../scss/_home.scss */
+#category-list .wrap .controls button {
+  float: right;
+  width: 178px;
+  height: 42px;
+  background: #55575C;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  border-radius: 4px;
+}
+/* line 129, ../scss/_home.scss */
 #category-list .category {
   width: 298px;
   background: #F8F8F8;
@@ -224,7 +252,7 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 110, ../scss/_home.scss */
+/* line 138, ../scss/_home.scss */
 #category-list .category .category-title {
   background: #fff;
   width: 100%;
@@ -237,11 +265,11 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 122, ../scss/_home.scss */
+/* line 150, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap {
   padding: 20px;
 }
-/* line 124, ../scss/_home.scss */
+/* line 152, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon, #category-list .category .category-title .title-wrap .title-copy {
   display: inline-block;
   vertical-align: middle;
@@ -252,28 +280,28 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 135, ../scss/_home.scss */
+/* line 163, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon {
   height: 65px;
   width: 65px;
   background: #333;
   border-radius: 41px;
 }
-/* line 144, ../scss/_home.scss */
+/* line 172, ../scss/_home.scss */
 #category-list .category .app {
   border: 0;
   padding: 20px 20px 0 20px;
 }
-/* line 147, ../scss/_home.scss */
+/* line 175, ../scss/_home.scss */
 #category-list .category .app .app-details {
   padding: 0;
   border: 0;
 }
-/* line 152, ../scss/_home.scss */
+/* line 180, ../scss/_home.scss */
 #category-list .category .app:last-child {
   padding: 20px;
 }
-/* line 156, ../scss/_home.scss */
+/* line 184, ../scss/_home.scss */
 #category-list .category:last-child {
   margin: 0;
 }
@@ -405,18 +433,30 @@
   font-family: "FiraThin";
 }
 
-/* line 3, ../scss/_appview.scss */
+/* line 2, ../scss/_appview.scss */
+#appview {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 6, ../scss/_appview.scss */
 .app-content-container, #vendor-information {
   display: inline-block;
   vertical-align: top;
 }
 
+/* line 10, ../scss/_appview.scss */
+#vendor-information {
+  position: relative;
+  left: 20px;
+}
+
 /**
  *	All the details of the app
  */
-/* line 11, ../scss/_appview.scss */
+/* line 17, ../scss/_appview.scss */
 .app-content-container {
-  width: 938px;
+  width: 930px;
   height: 400px;
   background: #f6f6f6;
   border-radius: 4px;
@@ -426,22 +466,22 @@
    *	general meta info for the app, icon, rating etc.
    */
 }
-/* line 23, ../scss/_appview.scss */
+/* line 29, ../scss/_appview.scss */
 .app-content-container .app-meta {
   padding-top: 21px;
   border-right: solid 1px lightgrey;
 }
-/* line 26, ../scss/_appview.scss */
+/* line 32, ../scss/_appview.scss */
 .app-content-container .app-meta .img-rating {
   padding-right: 21px;
   padding-left: 21px;
   padding-bottom: 21px;
 }
-/* line 30, ../scss/_appview.scss */
+/* line 36, ../scss/_appview.scss */
 .app-content-container .app-meta .img-rating img {
   width: 97%;
 }
-/* line 35, ../scss/_appview.scss */
+/* line 41, ../scss/_appview.scss */
 .app-content-container .app-meta .updates {
   border-top: solid 1px lightgrey;
   padding-right: 21px;
@@ -451,57 +491,57 @@
   padding-top: 21px;
   padding-bottom: 18px;
 }
-/* line 43, ../scss/_appview.scss */
+/* line 49, ../scss/_appview.scss */
 .app-content-container .app-meta .updates h3 {
   font-size: 13px;
 }
-/* line 46, ../scss/_appview.scss */
+/* line 52, ../scss/_appview.scss */
 .app-content-container .app-meta .updates p {
   font-size: 12px;
 }
-/* line 53, ../scss/_appview.scss */
+/* line 59, ../scss/_appview.scss */
 .app-content-container .app-meta .govt-rating {
   padding-top: 21px;
   padding-bottom: 21px;
 }
-/* line 56, ../scss/_appview.scss */
+/* line 62, ../scss/_appview.scss */
 .app-content-container .app-meta .govt-rating img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
-/* line 65, ../scss/_appview.scss */
+/* line 71, ../scss/_appview.scss */
 .app-content-container .app-information {
   position: absolute;
-  width: 81%;
+  width: 83%;
 }
-/* line 69, ../scss/_appview.scss */
+/* line 75, ../scss/_appview.scss */
 .app-content-container .app-information .download {
   float: right;
   width: 100px;
   height: 30px;
   border: solid 1px blue;
 }
-/* line 75, ../scss/_appview.scss */
+/* line 81, ../scss/_appview.scss */
 .app-content-container .app-information .name-author {
   border-bottom: solid 1px lightgrey;
   padding: 21px;
   width: 100%;
 }
-/* line 79, ../scss/_appview.scss */
+/* line 85, ../scss/_appview.scss */
 .app-content-container .app-information .name-author h1, .app-content-container .app-information .name-author h3, .app-content-container .app-information .name-author .divider {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 89, ../scss/_appview.scss */
+/* line 95, ../scss/_appview.scss */
 .app-content-container .app-information .tabs ul li div:first-child.tab-trigger {
   border-right: solid 1px lightgrey;
 }
-/* line 93, ../scss/_appview.scss */
+/* line 99, ../scss/_appview.scss */
 .app-content-container .app-information .tabs ul li div:last-child.tab-trigger {
   border-left: solid 1px lightgrey;
 }
-/* line 97, ../scss/_appview.scss */
+/* line 103, ../scss/_appview.scss */
 .app-content-container .app-information .tabs ul li div.tab-trigger {
   padding: 30px;
   width: 189px;
@@ -510,7 +550,7 @@
   text-transform: uppercase;
   font-family: "FiraLight";
 }
-/* line 99, ../scss/_appview.scss */
+/* line 105, ../scss/_appview.scss */
 .app-content-container .app-information .tabs ul li div.tab-trigger h4 {
   font-size: 13px;
   -webkit-transition: color 0.5s ease;
@@ -519,11 +559,11 @@
   transition: color 0.5s ease;
   color: #333;
 }
-/* line 111, ../scss/_appview.scss */
+/* line 117, ../scss/_appview.scss */
 .app-content-container .app-information .tabs ul li div.tab-trigger:hover {
   cursor: pointer;
 }
-/* line 114, ../scss/_appview.scss */
+/* line 120, ../scss/_appview.scss */
 .app-content-container .app-information .tabs ul li div.tab-trigger:hover h4 {
   -webkit-transition: color 0.5s ease;
   -moz-transition: color 0.5s ease;
@@ -531,19 +571,19 @@
   transition: color 0.5s ease;
   color: #4cb1ff;
 }
-/* line 125, ../scss/_appview.scss */
+/* line 131, ../scss/_appview.scss */
 .app-content-container .app-information #tab-content {
   border-top: solid 1px lightgrey;
   width: 100%;
   padding: 19px;
 }
-/* line 132, ../scss/_appview.scss */
+/* line 138, ../scss/_appview.scss */
 .app-content-container .app-information, .app-content-container .app-meta {
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 139, ../scss/_appview.scss */
+/* line 145, ../scss/_appview.scss */
 #app-links {
   width: 280px;
   height: 180px;
@@ -553,17 +593,17 @@
   border: solid 1px lightgrey;
   position: relative;
 }
-/* line 148, ../scss/_appview.scss */
+/* line 154, ../scss/_appview.scss */
 #app-links .title {
   text-transform: uppercase;
   font-family: "FiraLight";
 }
 
-/* line 156, ../scss/_appview.scss */
+/* line 162, ../scss/_appview.scss */
 #other-applications h2 {
   font-size: 13px;
 }
-/* line 159, ../scss/_appview.scss */
+/* line 165, ../scss/_appview.scss */
 #other-applications #other-applications-list {
   background: #f6f6f6;
   border-radius: 4px;
@@ -573,44 +613,51 @@
   height: 100%;
   padding: 20px;
 }
-/* line 165, ../scss/_appview.scss */
+/* line 171, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app img, #other-applications #other-applications-list .other-app .details {
   display: inline-block;
   vertical-align: top;
 }
-/* line 170, ../scss/_appview.scss */
+/* line 176, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app .app-download-button.mini-container {
   position: relative;
   top: 20px;
 }
 
-/* line 179, ../scss/_appview.scss */
+/* line 184, ../scss/_appview.scss */
+#reviews {
+  margin-top: 34px;
+  width: 104%;
+}
+/* line 187, ../scss/_appview.scss */
 #reviews .view-all-reviews {
   float: right;
 }
-/* line 183, ../scss/_appview.scss */
+/* line 191, ../scss/_appview.scss */
 #reviews .app-review {
+  margin-top: 24px;
   display: inline-block;
   vertical-align: top;
-  width: 280px;
-  height: 160px;
+  width: 300px;
+  height: 180px;
   padding: 0px;
+  margin-right: 23px;
   background: #f6f6f6;
   border-radius: 4px;
   border: solid 1px lightgrey;
   position: relative;
 }
-/* line 190, ../scss/_appview.scss */
+/* line 200, ../scss/_appview.scss */
 #reviews .app-review .stars {
   max-width: 100px;
   margin: 0 auto;
 }
-/* line 194, ../scss/_appview.scss */
+/* line 204, ../scss/_appview.scss */
 #reviews .app-review .rating-copy, #reviews .app-review .username {
   text-align: center;
 }
 
-/* line 201, ../scss/_appview.scss */
+/* line 211, ../scss/_appview.scss */
 #related-apps {
   width: 100%;
   height: 192px;
@@ -618,20 +665,17 @@
   padding-bottom: 32px;
   background: #f6f6f6;
   border-top: solid 1px lightgrey;
+  margin-top: 40px;
 }
-/* line 209, ../scss/_appview.scss */
+/* line 219, ../scss/_appview.scss */
 #related-apps .apps {
-  width: 100%;
+  width: 106%;
   background: #333;
   border: lightgrey;
 }
-/* line 213, ../scss/_appview.scss */
+/* line 223, ../scss/_appview.scss */
 #related-apps .apps .app {
   float: left;
-}
-/* line 217, ../scss/_appview.scss */
-#related-apps .wrap {
-  padding-left: 79px;
 }
 
 /* line 1, ../scss/_apps.scss */
@@ -751,18 +795,22 @@
   margin: 0;
   padding: 0;
 }
+/* line 16, ../scss/main.scss */
+* p {
+  font-family: "FiraUltraLight";
+}
 
-/* line 18, ../scss/main.scss */
+/* line 22, ../scss/main.scss */
 .rating li {
   float: left;
   margin-right: -5px;
 }
-/* line 21, ../scss/main.scss */
+/* line 25, ../scss/main.scss */
 .rating li img {
   max-width: 75%;
 }
 
-/* line 27, ../scss/main.scss */
+/* line 31, ../scss/main.scss */
 body, html {
   font-size: 100%;
   font-family: "FiraRegular",sans-serif;
@@ -770,141 +818,165 @@ body, html {
   color: #47484d;
 }
 
+/* line 38, ../scss/main.scss */
+.thin {
+  font-family: "FiraThin";
+}
+
 /**======= COMMON =============*/
-/* line 35, ../scss/main.scss */
+/* line 43, ../scss/main.scss */
 ul, li {
   list-style: none;
 }
 
-/* line 39, ../scss/main.scss */
+/* line 47, ../scss/main.scss */
 .dark {
   color: #44474b;
 }
 
-/* line 43, ../scss/main.scss */
+/* line 51, ../scss/main.scss */
 .thin {
   font-family: "FiraLight";
 }
 
-/* line 47, ../scss/main.scss */
+/* line 55, ../scss/main.scss */
 a {
   text-decoration: none;
   color: #55575c;
   cursor: pointer;
 }
 
-/* line 53, ../scss/main.scss */
+/* line 61, ../scss/main.scss */
 footer {
   width: 100%;
 }
-/* line 56, ../scss/main.scss */
+/* line 64, ../scss/main.scss */
 footer#developers {
   background: #EDEDED;
 }
-/* line 58, ../scss/main.scss */
+/* line 66, ../scss/main.scss */
 footer#developers #developer-link {
   width: 300px;
-  height: 60px;
+  height: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  position: relative;
+  bottom: 13px;
   background: #F8F8F8;
+  text-align: center;
   border: solid 1px #A7A7A7;
 }
-/* line 66, ../scss/main.scss */
+/* line 79, ../scss/main.scss */
 footer#mozilla {
   font-family: "FiraLight";
   font-size: 10px;
   color: #55575c;
 }
-/* line 70, ../scss/main.scss */
+/* line 83, ../scss/main.scss */
 footer#mozilla img {
   height: 20px;
   width: 78px;
   margin-right: 30px;
 }
-/* line 75, ../scss/main.scss */
+/* line 88, ../scss/main.scss */
 footer#mozilla p {
   max-width: 450px;
 }
-/* line 78, ../scss/main.scss */
+/* line 91, ../scss/main.scss */
 footer#mozilla .links {
   margin-top: 8px;
 }
-/* line 81, ../scss/main.scss */
+/* line 94, ../scss/main.scss */
 footer#mozilla a {
   margin-right: 10px;
   padding-right: 10px;
   border-right: 1px solid #55575C;
 }
-/* line 86, ../scss/main.scss */
+/* line 99, ../scss/main.scss */
 footer#mozilla a:last-child {
   margin: 0;
   padding: 0;
   border: 0;
 }
-/* line 93, ../scss/main.scss */
+/* line 106, ../scss/main.scss */
 footer .footer-wrapper {
   max-width: 1260px;
   margin: 0 auto;
   padding: 30px 0;
   display: block;
 }
-/* line 98, ../scss/main.scss */
+/* line 111, ../scss/main.scss */
 footer .footer-wrapper h2, footer .footer-wrapper p, footer .footer-wrapper div, footer .footer-wrapper img {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 102, ../scss/main.scss */
+/* line 116, ../scss/main.scss */
+footer .footer-wrapper p {
+  position: relative;
+  left: 40px;
+  font-size: 14px;
+}
+/* line 122, ../scss/main.scss */
 footer .footer-wrapper div {
   float: right;
 }
 
 /**======= HEADER =============*/
-/* line 111, ../scss/main.scss */
+/* line 131, ../scss/main.scss */
 header {
   width: 100%;
   background: #e9e9e9;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 116, ../scss/main.scss */
+/* line 136, ../scss/main.scss */
 header h1 {
   font-family: "FiraRegular";
 }
-/* line 121, ../scss/main.scss */
+/* line 139, ../scss/main.scss */
+header .wrap {
+  /**======= SEARCH =============*/
+}
+/* line 141, ../scss/main.scss */
 header .wrap div {
   vertical-align: middle;
   cursor: pointer;
 }
-/* line 125, ../scss/main.scss */
+/* line 145, ../scss/main.scss */
 header .wrap div:first-child {
   display: inline-block;
 }
-/* line 128, ../scss/main.scss */
+/* line 148, ../scss/main.scss */
 header .wrap div:first-child img, header .wrap div:first-child h1 {
   vertical-align: middle;
   display: inline-block;
 }
-/* line 136, ../scss/main.scss */
-header .wrap div:last-child {
-  float: right;
-  display: inline-block;
-  /**======= SEARCH =============*/
-}
-/* line 141, ../scss/main.scss */
-header .wrap div:last-child #searchbutton {
+/* line 156, ../scss/main.scss */
+header .wrap #searchbutton {
   border: solid 1px #333333;
   background: none;
   width: 100px;
-  height: 40px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   border-radius: 4px;
   position: relative;
-  left: -200px;
+  left: 30%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+  z-index: 999999;
 }
-/* line 152, ../scss/main.scss */
+/* line 170, ../scss/main.scss */
+header .wrap div:last-child {
+  float: right;
+  display: inline-block;
+}
+/* line 176, ../scss/main.scss */
 header .wrap div:last-child #user img, header .wrap div:last-child #user p {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 158, ../scss/main.scss */
+/* line 182, ../scss/main.scss */
 header .wrap div:last-child #user-details {
   position: absolute;
   height: 45px;
@@ -920,15 +992,15 @@ header .wrap div:last-child #user-details {
   -o-transition: background 0.5s ease;
   transition: background 0.5s ease;
 }
-/* line 170, ../scss/main.scss */
+/* line 194, ../scss/main.scss */
 header .wrap div:last-child #user-details .identification {
   float: right;
 }
-/* line 173, ../scss/main.scss */
+/* line 197, ../scss/main.scss */
 header .wrap div:last-child #user-details .identification img {
   margin-left: 10px;
 }
-/* line 177, ../scss/main.scss */
+/* line 201, ../scss/main.scss */
 header .wrap div:last-child #user-details.open {
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
@@ -936,16 +1008,16 @@ header .wrap div:last-child #user-details.open {
   transition: background 0.5s ease;
   background: #64be3c;
 }
-/* line 183, ../scss/main.scss */
+/* line 207, ../scss/main.scss */
 header .wrap div:last-child #menu-trigger:hover {
   cursor: pointer;
 }
-/* line 186, ../scss/main.scss */
+/* line 210, ../scss/main.scss */
 header .wrap div:last-child #menu-trigger img {
   display: inline-block;
 }
 
-/* line 198, ../scss/main.scss */
+/* line 222, ../scss/main.scss */
 .wrap {
   max-width: 1260px;
   margin: 0 auto;
@@ -954,7 +1026,7 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	References sections that are loading in content via AJAX
  */
-/* line 207, ../scss/main.scss */
+/* line 231, ../scss/main.scss */
 .section {
   opacity: 1;
   -webkit-transition: opacity 0.5s ease;
@@ -962,7 +1034,7 @@ header .wrap div:last-child #menu-trigger img {
   -o-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-/* line 210, ../scss/main.scss */
+/* line 234, ../scss/main.scss */
 .section.ajax {
   opacity: 0;
   -webkit-transition: opacity 0.5s ease;
@@ -971,7 +1043,7 @@ header .wrap div:last-child #menu-trigger img {
   transition: opacity 0.5s ease;
 }
 
-/* line 216, ../scss/main.scss */
+/* line 240, ../scss/main.scss */
 #searchresults {
   position: absolute;
   min-width: 100%;
@@ -981,13 +1053,13 @@ header .wrap div:last-child #menu-trigger img {
   top: -99990px;
   z-index: 99;
 }
-/* line 224, ../scss/main.scss */
+/* line 248, ../scss/main.scss */
 #searchresults .search-wrap {
   display: block;
   padding: 30px;
   margin: 0 auto;
 }
-/* line 229, ../scss/main.scss */
+/* line 253, ../scss/main.scss */
 #searchresults .search-wrap #searchterm {
   background: none;
   border: none;
@@ -996,11 +1068,11 @@ header .wrap div:last-child #menu-trigger img {
   color: #fff;
   font-size: 40px;
 }
-/* line 237, ../scss/main.scss */
+/* line 261, ../scss/main.scss */
 #searchresults .search-wrap #searchterm:focus {
   outline: 0;
 }
-/* line 245, ../scss/main.scss */
+/* line 269, ../scss/main.scss */
 #searchresults #results {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -1008,7 +1080,7 @@ header .wrap div:last-child #menu-trigger img {
   position: relative;
   top: 10px;
 }
-/* line 252, ../scss/main.scss */
+/* line 276, ../scss/main.scss */
 #searchresults #results .searchresult {
   border: solid 1px red;
   width: 200px;
@@ -1023,7 +1095,7 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	Editorial content
  */
-/* line 274, ../scss/main.scss */
+/* line 298, ../scss/main.scss */
 .editorial-collections .collections .collection {
   width: 338px;
   height: 185px;
@@ -1039,12 +1111,12 @@ header .wrap div:last-child #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 286, ../scss/main.scss */
+/* line 310, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps {
   max-width: 270px;
   margin: 0 auto;
 }
-/* line 289, ../scss/main.scss */
+/* line 313, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app {
   height: 70px;
   width: 70px;
@@ -1059,26 +1131,26 @@ header .wrap div:last-child #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 300, ../scss/main.scss */
+/* line 324, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app:last-child {
   margin: 0;
 }
-/* line 305, ../scss/main.scss */
+/* line 329, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy {
   margin-top: 24px;
 }
-/* line 307, ../scss/main.scss */
+/* line 331, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy h1 {
   font-size: 20px;
   letter-spacing: -.5px;
 }
-/* line 311, ../scss/main.scss */
+/* line 335, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy p {
   font-family: "FiraLight";
   font-size: 14px;
   margin-top: 5px;
 }
-/* line 321, ../scss/main.scss */
+/* line 345, ../scss/main.scss */
 .editorial-collections .collections .collection:last-child {
   margin: 0;
 }
@@ -1086,11 +1158,11 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	Ratings
  */
-/* line 330, ../scss/main.scss */
+/* line 354, ../scss/main.scss */
 .review {
   text-align: center;
 }
-/* line 333, ../scss/main.scss */
+/* line 357, ../scss/main.scss */
 .review .review-rating {
   max-width: 100px;
   margin: 0 auto;

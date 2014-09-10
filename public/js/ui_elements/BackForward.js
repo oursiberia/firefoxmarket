@@ -1,7 +1,13 @@
 /**
- *  Back / Forward buttons
+ * @ngdoc directive
+ * @name FirefoxMarket.directive:uicontrols
+ *
+ * @description
+ * Responsible for displaying and creating user interface elements.
  */
-app.directive("backforward_buttons",[
+
+
+app.directive("uicontrols",[
     "$location",
     "$window",function($location,$window){
 
