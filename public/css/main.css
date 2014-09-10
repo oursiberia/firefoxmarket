@@ -165,16 +165,20 @@
   top: 286px;
   z-index: 99;
 }
-/* line 49, ../scss/_home.scss */
+/* line 50, ../scss/_home.scss */
 #search-home-result .searchresult {
   display: inline-block;
 }
+/* line 54, ../scss/_home.scss */
+#search-home-result .resultsbyname {
+  width: 400px;
+}
 
-/* line 57, ../scss/_home.scss */
+/* line 62, ../scss/_home.scss */
 .home-main {
   margin-top: 50px;
 }
-/* line 59, ../scss/_home.scss */
+/* line 64, ../scss/_home.scss */
 .home-main .column {
   height: 40px;
   width: 40px;
@@ -183,17 +187,17 @@
   background: #333;
   margin-right: 21px;
 }
-/* line 67, ../scss/_home.scss */
+/* line 72, ../scss/_home.scss */
 .home-main .column.main {
   width: 620px;
   height: 366px;
 }
-/* line 72, ../scss/_home.scss */
+/* line 77, ../scss/_home.scss */
 .home-main .column.secondary {
   width: 300px;
   height: 366px;
 }
-/* line 78, ../scss/_home.scss */
+/* line 83, ../scss/_home.scss */
 .home-main .column.third .inner-box {
   width: 300px;
   height: 173px;
@@ -201,34 +205,34 @@
   margin-bottom: 20px;
 }
 
-/* line 89, ../scss/_home.scss */
+/* line 94, ../scss/_home.scss */
 #featured .app {
   display: inline-block;
   vertical-align: top;
 }
-/* line 93, ../scss/_home.scss */
+/* line 98, ../scss/_home.scss */
 #featured .app:last-child {
   margin: 0;
 }
 
-/* line 102, ../scss/_home.scss */
+/* line 107, ../scss/_home.scss */
 #category-list .wrap .controls {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/* line 105, ../scss/_home.scss */
+/* line 110, ../scss/_home.scss */
 #category-list .wrap .controls h1 {
   display: inline-block;
 }
-/* line 109, ../scss/_home.scss */
+/* line 114, ../scss/_home.scss */
 #category-list .wrap .controls h1:first-child:after {
   content: "|";
 }
-/* line 113, ../scss/_home.scss */
+/* line 118, ../scss/_home.scss */
 #category-list .wrap .controls h1:last-child {
   font-family: "FiraLight";
 }
-/* line 117, ../scss/_home.scss */
+/* line 122, ../scss/_home.scss */
 #category-list .wrap .controls button {
   float: right;
   width: 178px;
@@ -239,7 +243,7 @@
   color: #fff;
   border-radius: 4px;
 }
-/* line 129, ../scss/_home.scss */
+/* line 134, ../scss/_home.scss */
 #category-list .category {
   width: 298px;
   background: #F8F8F8;
@@ -252,7 +256,7 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 138, ../scss/_home.scss */
+/* line 143, ../scss/_home.scss */
 #category-list .category .category-title {
   background: #fff;
   width: 100%;
@@ -265,11 +269,11 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 150, ../scss/_home.scss */
+/* line 155, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap {
   padding: 20px;
 }
-/* line 152, ../scss/_home.scss */
+/* line 157, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon, #category-list .category .category-title .title-wrap .title-copy {
   display: inline-block;
   vertical-align: middle;
@@ -280,28 +284,28 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 163, ../scss/_home.scss */
+/* line 168, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon {
   height: 65px;
   width: 65px;
   background: #333;
   border-radius: 41px;
 }
-/* line 172, ../scss/_home.scss */
+/* line 177, ../scss/_home.scss */
 #category-list .category .app {
   border: 0;
   padding: 20px 20px 0 20px;
 }
-/* line 175, ../scss/_home.scss */
+/* line 180, ../scss/_home.scss */
 #category-list .category .app .app-details {
   padding: 0;
   border: 0;
 }
-/* line 180, ../scss/_home.scss */
+/* line 185, ../scss/_home.scss */
 #category-list .category .app:last-child {
   padding: 20px;
 }
-/* line 184, ../scss/_home.scss */
+/* line 189, ../scss/_home.scss */
 #category-list .category:last-child {
   margin: 0;
 }

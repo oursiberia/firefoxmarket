@@ -46,10 +46,15 @@
 	position: absolute;
 	top:286px;
 	z-index: 99;
+
 	.searchresult{
 		display: inline-block;
-
 	}
+
+	.resultsbyname {
+		width: 400px;
+	}
+
 }
 
 

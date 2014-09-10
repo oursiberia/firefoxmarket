@@ -7,9 +7,11 @@
   </div>
   <div id="search-home-result">
     <div class="wrap">
-      <div data-ng-repeat="result in results" class="searchresult"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}"/></a>
-        <h2 class="result-title">{{result.name}}</h2>
-        <p class="result-author">{{result.author}}</p>
+      <div class="resultsbyname">
+        <div data-ng-repeat="result in results" class="searchresult app"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a>
+          <h1 class="result-title">{{result.name}}</h1>
+          <h2 class="result-author">{{result.author}}</h2>
+        </div>
       </div>
     </div>
   </div>
