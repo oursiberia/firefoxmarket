@@ -4,12 +4,15 @@ $borderColor:rgb(211,211,211);
 	display: inline-block;
 	vertical-align: top;
 }
-
+#vendor-information{
+	position: relative;
+	left:20px;
+}
 /**
  *	All the details of the app
  */
 .app-content-container{
-	width:938px;
+	width:930px;
 	height:400px;
 	background: rgb(246,246,246);
 	border-radius: 4px;
@@ -65,7 +68,7 @@ $borderColor:rgb(211,211,211);
 	.app-information{
 
 		position: absolute;
-		width:81%;
+		width:83%;
 		.download{
 			float:right;
 			width:100px;
