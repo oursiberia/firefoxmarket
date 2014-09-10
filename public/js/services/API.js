@@ -13,7 +13,7 @@ app.factory("API",[
 
     var routes = {
         "featured":"/api/v1/fireplace/search/featured/?limit=100",
-        "app_detail":"/api/v1/fireplace/app/",
+        "app_detail":"/api/v1/apps/app/",
         "apps_in_category":"/api/v1/apps/search/?cat=",
         "search":"/api/v1/apps/search/",
         "collections_detail":"/api/v2/feed/collections/",
