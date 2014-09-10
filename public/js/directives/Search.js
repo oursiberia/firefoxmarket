@@ -6,7 +6,7 @@
  * Deals with pinging the API for search queries.
  */
 
-app.directive("appsearch",["$http","$rootScope",function($http,$rootScope){
+app.directive("appsearch",["$http","$rootScope","MasterSearch",function($http,$rootScope,MasterSearch){
 
     return {
         templateUrl:"/templates/searchbox.html",
