@@ -15,10 +15,10 @@ $borderColor:rgb(211,211,211);
  *	All the details of the app
  */
 .app-content-container{
-	width:930px;
+	width:936px;
 	height:400px;
 	background: rgb(246,246,246);
-	border-radius: 4px;
+	@include border-radius(5px);
 	border:solid 1px rgb(211,211,211);
 	position: relative;
 
@@ -27,24 +27,26 @@ $borderColor:rgb(211,211,211);
 	 *	general meta info for the app, icon, rating etc.
 	 */
 	.app-meta{
-		padding-top:21px;
+		width: 126px;
+		height: 100%;
+		padding-top:20px;
 		border-right:solid 1px rgb(211,211,211);
 		.img-rating{
-			padding-right: 21px;
-			padding-left: 21px;
-			padding-bottom: 21px;
+			padding-right: 20px;
+			padding-left: 20px;
+			padding-bottom: 20px;
 			img{
-				width: 97%;
+				width: 100%;
 			}
 		}
 
 		.updates{
 			border-top:solid 1px $borderColor;
-			padding-right: 21px;
-			padding-left: 21px;
+			padding-right: 20px;
+			padding-left: 20px;
 			border-bottom: solid 1px $borderColor;
 			text-align: center;
-			padding-top:21px;
+			padding-top:20px;
 			padding-bottom:18px;
 			h3{
 				font-size:13px;
@@ -57,8 +59,8 @@ $borderColor:rgb(211,211,211);
 		}
 
 		.govt-rating{
-			padding-top:21px;
-			padding-bottom: 21px;
+			padding-top:20px;
+			padding-bottom: 20px;
 			img{
 				display: block;
 				max-width: 100%;
@@ -71,20 +73,54 @@ $borderColor:rgb(211,211,211);
 	.app-information{
 
 		position: absolute;
-		width:83%;
-		.download{
-			float:right;
-			width:100px;
-			height:30px;
-			border:solid 1px blue;
+		width: 809px;
+		.download {
+			float: right;
+			width: 80px;
+			height: 30px;
+			padding-top: 6px;
+			display: inline-block;
+			@include border-radius(5px);
+			background: $dark_gray;
+			p {
+				font-size: 16px;
+				color: $white;
+				font-family: "FiraRegular";
+				text-align: center;
+			}
+		}
+		.ages {
+			float: right;
+			width: 64px;
+			height: 22px;
+			padding-top: 4px;
+			border: 1px solid $dark_gray;
+			display: inline-block;
+			margin: 4px 20px 0 0;
+			@include border-radius(5px);
+			p {
+				font-size: 12px;
+				color: $dark_gray;
+				font-family: "FiraLight";
+				letter-spacing: .5px;
+				text-align: center;
+			}
 		}
 		.name-author{
 			border-bottom:solid 1px $borderColor;
-			padding:21px;
-			width:100%;
-			h1,h3,.divider{
+			padding:20px;
+			h1 {
+				font-size: 24px;
+				padding-right: 20px;
+				font-family: "FiraLight";
+				letter-spacing: -.5px;
+			}
+			h3 {
+				font-size: 14px;
+				font-family: "FiraThin";
+			}
+			h1,h3 {
 				display: inline-block;
-				vertical-align: middle;
 			}
 		}
 
@@ -130,7 +166,6 @@ $borderColor:rgb(211,211,211);
 
 		#tab-content{
 			border-top:solid 1px $borderColor;
-			width:100%;
 			padding:19px;
 		}
 	}//end .app-information
