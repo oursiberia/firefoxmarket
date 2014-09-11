@@ -195,10 +195,9 @@ app.controller("AppViewController",[
                         var s = setInterval(function(){
                             if($scope.description !== undefined){
                                 content.innerHTML = $scope.description;
-
                                 clearInterval(s);
                             }
-                        })
+                        }, 1000)
                     }else{
                         content.innerHTML = $scope.description;
 
