@@ -15,6 +15,9 @@ app.factory("AgeRatingLookup",function(){
      * TODO perhaps better as JSON?
      */
     var rules = {
+        general:{
+          "img": "/img/content_ratings/generic/general.png"
+        },
         bodies:[
             {
                 "name":"generic",
@@ -74,8 +77,8 @@ app.factory("AgeRatingLookup",function(){
          */
         getImage:function(app){
             var ratings = app.content_ratings;
-            var image = new Image();
-            console.log(ratings);
+            var image = ""
+
             switch(ratings.body){
                 case "generic":
                     //fetch the "generic" rating object from the rules object
@@ -85,7 +88,9 @@ app.factory("AgeRatingLookup",function(){
 
                         if(types[i].rating === ratings.rating){
                             console.log(types[i]);
-                            image.src = types[i].img
+                            image = types[i].img
+                        }else{
+                            image = rules.general.img;
                         }
                     }
 
@@ -95,7 +100,9 @@ app.factory("AgeRatingLookup",function(){
                     var rule = rules.bodes[1];
                     for(var i = 0;i<rule.rating_types.length;++i){
                         if(rule.rating_types[i].ratingNumber === ratings.rating ){
-                            image.src = rule.rating_types[i].img;
+                            image = rule.rating_types[i].img;
+                        }else{
+                            image = rules.general.img;
                         }
                     }
                     break;
