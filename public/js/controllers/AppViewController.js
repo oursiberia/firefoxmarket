@@ -11,7 +11,8 @@ app.controller("AppViewController",[
     "$scope",
     "$rootScope",
     "$filter",
-    function($window,API,$scope,$rootScope,$filter) {
+    "AgeRatingLookup",
+    function($window,API,$scope,$rootScope,$filter,AgeRatingLookup) {
 
         //get the app id out of the url
         var id = $window.location.href.split("/");
@@ -35,6 +36,10 @@ app.controller("AppViewController",[
             $scope.category = data.categories[0];
             $scope.content_ratings = data.content_ratings;
             $scope.rating = data.content_ratings.rating;
+
+            $scope.rating_image = AgeRatingLookup.getImage(data);
+
+
             $scope.name = data.name[navigator.language];
 
             //set the main icon to be used
@@ -68,6 +73,8 @@ app.controller("AppViewController",[
             $scope.support_url = data.support_url[navigator.language];
 
 
+            $scope.purchase_type = data.premium_type.charAt(0).toUpperCase() + data.premium_type.slice(1);
+
             //versions of the app published.
             $scope.versions = data.versions;
 
@@ -76,10 +83,12 @@ app.controller("AppViewController",[
 
             //used to trigger download
             $scope.manifest = data.manifest_url;
+            $scope.package_path = data.package_path;
 
             //if the content has been loaded, trigger the hiding of the loading indicator
             $rootScope.loaded();
 
+            $scope.app_type = data.app_type;
 
 
             /**
@@ -99,6 +108,7 @@ app.controller("AppViewController",[
                                 name:oapp.name[navigator.language],
                                 rating:oapp.ratings.average,
                                 author:data.author,
+                                purchase_type:data.premium_type.charAt(0).toUpperCase() + data.premium_type.slice(1),
                                 icon:oapp.icons["64"],
                                 id:oapp.id
                             });
@@ -116,7 +126,7 @@ app.controller("AppViewController",[
                     $scope.other_apps = apps;
                 } else {
                     //TODO copy aproval
-                    $scope.other_apps = "No other apps by this devloper";
+                    $scope.other_apps = false;
                 }
 
 
@@ -257,6 +267,42 @@ app.controller("AppViewController",[
 
         var tabs = document.getElementsByClassName("tab-trigger")[0];
         $scope.changeTabContent(tabs,true);
+
+        /**
+         * Starts the app download process
+         */
+
+
+        $scope.initPurchase = function(app_type){
+            console.log("clicked");
+            /**
+             * first make sure we're in Firefox.
+             */
+            if(navigator.userAgent.search("Firefox") === -1){
+                alert("We're sorry, but apps within the Firefox Marketplace can only be downloaded from the Firefox browser");
+                return;
+            }
+
+            switch(app_type){
+                case "hosted":
+                    var req = navigator.mozApps.install($scope.manifest);
+
+                    break;
+
+                case "packaged":
+                    var req = navigator.mozApps.installPackage($scope.manifest);
+                    break;
+            }
+
+
+            req.onsuccess = function() {
+
+            };
+            req.onerror = function() {
+
+            };
+
+        };
 
 
 }]);
