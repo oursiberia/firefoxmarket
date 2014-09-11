@@ -156,7 +156,7 @@ app.controller("AppViewController",[
          * Controls the tabbed content for the App view
          * @param e{Event} the click event that happens when you click on a tab button
          */
-        $scope.changeTabContent = function(e) {
+        $scope.changeTabContent = function(e,eventFalse) {
 
             //alias the content section for the panel.
             var content = document.querySelector("#tab-content");
@@ -165,7 +165,14 @@ app.controller("AppViewController",[
             content.innerHTML = "";
 
             //re-alias the target for ease of use
-            var target = e.target;
+            var target = null;
+
+            if(eventFalse === true){
+                target = e;
+            }else{
+                target = e.target;
+            }
+
 
             /**
              * If we've clicked on the tab button but the copy node
@@ -183,7 +190,19 @@ app.controller("AppViewController",[
              */
             switch (target.getAttribute("data-tabname")) {
                 case "description":
-                    content.innerHTML = $scope.description;
+
+                    if(eventFalse){
+                        var s = setInterval(function(){
+                            if($scope.description !== undefined){
+                                content.innerHTML = $scope.description;
+
+                                clearInterval(s);
+                            }
+                        })
+                    }else{
+                        content.innerHTML = $scope.description;
+
+                    }
                     break;
 
                 case "screenshots":
@@ -237,6 +256,8 @@ app.controller("AppViewController",[
         });
 
 
+        var tabs = document.getElementsByClassName("tab-trigger")[0];
+        $scope.changeTabContent(tabs,true);
 
 
 }]);
