@@ -12,6 +12,43 @@ $borderColor:rgb(211,211,211);
 	position: relative;
 	left: 16px;
 }
+
+.app-category {
+	margin: 35px 0 25px 0;
+	.category-label {
+		display: inline-block;
+		h3, span {font-size: 18px;}
+		h3, a {display: inline-block;}
+		a {margin-left: 5px;}
+		span {
+			cursor: pointer;
+			font-family: "FiraLight";
+			text-transform: capitalize;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+	.share-app {
+		cursor: pointer;
+		float: right;
+		font-size: 12px;
+		padding: 6px 15px 5px 15px;
+		display: inline-block;
+		border: solid 1px $dark_gray;
+		@include border-radius(5px);
+		p, img {
+			display: inline-block;
+		}
+		img {
+			height: 14px;
+			width: 14px;
+			margin: -1px 0 0 8px;
+			vertical-align: middle;
+		}
+	}
+}
+
 /**
  *	All the details of the app
  */
@@ -30,7 +67,7 @@ $borderColor:rgb(211,211,211);
 	.app-meta{
 		width: 126px;
 		height: 100%;
-		border-right:solid 1px rgb(211,211,211);
+		border-right: solid 1px rgb(211,211,211);
 		.img-rating{
 			padding: 20px;
 			img{
@@ -38,11 +75,15 @@ $borderColor:rgb(211,211,211);
 				@include border-radius(5px);
 			}
 			p {
+				cursor: pointer;
 				width: 100%;
 				font-size: 13px;
 				text-align: center;
 				display: inline-block;
 				font-family: "FiraRegular";
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 		}
 
@@ -54,7 +95,6 @@ $borderColor:rgb(211,211,211);
 				font-size: 12px;
 			} 
 			h3 {
-				font-family: "FiraLight";
 				letter-spacing: .3px;
 			}
 			.date {
@@ -115,16 +155,24 @@ $borderColor:rgb(211,211,211);
 			padding:20px;
 			h1 {
 				font-size: 24px;
-				padding-right: 20px;
-				font-family: "FiraLight";
+				padding-right: 15px;
 				letter-spacing: -.5px;
 			}
 			h3 {
 				font-size: 14px;
-				font-family: "FiraThin";
+				font-family: "FiraLight";
+				&:hover {
+					cursor: pointer;
+					text-decoration: underline;
+				}
 			}
 			h1,h3 {
 				display: inline-block;
+			}
+			img {
+				height: 11px;
+				width: 11px;
+				margin-left: 8px;
 			}
 		}
 
@@ -135,7 +183,6 @@ $borderColor:rgb(211,211,211);
 				text-align: center;
 				display: inline-block;
 				text-transform: uppercase;
-				font-family: "FiraUltraLight";
 				margin: 0 -4px;
 
 				h4{
@@ -151,6 +198,11 @@ $borderColor:rgb(211,211,211);
 						color:$blue;
 					}
 				}
+
+				&.active {
+					background: #E8E8E8;
+				}
+
 			}
 
 			.tab-trigger:first-child {
@@ -167,22 +219,25 @@ $borderColor:rgb(211,211,211);
 
 		}
 
-
-		#tab-content{
-			border-top: solid 1px $borderColor;
-			padding: 20px;
-			font-size: 14px;
-			line-height: 22px;
-			font-family: "FiraLight";
-		}
 	}//end .app-information
 
 	.app-information,.app-meta{
 		display: inline-block;
 		vertical-align: top;
 	}
+
 }// end .app-content-container
 
+#tab-content{
+	border-top: solid 1px $borderColor;
+	padding: 20px;
+	font-size: 14px;
+	line-height: 22px;
+	font-family: "FiraLight";
+	.screenshots {
+
+	}
+}
 
 #app-links{
 	width: 258px;
@@ -284,46 +339,127 @@ $borderColor:rgb(211,211,211);
 }
 
 #reviews{
-	margin-top:34px;
-	width:104%;
-	.view-all-reviews{
-		float:right;
+	margin-top: 20px;
+	max-width: 1260px;
+	.reviews-header {
+		height: 43px;
+		margin-bottom: 20px;
+		h2, div {
+			display: inline-block;
+		}
+		h2 {
+			font-size: 18px;
+			margin-top: 8px;
+		}
+		.view-all-reviews, .write-a-review {
+			float:right;
+		}
+		.view-all-reviews {
+			font-size: 13px;
+			margin: 12px 20px 0 0;
+			font-family: "FiraLight";
+			&:hover {
+				cursor: pointer;
+				text-decoration: underline;
+			}
+		}
+		.write-a-review {
+			font-size: 16px;
+			padding: 10px 20px;
+			color: $white;
+			background: $dark_gray;
+			@include border-radius(5px);
+		}
 	}
 
-	.app-review{
-		margin-top:24px;
+	.app-review {
 		display: inline-block;
 		vertical-align: top;
-		width:300px;
-		height:180px;
-		padding:0px;
-		margin-right:23px;
+		width: 258px;
+		height: 180px;
+		padding: 20px;
+		margin-right: 20px;
 		@include panel;
-		.stars{
-			max-width:100px;
-			margin:0 auto;
+		&:last-child { margin: 0;}
+		.stars, .rating-copy,.username {
+			display: inline-block;
 		}
-		.rating-copy,.username{
+		.stars {
+			width: 100%;
+			height: 17px;
+			margin: 0 auto;
+			.review-rating {
+				height: 17px;
+			}
+			ul {
+				width: 97px;
+				height: 17px;
+				margin: 0 auto;
+			}
+			ul li {
+				height: 17px;
+				width: 17px;
+				margin-right: 3px;
+				&:last-child {
+					margin: 0px;
+				}
+				img {
+					max-width: none;
+				}
+			}
+		}
+		.rating-copy {
+			width: 100%;
+			margin-top: 10px;
+		}
+		.rating-copy,.username {
+			font-size: 14px;
+			font-family: "FiraLight";
 			text-align: center;
+		}
+		.username {
+			position: absolute;
+			bottom: 15px;
+			left: 0px;
+			width: 100%;
+			p {
+				font-family: "FiraRegular";
+			}
 		}
 	}
 }
 
 
 #related-apps{
-	width:100%;
-	height:192px;
-	padding-top:32px;
-	padding-bottom:32px;
-	background:$panelBackground;
-	border-top:solid 1px $panelBorder;
-	margin-top:40px;
+	width: 100%;
+	height: 192px;
+	padding-top: 32px;
+	padding-bottom: 32px;
+	background: $panelBackground;
+	border-top: solid 1px $panelBorder;
+	margin-top: 40px;
 	.apps{
-		width:106%;
-		background:#333;
-		border:$panelBorder;
-		.app{
-			float:left;
+		width: 106%;
+		background: #333;
+		border: $panelBorder;
+		.app {
+			float: left;
+			.app-image {
+				height: 60px;
+				width: 60px;
+				a, img {
+					height: 60px;
+					width: 60px;
+					display: inline-block;
+				}
+			}
+			.app-details {
+				border: none;
+				padding: 0;
+				.app-copy {
+					width: 187px;
+				}
+			}
 		}
 	}
 

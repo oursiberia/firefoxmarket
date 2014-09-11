@@ -14,7 +14,7 @@ $grey:#e9e9e9;
 	padding:0;
 
 	p{
-		font-family: "FiraUltraLight";
+		font-family: "FiraLight";
 	}
 }
 
@@ -169,7 +169,7 @@ header{
 			text-align: center;
 			display: inline-block;
 			vertical-align: middle;
-			z-index: 999999;
+			z-index: 100;
 		}
 		div:last-child{
 			float:right;

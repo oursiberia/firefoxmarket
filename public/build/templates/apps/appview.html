@@ -3,7 +3,14 @@
 -->
 <section id="appview">
   <div class="wrap">
-    <h3>Category<span> {{category}}</span></h3>
+    <div class="app-category">
+      <div class="category-label">
+        <h3>Categories &#9656;</h3><a data-ng-href="/category/{{category}}" translate="translate"><span>{{category}}</span></a>
+      </div>
+      <div class="share-app">
+        <p>Share App</p><img src="/img/share_icon.svg" alt="share icon"/>
+      </div>
+    </div>
     <div class="app-content-container">
       <div class="app-meta">
         <div class="img-rating"><img src="{{icon}}" alt="app-image"/>
@@ -30,22 +37,20 @@
             </p>
           </div>
           <h1>{{name}}</h1>
-          <h3>{{author}}</h3>
+          <h3>{{author}}</h3><img src="/img/developer_site.svg" alt="developer website icon"/>
         </div>
         <div class="tabs">
-          <div data-tabname="description" data-content="{{app.description}}" data-ng-click="changeTabContent($event)" class="tab-trigger">
-            <h4>description</h4>
+          <div data-tabname="description" data-content="{{app.description}}" data-ng-click="changeTabContent($event)" class="tab-trigger active">
+            <h4>Description</h4>
           </div>
           <div data-tabname="screenshots" data-ng-click="changeTabContent($event)" class="tab-trigger">
             <h4>Screenshots</h4>
           </div>
           <div data-tabname="releasenotes" data-content="{{app.releaseNotes}}" data-ng-click="changeTabContent($event)" class="tab-trigger">
-            <h4>release notes</h4>
+            <h4>Release Notes</h4>
           </div>
         </div>
-        <div id="tab-content">
-          <h1>TEST</h1>
-        </div>
+        <div id="tab-content"></div>
       </div>
     </div>
     <div id="vendor-information">
@@ -76,20 +81,21 @@
       </div>
     </div>
     <div id="reviews">
-      <div>
-        <div translate="translate" class="view-all-reviews">view all reviews</div>
+      <div class="reviews-header">
         <h2 translate="translate">Latest Reviews</h2>
+        <div class="write-a-review">Write a Review</div>
+        <div translate="translate" class="view-all-reviews">View All Reviews &#9656;</div>
       </div>
-      <div data-ng-repeat="review in reviews" class="app-review">
-        <div>
+      <div class="app-reviews">
+        <div data-ng-repeat="review in reviews" class="app-review">
           <div class="stars">
             <div starrating="starrating" data-rating="{{review.rating}}" data-review="true" class="review-rating"></div>
-          </div><br/>
+          </div>
           <div class="rating-copy">
             <p>{{review.copy}}</p>
           </div>
           <div class="username">
-            <p>{{review.username}}</p>
+            <p>- {{review.username}}</p>
           </div>
         </div>
       </div>
@@ -101,7 +107,6 @@
     <h3>Related Apps</h3>
     <div class="apps">
       <div data-ng-repeat="app in relatedapps" class="app">
-        <div class="app-wrap"></div>
         <div class="app-details">
           <div class="app-image"><a data-ng-href="/app/{{app.id}}"><img ng-src="{{app.icon}}" class="app-icon"/></a></div>
           <div class="app-copy">

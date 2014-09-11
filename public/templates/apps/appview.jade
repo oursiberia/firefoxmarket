@@ -2,8 +2,14 @@
    Created by sortofsleepy on 8/28/14.
 section#appview
     div.wrap
-        h3 Category
-            span  {{category}}
+        div.app-category
+            div.category-label
+                h3 Categories &#9656;
+                a(data-ng-href="/category/{{category}}",translate)
+                    span {{category}}
+            div.share-app
+                p Share App
+                img(src="/img/share_icon.svg" alt="share icon")
 
         div.app-content-container
             div.app-meta
@@ -31,19 +37,19 @@ section#appview
                             | 3+
                     h1 {{name}}
                     h3 {{author}}
+                    img(src="/img/developer_site.svg" alt="developer website icon")
 
                 div.tabs
-                    div.tab-trigger(data-tabname="description", data-content="{{app.description}}",data-ng-click="changeTabContent($event)")
-                        h4 description
+                    div.tab-trigger.active(data-tabname="description", data-content="{{app.description}}",data-ng-click="changeTabContent($event)")
+                        h4 Description
 
                     div.tab-trigger(data-tabname="screenshots",data-ng-click="changeTabContent($event)")
                         h4 Screenshots
 
                     div.tab-trigger(data-tabname="releasenotes",data-content="{{app.releaseNotes}}",data-ng-click="changeTabContent($event)")
-                        h4 release notes
+                        h4 Release Notes
 
                 div#tab-content
-                    h1 TEST
 
         div#vendor-information
             div#app-links
@@ -82,28 +88,24 @@ section#appview
 
 
         div#reviews
-            div
-                div.view-all-reviews(translate) view all reviews
-
+            div.reviews-header
                 h2(translate) Latest Reviews
-
-
-            div(data-ng-repeat="review in reviews",class="app-review")
-                div
+                div.write-a-review Write a Review
+                div.view-all-reviews(translate) View All Reviews &#9656;
+            div.app-reviews
+                div(data-ng-repeat="review in reviews",class="app-review")
                     div.stars
                         div(class="review-rating", starrating, data-rating="{{review.rating}}", data-review="true")
-                    br
                     div.rating-copy
                         p {{review.copy}}
                     div.username
-                        p {{review.username}}
+                        p - {{review.username}}
 
 div#related-apps
    div.wrap
        h3 Related Apps
        div.apps
            div(class="app",data-ng-repeat="app in relatedapps")
-               div.app-wrap
                div.app-details
                    div.app-image
                        a(data-ng-href="/app/{{app.id}}")
