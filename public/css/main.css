@@ -477,20 +477,17 @@
 .app-content-container .app-meta {
   width: 126px;
   height: 100%;
-  padding-top: 20px;
   border-right: solid 1px lightgrey;
 }
-/* line 34, ../scss/_appview.scss */
+/* line 33, ../scss/_appview.scss */
 .app-content-container .app-meta .img-rating {
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-bottom: 20px;
+  padding: 20px;
 }
-/* line 38, ../scss/_appview.scss */
+/* line 35, ../scss/_appview.scss */
 .app-content-container .app-meta .img-rating img {
   width: 100%;
 }
-/* line 43, ../scss/_appview.scss */
+/* line 40, ../scss/_appview.scss */
 .app-content-container .app-meta .updates {
   border-top: solid 1px lightgrey;
   padding-right: 20px;
@@ -500,31 +497,31 @@
   padding-top: 20px;
   padding-bottom: 18px;
 }
-/* line 51, ../scss/_appview.scss */
+/* line 48, ../scss/_appview.scss */
 .app-content-container .app-meta .updates h3 {
   font-size: 13px;
 }
-/* line 54, ../scss/_appview.scss */
+/* line 51, ../scss/_appview.scss */
 .app-content-container .app-meta .updates p {
   font-size: 12px;
 }
-/* line 61, ../scss/_appview.scss */
+/* line 58, ../scss/_appview.scss */
 .app-content-container .app-meta .govt-rating {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 64, ../scss/_appview.scss */
+/* line 61, ../scss/_appview.scss */
 .app-content-container .app-meta .govt-rating img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
-/* line 73, ../scss/_appview.scss */
+/* line 70, ../scss/_appview.scss */
 .app-content-container .app-information {
   position: absolute;
   width: 809px;
 }
-/* line 77, ../scss/_appview.scss */
+/* line 74, ../scss/_appview.scss */
 .app-content-container .app-information .download {
   float: right;
   width: 80px;
@@ -537,14 +534,14 @@
   border-radius: 5px;
   background: #55575c;
 }
-/* line 85, ../scss/_appview.scss */
+/* line 82, ../scss/_appview.scss */
 .app-content-container .app-information .download p {
   font-size: 16px;
   color: #fafcfc;
   font-family: "FiraRegular";
   text-align: center;
 }
-/* line 92, ../scss/_appview.scss */
+/* line 89, ../scss/_appview.scss */
 .app-content-container .app-information .ages {
   float: right;
   width: 64px;
@@ -558,7 +555,7 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 101, ../scss/_appview.scss */
+/* line 98, ../scss/_appview.scss */
 .app-content-container .app-information .ages p {
   font-size: 12px;
   color: #55575c;
@@ -566,36 +563,36 @@
   letter-spacing: .5px;
   text-align: center;
 }
-/* line 109, ../scss/_appview.scss */
+/* line 106, ../scss/_appview.scss */
 .app-content-container .app-information .name-author {
   border-bottom: solid 1px lightgrey;
   padding: 20px;
 }
-/* line 112, ../scss/_appview.scss */
+/* line 109, ../scss/_appview.scss */
 .app-content-container .app-information .name-author h1 {
   font-size: 24px;
   padding-right: 20px;
   font-family: "FiraLight";
   letter-spacing: -.5px;
 }
-/* line 118, ../scss/_appview.scss */
+/* line 115, ../scss/_appview.scss */
 .app-content-container .app-information .name-author h3 {
   font-size: 14px;
   font-family: "FiraThin";
 }
-/* line 122, ../scss/_appview.scss */
+/* line 119, ../scss/_appview.scss */
 .app-content-container .app-information .name-author h1, .app-content-container .app-information .name-author h3 {
   display: inline-block;
 }
-/* line 131, ../scss/_appview.scss */
+/* line 128, ../scss/_appview.scss */
 .app-content-container .app-information .tabs ul li div:first-child.tab-trigger {
   border-right: solid 1px lightgrey;
 }
-/* line 135, ../scss/_appview.scss */
+/* line 132, ../scss/_appview.scss */
 .app-content-container .app-information .tabs ul li div:last-child.tab-trigger {
   border-left: solid 1px lightgrey;
 }
-/* line 139, ../scss/_appview.scss */
+/* line 136, ../scss/_appview.scss */
 .app-content-container .app-information .tabs ul li div.tab-trigger {
   padding: 30px;
   width: 189px;
@@ -604,7 +601,7 @@
   text-transform: uppercase;
   font-family: "FiraLight";
 }
-/* line 141, ../scss/_appview.scss */
+/* line 138, ../scss/_appview.scss */
 .app-content-container .app-information .tabs ul li div.tab-trigger h4 {
   font-size: 13px;
   -webkit-transition: color 0.5s ease;
@@ -613,11 +610,11 @@
   transition: color 0.5s ease;
   color: #333;
 }
-/* line 153, ../scss/_appview.scss */
+/* line 150, ../scss/_appview.scss */
 .app-content-container .app-information .tabs ul li div.tab-trigger:hover {
   cursor: pointer;
 }
-/* line 156, ../scss/_appview.scss */
+/* line 153, ../scss/_appview.scss */
 .app-content-container .app-information .tabs ul li div.tab-trigger:hover h4 {
   -webkit-transition: color 0.5s ease;
   -moz-transition: color 0.5s ease;
@@ -625,68 +622,71 @@
   transition: color 0.5s ease;
   color: #4cb1ff;
 }
-/* line 167, ../scss/_appview.scss */
+/* line 164, ../scss/_appview.scss */
 .app-content-container .app-information #tab-content {
   border-top: solid 1px lightgrey;
   padding: 19px;
 }
-/* line 173, ../scss/_appview.scss */
+/* line 170, ../scss/_appview.scss */
 .app-content-container .app-information, .app-content-container .app-meta {
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 180, ../scss/_appview.scss */
+/* line 177, ../scss/_appview.scss */
 #app-links {
-  width: 280px;
+  width: 258px;
   height: 180px;
   padding: 20px;
   background: #f6f6f6;
-  border-radius: 4px;
   border: solid 1px lightgrey;
   position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
 }
-/* line 189, ../scss/_appview.scss */
+/* line 186, ../scss/_appview.scss */
 #app-links .title {
   text-transform: uppercase;
   font-family: "FiraLight";
 }
 
-/* line 197, ../scss/_appview.scss */
+/* line 194, ../scss/_appview.scss */
 #other-applications h2 {
   font-size: 13px;
 }
-/* line 200, ../scss/_appview.scss */
+/* line 197, ../scss/_appview.scss */
 #other-applications #other-applications-list {
   background: #f6f6f6;
   border-radius: 4px;
   border: solid 1px lightgrey;
   position: relative;
-  width: 280px;
+  width: 258px;
   height: 100%;
   padding: 20px;
 }
-/* line 206, ../scss/_appview.scss */
+/* line 203, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app img, #other-applications #other-applications-list .other-app .details {
   display: inline-block;
   vertical-align: top;
 }
-/* line 211, ../scss/_appview.scss */
+/* line 208, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app .app-download-button.mini-container {
   position: relative;
   top: 20px;
 }
 
-/* line 219, ../scss/_appview.scss */
+/* line 216, ../scss/_appview.scss */
 #reviews {
   margin-top: 34px;
   width: 104%;
 }
-/* line 222, ../scss/_appview.scss */
+/* line 219, ../scss/_appview.scss */
 #reviews .view-all-reviews {
   float: right;
 }
-/* line 226, ../scss/_appview.scss */
+/* line 223, ../scss/_appview.scss */
 #reviews .app-review {
   margin-top: 24px;
   display: inline-block;
@@ -700,17 +700,17 @@
   border: solid 1px lightgrey;
   position: relative;
 }
-/* line 235, ../scss/_appview.scss */
+/* line 232, ../scss/_appview.scss */
 #reviews .app-review .stars {
   max-width: 100px;
   margin: 0 auto;
 }
-/* line 239, ../scss/_appview.scss */
+/* line 236, ../scss/_appview.scss */
 #reviews .app-review .rating-copy, #reviews .app-review .username {
   text-align: center;
 }
 
-/* line 246, ../scss/_appview.scss */
+/* line 243, ../scss/_appview.scss */
 #related-apps {
   width: 100%;
   height: 192px;
@@ -720,13 +720,13 @@
   border-top: solid 1px lightgrey;
   margin-top: 40px;
 }
-/* line 254, ../scss/_appview.scss */
+/* line 251, ../scss/_appview.scss */
 #related-apps .apps {
   width: 106%;
   background: #333;
   border: lightgrey;
 }
-/* line 258, ../scss/_appview.scss */
+/* line 255, ../scss/_appview.scss */
 #related-apps .apps .app {
   float: left;
 }

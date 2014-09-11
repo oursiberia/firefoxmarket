@@ -22,7 +22,7 @@ app.controller("AppViewController",[
 
         //get the number of ratings
         API.request ("ratings","?app=" + id + "&limit=999999").then(function(data) {
-            $scope.ratings = data.objects.length + " ratings";
+            $scope.ratings = data.objects.length + " reviews";
         });
 
 
@@ -38,7 +38,7 @@ app.controller("AppViewController",[
             $scope.name = data.name[navigator.language];
 
             //set the main icon to be used
-            $scope.icon = data.icons["64"];
+            $scope.icon = data.icons["128"];
 
             //parse out previews
             var previews = [];
