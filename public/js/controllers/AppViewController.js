@@ -11,7 +11,8 @@ app.controller("AppViewController",[
     "$scope",
     "$rootScope",
     "$filter",
-    function($window,API,$scope,$rootScope,$filter) {
+    "AgeRatingLookup",
+    function($window,API,$scope,$rootScope,$filter,AgeRatingLookup) {
 
         //get the app id out of the url
         var id = $window.location.href.split("/");
@@ -35,6 +36,11 @@ app.controller("AppViewController",[
             $scope.category = data.categories[0];
             $scope.content_ratings = data.content_ratings;
             $scope.rating = data.content_ratings.rating;
+
+            var image = AgeRatingLookup.getImage(data);
+            console.log(image);
+
+
             $scope.name = data.name[navigator.language];
 
             //set the main icon to be used
