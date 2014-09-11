@@ -10,7 +10,8 @@ app.controller("home",[
     "API","$scope",
     "$filter",
     "$http",
-    function($rootScope,API,$scope,$filter,$http){
+    "MasterSearch",
+    function($rootScope,API,$scope,$filter,$http,MasterSearch){
 
 
         /**================ FEATURED APPS ==================*/
@@ -54,7 +55,7 @@ app.controller("home",[
             TweenMax.to(selector,1,{
                 height:window.innerWidth,
                 onComplete:function(){
-                    query();
+                    MasterSearch.query($scope);
                     $rootScope.lockBody();
                 }
             });

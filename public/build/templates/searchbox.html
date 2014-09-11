@@ -5,7 +5,7 @@
     <div id="searchresults">
       <div class="search-wrap">
         <h1 translate="translate">Search</h1>
-        <input id="searchterm" type="text" name="search" ng-model="searchbox" ng-change="searchApp()"/>
+        <input id="searchterm" type="text" name="search" ng-model="searchbox" ng-change="query()"/>
         <div class="search-divider"></div>
         <div id="results">
           <div ng-repeat="result in results" class="searchresult"><a ng-href="/app/{{result.id}}"><img ng-src="{{result.icon}}" alt="result-icon"/></a>
