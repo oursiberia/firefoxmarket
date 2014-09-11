@@ -186,7 +186,7 @@ $borderColor:rgb(211,211,211);
 
 #app-links{
 	width: 258px;
-	height: 165px;
+	height: 162px;
 	padding: 16px 20px;
 	background: rgb(246,246,246);
 	border:solid 1px rgb(211,211,211);
@@ -210,10 +210,11 @@ $borderColor:rgb(211,211,211);
 		text-transform: uppercase;
 		font-family: "FiraRegular";
 		font-weight: normal;
-		margin: 15px 0 7px 0;
+		margin: 15px 0 5px 0;
 		a {
 			float: right;
 			font-family: "FiraLight";
+			text-transform: none;
 		}
 	}
 	#other-applications-list{
@@ -222,7 +223,8 @@ $borderColor:rgb(211,211,211);
 		height: 100%;
 
 		.other-app {
-			padding: 20px 20px 8px 20px;
+			padding: 20px;
+			position: relative;
 
 			.app-icon {
 				height: 45px;
@@ -238,6 +240,10 @@ $borderColor:rgb(211,211,211);
 			h3, p {
 				font-size: 13px;
 				font-weight: normal;
+				width: 125px;
+  				white-space: nowrap;
+  				overflow: hidden;
+  				text-overflow: ellipsis;
 			}
 
 			img,.details {
@@ -246,7 +252,8 @@ $borderColor:rgb(211,211,211);
 			}
 
 			.details {
-				margin: -5px 0 0 5px;
+				position: absolute;
+				margin: -4px 0 0 10px;
 				p {
 					margin-top: -1px;
 				}
@@ -256,10 +263,11 @@ $borderColor:rgb(211,211,211);
 			}
 
 			.app-download-button.mini-container {
+				height: 24px;
 				cursor: pointer;
-				position:relative;
+				position: relative;
 				float: right;
-				top:20px;
+				top: 23px;
 			}
 
 		}

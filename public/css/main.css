@@ -659,7 +659,7 @@
 /* line 187, ../scss/_appview.scss */
 #app-links {
   width: 258px;
-  height: 165px;
+  height: 162px;
   padding: 16px 20px;
   background: #f6f6f6;
   border: solid 1px lightgrey;
@@ -688,14 +688,15 @@
   text-transform: uppercase;
   font-family: "FiraRegular";
   font-weight: normal;
-  margin: 15px 0 7px 0;
+  margin: 15px 0 5px 0;
 }
 /* line 214, ../scss/_appview.scss */
 #other-applications h2 a {
   float: right;
   font-family: "FiraLight";
+  text-transform: none;
 }
-/* line 219, ../scss/_appview.scss */
+/* line 220, ../scss/_appview.scss */
 #other-applications #other-applications-list {
   background: #f6f6f6;
   border-radius: 4px;
@@ -704,11 +705,12 @@
   width: 298px;
   height: 100%;
 }
-/* line 224, ../scss/_appview.scss */
+/* line 225, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app {
-  padding: 20px 20px 8px 20px;
+  padding: 20px;
+  position: relative;
 }
-/* line 227, ../scss/_appview.scss */
+/* line 229, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app .app-icon {
   height: 45px;
   width: 45px;
@@ -718,62 +720,68 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 234, ../scss/_appview.scss */
+/* line 236, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app h3 {
   min-height: 19px;
 }
-/* line 238, ../scss/_appview.scss */
+/* line 240, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app h3, #other-applications #other-applications-list .other-app p {
   font-size: 13px;
   font-weight: normal;
+  width: 125px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-/* line 243, ../scss/_appview.scss */
+/* line 249, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app img, #other-applications #other-applications-list .other-app .details {
   display: inline-block;
   vertical-align: top;
 }
-/* line 248, ../scss/_appview.scss */
+/* line 254, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app .details {
-  margin: -5px 0 0 5px;
+  position: absolute;
+  margin: -4px 0 0 10px;
 }
-/* line 250, ../scss/_appview.scss */
+/* line 257, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app .details p {
   margin-top: -1px;
 }
-/* line 253, ../scss/_appview.scss */
+/* line 260, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app .details div {
   margin-top: 2px;
 }
-/* line 258, ../scss/_appview.scss */
+/* line 265, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app .app-download-button.mini-container {
+  height: 24px;
   cursor: pointer;
   position: relative;
   float: right;
-  top: 20px;
+  top: 23px;
 }
-/* line 266, ../scss/_appview.scss */
+/* line 274, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app:nth-child(n+3) {
   display: none;
 }
-/* line 269, ../scss/_appview.scss */
+/* line 277, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app:first-child {
   border-bottom: solid 1px lightgrey;
 }
-/* line 272, ../scss/_appview.scss */
+/* line 280, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app:last-child {
   border: none;
 }
 
-/* line 278, ../scss/_appview.scss */
+/* line 286, ../scss/_appview.scss */
 #reviews {
   margin-top: 34px;
   width: 104%;
 }
-/* line 281, ../scss/_appview.scss */
+/* line 289, ../scss/_appview.scss */
 #reviews .view-all-reviews {
   float: right;
 }
-/* line 285, ../scss/_appview.scss */
+/* line 293, ../scss/_appview.scss */
 #reviews .app-review {
   margin-top: 24px;
   display: inline-block;
@@ -787,17 +795,17 @@
   border: solid 1px lightgrey;
   position: relative;
 }
-/* line 294, ../scss/_appview.scss */
+/* line 302, ../scss/_appview.scss */
 #reviews .app-review .stars {
   max-width: 100px;
   margin: 0 auto;
 }
-/* line 298, ../scss/_appview.scss */
+/* line 306, ../scss/_appview.scss */
 #reviews .app-review .rating-copy, #reviews .app-review .username {
   text-align: center;
 }
 
-/* line 305, ../scss/_appview.scss */
+/* line 313, ../scss/_appview.scss */
 #related-apps {
   width: 100%;
   height: 192px;
@@ -807,13 +815,13 @@
   border-top: solid 1px lightgrey;
   margin-top: 40px;
 }
-/* line 313, ../scss/_appview.scss */
+/* line 321, ../scss/_appview.scss */
 #related-apps .apps {
   width: 106%;
   background: #333;
   border: lightgrey;
 }
-/* line 317, ../scss/_appview.scss */
+/* line 325, ../scss/_appview.scss */
 #related-apps .apps .app {
   float: left;
 }
@@ -909,7 +917,7 @@
   height: 25px;
   border-radius: 4px;
   position: relative;
-  background: #333;
+  background: #55575c;
   /**
    *	For containers that are smaller(ie app view in the other applications category)
    */
