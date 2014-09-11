@@ -36,6 +36,7 @@
 			position:relative;
 			margin-left: 6px;
 			width:188px;
+
 			.app-download-button{
 				position:absolute;
 				right:0;
@@ -51,7 +52,6 @@
 				}
 			}
 
-
 			a{
 				h1{
 					font-size: 14px;
@@ -63,7 +63,9 @@
 					font-family: "FiraLight";
 				}
 			}
+
 		}
+		
 	}// end .app-details
 
 	.app-description{

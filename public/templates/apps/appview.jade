@@ -50,26 +50,26 @@ section#appview
                 p.title(translate) Additional Information
                 ul
                     li
-                        a(data-ng-href="mailto:{{support_email}}",translate) Contact Support
+                        a(data-ng-href="mailto:{{support_email}}",translate) Contact Support &#9656;
 
                     li
-                        a(data-ng-href="{{support_url}}",target="_blank",translate) Support Site
+                        a(data-ng-href="{{support_url}}",target="_blank",translate) Support Site &#9656;
 
                     li
-                        a(data-ng-href="{{privacy}}",translate) Privacy Policy
+                        a(data-ng-href="{{privacy}}",translate) Privacy Policy &#9656;
 
                     li
-                        a(data-ng-href="{{report_abuse}}",translate) Report Abuse
+                        a(data-ng-href="{{report_abuse}}",translate) Report Abuse &#9656;
 
                     li
-                        a(data-ng-href="{{feedback}}",translate) Send Feedback
+                        a(data-ng-href="{{feedback}}",translate) Send Feedback &#9656;
 
             div#other-applications
                 h2(translate) Apps By this developer
-                    a(data-ng-href="#") {{more_other_apps}}
+                    a(data-ng-href="#") {{more_other_apps}} &#9656;
                 div#other-applications-list
                     div(data-ng-repeat="app in other_apps",class="other-app")
-                        img(data-ng-src="{{app.icon}}")
+                        img.app-icon(data-ng-src="{{app.icon}}")
                         div.details
                             h3 {{app.name}}
                             p {{app.author}}
