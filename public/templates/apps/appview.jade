@@ -30,7 +30,7 @@ section#appview
             div.app-information
                 div.name-author
                     div.download
-                        p Free
+                        p(data-ng-click="initPurchase(app_type)") {{purchase_type}}
                     div.ages
                         p 
                             | Ages 
@@ -70,18 +70,20 @@ section#appview
                     li
                         a(data-ng-href="{{feedback}}",translate) Send Feedback &#9656;
 
-            div#other-applications
+            div#other-applications(ng-if="other_apps != false")
                 h2(translate) Apps By this developer
                     a(data-ng-href="#") {{more_other_apps}}
                 div#other-applications-list
                     div(data-ng-repeat="app in other_apps",class="other-app")
-                        img.app-icon(data-ng-src="{{app.icon}}")
+                        a(ng-href="/app/{{app.id}}")
+                            img.app-icon(data-ng-src="{{app.icon}}")
                         div.details
                             h3 {{app.name}}
                             p {{app.author}}
                             div(starrating,data-rating="{{app.rating}}")
                         div.app-download-button.mini-container
-                            p Free
+                            a(ng-href="/app/{{app.id}}")
+                                p {{purchase_type}}
 
 
 

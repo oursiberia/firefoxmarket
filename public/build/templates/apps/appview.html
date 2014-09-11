@@ -28,7 +28,7 @@
       <div class="app-information">
         <div class="name-author">
           <div class="download">
-            <p>Free</p>
+            <p data-ng-click="initPurchase(app_type)">{{purchase_type}}</p>
           </div>
           <div class="ages">
             <p>
@@ -64,18 +64,17 @@
           <li><a data-ng-href="{{feedback}}" translate="translate">Send Feedback &#9656;</a></li>
         </ul>
       </div>
-      <div id="other-applications">
+      <div id="other-applications" ng-if="other_apps != false">
         <h2 translate="translate">Apps By this developer<a data-ng-href="#">{{more_other_apps}}</a></h2>
         <div id="other-applications-list">
-          <div data-ng-repeat="app in other_apps" class="other-app"><img data-ng-src="{{app.icon}}" class="app-icon"/>
+          <div data-ng-repeat="app in other_apps" class="other-app"><a ng-href="/app/{{app.id}}"><img data-ng-src="{{app.icon}}" class="app-icon"/></a>
             <div class="details">
               <h3>{{app.name}}</h3>
               <p>{{app.author}}</p>
               <div starrating="starrating" data-rating="{{app.rating}}"></div>
             </div>
-            <div class="app-download-button mini-container">
-              <p>Free</p>
-            </div>
+            <div class="app-download-button mini-container"><a ng-href="/app/{{app.id}}">
+                <p>{{purchase_type}}</p></a></div>
           </div>
         </div>
       </div>

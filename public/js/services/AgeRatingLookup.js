@@ -25,7 +25,7 @@ app.factory("AgeRatingLookup",function(){
                     {
                         "name":"three",
                         "rating":"3",
-                        "img":"/img/content_ratings/generic/generic.png"
+                        "img":"/img/content_ratings/generic/general.png"
                     }
                 ]
             },
@@ -97,7 +97,7 @@ app.factory("AgeRatingLookup",function(){
                     break;
 
                 case "esrb":
-                    var rule = rules.bodes[1];
+                    var rule = rules.bodies[1];
                     for(var i = 0;i<rule.rating_types.length;++i){
                         if(rule.rating_types[i].ratingNumber === ratings.rating ){
                             image = rule.rating_types[i].img;
