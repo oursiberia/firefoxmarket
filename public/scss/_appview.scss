@@ -9,14 +9,13 @@ $borderColor:rgb(211,211,211);
 }
 #vendor-information{
 	position: relative;
-	left:20px;
+	left: 16px;
 }
 /**
  *	All the details of the app
  */
 .app-content-container{
-	width:936px;
-	height:400px;
+	width:938px;
 	background: rgb(246,246,246);
 	@include border-radius(5px);
 	border:solid 1px rgb(211,211,211);
@@ -35,23 +34,28 @@ $borderColor:rgb(211,211,211);
 			img{
 				width: 100%;
 			}
+			p {
+				width: 100%;
+				font-size: 13px;
+				text-align: center;
+				display: inline-block;
+				font-family: "FiraRegular";
+			}
 		}
 
 		.updates{
-			border-top:solid 1px $borderColor;
-			padding-right: 20px;
-			padding-left: 20px;
+			padding: 20px;
+			border-top: solid 1px $borderColor;
 			border-bottom: solid 1px $borderColor;
-			text-align: center;
-			padding-top:20px;
-			padding-bottom:18px;
-			h3{
-				font-size:13px;
-			}
-			p{
+			h3,p {
 				font-size: 12px;
-
-
+			} 
+			h3 {
+				font-family: "FiraLight";
+				letter-spacing: .3px;
+			}
+			.date {
+				margin-bottom: 15px;
 			}
 		}
 
@@ -70,7 +74,7 @@ $borderColor:rgb(211,211,211);
 	.app-information{
 
 		position: absolute;
-		width: 809px;
+		width: 811px;
 		.download {
 			float: right;
 			width: 80px;
@@ -122,48 +126,51 @@ $borderColor:rgb(211,211,211);
 		}
 
 		.tabs{
-			ul{
-				li{
+			.tab-trigger{
+				padding: 10px;
+				width: 250px;
+				text-align: center;
+				display: inline-block;
+				text-transform: uppercase;
+				font-family: "FiraUltraLight";
+				margin: 0 -4px;
 
-					div:first-child.tab-trigger{
-						border-right:solid 1px $borderColor;
-					}
+				h4{
+					font-size: 13px;
+					@include transition((color));
+					color:#333;
+				}
 
-					div:last-child.tab-trigger{
-						border-left: solid 1px $borderColor;
-					}
-
-					div.tab-trigger{
-						padding:30px;
-						h4{
-							font-size: 13px;
-							@include transition((color));
-							color:#333;
-						}
-
-						width: 189px;
-						text-align: center;
-						display: inline-block;
-						text-transform: uppercase;
-						font-family: "FiraLight";
-
-						&:hover{
-							cursor: pointer;
-
-							h4{
-								@include transition((color));
-								color:$blue;
-							}
-						}
+				&:hover{
+					cursor: pointer;
+					h4{
+						@include transition((color));
+						color:$blue;
 					}
 				}
 			}
+
+			.tab-trigger:first-child {
+				border-right:solid 1px $borderColor;
+				width: 249px;
+				margin: 0;
+			}
+
+			.tab-trigger:last-child {
+				border-left: solid 1px $borderColor;
+				width: 249px;
+				margin: 0;
+			}
+
 		}
 
 
 		#tab-content{
-			border-top:solid 1px $borderColor;
-			padding:19px;
+			border-top: solid 1px $borderColor;
+			padding: 20px;
+			font-size: 14px;
+			line-height: 22px;
+			font-family: "FiraLight";
 		}
 	}//end .app-information
 

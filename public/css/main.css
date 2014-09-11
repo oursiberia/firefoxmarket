@@ -452,7 +452,7 @@
 /* line 10, ../scss/_appview.scss */
 #vendor-information {
   position: relative;
-  left: 20px;
+  left: 16px;
 }
 
 /**
@@ -460,8 +460,7 @@
  */
 /* line 17, ../scss/_appview.scss */
 .app-content-container {
-  width: 936px;
-  height: 400px;
+  width: 938px;
   background: #f6f6f6;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -473,55 +472,64 @@
    *	general meta info for the app, icon, rating etc.
    */
 }
-/* line 29, ../scss/_appview.scss */
+/* line 28, ../scss/_appview.scss */
 .app-content-container .app-meta {
   width: 126px;
   height: 100%;
   border-right: solid 1px lightgrey;
 }
-/* line 33, ../scss/_appview.scss */
+/* line 32, ../scss/_appview.scss */
 .app-content-container .app-meta .img-rating {
   padding: 20px;
 }
-/* line 35, ../scss/_appview.scss */
+/* line 34, ../scss/_appview.scss */
 .app-content-container .app-meta .img-rating img {
   width: 100%;
 }
-/* line 40, ../scss/_appview.scss */
-.app-content-container .app-meta .updates {
-  border-top: solid 1px lightgrey;
-  padding-right: 20px;
-  padding-left: 20px;
-  border-bottom: solid 1px lightgrey;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 18px;
-}
-/* line 48, ../scss/_appview.scss */
-.app-content-container .app-meta .updates h3 {
+/* line 37, ../scss/_appview.scss */
+.app-content-container .app-meta .img-rating p {
+  width: 100%;
   font-size: 13px;
+  text-align: center;
+  display: inline-block;
+  font-family: "FiraRegular";
 }
-/* line 51, ../scss/_appview.scss */
-.app-content-container .app-meta .updates p {
+/* line 46, ../scss/_appview.scss */
+.app-content-container .app-meta .updates {
+  padding: 20px;
+  border-top: solid 1px lightgrey;
+  border-bottom: solid 1px lightgrey;
+}
+/* line 50, ../scss/_appview.scss */
+.app-content-container .app-meta .updates h3, .app-content-container .app-meta .updates p {
   font-size: 12px;
 }
-/* line 58, ../scss/_appview.scss */
+/* line 53, ../scss/_appview.scss */
+.app-content-container .app-meta .updates h3 {
+  font-family: "FiraLight";
+  letter-spacing: .3px;
+}
+/* line 57, ../scss/_appview.scss */
+.app-content-container .app-meta .updates .date {
+  margin-bottom: 15px;
+}
+/* line 62, ../scss/_appview.scss */
 .app-content-container .app-meta .govt-rating {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 61, ../scss/_appview.scss */
+/* line 65, ../scss/_appview.scss */
 .app-content-container .app-meta .govt-rating img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
-/* line 70, ../scss/_appview.scss */
+/* line 74, ../scss/_appview.scss */
 .app-content-container .app-information {
   position: absolute;
-  width: 809px;
+  width: 811px;
 }
-/* line 74, ../scss/_appview.scss */
+/* line 78, ../scss/_appview.scss */
 .app-content-container .app-information .download {
   float: right;
   width: 80px;
@@ -534,14 +542,14 @@
   border-radius: 5px;
   background: #55575c;
 }
-/* line 82, ../scss/_appview.scss */
+/* line 86, ../scss/_appview.scss */
 .app-content-container .app-information .download p {
   font-size: 16px;
   color: #fafcfc;
   font-family: "FiraRegular";
   text-align: center;
 }
-/* line 89, ../scss/_appview.scss */
+/* line 93, ../scss/_appview.scss */
 .app-content-container .app-information .ages {
   float: right;
   width: 64px;
@@ -555,7 +563,7 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 98, ../scss/_appview.scss */
+/* line 102, ../scss/_appview.scss */
 .app-content-container .app-information .ages p {
   font-size: 12px;
   color: #55575c;
@@ -563,46 +571,39 @@
   letter-spacing: .5px;
   text-align: center;
 }
-/* line 106, ../scss/_appview.scss */
+/* line 110, ../scss/_appview.scss */
 .app-content-container .app-information .name-author {
   border-bottom: solid 1px lightgrey;
   padding: 20px;
 }
-/* line 109, ../scss/_appview.scss */
+/* line 113, ../scss/_appview.scss */
 .app-content-container .app-information .name-author h1 {
   font-size: 24px;
   padding-right: 20px;
   font-family: "FiraLight";
   letter-spacing: -.5px;
 }
-/* line 115, ../scss/_appview.scss */
+/* line 119, ../scss/_appview.scss */
 .app-content-container .app-information .name-author h3 {
   font-size: 14px;
   font-family: "FiraThin";
 }
-/* line 119, ../scss/_appview.scss */
+/* line 123, ../scss/_appview.scss */
 .app-content-container .app-information .name-author h1, .app-content-container .app-information .name-author h3 {
   display: inline-block;
 }
-/* line 128, ../scss/_appview.scss */
-.app-content-container .app-information .tabs ul li div:first-child.tab-trigger {
-  border-right: solid 1px lightgrey;
-}
-/* line 132, ../scss/_appview.scss */
-.app-content-container .app-information .tabs ul li div:last-child.tab-trigger {
-  border-left: solid 1px lightgrey;
-}
-/* line 136, ../scss/_appview.scss */
-.app-content-container .app-information .tabs ul li div.tab-trigger {
-  padding: 30px;
-  width: 189px;
+/* line 129, ../scss/_appview.scss */
+.app-content-container .app-information .tabs .tab-trigger {
+  padding: 10px;
+  width: 250px;
   text-align: center;
   display: inline-block;
   text-transform: uppercase;
-  font-family: "FiraLight";
+  font-family: "FiraUltraLight";
+  margin: 0 -4px;
 }
 /* line 138, ../scss/_appview.scss */
-.app-content-container .app-information .tabs ul li div.tab-trigger h4 {
+.app-content-container .app-information .tabs .tab-trigger h4 {
   font-size: 13px;
   -webkit-transition: color 0.5s ease;
   -moz-transition: color 0.5s ease;
@@ -610,30 +611,45 @@
   transition: color 0.5s ease;
   color: #333;
 }
-/* line 150, ../scss/_appview.scss */
-.app-content-container .app-information .tabs ul li div.tab-trigger:hover {
+/* line 144, ../scss/_appview.scss */
+.app-content-container .app-information .tabs .tab-trigger:hover {
   cursor: pointer;
 }
-/* line 153, ../scss/_appview.scss */
-.app-content-container .app-information .tabs ul li div.tab-trigger:hover h4 {
+/* line 146, ../scss/_appview.scss */
+.app-content-container .app-information .tabs .tab-trigger:hover h4 {
   -webkit-transition: color 0.5s ease;
   -moz-transition: color 0.5s ease;
   -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
   color: #4cb1ff;
 }
-/* line 164, ../scss/_appview.scss */
+/* line 153, ../scss/_appview.scss */
+.app-content-container .app-information .tabs .tab-trigger:first-child {
+  border-right: solid 1px lightgrey;
+  width: 249px;
+  margin: 0;
+}
+/* line 159, ../scss/_appview.scss */
+.app-content-container .app-information .tabs .tab-trigger:last-child {
+  border-left: solid 1px lightgrey;
+  width: 249px;
+  margin: 0;
+}
+/* line 168, ../scss/_appview.scss */
 .app-content-container .app-information #tab-content {
   border-top: solid 1px lightgrey;
-  padding: 19px;
+  padding: 20px;
+  font-size: 14px;
+  line-height: 22px;
+  font-family: "FiraLight";
 }
-/* line 170, ../scss/_appview.scss */
+/* line 177, ../scss/_appview.scss */
 .app-content-container .app-information, .app-content-container .app-meta {
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 177, ../scss/_appview.scss */
+/* line 184, ../scss/_appview.scss */
 #app-links {
   width: 258px;
   height: 180px;
@@ -646,17 +662,17 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 186, ../scss/_appview.scss */
+/* line 193, ../scss/_appview.scss */
 #app-links .title {
   text-transform: uppercase;
   font-family: "FiraLight";
 }
 
-/* line 194, ../scss/_appview.scss */
+/* line 201, ../scss/_appview.scss */
 #other-applications h2 {
   font-size: 13px;
 }
-/* line 197, ../scss/_appview.scss */
+/* line 204, ../scss/_appview.scss */
 #other-applications #other-applications-list {
   background: #f6f6f6;
   border-radius: 4px;
@@ -666,27 +682,27 @@
   height: 100%;
   padding: 20px;
 }
-/* line 203, ../scss/_appview.scss */
+/* line 210, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app img, #other-applications #other-applications-list .other-app .details {
   display: inline-block;
   vertical-align: top;
 }
-/* line 208, ../scss/_appview.scss */
+/* line 215, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app .app-download-button.mini-container {
   position: relative;
   top: 20px;
 }
 
-/* line 216, ../scss/_appview.scss */
+/* line 223, ../scss/_appview.scss */
 #reviews {
   margin-top: 34px;
   width: 104%;
 }
-/* line 219, ../scss/_appview.scss */
+/* line 226, ../scss/_appview.scss */
 #reviews .view-all-reviews {
   float: right;
 }
-/* line 223, ../scss/_appview.scss */
+/* line 230, ../scss/_appview.scss */
 #reviews .app-review {
   margin-top: 24px;
   display: inline-block;
@@ -700,17 +716,17 @@
   border: solid 1px lightgrey;
   position: relative;
 }
-/* line 232, ../scss/_appview.scss */
+/* line 239, ../scss/_appview.scss */
 #reviews .app-review .stars {
   max-width: 100px;
   margin: 0 auto;
 }
-/* line 236, ../scss/_appview.scss */
+/* line 243, ../scss/_appview.scss */
 #reviews .app-review .rating-copy, #reviews .app-review .username {
   text-align: center;
 }
 
-/* line 243, ../scss/_appview.scss */
+/* line 250, ../scss/_appview.scss */
 #related-apps {
   width: 100%;
   height: 192px;
@@ -720,13 +736,13 @@
   border-top: solid 1px lightgrey;
   margin-top: 40px;
 }
-/* line 251, ../scss/_appview.scss */
+/* line 258, ../scss/_appview.scss */
 #related-apps .apps {
   width: 106%;
   background: #333;
   border: lightgrey;
 }
-/* line 255, ../scss/_appview.scss */
+/* line 262, ../scss/_appview.scss */
 #related-apps .apps .app {
   float: left;
 }

@@ -13,9 +13,8 @@ section#appview
                     p {{ratings}}
                 div.updates
                     h3 Updated
-                    p May 14, 2014
-
-                    p.latest Latest version
+                    p.date May 14, 2014
+                    h3 Latest Version
                     p.version 0.2
 
                 div.govt-rating
@@ -34,16 +33,14 @@ section#appview
                     h3 {{author}}
 
                 div.tabs
-                    ul
-                        li
-                            div.tab-trigger(data-tabname="description", data-content="{{app.description}}",data-ng-click="changeTabContent($event)")
-                                h4 description
+                    div.tab-trigger(data-tabname="description", data-content="{{app.description}}",data-ng-click="changeTabContent($event)")
+                        h4 description
 
-                            div.tab-trigger(data-tabname="screenshots",data-ng-click="changeTabContent($event)")
-                                h4 Screenshots
+                    div.tab-trigger(data-tabname="screenshots",data-ng-click="changeTabContent($event)")
+                        h4 Screenshots
 
-                            div.tab-trigger(data-tabname="releasenotes",data-content="{{app.releaseNotes}}",data-ng-click="changeTabContent($event)")
-                                h4 release notes
+                    div.tab-trigger(data-tabname="releasenotes",data-content="{{app.releaseNotes}}",data-ng-click="changeTabContent($event)")
+                        h4 release notes
 
 
 

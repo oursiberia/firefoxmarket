@@ -22,7 +22,7 @@ app.controller("AppViewController",[
 
         //get the number of ratings
         API.request ("ratings","?app=" + id + "&limit=999999").then(function(data) {
-            $scope.ratings = data.objects.length + " reviews";
+            $scope.ratings = data.objects.length + " Reviews";
         });
 
 
