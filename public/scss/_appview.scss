@@ -119,6 +119,7 @@ $borderColor:rgb(211,211,211);
 		width: 811px;
 		height: 100%;
 		.download {
+			cursor: pointer;
 			float: right;
 			width: 80px;
 			height: 30px;
@@ -311,6 +312,7 @@ $borderColor:rgb(211,211,211);
 				margin: -4px 0 0 10px;
 				p {
 					margin-top: -1px;
+					font-size: 12px;
 				}
 				div {
 					margin-top: 2px;

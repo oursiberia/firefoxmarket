@@ -109,7 +109,7 @@ app.controller("AppViewController",[
 
                     if (objects.length > 2) {
                         //TODO does this link anywhere? Modal? etc
-                        $scope.more_other_apps = "View All";
+                        $scope.more_other_apps = "View All \u25B8";
                     }
 
 
@@ -137,7 +137,7 @@ app.controller("AppViewController",[
                     relatedapps.push({
                         name:oapp.name[navigator.language],
                         rating:oapp.ratings.average,
-                        author:data.author,
+                        author:oapp.author,
                         icon:oapp.icons["64"],
                         id:oapp.id
                     });
