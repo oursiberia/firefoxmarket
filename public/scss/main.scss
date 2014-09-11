@@ -141,7 +141,7 @@ header{
 		font-family: "FiraRegular";
 	}
 	.wrap{
-
+		position: relative;
 		div{
 			vertical-align: middle;
 			cursor: pointer;
@@ -186,18 +186,21 @@ header{
 			#user-details{
 				position: absolute;
 				height: 45px;
-				width: 300px;
+				width: 280px;
 				background: $grey;
 				padding: 20px;
-				z-index: 99;
+				margin: -20px -20px 0 0;
 				top: 0px;
+				right: 0px;
 				overflow: hidden;
-				right:255px;
+				z-index: 99;
 				@include transition((background));
 
 				.identification{
 					float:right;
-
+					p {
+						font-size: 13px;
+					}
 					img{
 						margin-left:10px;
 					}
@@ -208,6 +211,8 @@ header{
 				}
 			}
 			#menu-trigger{
+				float: right;
+				margin-left: 30px;
 				&:hover{
 					cursor: pointer;
 				}

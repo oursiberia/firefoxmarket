@@ -213,7 +213,7 @@ app.controller("AppViewController",[
 
                     for(var i = 0;i<previews.length;++i){
                         var image = new Image();
-                        image.src = previews[i].thumb;
+                        image.src = previews[i].image;
                         image.setAttribute("large",previews[i].image);
                         previewWrap.appendChild(image);
                     }
