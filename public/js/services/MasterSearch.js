@@ -165,7 +165,7 @@ app.factory("MasterSearch",function($http){
         },
 
 
-        parseDescriptions:function(){
+        parseDescriptions:function(appset){
             //get the number of objects
             var len = appset.length;
 
