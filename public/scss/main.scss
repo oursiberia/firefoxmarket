@@ -134,9 +134,10 @@ footer {
 /**======= HEADER =============*/
 header{
 	width:100%;
-	background: $grey;
+	background: #fff;
 	padding-top:20px;
 	padding-bottom: 20px;
+	border-bottom: solid 1px $borderColor;
 	h1{
 		font-family: "FiraRegular";
 	}
@@ -187,7 +188,6 @@ header{
 				position: absolute;
 				height: 45px;
 				width: 280px;
-				background: $grey;
 				padding: 20px;
 				margin: -20px -20px 0 0;
 				top: 0px;

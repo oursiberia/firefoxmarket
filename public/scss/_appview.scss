@@ -2,6 +2,8 @@ $borderColor:rgb(211,211,211);
 #appview{
 	position: relative;
 	min-height: 100%;
+	padding: 40px 0;
+	background: rgb(246,246,246);
 }
 .app-content-container,#vendor-information{
 	display: inline-block;
@@ -14,7 +16,7 @@ $borderColor:rgb(211,211,211);
 }
 
 .app-category {
-	margin: 35px 0 25px 0;
+	margin-bottom: 25px;
 	.category-label {
 		display: inline-block;
 		h3, span {font-size: 18px;}
@@ -35,7 +37,8 @@ $borderColor:rgb(211,211,211);
 		font-size: 12px;
 		padding: 6px 15px 5px 15px;
 		display: inline-block;
-		border: solid 1px $dark_gray;
+		border: 1px solid #D3D3D3;
+		background: #fff;
 		@include border-radius(5px);
 		p, img {
 			display: inline-block;
@@ -55,7 +58,7 @@ $borderColor:rgb(211,211,211);
 .app-content-container{
 	width:938px;
 	height: 100%;
-	background: rgb(246,246,246);
+	background: #fff;
 	@include border-radius(5px);
 	border:solid 1px rgb(211,211,211);
 	position: relative;
@@ -249,7 +252,7 @@ $borderColor:rgb(211,211,211);
 	width: 258px;
 	height: 162px;
 	padding: 16px 20px;
-	background: rgb(246,246,246);
+	background: #fff;
 	border:solid 1px rgb(211,211,211);
 	position: relative;
 	font-size: 13px;
@@ -282,6 +285,7 @@ $borderColor:rgb(211,211,211);
 		@include panel;
 		width: 298px;
 		height: 100%;
+		background: #fff;
 
 		.other-app {
 			padding: 20px;
@@ -386,6 +390,7 @@ $borderColor:rgb(211,211,211);
 		padding: 20px;
 		margin-right: 20px;
 		@include panel;
+		background: #fff;
 		&:last-child { margin: 0;}
 		.stars, .rating-copy,.username {
 			display: inline-block;
@@ -441,18 +446,19 @@ $borderColor:rgb(211,211,211);
 	width: 100%;
 	height: 192px;
 	padding-top: 32px;
-	padding-bottom: 32px;
-	background: $panelBackground;
-	border-top: solid 1px $panelBorder;
-	margin-top: 40px;
+	background: #47484D;
+	border-top: 1px solid #2C2C2F;
+	h3 {color: #fff;}
 	.apps{
-		width: 106%;
+		width: 100%;
 		background: #333;
 		border: $panelBorder;
+		margin-top: 15px;
 		.app {
 			float: left;
 			background: #fff;
-			padding: 20px 20px 15px 20px;
+			padding: 20px;
+			border: 1px solid #2C2C2F;
 			.app-image {
 				height: 60px;
 				width: 60px;
@@ -465,17 +471,39 @@ $borderColor:rgb(211,211,211);
 			.app-details {
 				border: none;
 				padding: 0;
+				position: relative;
 				.app-copy {
-					width: 187px;
+					position: absolute;
+					width: 188px;
+					height: 100%;
+					margin-left: 10px;
+					h2 {
+						font-size: 14px;
+						font-family: "FiraRegular";
+						margin-top: -4px;
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+					p {
+						font-size: 12px;
+						font-family: "FiraLight";
+					}
+					div {
+						margin-top: 10px;
+					}
 				}
 				.app-download-button {
 					background: $dark_gray;
 					height: 24px;
 					cursor: pointer;
-					position: relative;
-					float: right;
-					top: 23px;
+					position: absolute;
+					right: 0;
+					bottom: 0;
 				}
+			}
+			&:last-child {
+				margin-right: 0;
 			}
 		}
 	}

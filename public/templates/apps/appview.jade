@@ -78,7 +78,8 @@ section#appview
                         a(ng-href="/app/{{app.id}}")
                             img.app-icon(data-ng-src="{{app.icon}}")
                         div.details
-                            h3 {{app.name}}
+                            a(data-ng-href="/app/{{app.id}}")
+                                h3 {{app.name}}
                             p {{app.author}}
                             div(starrating,data-rating="{{app.rating}}")
                         div.app-download-button.mini-container
@@ -104,21 +105,21 @@ section#appview
                         p - {{review.username}}
 
 div#related-apps
-   div.wrap
-       h3 Related Apps
-       div.apps
-           div(class="app",data-ng-repeat="app in relatedapps")
-               div.app-details
-                   div.app-image
-                       a(data-ng-href="/app/{{app.id}}")
-                           img.app-icon(ng-src="{{app.icon}}")
-                   div.app-copy
-                       div.app-download-button
-                           p Free
-                       a(data-ng-href="/app/{{app.id}}")
+    div.wrap
+        h3 Related Apps
+        div.apps
+            div(class="app",data-ng-repeat="app in relatedapps")
+                div.app-details
+                    div.app-image
+                        a(data-ng-href="/app/{{app.id}}")
+                            img.app-icon(ng-src="{{app.icon}}")
+                    div.app-copy
+                        a(data-ng-href="/app/{{app.id}}")
                            h2.app-title {{app.name}}
-                           p.app-author {{app.author}}
-                           div(starrating,data-rating="{{app.rating}}")
+                        p.app-author {{app.author}}
+                        div(starrating,data-rating="{{app.rating}}")
+                    div.app-download-button
+                        p Free
 
 
 

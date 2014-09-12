@@ -1,6 +1,3 @@
-
-
-
 section#search
     div#searchform
         button(ng-click="search()" id="searchbutton") Search
@@ -17,3 +14,4 @@ section#search
                             img(ng-src="{{result.icon}}",alt="result-icon")
                         h2.result-title {{result.name}}
                         p.result-author {{result.author}}
+                        div(starrating,data-rating="{{app.rating}}")

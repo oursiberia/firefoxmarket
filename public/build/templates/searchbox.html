@@ -11,6 +11,7 @@
           <div ng-repeat="result in results" class="searchresult"><a ng-href="/app/{{result.id}}"><img ng-src="{{result.icon}}" alt="result-icon"/></a>
             <h2 class="result-title">{{result.name}}</h2>
             <p class="result-author">{{result.author}}</p>
+            <div starrating="starrating" data-rating="{{app.rating}}"></div>
           </div>
         </div>
       </div>
