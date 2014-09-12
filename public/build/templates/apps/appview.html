@@ -59,7 +59,7 @@
         <ul>
           <li><a data-ng-href="mailto:{{support_email}}" translate="translate">Contact Support &#9656;</a></li>
           <li ng-if="support_url != false"><a data-ng-href="{{support_url}}" target="_blank" translate="translate">Support Site &#9656;</a></li>
-          <li><a data-ng-href="{{privacy}}" translate="translate">Privacy Policy &#9656;</a></li>
+          <li><a data-ng-href="#" translate="translate" data-ng-click="showPrivacyPolicy()">Privacy Policy &#9656;</a></li>
           <li><a data-ng-href="{{report_abuse}}" translate="translate" data-ng-click="reportAbuse()">Report Abuse &#9656;</a></li>
           <li><a data-ng-href="{{feedback}}" translate="translate" data-ng-click="sendFeedback()">Send Feedback &#9656;</a></li>
         </ul>
@@ -110,7 +110,7 @@
           <div class="app-image"><a data-ng-href="/app/{{app.id}}"><img ng-src="{{app.icon}}" class="app-icon"/></a></div>
           <div class="app-copy">
             <div class="app-download-button">
-              <p>Free</p>
+              <p>{{purchase_type}}</p>
             </div><a data-ng-href="/app/{{app.id}}">
               <h2 class="app-title">{{app.name}}</h2>
               <p class="app-author">{{app.author}}</p>
@@ -124,3 +124,10 @@
 <div abusedirective="abusedirective"></div>
 <div appfeedback="appfeedback"></div>
 <div appreview="appreview"></div>
+<div id="privacy" class="modal closed">
+  <div class="modalBox">
+    <h2>Privacy Policy</h2>
+    <div class="closeModal"></div>
+    <p>{{privacy_policy}}</p>
+  </div>
+</div>

@@ -62,7 +62,7 @@ section#appview
                         a(data-ng-href="{{support_url}}",target="_blank",translate) Support Site &#9656;
 
                     li
-                        a(data-ng-href="{{privacy}}",translate) Privacy Policy &#9656;
+                        a(data-ng-href="#",translate,data-ng-click="showPrivacyPolicy()") Privacy Policy &#9656;
 
                     li
                         a(data-ng-href="{{report_abuse}}",translate,data-ng-click="reportAbuse()") Report Abuse &#9656;
@@ -114,7 +114,7 @@ div#related-apps
                            img.app-icon(ng-src="{{app.icon}}")
                    div.app-copy
                        div.app-download-button
-                           p Free
+                           p {{purchase_type}}
                        a(data-ng-href="/app/{{app.id}}")
                            h2.app-title {{app.name}}
                            p.app-author {{app.author}}
@@ -127,3 +127,8 @@ div#related-apps
 div(abusedirective)
 div(appfeedback)
 div(appreview)
+div#privacy(class="modal closed")
+    div.modalBox
+        h2 Privacy Policy
+        div.closeModal
+        p {{privacy_policy}}

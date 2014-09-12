@@ -12,7 +12,8 @@ app.controller("AppViewController",[
     "$rootScope",
     "$filter",
     "AgeRatingLookup",
-    function($window,API,$scope,$rootScope,$filter,AgeRatingLookup) {
+    "$http",
+    function($window,API,$scope,$rootScope,$filter,AgeRatingLookup,$http) {
 
         //get the app id out of the url
         var id = $window.location.href.split("/");
@@ -144,6 +145,7 @@ app.controller("AppViewController",[
             API.request ("search","?q=" + data.categories[0]).then(function(data) {
 
                 var objects = data.objects;
+
                 var relatedapps = [];
 
                 for(var i = 0;i<4;++i){
@@ -152,6 +154,7 @@ app.controller("AppViewController",[
                         name:oapp.name[navigator.language],
                         rating:oapp.ratings.average,
                         author:oapp.author,
+                        purchase_type:oapp.premium_type.charAt(0).toUpperCase() + oapp.premium_type.slice(1),
                         icon:oapp.icons["64"],
                         id:oapp.id
                     });
@@ -311,7 +314,7 @@ app.controller("AppViewController",[
 
         };
 
-        /**================= FEEDBACK/REVIEW/ABUSE ==========================*/
+        /**================= FEEDBACK/REVIEW/ABUSE/PRIVACY ==========================*/
         $scope.sendFeedback = function(){
             var box = document.querySelector("#feedback");
             box.className = box.className.replace("closed","");
@@ -343,6 +346,25 @@ app.controller("AppViewController",[
 
             //lock body
             document.getElementsByTagName("html")[0].style.overflow = "hidden";
+        };
+
+        $scope.showPrivacyPolicy = function(){
+            var box = document.querySelector("#privacy");
+            box.className = box.className.replace("closed","");
+
+            //lock body
+            document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+            //get the policy
+            $http({
+                method:"GET",
+                url:"https://marketplace.firefox.com/api/v1/apps/app/"+ $scope.appid + "/privacy/"
+            }).success(function(data,status,headers,config){
+                $scope.privacy_policy = data.privacy_policy;
+            }).error(function(data,status,headers,config){
+                console.log("A error occured when fetching the privacy policy");
+                console.log(data);
+            })
         };
 
 
