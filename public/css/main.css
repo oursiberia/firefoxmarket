@@ -1185,6 +1185,51 @@
   font-family: "FiraRegular";
 }
 
+/**
+ *	Abuse reporting
+ */
+/* line 114, ../scss/_apps.scss */
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  z-index: 999999;
+  background: rgba(100, 100, 100, 0.6);
+  -webkit-transition: display 1 ease;
+  -moz-transition: display 1 ease;
+  -o-transition: display 1 ease;
+  transition: display 1 ease;
+  display: block;
+}
+/* line 122, ../scss/_apps.scss */
+.modal.closed {
+  -webkit-transition: display 1 ease;
+  -moz-transition: display 1 ease;
+  -o-transition: display 1 ease;
+  transition: display 1 ease;
+  display: none;
+}
+/* line 129, ../scss/_apps.scss */
+.modal .modalBox {
+  height: 500px;
+  width: 700px;
+  position: relative;
+  left: 50%;
+  margin-left: -450px;
+  top: 50%;
+  margin-top: 200px;
+  background: #fff;
+  padding: 100px;
+}
+/* line 138, ../scss/_apps.scss */
+.modal .modalBox textarea {
+  position: relative;
+  width: 100%;
+  height: 90%;
+}
+
 /* line 12, ../scss/main.scss */
 * {
   margin: 0;

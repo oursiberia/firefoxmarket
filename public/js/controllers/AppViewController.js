@@ -12,7 +12,8 @@ app.controller("AppViewController",[
     "$rootScope",
     "$filter",
     "AgeRatingLookup",
-    function($window,API,$scope,$rootScope,$filter,AgeRatingLookup) {
+    "$http",
+    function($window,API,$scope,$rootScope,$filter,AgeRatingLookup,$http) {
 
         //get the app id out of the url
         var id = $window.location.href.split("/");
@@ -70,7 +71,11 @@ app.controller("AppViewController",[
             $scope.support_email = data.support_email[navigator.language];
 
             //TODO Get people who don't have Support URLs set to add em.
-            $scope.support_url = data.support_url[navigator.language];
+            if(data.support_url[navigator.language] !== ""){
+                $scope.support_url = data.support_url[navigator.language];
+            }else{
+                $scope.support_url = false;
+            }
 
 
             $scope.purchase_type = data.premium_type.charAt(0).toUpperCase() + data.premium_type.slice(1);
@@ -140,6 +145,7 @@ app.controller("AppViewController",[
             API.request ("search","?q=" + data.categories[0]).then(function(data) {
 
                 var objects = data.objects;
+
                 var relatedapps = [];
 
                 for(var i = 0;i<4;++i){
@@ -148,6 +154,7 @@ app.controller("AppViewController",[
                         name:oapp.name[navigator.language],
                         rating:oapp.ratings.average,
                         author:oapp.author,
+                        purchase_type:oapp.premium_type.charAt(0).toUpperCase() + oapp.premium_type.slice(1),
                         icon:oapp.icons["64"],
                         id:oapp.id
                     });
@@ -162,6 +169,7 @@ app.controller("AppViewController",[
     });//end main app details GET
 
 
+        /**================= TABS ==========================*/
         /**
          * Controls the tabbed content for the App view
          * @param e{Event} the click event that happens when you click on a tab button
@@ -240,6 +248,7 @@ app.controller("AppViewController",[
         };
 
 
+        /**================= APP REVIEWS ==========================*/
         /**
          * Get the reviews
          */
@@ -272,6 +281,7 @@ app.controller("AppViewController",[
          * Starts the app download process
          */
 
+        /**================= DOWNLOADING/INSTALLING ==========================*/
 
         $scope.initPurchase = function(app_type){
             console.log("clicked");
@@ -296,13 +306,66 @@ app.controller("AppViewController",[
 
 
             req.onsuccess = function() {
-
+                console.log("Install process initiated");
             };
             req.onerror = function() {
-
+                console.log("Install process failed");
             };
 
         };
 
+        /**================= FEEDBACK/REVIEW/ABUSE/PRIVACY ==========================*/
+        $scope.sendFeedback = function(){
+            var box = document.querySelector("#feedback");
+            box.className = box.className.replace("closed","");
 
-}]);
+            //lock body
+            document.getElementsByTagName("html")[0].style.overflow = "hidden";
+        };
+
+        $scope.writeReview = function(){
+            /**
+             * If we're not signed in, theres no point, flash message and stop running
+             * function
+             */
+            if(localStorage.getItem("loggedIn") !== "true"){
+                alert("you must be logged in to write a review");
+                return;
+            }
+            var box = document.querySelector("#review");
+            box.className = box.className.replace("closed","");
+
+            //lock body
+            document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+        };
+
+        $scope.reportAbuse = function(){
+            var box = document.querySelector("#abused");
+            box.className = box.className.replace("closed","");
+
+            //lock body
+            document.getElementsByTagName("html")[0].style.overflow = "hidden";
+        };
+
+        $scope.showPrivacyPolicy = function(){
+            var box = document.querySelector("#privacy");
+            box.className = box.className.replace("closed","");
+
+            //lock body
+            document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+            //get the policy
+            $http({
+                method:"GET",
+                url:"https://marketplace.firefox.com/api/v1/apps/app/"+ $scope.appid + "/privacy/"
+            }).success(function(data,status,headers,config){
+                $scope.privacy_policy = data.privacy_policy;
+            }).error(function(data,status,headers,config){
+                console.log("A error occured when fetching the privacy policy");
+                console.log(data);
+            })
+        };
+
+
+    }]);
