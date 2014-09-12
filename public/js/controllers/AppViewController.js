@@ -70,7 +70,11 @@ app.controller("AppViewController",[
             $scope.support_email = data.support_email[navigator.language];
 
             //TODO Get people who don't have Support URLs set to add em.
-            $scope.support_url = data.support_url[navigator.language];
+            if(data.support_url[navigator.language] !== ""){
+                $scope.support_url = data.support_url[navigator.language];
+            }else{
+                $scope.support_url = false;
+            }
 
 
             $scope.purchase_type = data.premium_type.charAt(0).toUpperCase() + data.premium_type.slice(1);
@@ -162,6 +166,7 @@ app.controller("AppViewController",[
     });//end main app details GET
 
 
+        /**================= TABS ==========================*/
         /**
          * Controls the tabbed content for the App view
          * @param e{Event} the click event that happens when you click on a tab button
@@ -240,6 +245,7 @@ app.controller("AppViewController",[
         };
 
 
+        /**================= APP REVIEWS ==========================*/
         /**
          * Get the reviews
          */
@@ -272,6 +278,7 @@ app.controller("AppViewController",[
          * Starts the app download process
          */
 
+        /**================= DOWNLOADING/INSTALLING ==========================*/
 
         $scope.initPurchase = function(app_type){
             console.log("clicked");
@@ -296,13 +303,47 @@ app.controller("AppViewController",[
 
 
             req.onsuccess = function() {
-
+                console.log("Install process initiated");
             };
             req.onerror = function() {
-
+                console.log("Install process failed");
             };
 
         };
 
+        /**================= FEEDBACK/REVIEW/ABUSE ==========================*/
+        $scope.sendFeedback = function(){
+            var box = document.querySelector("#feedback");
+            box.className = box.className.replace("closed","");
 
-}]);
+            //lock body
+            document.getElementsByTagName("html")[0].style.overflow = "hidden";
+        };
+
+        $scope.writeReview = function(){
+            /**
+             * If we're not signed in, theres no point, flash message and stop running
+             * function
+             */
+            if(localStorage.getItem("loggedIn") !== "true"){
+                alert("you must be logged in to write a review");
+                return;
+            }
+            var box = document.querySelector("#review");
+            box.className = box.className.replace("closed","");
+
+            //lock body
+            document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+        };
+
+        $scope.reportAbuse = function(){
+            var box = document.querySelector("#abused");
+            box.className = box.className.replace("closed","");
+
+            //lock body
+            document.getElementsByTagName("html")[0].style.overflow = "hidden";
+        };
+
+
+    }]);
