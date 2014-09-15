@@ -32,7 +32,6 @@
 		background: url(/img/background1.jpg);
 	}
 
-
 	#featured-category-apps{
 		float: right;
 		background: #fff;
@@ -69,6 +68,26 @@
 			top: 30px;
 			left: 90px;
 		}
+
+		.star-rating {
+			height: 20px;
+			width: 100px;
+			position: absolute;
+			bottom: 20px;
+			left: 90px;
+		}
+
+		.stars {
+			ul li {
+				img {
+					height: 15px;
+					width: 15px;
+					top: 0;
+					left: 0;
+				}
+			}
+		}
+
 	}
 
 	#category-details{
@@ -111,20 +130,29 @@
 
 #popular-in-category{
 
-	.app-set{
-		height: 116px;
-		width:316px;
+	.app-grid{
+		height: 100%;
+		width: 100%;
 		background:rgba(246,246,246,1.0);
 		display: inline-block;
-		vertical-align: top;
-		border:solid 1px #979797;
-		margin:0.5px 0.5px;
+		border: 1px solid #D6D6D6;
+		@include border-radius(5px);
+
+		.category {
+			height: 60px;
+			width: 273px;
+			float: left;
+			padding: 20px;
+			border-right: 1px solid #D6D6D6;
+			border-bottom: 1px solid #D6D6D6;
+		}
 
 		.app{
 			position: relative;
-			top:20px;
-			left:20px;
+			margin: 0;
+			padding: 0;
 		}
+
 		img,.app-details{
 			vertical-align: top;
 			display: inline-block;
@@ -153,19 +181,3 @@
 	}
 
 }//end popular in category
-
-/**
- *	Fix star rating images for featured box
- */
-.featured-app{
-	.stars{
-		.rating{
-			li{
-				img{
-					height:14px;
-					width:20px;
-				}
-			}
-		}
-	}
-}

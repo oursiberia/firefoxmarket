@@ -15,7 +15,7 @@ section#category-page
                                 img(data-ng-src="{{fapp.icon}}",class="icon")
                                 h1 {{fapp.name}}
                                 h3 {{fapp.author}}
-                                div(starrating, data-rating="{{fapp.rating}}")
+                                div(class="star-rating", starrating, data-rating="{{fapp.rating}}")
 
 
             div#category-details
@@ -81,10 +81,11 @@ section#category-page
         div#popular-in-category(class="category popular")
             h3(translate) Popular |
                 span.light(translate,class="thin") New
-            div(class="category",data-ng-repeat="app in popularapps")
-                div.app
-                    img(data-ng-src="{{app.icon}}")
-                    div.app-details
-                        h4 {{app.name}}
-                        p {{app.author}}
-                    div.install-button Free
+            div.app-grid
+                div(class="category",data-ng-repeat="app in popularapps")
+                    div.app
+                        img(data-ng-src="{{app.icon}}")
+                        div.app-details
+                            h4 {{app.name}}
+                            p {{app.author}}
+                        div.install-button Free
