@@ -35,6 +35,7 @@ app.controller("CategoryViewController",[
 
         //limit to 4
         for(var i = 0;i<4;++i){
+            apps[i]["index"] = i;
             fapps.push(apps[i]);
         }
 
@@ -63,7 +64,7 @@ app.controller("CategoryViewController",[
      */
     var timer = setInterval( function() {
         if (window.location.href.search("category") !== -1) {
-            swapApp();
+           // swapApp();
         } else {
             clearInterval(timer);
         }
@@ -99,24 +100,12 @@ app.controller("CategoryViewController",[
                     }
                     app = fapps[currentIndex];
 
-                    console.log(app);
-                    var img = new Image();
-                    img.src = app.icon;
 
-                    var h1 = document.createElement("h1");
-                    var h3 = document.createElement("h3");
-                    var div = document.createElement("div");
 
-                    h1.innerHTML = app.name;
-                    h3.innerHTML = app.author;
+                    var appf = document.querySelectorAll(".featured-app")[currentIndex];
 
-                    selector.appendChild(img);
-                    selector.appendChild(h1);
-                    selector.appendChild(h3);
-                    selector.appendChild(div);
+                    selector.appendChild(appf.cloneNode(true));
 
-                    div.setAttribute("data-starrating","");
-                    div.setAttribute("data-rating",app.rating.average);
 
                     TweenMax.to(selector,1,{
                         opacity:1

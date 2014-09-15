@@ -7,12 +7,16 @@ section#category-page
                 div.wrap
                     div#in-view-featured(class="category in-view-featured")
 
+
+
                     div(class="category featuredapps",style="display:none")
-                        div(class="category featured-app",data-ng-repeat="fapp in featuredapps")
-                            img(data-ng-src="{{fapp.icon}}")
-                            h1 {{fapp.name}}
-                            h3 {{fapp.author}}
-                            div(starrating,data-rating="{{app.rating}}")
+                        div(class="category",data-ng-repeat="fapp in featuredapps",data-index="{{fapp.index}}")
+                            div.featured-app
+                                img(data-ng-src="{{fapp.icon}}",class="icon")
+                                h1 {{fapp.name}}
+                                h3 {{fapp.author}}
+                                div(starrating, data-rating="{{fapp.rating}}")
+
 
             div#category-details
                 img(src="/img/category-icon.png")

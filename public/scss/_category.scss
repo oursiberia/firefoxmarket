@@ -33,15 +33,17 @@
 		width: 300px;
 		@include border-radius(5px);
 	}
-	
+
 	#in-view-featured{
 		opacity: 0;
+
 		img, h1, h3 {
 			position: absolute;
 		}
 		img {
 			height: 60px;
 			width: 60px;
+
 			display: block;
 			top: 20px;
 			left: 20px;
@@ -143,3 +145,19 @@
 	}
 
 }//end popular in category
+
+/**
+ *	Fix star rating images for featured box
+ */
+.featured-app{
+	.stars{
+		.rating{
+			li{
+				img{
+					height:14px;
+					width:20px;
+				}
+			}
+		}
+	}
+}
