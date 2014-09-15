@@ -45,9 +45,9 @@ app.factory("MasterSearch",function($http){
             //query api
             $http({
                 method:"GET",
-                url:"https://marketplace.firefox.com/api/v1/apps/search/?q=" + term.value + "&device=desktop"
+                url:"https://marketplace.firefox.com/api/v1/apps/search/?q=" + query + "&device=desktop"
             }).success(function(data, status, headers, config){
-
+                console.log(data);
                 //need to filter out unecessary content, make new array
                 var results = [];
 
@@ -200,14 +200,18 @@ app.factory("MasterSearch",function($http){
             var len = appset.length;
 
             var newset = []
-            for(var i = 0;i<len;++i){
+            for(var i = 0;i<len-1;++i){
                 var app = appset[i];
 
-                app.name = app.name[navigator.language];
-                app.icon = app.icons["64"];
-                app.ratings = app.ratings.average;
+                var name = app.name[navigator.language];
+                var icon = app.icons["64"];
+                var ratings = app.ratings.average;
 
-                newset.push(app);
+                newset.push({
+                    name:name,
+                    icon:icon,
+                    ratings:ratings
+                });
             }
 
             return newset;

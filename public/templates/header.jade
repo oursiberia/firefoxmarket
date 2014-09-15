@@ -1,3 +1,14 @@
+div#mainsearch
+    div.wrap
+        input(type="text",name="search",data-ng-model="searchbox",placeholder="Search for anything...",data-ng-change="searchApp()")
+    div.wrap
+
+        div.resultsbyname
+            div.searchresult.app(data-ng-repeat="result in author_results")
+                a(data-ng-href="/app/{{result.id}}")
+                    img.app-icon(data-ng-src="{{result.icon}}")
+                h1.result-title {{result.name}}
+                h2.result-author {{result.author}}
 header
     div.wrap
         div(data-ng-click="returnHome()")
@@ -6,7 +17,7 @@ header
                 span.dark(translate) Firefox
                 span.thin(translate) Market
 
-        div#searchbutton(translate) Search
+        div#searchbutton(translate,data-ng-click="search()") Search
 
         div
             div#user
@@ -16,3 +27,5 @@ header
                     div.identification
                         p#username(data-ng-click="login()",translate) Sign in
                         img(src="/img/test_user.svg")
+
+
