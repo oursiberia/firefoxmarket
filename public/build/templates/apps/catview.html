@@ -1,0 +1,107 @@
+
+<section id="category-page">
+  <div id="category-banner">
+    <div id="banner"></div>
+    <div class="wrap">
+      <div id="featured-category-apps">
+        <div class="wrap">
+          <div id="in-view-featured" class="category in-view-featured"></div>
+          <div style="display:none" class="category featuredapps">
+            <div data-ng-repeat="fapp in featuredapps" data-index="{{fapp.index}}" class="category">
+              <div class="featured-app"><img data-ng-src="{{fapp.icon}}" class="icon"/>
+                <h1>{{fapp.name}}</h1>
+                <h3>{{fapp.author}}</h3>
+                <div starrating="starrating" data-rating="{{fapp.rating}}"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="category-details"><img src="/img/category-icon.png"/>
+        <div class="category-copy">
+          <h2>View All Categories</h2>
+          <h1 id="category-title"></h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis risus viverra, placerat ante ut.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="editorial-collections">
+    <div class="wrap">
+      <div class="collections">
+        <div class="collection">
+          <div class="collection-apps">
+            <div class="collection-app"></div>
+            <div class="collection-app"></div>
+            <div class="collection-app"></div>
+          </div>
+          <div class="collection-copy">
+            <h2 translate="translate">Our Staff Picks</h2>
+            <p>Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
+          </div>
+        </div>
+        <div class="collection">
+          <div class="collection-apps">
+            <div class="collection-app"></div>
+            <div class="collection-app"></div>
+            <div class="collection-app"></div>
+          </div>
+          <div class="collection-copy">
+            <h2 translate="translate">Top three Games</h2>
+            <p>Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
+          </div>
+        </div>
+        <div class="collection">
+          <div class="collection-apps">
+            <div class="collection-app"></div>
+            <div class="collection-app"></div>
+            <div class="collection-app"></div>
+          </div>
+          <div class="collection-copy">
+            <h2 translate="translate">Great Apps for the workplace</h2>
+            <p>Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="featured">
+    <div class="wrap">
+      <h1 translate="translate">Featured Apps</h1>
+      <div class="apps home-apps">
+        <div data-ng-repeat="app in featuredapps" class="{{app.classname}} featured {{app.showfirst}} with-review">
+          <div class="app-wrap">
+            <div class="app-details">
+              <div class="app-image"><a data-ng-href="/app/{{app.id}}"><img data-ng-src="{{app.icon}}" class="app-icon"/></a></div>
+              <div class="app-copy">
+                <div class="app-download-button">
+                  <p>Free</p>
+                </div><a data-ng-href="/app/{{app.id}}">
+                  <h2 class="app-title">{{app.name}}</h2>
+                  <p class="app-author">{{app.author}}</p>
+                  <div starrating="starrating" data-rating="{{app.rating}}"></div></a>
+              </div>
+            </div>
+            <div class="app-description">
+              <div appreviews="appreviews" data-appid="{{app.id}}"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div id="popular-in-category" class="category popular">
+      <h3 translate="translate">Popular |<span translate="translate" class="light thin">New</span></h3>
+      <div data-ng-repeat="app in popularapps" class="category">
+        <div class="app"><img data-ng-src="{{app.icon}}"/>
+          <div class="app-details">
+            <h4>{{app.name}}</h4>
+            <p>{{app.author}}</p>
+          </div>
+          <div class="install-button">Free</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

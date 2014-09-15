@@ -39,9 +39,10 @@ app.controller("AppViewController",[
             $scope.rating = data.content_ratings.rating;
 
             $scope.rating_image = AgeRatingLookup.getImage(data);
-
+            console.log(data);
 
             $scope.name = data.name[navigator.language];
+            $scope.version = data.current_version;
 
             //set the main icon to be used
             $scope.icon = data.icons["128"];
@@ -284,7 +285,7 @@ app.controller("AppViewController",[
         /**================= DOWNLOADING/INSTALLING ==========================*/
 
         $scope.initPurchase = function(app_type){
-            console.log("clicked");
+
             /**
              * first make sure we're in Firefox.
              */
