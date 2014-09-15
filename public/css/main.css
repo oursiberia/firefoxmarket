@@ -13,6 +13,11 @@
 }
 
 @font-face {
+  font-family: "FiraMedium";
+  src: url("/fonts/FiraSans-Medium.ttf");
+}
+
+@font-face {
   font-family: "FiraRegular";
   src: url("/fonts/FiraSans-Regular.ttf");
 }
@@ -118,6 +123,11 @@
 }
 
 /* line 1, ../scss/_home.scss */
+#HOME {
+  background: #f6f6f6;
+}
+
+/* line 5, ../scss/_home.scss */
 .all-trigger {
   float: right;
   font-size: 12px;
@@ -129,7 +139,7 @@
   transition: color 0.5s ease;
   color: #333;
 }
-/* line 10, ../scss/_home.scss */
+/* line 14, ../scss/_home.scss */
 .all-trigger:hover {
   -webkit-transition: color 0.5s ease;
   -moz-transition: color 0.5s ease;
@@ -139,19 +149,19 @@
   cursor: pointer;
 }
 
-/* line 17, ../scss/_home.scss */
+/* line 21, ../scss/_home.scss */
 #search-home {
   height: 200px;
   width: 100%;
   background: #55575c;
   position: relative;
 }
-/* line 22, ../scss/_home.scss */
+/* line 26, ../scss/_home.scss */
 #search-home div.wrap {
   padding: 20px;
   padding-top: 40px;
 }
-/* line 25, ../scss/_home.scss */
+/* line 29, ../scss/_home.scss */
 #search-home div.wrap #homesearch {
   font-family: "FiraThin";
   outline: none;
@@ -165,7 +175,7 @@
   letter-spacing: -1.5px;
 }
 
-/* line 42, ../scss/_home.scss */
+/* line 46, ../scss/_home.scss */
 #search-home-result {
   height: 0px;
   width: 100%;
@@ -174,20 +184,20 @@
   top: 286px;
   z-index: 99;
 }
-/* line 50, ../scss/_home.scss */
+/* line 54, ../scss/_home.scss */
 #search-home-result .searchresult {
   display: inline-block;
 }
-/* line 54, ../scss/_home.scss */
+/* line 58, ../scss/_home.scss */
 #search-home-result .resultsbyname {
   width: 400px;
 }
 
-/* line 62, ../scss/_home.scss */
+/* line 66, ../scss/_home.scss */
 .home-main {
   margin-top: 50px;
 }
-/* line 64, ../scss/_home.scss */
+/* line 68, ../scss/_home.scss */
 .home-main .column {
   height: 40px;
   width: 40px;
@@ -196,17 +206,17 @@
   background: #333;
   margin-right: 21px;
 }
-/* line 72, ../scss/_home.scss */
+/* line 76, ../scss/_home.scss */
 .home-main .column.main {
   width: 620px;
   height: 366px;
 }
-/* line 77, ../scss/_home.scss */
+/* line 81, ../scss/_home.scss */
 .home-main .column.secondary {
   width: 300px;
   height: 366px;
 }
-/* line 83, ../scss/_home.scss */
+/* line 87, ../scss/_home.scss */
 .home-main .column.third .inner-box {
   width: 300px;
   height: 173px;
@@ -214,34 +224,38 @@
   margin-bottom: 20px;
 }
 
-/* line 94, ../scss/_home.scss */
+/* line 97, ../scss/_home.scss */
+#featured {
+  padding: 30px 0;
+}
+/* line 99, ../scss/_home.scss */
 #featured .app {
   display: inline-block;
   vertical-align: top;
 }
-/* line 98, ../scss/_home.scss */
+/* line 103, ../scss/_home.scss */
 #featured .app:last-child {
   margin: 0;
 }
 
-/* line 107, ../scss/_home.scss */
+/* line 112, ../scss/_home.scss */
 #category-list .wrap .controls {
   padding-top: 30px;
   padding-bottom: 30px;
 }
-/* line 110, ../scss/_home.scss */
+/* line 115, ../scss/_home.scss */
 #category-list .wrap .controls h1 {
   display: inline-block;
 }
-/* line 114, ../scss/_home.scss */
+/* line 119, ../scss/_home.scss */
 #category-list .wrap .controls h1:first-child:after {
   content: "|";
 }
-/* line 118, ../scss/_home.scss */
+/* line 123, ../scss/_home.scss */
 #category-list .wrap .controls h1:last-child {
   font-family: "FiraLight";
 }
-/* line 122, ../scss/_home.scss */
+/* line 127, ../scss/_home.scss */
 #category-list .wrap .controls button {
   float: right;
   width: 178px;
@@ -252,7 +266,7 @@
   color: #fff;
   border-radius: 4px;
 }
-/* line 134, ../scss/_home.scss */
+/* line 139, ../scss/_home.scss */
 #category-list .category {
   width: 298px;
   background: #F8F8F8;
@@ -265,7 +279,7 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 143, ../scss/_home.scss */
+/* line 148, ../scss/_home.scss */
 #category-list .category .category-title {
   background: #fff;
   width: 100%;
@@ -278,11 +292,11 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 155, ../scss/_home.scss */
+/* line 160, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap {
   padding: 20px;
 }
-/* line 157, ../scss/_home.scss */
+/* line 162, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon, #category-list .category .category-title .title-wrap .title-copy {
   display: inline-block;
   vertical-align: middle;
@@ -293,117 +307,148 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 168, ../scss/_home.scss */
+/* line 173, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon {
   height: 65px;
   width: 65px;
   background: #333;
   border-radius: 41px;
 }
-/* line 177, ../scss/_home.scss */
+/* line 182, ../scss/_home.scss */
 #category-list .category .app {
   border: 0;
   padding: 20px 20px 0 20px;
 }
-/* line 180, ../scss/_home.scss */
+/* line 185, ../scss/_home.scss */
 #category-list .category .app .app-details {
   padding: 0;
   border: 0;
 }
-/* line 185, ../scss/_home.scss */
+/* line 190, ../scss/_home.scss */
 #category-list .category .app:last-child {
   padding: 20px;
 }
-/* line 189, ../scss/_home.scss */
+/* line 194, ../scss/_home.scss */
 #category-list .category:last-child {
   margin: 0;
 }
 
 /* line 1, ../scss/_category.scss */
+#category-page {
+  background: #F6F6F6;
+}
+/* line 4, ../scss/_category.scss */
+#category-page .editorial-collections {
+  margin-top: 30px;
+}
+
+/* line 10, ../scss/_category.scss */
 #category-banner {
   width: 100%;
-  height: 250px;
+  padding: 50px 0;
+  height: 150px;
   position: relative;
   overflow: hidden;
+  background: #55575C;
 }
-/* line 7, ../scss/_category.scss */
+/* line 18, ../scss/_category.scss */
 #category-banner #banner {
   position: absolute;
   top: 0;
-  height: 300px;
+  height: 250px;
   width: 100%;
   opacity: 0.4;
   background: url(/img/background1.jpg);
-  -webkit-filter: blur(5px);
-  -moz-filter: blur(5px);
-  filter: url(blur.svg#blur);
 }
-/* line 21, ../scss/_category.scss */
+/* line 28, ../scss/_category.scss */
 #category-banner #featured-category-apps {
   float: right;
-  background: #F2F2F2;
-  height: 150px;
+  background: #fff;
+  height: 100px;
   position: relative;
-  top: 40px;
   width: 300px;
-  border-radius: 4px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
 }
-/* line 30, ../scss/_category.scss */
-#category-banner #featured-category-apps h1 {
-  font-size: 20px;
-}
-/* line 33, ../scss/_category.scss */
-#category-banner #featured-category-apps h3 {
-  font-size: 14px;
-}
-/* line 36, ../scss/_category.scss */
-#category-banner #featured-category-apps h1, #category-banner #featured-category-apps h3 {
-  font-family: "FiraThin";
-  position: relative;
-  left: 10px;
-  top: 20px;
-}
-/* line 44, ../scss/_category.scss */
+/* line 37, ../scss/_category.scss */
 #category-banner #in-view-featured {
   opacity: 0;
 }
-/* line 46, ../scss/_category.scss */
+/* line 39, ../scss/_category.scss */
+#category-banner #in-view-featured img, #category-banner #in-view-featured h1, #category-banner #in-view-featured h3 {
+  position: absolute;
+}
+/* line 42, ../scss/_category.scss */
 #category-banner #in-view-featured img {
-  height: 64px;
-  width: 64px;
+  height: 60px;
+  width: 60px;
   display: block;
-  margin: 0 auto;
-  position: relative;
-  top: 10px;
+  top: 20px;
+  left: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 50, ../scss/_category.scss */
+#category-banner #in-view-featured h1 {
+  font-size: 16px;
+  font-family: "FiraRegular";
+  top: 14px;
+  left: 90px;
 }
 /* line 56, ../scss/_category.scss */
+#category-banner #in-view-featured h3 {
+  font-size: 14px;
+  font-family: "FiraLight";
+  top: 30px;
+  left: 90px;
+}
+/* line 64, ../scss/_category.scss */
 #category-banner #category-details {
   position: relative;
-  top: 40px;
 }
-/* line 60, ../scss/_category.scss */
+/* line 67, ../scss/_category.scss */
 #category-banner #category-details img, #category-banner #category-details .category-copy {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 65, ../scss/_category.scss */
+/* line 72, ../scss/_category.scss */
 #category-banner #category-details .category-copy {
   position: relative;
   left: 39px;
+  color: #fff;
 }
-/* line 68, ../scss/_category.scss */
+/* line 76, ../scss/_category.scss */
+#category-banner #category-details .category-copy h2 {
+  font-size: 12px;
+  border: 1px solid #fff;
+  padding: 3px 8px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  border-radius: 5px;
+}
+/* line 82, ../scss/_category.scss */
 #category-banner #category-details .category-copy p {
   max-width: 370px;
-  font-family: "FiraLight";
+  font-family: "FiraUltraLight";
+  font-size: 14px;
+  margin-top: -5px;
 }
-/* line 74, ../scss/_category.scss */
+/* line 90, ../scss/_category.scss */
 #category-banner #category-details #category-title {
-  color: #55575C;
+  color: #fff;
   position: relative;
-  font-size: 50px;
+  font-size: 62px;
+  margin-left: -2px;
+  letter-spacing: -1.5px;
+  font-family: "FiraMedium";
 }
 
-/* line 86, ../scss/_category.scss */
+/* line 104, ../scss/_category.scss */
 #popular-in-category .app-set {
   height: 116px;
   width: 316px;
@@ -413,18 +458,18 @@
   border: solid 1px #979797;
   margin: 0.5px 0.5px;
 }
-/* line 95, ../scss/_category.scss */
+/* line 113, ../scss/_category.scss */
 #popular-in-category .app-set .app {
   position: relative;
   top: 20px;
   left: 20px;
 }
-/* line 100, ../scss/_category.scss */
+/* line 118, ../scss/_category.scss */
 #popular-in-category .app-set img, #popular-in-category .app-set .app-details {
   vertical-align: top;
   display: inline-block;
 }
-/* line 105, ../scss/_category.scss */
+/* line 123, ../scss/_category.scss */
 #popular-in-category .app-set .install-button {
   height: 25px;
   width: 65px;
@@ -436,11 +481,11 @@
   text-align: center;
   color: #fff;
 }
-/* line 116, ../scss/_category.scss */
+/* line 134, ../scss/_category.scss */
 #popular-in-category .app-set .app-details {
   position: relative;
 }
-/* line 118, ../scss/_category.scss */
+/* line 136, ../scss/_category.scss */
 #popular-in-category .app-set .app-details p {
   font-size: 12px;
   font-family: "FiraThin";
@@ -993,7 +1038,7 @@
 /* line 445, ../scss/_appview.scss */
 #related-apps {
   width: 100%;
-  height: 192px;
+  height: 184px;
   padding-top: 32px;
   background: #47484D;
   border-top: 1px solid #2C2C2F;
@@ -1077,7 +1122,7 @@
 .app {
   width: 258px;
   height: 100%;
-  background: #f8f8f8;
+  background: #fff;
   margin-right: 20px;
   padding: 20px;
   border: solid 1px #D6D6D6;
@@ -1117,8 +1162,8 @@
 /* line 34, ../scss/_apps.scss */
 .app .app-details .app-copy {
   overflow: hidden;
-  position: relative;
-  margin-left: 6px;
+  position: absolute;
+  margin-left: 10px;
   width: 188px;
 }
 /* line 40, ../scss/_apps.scss */
@@ -1554,7 +1599,7 @@ header .wrap div:last-child #menu-trigger img {
 /* line 307, ../scss/main.scss */
 .editorial-collections .collections .collection {
   width: 338px;
-  height: 185px;
+  height: 170px;
   background: #e6e6e6;
   display: inline-block;
   vertical-align: top;
@@ -1569,7 +1614,7 @@ header .wrap div:last-child #menu-trigger img {
 }
 /* line 319, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps {
-  max-width: 270px;
+  max-width: 271px;
   margin: 0 auto;
 }
 /* line 322, ../scss/main.scss */
@@ -1596,7 +1641,7 @@ header .wrap div:last-child #menu-trigger img {
   margin-top: 24px;
 }
 /* line 340, ../scss/main.scss */
-.editorial-collections .collections .collection .collection-copy h1 {
+.editorial-collections .collections .collection .collection-copy h2 {
   font-size: 20px;
   letter-spacing: -.5px;
 }
@@ -1604,7 +1649,7 @@ header .wrap div:last-child #menu-trigger img {
 .editorial-collections .collections .collection .collection-copy p {
   font-family: "FiraLight";
   font-size: 14px;
-  margin-top: 5px;
+  margin-top: 8px;
 }
 /* line 354, ../scss/main.scss */
 .editorial-collections .collections .collection:last-child {

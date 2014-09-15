@@ -12,11 +12,12 @@ section#category-page
                             img(data-ng-src="{{fapp.icon}}")
                             h1 {{fapp.name}}
                             h3 {{fapp.author}}
-
+                            div(starrating,data-rating="{{app.rating}}")
 
             div#category-details
                 img(src="/img/category-icon.png")
                 div.category-copy
+                    h2 View All Categories
                     h1#category-title
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis risus viverra, placerat ante ut.
 
@@ -31,7 +32,7 @@ section#category-page
                             div.collection-app
                         div.collection-copy
                             h2(translate) Our Staff Picks
-                            p fiehsoifheoisfhoesifheosifhoeishfoeishfo
+                            p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.
                     div.collection
                         div.collection-apps
                             div.collection-app
@@ -39,7 +40,7 @@ section#category-page
                             div.collection-app
                         div.collection-copy
                             h2(translate) Top three Games
-                            p fiehsoifheoisfhoesifheosifhoeishfoeishfo
+                            p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.
                     div.collection
                         div.collection-apps
                             div.collection-app
@@ -47,7 +48,7 @@ section#category-page
                             div.collection-app
                         div.collection-copy
                             h2(translate) Great Apps for the workplace
-                            p fiehsoifheoisfhoesifheosifhoeishfoeishfo
+                            p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.
 
     div#featured
         div.wrap
@@ -77,7 +78,7 @@ section#category-page
             h3(translate) Popular |
                 span.light(translate,class="thin") New
             div(class="category app-set",data-ng-repeat="app in popularapps")
-                div.app
+                div.app-grid
                     img(data-ng-src="{{app.icon}}")
                     div.app-details
                         h4 {{app.name}}

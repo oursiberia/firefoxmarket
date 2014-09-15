@@ -67,7 +67,7 @@ app.controller("CategoryViewController",[
         } else {
             clearInterval(timer);
         }
-    },2000);
+    },50000);
 
 
    /**
@@ -105,7 +105,7 @@ app.controller("CategoryViewController",[
 
                     var h1 = document.createElement("h1");
                     var h3 = document.createElement("h3");
-
+                    var div = document.createElement("div");
 
                     h1.innerHTML = app.name;
                     h3.innerHTML = app.author;
@@ -113,6 +113,10 @@ app.controller("CategoryViewController",[
                     selector.appendChild(img);
                     selector.appendChild(h1);
                     selector.appendChild(h3);
+                    selector.appendChild(div);
+
+                    div.setAttribute("data-starrating","");
+                    div.setAttribute("data-rating",app.rating.average);
 
                     TweenMax.to(selector,1,{
                         opacity:1

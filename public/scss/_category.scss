@@ -1,61 +1,68 @@
+#category-page {
+	background: #F6F6F6;
+
+	.editorial-collections {
+		margin-top: 30px;
+	}
+
+}
+
 #category-banner{
 	width:100%;
-	height:250px;
-	position:relative;
+	padding: 50px 0;
+	height: 150px;
+	position: relative;
 	overflow: hidden;
+	background: #55575C;
 
 	#banner{
-		position:absolute;
-		top:0;
-		height:300px;
-
-		width:100%;
-		opacity:0.4;
+		position: absolute;
+		top: 0;
+		height: 250px;
+		width: 100%;
+		opacity: 0.4;
 		background: url(/img/background1.jpg);
-		-webkit-filter:blur(5px);
-		-moz-filter:blur(5px);
-		filter:url(blur.svg#blur);
 	}
 
 
 	#featured-category-apps{
-		float:right;
-		background:#F2F2F2;
-		height:150px;
+		float: right;
+		background: #fff;
+		height: 100px;
 		position: relative;
-		top:40px;
-		width:300px;
-		border-radius: 4px;
-
-		h1{
-			font-size: 20px;
-		}
-		h3{
-			font-size:14px;
-		}
-		h1,h3{
-			font-family: "FiraThin";
-			position: relative;
-			left:10px;
-			top:20px;
-		}
+		width: 300px;
+		@include border-radius(5px);
 	}
 	
 	#in-view-featured{
 		opacity: 0;
-		img{
-			height:64px;
-			width:64px;
+		img, h1, h3 {
+			position: absolute;
+		}
+		img {
+			height: 60px;
+			width: 60px;
 			display: block;
-			margin:0 auto;
-			position: relative;
-			top:10px;
+			top: 20px;
+			left: 20px;
+			@include border-radius(5px);
+		}
+		h1 {
+			font-size: 16px;
+			font-family: "FiraRegular";
+			top: 14px;
+			left: 90px;
+		}
+		h3 {
+			font-size: 14px;
+			font-family: "FiraLight";
+			top: 30px;
+			left: 90px;
 		}
 	}
 
 	#category-details{
 		position: relative;
-		top:40px;
 
 		img,.category-copy{
 			display: inline-block;
@@ -65,17 +72,28 @@
 		.category-copy{
 			position: relative;
 			left:39px;
-			p{
+			color: #fff;
+			h2 {
+				font-size: 12px;
+				border: 1px solid #fff;
+				padding: 3px 8px;
+				@include border-radius(5px);
+			}
+			p {
 				max-width: 370px;
-				font-family: "FiraLight";
+				font-family: "FiraUltraLight";
+				font-size: 14px;
+				margin-top: -5px;
 			}
 		}
 
 		#category-title{
-			color:#55575C;
+			color: #fff;
 			position: relative;
-			font-size:50px;
-
+			font-size: 62px;
+			margin-left: -2px;
+			letter-spacing: -1.5px;
+			font-family: "FiraMedium";
 		}
 	}
 
@@ -111,7 +129,7 @@
 			right:44px;
 			bottom:-6px;
 			text-align: center;
-			color:#fff;
+			color: #fff;
 		}
 		.app-details{
 			position: relative;
