@@ -369,3 +369,19 @@ header{
 	}
 
 }
+
+
+/**
+ *	the Main search container
+ */
+
+#mainsearch{
+	position: absolute;
+	top:0;
+	left:0;
+	width: 100%;
+	height: 0;
+	background:red;
+	z-index: 999;
+	overflow: hidden;
+}

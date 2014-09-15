@@ -99,7 +99,7 @@ app.controller("CategoryViewController",[
                     }
                     app = fapps[currentIndex];
 
-
+                    console.log(app);
                     var img = new Image();
                     img.src = app.icon;
 
