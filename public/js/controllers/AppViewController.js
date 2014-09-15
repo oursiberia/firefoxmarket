@@ -322,6 +322,18 @@ app.controller("AppViewController",[
 
             //lock body
             document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+
+            box.addEventListener("click",function(){
+
+                TweenMax.to(box,0.5,{
+                    opacity:0,
+                    onComplete:function(){
+                        document.getElementsByTagName("html")[0].style.overflow = "scroll";
+                        box.className = "modal closed";
+                    }
+                })
+            });
         };
 
         $scope.writeReview = function(){
@@ -336,6 +348,18 @@ app.controller("AppViewController",[
             var box = document.querySelector("#review");
             box.className = box.className.replace("closed","");
 
+
+            box.addEventListener("click",function(){
+
+                TweenMax.to(box,0.5,{
+                    opacity:0,
+                    onComplete:function(){
+                        document.getElementsByTagName("html")[0].style.overflow = "scroll";
+                        box.className = "modal closed";
+                    }
+                })
+            });
+
             //lock body
             document.getElementsByTagName("html")[0].style.overflow = "hidden";
 
@@ -345,8 +369,21 @@ app.controller("AppViewController",[
             var box = document.querySelector("#abused");
             box.className = box.className.replace("closed","");
 
+
             //lock body
             document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+
+            box.addEventListener("click",function(){
+
+                TweenMax.to(box,0.5,{
+                    opacity:0,
+                    onComplete:function(){
+                        document.getElementsByTagName("html")[0].style.overflow = "scroll";
+                        box.className = "modal closed";
+                    }
+                })
+            });
         };
 
         $scope.showPrivacyPolicy = function(){
@@ -355,6 +392,17 @@ app.controller("AppViewController",[
 
             //lock body
             document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+            box.addEventListener("click",function(){
+
+                TweenMax.to(box,0.5,{
+                    opacity:0,
+                    onComplete:function(){
+                        document.getElementsByTagName("html")[0].style.overflow = "scroll";
+                        box.className = "modal closed";
+                    }
+                })
+            });
 
             //get the policy
             $http({
