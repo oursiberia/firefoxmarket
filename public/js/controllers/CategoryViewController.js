@@ -44,8 +44,35 @@ app.controller("CategoryViewController",[
     });
 
 
+   /**
+    * Editorial
+    */
+   var editorial = {
+       "staff_pics": {
+           "one": "421872",
+           "two": "374841",
+           "three": "366345"
+       },
 
-    /**
+       "top_three_games": {
+           "one": "427566",
+           "two": "502203",
+           "three": "490020"
+       },
+       "workplace_apps":{
+           "one":"429326",
+           "two":"468749",
+           "three":"478633"
+       }
+   };
+
+
+   function buildUrl(app){
+       //https://marketplace.cdn.mozilla.net/img/uploads/addon_icons/409/409214-64.png?modified=crushed
+       return "https://marketplace.cdn.mozilla.net/img/uploads/addon_icons/409/" + app + "-64.png?modified=crushed"
+   }
+
+        /**
      * Get all the apps in this category
      */
     API.request("apps_in_category",category).then( function(data) {
@@ -56,6 +83,8 @@ app.controller("CategoryViewController",[
         //fade the loader
         $rootScope.loaded();
     });
+
+
 
 
     /**==================== FUNCTIONS ===========================*/

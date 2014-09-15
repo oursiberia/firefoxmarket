@@ -15,13 +15,14 @@ section#appview
             div.app-meta
                 div.img-rating
                     img(src="{{icon}}",alt="app-image")
-                    div(StarRating,data-rating="3.5")
+                    div(starrating,data-rating="{{rating}}",data-delay="true")
                     p {{ratings}}
                 div.updates
                     h3 Updated
+                    //TODO need a way to get last updated date
                     p.date May 14, 2014
                     h3 Latest Version
-                    p.version 0.2
+                    p.version {{version}}
 
                 div.govt-rating
                     img(ng-src="{{rating_image}}")
@@ -98,7 +99,7 @@ section#appview
             div.app-reviews
                 div(data-ng-repeat="review in reviews",class="app-review")
                     div.stars
-                        div(class="review-rating", starrating, data-rating="{{review.rating}}", data-review="true")
+                        div(class="review-rating", starrating, data-rating="{{review.rating}}", data-delay="true")
                     div.rating-copy
                         p {{review.copy}}
                     div.username

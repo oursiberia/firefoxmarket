@@ -28,7 +28,7 @@ app.directive("starrating",function(){
             /**
              * If this set of stars is for a review.
              */
-            if($attr.review === "true"){
+            if($attr.delay === "true"){
 
                 /**
                  * Not angular way but what the hell.
@@ -49,7 +49,10 @@ app.directive("starrating",function(){
                 //get the number of stars
                 var rating = "";
                 var stars = $attr.rating;
+
                 stars = stars.split(".");
+
+
                 /**
                  * if it's above a .5, upp the rating,
                  * otherwise just floor it.
