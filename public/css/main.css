@@ -341,8 +341,17 @@
 #category-page .editorial-collections {
   margin-top: 30px;
 }
-
+/* line 8, ../scss/_category.scss */
+#category-page #featured {
+  padding: 25px 0;
+}
 /* line 10, ../scss/_category.scss */
+#category-page #featured .wrap h1 {
+  font-size: 18px;
+  margin-bottom: 17px;
+}
+
+/* line 18, ../scss/_category.scss */
 #category-banner {
   width: 100%;
   padding: 50px 0;
@@ -351,7 +360,7 @@
   overflow: hidden;
   background: #55575C;
 }
-/* line 18, ../scss/_category.scss */
+/* line 26, ../scss/_category.scss */
 #category-banner #banner {
   position: absolute;
   top: 0;
@@ -360,7 +369,7 @@
   opacity: 0.4;
   background: url(/img/background1.jpg);
 }
-/* line 28, ../scss/_category.scss */
+/* line 36, ../scss/_category.scss */
 #category-banner #featured-category-apps {
   float: right;
   background: #fff;
@@ -372,15 +381,15 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 37, ../scss/_category.scss */
+/* line 45, ../scss/_category.scss */
 #category-banner #in-view-featured {
   opacity: 0;
 }
-/* line 39, ../scss/_category.scss */
+/* line 47, ../scss/_category.scss */
 #category-banner #in-view-featured img, #category-banner #in-view-featured h1, #category-banner #in-view-featured h3 {
   position: absolute;
 }
-/* line 42, ../scss/_category.scss */
+/* line 50, ../scss/_category.scss */
 #category-banner #in-view-featured img {
   height: 60px;
   width: 60px;
@@ -392,36 +401,36 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 50, ../scss/_category.scss */
+/* line 58, ../scss/_category.scss */
 #category-banner #in-view-featured h1 {
   font-size: 16px;
   font-family: "FiraRegular";
   top: 14px;
   left: 90px;
 }
-/* line 56, ../scss/_category.scss */
+/* line 64, ../scss/_category.scss */
 #category-banner #in-view-featured h3 {
   font-size: 14px;
   font-family: "FiraLight";
   top: 30px;
   left: 90px;
 }
-/* line 64, ../scss/_category.scss */
+/* line 72, ../scss/_category.scss */
 #category-banner #category-details {
   position: relative;
 }
-/* line 67, ../scss/_category.scss */
+/* line 75, ../scss/_category.scss */
 #category-banner #category-details img, #category-banner #category-details .category-copy {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 72, ../scss/_category.scss */
+/* line 80, ../scss/_category.scss */
 #category-banner #category-details .category-copy {
   position: relative;
   left: 39px;
   color: #fff;
 }
-/* line 76, ../scss/_category.scss */
+/* line 84, ../scss/_category.scss */
 #category-banner #category-details .category-copy h2 {
   font-size: 12px;
   border: 1px solid #fff;
@@ -431,14 +440,14 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 82, ../scss/_category.scss */
+/* line 90, ../scss/_category.scss */
 #category-banner #category-details .category-copy p {
   max-width: 370px;
   font-family: "FiraUltraLight";
   font-size: 14px;
   margin-top: -5px;
 }
-/* line 90, ../scss/_category.scss */
+/* line 98, ../scss/_category.scss */
 #category-banner #category-details #category-title {
   color: #fff;
   position: relative;
@@ -448,7 +457,7 @@
   font-family: "FiraMedium";
 }
 
-/* line 104, ../scss/_category.scss */
+/* line 112, ../scss/_category.scss */
 #popular-in-category .app-set {
   height: 116px;
   width: 316px;
@@ -458,18 +467,18 @@
   border: solid 1px #979797;
   margin: 0.5px 0.5px;
 }
-/* line 113, ../scss/_category.scss */
+/* line 121, ../scss/_category.scss */
 #popular-in-category .app-set .app {
   position: relative;
   top: 20px;
   left: 20px;
 }
-/* line 118, ../scss/_category.scss */
+/* line 126, ../scss/_category.scss */
 #popular-in-category .app-set img, #popular-in-category .app-set .app-details {
   vertical-align: top;
   display: inline-block;
 }
-/* line 123, ../scss/_category.scss */
+/* line 131, ../scss/_category.scss */
 #popular-in-category .app-set .install-button {
   height: 25px;
   width: 65px;
@@ -481,11 +490,11 @@
   text-align: center;
   color: #fff;
 }
-/* line 134, ../scss/_category.scss */
+/* line 142, ../scss/_category.scss */
 #popular-in-category .app-set .app-details {
   position: relative;
 }
-/* line 136, ../scss/_category.scss */
+/* line 144, ../scss/_category.scss */
 #popular-in-category .app-set .app-details p {
   font-size: 12px;
   font-family: "FiraThin";
