@@ -322,6 +322,37 @@ app.controller("AppViewController",[
 
         };
 
+        /**================= SHAREING ====================*/
+        $scope.shareApp = function(){
+            var buttons = document.querySelector("#share-buttons");
+
+            var visible = buttons.getAttribute("isVisible");
+
+            if(visible === "true"){
+                TweenMax.to(buttons,0.5,{
+                    opacity:0,
+                    ease:"Power3.easeInOut",
+                    onComplete:function(){
+
+                    }
+                });
+
+                buttons.setAttribute("isVisible",false);
+            }else{
+                TweenMax.to(buttons,0.5,{
+                    opacity:1,
+                    ease:"Power3.easeInOut",
+                    onComplete:function(){
+
+                    }
+                });
+
+                buttons.setAttribute("isVisible",true);
+            }
+
+
+        };
+
         /**================= FEEDBACK/REVIEW/ABUSE/PRIVACY ==========================*/
         $scope.sendFeedback = function(){
             var box = document.querySelector("#feedback");

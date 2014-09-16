@@ -7,9 +7,16 @@ section#appview
                 h3 Categories &#9656;
                 a(data-ng-href="/category/{{category}}",translate)
                     span {{category}}
-            div.share-app
+            div.share-app(data-ng-click="shareApp()")
                 p Share App
                 img(src="/img/share_icon.svg" alt="share icon")
+                div#share-buttons
+                    span( class='st_sharethis_large',displayText='ShareThis')
+                    span( class='st_facebook_large',displayText='Facebook')
+                    span( class='st_twitter_large',displayText='Tweet')
+                    span( class='st_linkedin_large',displayText='LinkedIn')
+                    span( class='st_pinterest_large',displayText='Pinterest')
+                    span( class='st_email_large',displayText='Email')
 
         div.app-content-container
             div.app-meta

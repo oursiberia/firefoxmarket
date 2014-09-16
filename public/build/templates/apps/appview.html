@@ -7,8 +7,9 @@
       <div class="category-label">
         <h3>Categories &#9656;</h3><a data-ng-href="/category/{{category}}" translate="translate"><span>{{category}}</span></a>
       </div>
-      <div class="share-app">
+      <div data-ng-click="shareApp()" class="share-app">
         <p>Share App</p><img src="/img/share_icon.svg" alt="share icon"/>
+        <div id="share-buttons"><span displayText="ShareThis" class="st_sharethis_large"></span><span displayText="Facebook" class="st_facebook_large"></span><span displayText="Tweet" class="st_twitter_large"></span><span displayText="LinkedIn" class="st_linkedin_large"></span><span displayText="Pinterest" class="st_pinterest_large"></span><span displayText="Email" class="st_email_large"></span></div>
       </div>
     </div>
     <div class="app-content-container">
