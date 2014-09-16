@@ -157,6 +157,8 @@ app.controller("AppViewController",[
                         author:oapp.author,
                         purchase_type:oapp.premium_type.charAt(0).toUpperCase() + oapp.premium_type.slice(1),
                         icon:oapp.icons["64"],
+                        manifest:oapp.manifest_url,
+                        app_type:oapp.app_type,
                         id:oapp.id
                     });
 
@@ -284,8 +286,7 @@ app.controller("AppViewController",[
 
         /**================= DOWNLOADING/INSTALLING ==========================*/
 
-        $scope.initPurchase = function(app_type){
-
+        $scope.initPurchase = function(app_type,manifest){
             /**
              * first make sure we're in Firefox.
              */
@@ -294,22 +295,28 @@ app.controller("AppViewController",[
                 return;
             }
 
-            switch(app_type){
-                case "hosted":
-                    var req = navigator.mozApps.install($scope.manifest);
+            var final_manifest = "";
 
-                    break;
-
-                case "packaged":
-                    var req = navigator.mozApps.installPackage($scope.manifest);
-                    break;
+            if(manifest !== undefined){
+                final_manifest = manifest;
+            }else{
+                final_manifest = $scope.manifest;
             }
 
+
+            var req = null;
+            if(app_type === "hosted") {
+
+                req = navigator.mozApps.install(final_manifest);
+            }else if(app_type === "packaged"){
+                 req = navigator.mozApps.installPackage(final_manifest);
+            }
 
             req.onsuccess = function() {
                 console.log("Install process initiated");
             };
-            req.onerror = function() {
+            req.onerror = function(e) {
+
                 console.log("Install process failed");
             };
 
