@@ -38,7 +38,6 @@ app.filter("DesktopApps",function(){
                     obj.rating = data[i].ratings.average;
                     if(data[i].hasOwnProperty("description")){
                         obj.description = data[i].description[navigator.language];
-
                     }
                     obj.device = "desktop";
                     apps.push(obj);
