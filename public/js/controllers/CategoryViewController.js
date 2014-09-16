@@ -93,7 +93,7 @@ app.controller("CategoryViewController",[
      */
     var timer = setInterval( function() {
         if (window.location.href.search("category") !== -1) {
-           // swapApp();
+           swapApp();
         } else {
             clearInterval(timer);
         }

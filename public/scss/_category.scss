@@ -1,5 +1,6 @@
 #category-page {
 	background: #F6F6F6;
+	padding-bottom: 32px;
 
 	.editorial-collections {
 		margin-top: 30px;
@@ -130,54 +131,97 @@
 
 #popular-in-category{
 
+	h3 {
+		margin-bottom: 15px;
+	}
+
 	.app-grid{
 		height: 100%;
-		width: 100%;
+		width: 1258px;
 		background:rgba(246,246,246,1.0);
 		display: inline-block;
 		border: 1px solid #D6D6D6;
+		overflow: hidden;
 		@include border-radius(5px);
 
 		.category {
 			height: 60px;
-			width: 273px;
+			width: 274px;
 			float: left;
 			padding: 20px;
+			background: #fff;
 			border-right: 1px solid #D6D6D6;
 			border-bottom: 1px solid #D6D6D6;
-		}
 
-		.app{
-			position: relative;
-			margin: 0;
-			padding: 0;
-		}
-
-		img,.app-details{
-			vertical-align: top;
-			display: inline-block;
-		}
-
-		.install-button{
-			height:25px;
-			width:65px;
-			background: $blue;
-			border-radius: 4px;
-			position: absolute;
-			right:44px;
-			bottom:-6px;
-			text-align: center;
-			color: #fff;
-		}
-		.app-details{
-			position: relative;
-			p{
-				font-size:12px;
-				font-family: "FiraThin";
+			&:nth-child(4n+4) {
+				border-right: none;
+				width: 273px;
 			}
 
-
+			&:nth-last-child(-n+4) {
+				border-bottom: none;
+			}
 		}
+
+		.app {
+			position: relative;
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			border: none;
+			background: none;
+		}
+
+		img {
+			height: 60px;
+			width: 60px;
+			@include border-radius(5px);
+		}
+
+		img, .app-details, .app-download-button{
+			vertical-align: top;
+			display: inline-block;
+			position: absolute;
+		}
+
+		.app-download-button {
+			right: 0;
+			bottom: 0;
+		}
+
+		.app-details{
+			margin-left: 70px;
+			margin-top: -3px;
+			border-bottom: 0;
+			padding-bottom: 0;
+			h4 {
+				font-size: 14px;
+				font-family: "FiraMedium";
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			p {
+				font-size: 12px;
+				font-family: "FiraLight";
+				margin-top: -2px;
+			}
+			ul.rating {
+				display: inline-block;
+				li {
+					height: 15px;
+					width: 15px;
+					display: inline-block;
+					margin-right: 0;
+					img {
+						height: 15px;
+						width: 15px;
+					}
+				}
+			}
+		}
+
 	}
 
 }//end popular in category
