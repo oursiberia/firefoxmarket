@@ -3,6 +3,9 @@
 # Packages the app up into a zip file for installation
 # currently, it seems that things don't work in a local enviroment, so for now, this doesn't matter
 
+#make sure stuff gets built
+grunt default
+
 #make a temp folder
 mkdir compile_temp
 
@@ -33,4 +36,6 @@ cp -rf img deploy/img
 cp -rf index.html deploy/index.html
 cp -rf install.html deploy/install.html
 cp -rf package.zip deploy/package.zip
+cp -rf manifest.webapp deploy/manifest.webapp
+cp -rf fonts deploy/fonts
 
