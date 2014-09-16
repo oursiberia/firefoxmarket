@@ -40,6 +40,19 @@ $borderColor:rgb(211,211,211);
 		border: 1px solid #D3D3D3;
 		background: #fff;
 		@include border-radius(5px);
+
+		position:relative;
+		#share-buttons{
+			position: absolute;
+			top:30px;
+			right:0px;
+			width:228px;
+			z-index: 99;
+			background:red;
+			overflow: hidden;
+			opacity: 0;
+			padding:10px;
+		}
 		p, img {
 			display: inline-block;
 		}

@@ -7,9 +7,16 @@ section#appview
                 h3 Categories &#9656;
                 a(data-ng-href="/category/{{category}}",translate)
                     span {{category}}
-            div.share-app
+            div.share-app(data-ng-click="shareApp()")
                 p Share App
                 img(src="/img/share_icon.svg" alt="share icon")
+                div#share-buttons
+                    span( class='st_sharethis_large',displayText='ShareThis')
+                    span( class='st_facebook_large',displayText='Facebook')
+                    span( class='st_twitter_large',displayText='Tweet')
+                    span( class='st_linkedin_large',displayText='LinkedIn')
+                    span( class='st_pinterest_large',displayText='Pinterest')
+                    span( class='st_email_large',displayText='Email')
 
         div.app-content-container
             div.app-meta
@@ -73,7 +80,7 @@ section#appview
 
             div#other-applications(ng-if="other_apps != false")
                 h2(translate) Apps By this developer
-                    a(data-ng-href="#") {{more_other_apps}}
+                    a(data-ng-href="/developer/{{author}}") {{more_other_apps}}
                 div#other-applications-list
                     div(data-ng-repeat="app in other_apps",class="other-app")
                         a(ng-href="/app/{{app.id}}")
@@ -121,9 +128,8 @@ div#related-apps
                            h2.app-title {{app.name}}
                         p.app-author {{app.author}}
                         div(starrating,data-rating="{{app.rating}}")
-                    a(data-ng-href="/app/{{app.id}}")
-                        div.app-download-button
-                            p Free
+                        div.app-download-button(data-ng-click="initPurchase(app.app_type,app.manifest)")
+                            p {{purchase_type}}
 
 
 

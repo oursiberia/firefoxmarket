@@ -46,6 +46,7 @@ app.controller("CategoryViewController",[
 
    /**
     * Editorial
+    * TODO figure out how curated apps would better work.
     */
    var editorial = {
        "staff_pics": {
@@ -66,10 +67,72 @@ app.controller("CategoryViewController",[
        }
    };
 
+        $scope.test = {
+            name:"apple",
+            id:"mapple"
+        }
 
-   function buildUrl(app){
+        $scope.editorial = editorial;
+
+   $scope.staff_one = {
+       id:editorial.staff_pics.one,
+       image:buildUrl(editorial.staff_pics.one)
+   }
+
+    $scope.staff_two = {
+        id:editorial.staff_pics.two,
+        image:buildUrl(editorial.staff_pics.two)
+    }
+    $scope.staff_three = {
+        id:editorial.staff_pics.three,
+        image:buildUrl(editorial.staff_pics.three)
+    }
+
+
+    $scope.games_one = {
+        id:editorial.top_three_games.one,
+        image:buildUrl(editorial.top_three_games.one)
+    }
+
+
+    $scope.games_two = {
+        id:editorial.top_three_games.two,
+        image:buildUrl(editorial.top_three_games.two)
+    }
+
+    $scope.games_three = {
+        id:editorial.top_three_games.three,
+        image:buildUrl(editorial.top_three_games.three)
+    }
+
+
+
+    $scope.workplace_one = {
+        id:editorial.workplace_apps.one,
+        image:buildUrl(editorial.workplace_apps.one)
+    }
+
+
+        $scope.workplace_two = {
+            id:editorial.workplace_apps.two,
+            image:buildUrl(editorial.workplace_apps.two)
+        }
+
+
+        $scope.workplace_three = {
+            id:editorial.workplace_apps.three,
+            image:buildUrl(editorial.workplace_apps.three)
+        }
+
+
+
+
+
+
+        function buildUrl(app){
        //https://marketplace.cdn.mozilla.net/img/uploads/addon_icons/409/409214-64.png?modified=crushed
-       return "https://marketplace.cdn.mozilla.net/img/uploads/addon_icons/409/" + app + "-64.png?modified=crushed"
+            var chars = app.split("");
+       return "https://marketplace.cdn.mozilla.net/img/uploads/addon_icons/"+ chars[0] + chars[1] + chars[2] +"/" + app + "-64.png?modified=crushed"
    }
 
         /**

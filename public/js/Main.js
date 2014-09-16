@@ -55,6 +55,17 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
     });
 
 
+    /**
+     * View to see a list of all the apps a developer has made
+     */
+    $stateProvider.state("AppDeveloperView",{
+        url:"/developer/:name",
+        templateUrl:function(urlattr){
+            return "/build/templates/apps/appDevView.html";
+        },
+        controller:"AppDeveloperController"
+    });
+
     delete $httpProvider.defaults.headers.common["X-Requested-Width"];
 });
 
