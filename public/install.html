@@ -18,7 +18,7 @@
      */
 
     // var req = navigator.mozApps.installPackage("manifest.webapp");
-    var req = navigator.mozApps.install("manifest.webapp");
+    var req = navigator.mozApps.install("http://54.84.190.82/manifest.webapp");
     req.onsuccess = function() {
         console.log(this);
         console.log(this.result);

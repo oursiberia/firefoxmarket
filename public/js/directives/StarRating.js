@@ -42,7 +42,7 @@ app.directive("starrating",function(){
                         applyStars();
                         clearInterval(s);
                     }
-                });
+                },100);
 
             }else{
 

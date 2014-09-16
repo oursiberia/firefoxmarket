@@ -36,10 +36,10 @@ app.controller("AppViewController",[
             $scope.categories = data.categories;
             $scope.category = data.categories[0];
             $scope.content_ratings = data.content_ratings;
-            $scope.rating = data.content_ratings.rating;
+            $scope.rating = data.ratings.average;
+
 
             $scope.rating_image = AgeRatingLookup.getImage(data);
-            console.log(data);
 
             $scope.name = data.name[navigator.language];
             $scope.version = data.current_version;
@@ -287,6 +287,7 @@ app.controller("AppViewController",[
         /**================= DOWNLOADING/INSTALLING ==========================*/
 
         $scope.initPurchase = function(app_type,manifest){
+            var req = "";
             /**
              * first make sure we're in Firefox.
              */
@@ -304,7 +305,6 @@ app.controller("AppViewController",[
             }
 
 
-            var req = null;
             if(app_type === "hosted") {
 
                 req = navigator.mozApps.install(final_manifest);

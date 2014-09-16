@@ -45,7 +45,7 @@ app.factory("MasterSearch",function($http){
             //query api
             $http({
                 method:"GET",
-                url:"https://marketplace.firefox.com/api/v1/apps/search/?q=" + query + "&device=desktop"
+                url:"https://marketplace.firefox.com/api/v1/apps/search/?q=" + query //+ "&device=desktop"
             }).success(function(data, status, headers, config){
                 console.log(data);
                 //need to filter out unecessary content, make new array
@@ -66,6 +66,7 @@ app.factory("MasterSearch",function($http){
 
 
             }).error(function(data, status, headers, config) {
+                console.log(data);
                 console.error("Something went wrong with the search");
             });
 

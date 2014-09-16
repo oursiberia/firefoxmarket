@@ -140,8 +140,36 @@ app.controller("CategoryViewController",[
      */
     API.request("apps_in_category",category).then( function(data) {
 
-        var apps = $filter("DesktopApps")(data.objects);
-        $scope.popularapps = apps;
+      //  var apps = $filter("DesktopApps")(data.objects);
+        var objects = data.objects;
+        var popular = [];
+        for (var i = 0; i < objects.length; ++i) {
+            var name = objects[i].name["en-US"];
+            var obj = {};
+
+
+
+
+                    obj.icon = objects[i].icons["64"];
+                    obj.name =  objects[i].name["en-US"];
+                    obj.id = objects[i].id;
+                    obj.author = objects[i].author;
+                    obj.classname = "app";
+                    obj.rating = objects[i].ratings.average;
+
+
+                    popular.push(obj);
+
+
+
+
+
+
+        }
+
+
+
+        $scope.popularapps = popular;
 
         //fade the loader
         $rootScope.loaded();
