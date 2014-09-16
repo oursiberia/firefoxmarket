@@ -30,7 +30,7 @@
 		height: 250px;
 		width: 100%;
 		opacity: 0.4;
-		background: url(/img/background1.jpg);
+		background: url('/img/background1.jpg') no-repeat scroll center center / 100% 250px transparent
 	}
 
 	#featured-category-apps{

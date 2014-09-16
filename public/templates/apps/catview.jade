@@ -1,13 +1,10 @@
 section#category-page
     div#category-banner
-        h1 {{staff_one.image}}
         div#banner
         div.wrap
             div#featured-category-apps
                 div.wrap
                     div#in-view-featured(class="category in-view-featured")
-
-
 
                     div(class="category featuredapps",style="display:none")
                         div(class="category",data-ng-repeat="fapp in featuredapps",data-index="{{fapp.index}}")
@@ -37,7 +34,6 @@ section#category-page
                                 img(src="{{staff_two.image}}")
                             div.collection-app
                                 img(src="{{staff_three.image}}")
-
                         div.collection-copy
                             h2(translate) Our Staff Picks
                             p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.

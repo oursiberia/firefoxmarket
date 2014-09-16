@@ -92,7 +92,7 @@ app.directive("starrating",function(){
                  */
                 for(var i = 0;i<starratings.length;++i){
                     if(i < rating){
-                        starratings[i].children[0].src = "/img/star_filled.png";
+                        starratings[i].children[0].src = "/img/star_filled.svg";
                     }
                 }
             }

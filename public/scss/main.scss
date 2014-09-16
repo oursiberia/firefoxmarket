@@ -22,9 +22,11 @@ $grey:#e9e9e9;
 .rating{
 	li{
 		float:left;
-		margin-right: -5px;
+		height: 15px;
+		width: 15px;
 		img{
-			max-width: 75%;
+			height: 15px;
+			width: 15px;
 		}
 	}
 }
@@ -208,7 +210,7 @@ header{
 				}
 				&.open{
 					@include transition((background));
-					background: $green;
+					background: $blue;
 				}
 			}
 			#menu-trigger{
@@ -316,6 +318,10 @@ header{
 			position:relative;
 			border: 1px solid #D6D6D6;
 			@include border-radius(5px);
+
+			&:last-child {
+				width: 337px;
+			}
 
 			.collection-apps {
 				max-width: 271px;
