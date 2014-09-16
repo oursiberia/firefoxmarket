@@ -56,7 +56,7 @@ app.factory("MasterSearch",function($http){
                 var category_results = API.filter(API.parseCategories(data.objects));
                 var description_results = API.filter(API.parseDescriptions(data.objects));
 
-                console.log(author_results);
+
                 //set to the scope
                 $scope.author_results = author_results;
                 $scope.name_results = name_results;
