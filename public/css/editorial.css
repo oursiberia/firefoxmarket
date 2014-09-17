@@ -1,0 +1,22 @@
+.editorial-category{
+    margin-bottom: 40px;
+    border:solid 1px #d1d1d1;
+    width:350px;
+    height:auto;
+    padding: 15px;
+    padding-right: 20px;
+    background:#fff;
+}
+
+.editorial-item{
+    display: inline-block;
+    vertical-align: top;
+}
+
+.editorial-category .section{
+    margin-bottom: 40px;
+}
+
+.editorial-category .section input{
+    width:100%;
+}

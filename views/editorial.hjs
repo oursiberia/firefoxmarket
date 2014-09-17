@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="EditorialGenerator">
+<head lang="en">
+    <meta charset="UTF-8"/>
+    <title></title>
+
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/editorial.css"/>
+
+
+</head>
+<body ng-controller="main">
+
+<section id="editorial-bits">
+
+    <div data-index="1" class="editorial-item" editorial-item></div>
+
+
+
+
+
+</section>
+
+
+
+
+<button ng-click="addItem()">Add Item</button>
+<button ng-click="compile()">Compile</button>
+<script src="/build/libs.min.js"> </script>
+<script src="/js/EditorialGenerator.js"> </script>
+<script src="/js/EditorialItem.js"> </script>
+
+</body>
+</html>

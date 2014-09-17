@@ -207,10 +207,11 @@ app.factory("MasterSearch",function($http){
                 var name = app.name[navigator.language];
                 var icon = app.icons["64"];
                 var ratings = app.ratings.average;
-
+                var id = app.id;
                 newset.push({
                     name:name,
                     icon:icon,
+                    id:id,
                     ratings:ratings
                 });
             }

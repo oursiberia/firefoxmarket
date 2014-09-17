@@ -43,9 +43,30 @@ router.get("/manifest.webapp",function(req,res){
     });
 });
 
-router.get("/test",function(req,res){
-    res.render("index",{});
-})
+/**
+ * Path to the part where you can generate editorial
+ * json
+ */
+router.get("/editorial",function(req,res){
+    res.render("editorial",{});
+});
+
+/**
+ * Saves the editorial as JSON
+ */
+router.post("/saveeditorial",function(req,res){
+    var body = req.body;
+
+    fs.writeFile("./public/editorial.json",JSON.stringify(body),function(err){
+        if(err){
+            console.log(err);
+        }
+
+        res.end("Saved!");
+    });
+
+});
+
 /**
  * Loads the homepage / template
  */
