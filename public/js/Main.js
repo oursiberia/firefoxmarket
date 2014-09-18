@@ -72,6 +72,11 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
 
 app.controller("main",function($window,$rootScope,API,localStorageService,$http,$scope) {
     $rootScope.menuOpen = false;
+
+
+
+    /////////////// LOGIN ////////////////////////
+
     /**
      * Check to see if the user is logged in
      */
@@ -87,6 +92,23 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
         navigator.id.request();
     }; //end login
 
+
+    /**
+     * Check to see if user has logged in by checking localStorage.
+     * Make sure userdata loads if they are.
+     * Within a setInterval so templates have time to load
+     */
+    var s = setInterval(function(){
+        var username = document.querySelector("#username");
+
+        if(username !== null){
+            if((localStorage.getItem("username") !== null)||(localStorage.getItem("username") !== undefined)){
+                username.innerHTML = localStorage.getItem("username");
+            }
+            clearInterval(s);
+        }
+
+    },100);
 
     navigator.id.watch({
         loggedInUser:"",
@@ -109,6 +131,22 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
                         //change the username
                         username.innerHTML = data.settings.display_name;
 
+                        /**
+                         * Need to store the data in localStorage.
+                         * Note - all values that haven't been defined within Persona
+                         * show up as undefined
+                         */
+                        localStorage.setItem("username",data.settings.display_name);
+                        localStorage.setItem("email",data.settings.email);
+                        localStorage.setItem("token",data.token);
+                        localStorage.setItem("installed_apps",data.apps.installed);
+                        localStorage.setItem("purchased_apps",data.apps.purchaed);
+                        localStorage.setItem("developed_apps",data.apps.developed);
+
+                        for(var i in data.permissions){
+                            localStorage.setItem(i,data[i]);
+                        }
+
                         TweenMax.to(username,1, {
                             opacity: 1
                         });
@@ -122,22 +160,7 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
             $rootScope.USER = null;
         }
     });
-
-    /**
-     *  $.ajax({
-                type:"POST",
-                url:"https://marketplace.firefox.com/api/v1/account/login",
-                data:{
-                    assertation:assertation,
-                    audience:"http://localhost:3000"
-                },
-
-                success:function(){
-                    console.log("success")
-                }
-            });
-     */
-
+    /////////////// END LOGIN ////////////////////////
     /**
      * This hides the loader once content has been loaded.
      * @param delay
