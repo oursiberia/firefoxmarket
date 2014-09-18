@@ -31,14 +31,18 @@ app.filter("DesktopApps",function(){
             for(var a = 0;a<data[i].device_types.length;++a){
                 if(data[i].device_types[a] === "desktop"){
                     obj.icon = data[i].icons["64"];
+                    obj.app_type = data[i].premium_type;
                     obj.name =  data[i].name["en-US"];
                     obj.id = data[i].id;
+                    obj.manifest_url = data[i].manifest_url;
+                    obj.premium_type = data[i].premium_type.charAt(0).toUpperCase() + data[i].premium_type.slice(1);
                     obj.author = data[i].author;
                     obj.classname = "app";
                     obj.rating = data[i].ratings.average;
                     if(data[i].hasOwnProperty("description")){
                         obj.description = data[i].description[navigator.language];
                     }
+
                     obj.device = "desktop";
                     apps.push(obj);
                 }

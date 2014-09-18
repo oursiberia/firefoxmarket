@@ -118,9 +118,9 @@ This can be found at
 
 You will need the node server running in order to be able to save this out because
 the filesystem api is apparently going to be deprecated soon so things have 
-shifted to a server setup.
+shifted to a server setup so we can actually save out the json file.
 
 
 The way it works is that each box represents one editorial box. You can add as many 
 editorial items as you want in addition to as many application ids you want, but 
-for the purposes of this beta, will only be taking the first 3 editorial boxes.
+for the purposes of this beta, we will only be taking the first 3 editorial boxes.

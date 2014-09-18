@@ -38,7 +38,7 @@ app.controller("AppViewController",[
             $scope.content_ratings = data.content_ratings;
             $scope.rating = data.ratings.average;
 
-
+            console.log(data);
             $scope.rating_image = AgeRatingLookup.getImage(data);
 
             $scope.name = data.name[navigator.language];

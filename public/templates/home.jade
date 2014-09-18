@@ -47,7 +47,7 @@ section#HOME(data-ng-controller="home",class="section ajax")
 
                                 div.app-copy
                                     div.app-download-button
-                                        p Free
+                                        p(data-ng-click="initPurchase(app.app_type,app.manifest_url)") {{app.premium_type}}
                                     a(data-ng-href="/app/{{app.id}}")
                                         h1.app-title {{app.name}}
                                         h2.app-author {{app.author}}
