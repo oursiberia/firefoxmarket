@@ -1797,3 +1797,18 @@ header .wrap div:last-child #menu-trigger img {
   z-index: 999;
   overflow: hidden;
 }
+
+/* line 397, ../scss/main.scss */
+#nav-controls {
+  position: absolute;
+  width: 100%;
+}
+/* line 401, ../scss/main.scss */
+#nav-controls #back-button {
+  position: absolute;
+}
+/* line 404, ../scss/main.scss */
+#nav-controls #forward-button {
+  right: 0;
+  position: absolute;
+}

@@ -12,7 +12,7 @@ app.directive("uicontrols",[
     "$window",function($location,$window){
 
     return {
-        templateUrl:"/templates/ui/buttons.html",
+        templateUrl:"/build/templates/buttons.html",
         controller:function($scope) {},
         link:function($scope,$el,$attrs) {
             /**

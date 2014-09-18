@@ -393,3 +393,16 @@ header{
 	z-index: 999;
 	overflow: hidden;
 }
+
+#nav-controls{
+	position:absolute;
+	width:100%;
+
+	#back-button{
+		position: absolute;
+	}
+	#forward-button{
+		right:0;
+		position:absolute;
+	}
+}
