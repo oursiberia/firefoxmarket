@@ -311,24 +311,33 @@
 #category-list .category .category-title .title-wrap .icon {
   height: 65px;
   width: 65px;
-  background: #333;
+  background-image: url(../img/categoryicons.svg);
+  background-color: #333;
   border-radius: 41px;
 }
-/* line 182, ../scss/_home.scss */
+/* line 180, ../scss/_home.scss */
+#category-list .category .category-title .title-wrap .icon:before {
+  background-position: 0 -.8%;
+}
+/* line 183, ../scss/_home.scss */
+#category-list .category .category-title .title-wrap .icon.games {
+  background-position: 2px -9px;
+}
+/* line 190, ../scss/_home.scss */
 #category-list .category .app {
   border: 0;
   padding: 20px 20px 0 20px;
 }
-/* line 185, ../scss/_home.scss */
+/* line 193, ../scss/_home.scss */
 #category-list .category .app .app-details {
   padding: 0;
   border: 0;
 }
-/* line 190, ../scss/_home.scss */
+/* line 198, ../scss/_home.scss */
 #category-list .category .app:last-child {
   padding: 20px;
 }
-/* line 194, ../scss/_home.scss */
+/* line 202, ../scss/_home.scss */
 #category-list .category:last-child {
   margin: 0;
 }
@@ -1278,28 +1287,32 @@
   background: #333;
   color: #fff;
 }
-/* line 49, ../scss/_apps.scss */
+/* line 50, ../scss/_apps.scss */
+.app .app-details .app-copy .app-download-button:hover {
+  cursor: pointer;
+}
+/* line 53, ../scss/_apps.scss */
 .app .app-details .app-copy .app-download-button p {
   text-align: center;
   font-size: 13px;
 }
-/* line 56, ../scss/_apps.scss */
+/* line 60, ../scss/_apps.scss */
 .app .app-details .app-copy a h1 {
   font-size: 14px;
   letter-spacing: -.5px;
 }
-/* line 60, ../scss/_apps.scss */
+/* line 64, ../scss/_apps.scss */
 .app .app-details .app-copy a h2 {
   font-size: 12px;
   letter-spacing: -.5px;
   font-family: "FiraLight";
 }
-/* line 65, ../scss/_apps.scss */
+/* line 69, ../scss/_apps.scss */
 .app .app-details .app-copy a div {
   height: 15px;
   width: 100%;
 }
-/* line 75, ../scss/_apps.scss */
+/* line 79, ../scss/_apps.scss */
 .app .app-description {
   font-size: 14px;
   font-family: "FiraLight";
@@ -1309,7 +1322,7 @@
 /**
  *	General App Download BUtton
  */
-/* line 90, ../scss/_apps.scss */
+/* line 94, ../scss/_apps.scss */
 .app-download-button {
   width: 65px;
   height: 23px;
@@ -1321,12 +1334,12 @@
    *	For containers that are smaller(ie app view in the other applications category)
    */
 }
-/* line 101, ../scss/_apps.scss */
+/* line 105, ../scss/_apps.scss */
 .app-download-button.mini-container {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 105, ../scss/_apps.scss */
+/* line 109, ../scss/_apps.scss */
 .app-download-button p {
   position: absolute;
   top: 2px;
@@ -1340,7 +1353,7 @@
 /**
  *	Abuse reporting
  */
-/* line 119, ../scss/_apps.scss */
+/* line 123, ../scss/_apps.scss */
 .modal {
   position: absolute;
   top: 0;
@@ -1355,7 +1368,7 @@
   transition: display 1 ease;
   display: block;
 }
-/* line 127, ../scss/_apps.scss */
+/* line 131, ../scss/_apps.scss */
 .modal.closed {
   -webkit-transition: display 1 ease;
   -moz-transition: display 1 ease;
@@ -1363,7 +1376,7 @@
   transition: display 1 ease;
   display: none;
 }
-/* line 134, ../scss/_apps.scss */
+/* line 138, ../scss/_apps.scss */
 .modal .modalBox {
   height: 500px;
   width: 700px;
@@ -1375,7 +1388,7 @@
   background: #fff;
   padding: 100px;
 }
-/* line 143, ../scss/_apps.scss */
+/* line 147, ../scss/_apps.scss */
 .modal .modalBox textarea {
   position: relative;
   width: 100%;
@@ -1803,12 +1816,23 @@ header .wrap div:last-child #menu-trigger img {
   position: absolute;
   width: 100%;
 }
-/* line 401, ../scss/main.scss */
+/* line 400, ../scss/main.scss */
+#nav-controls button {
+  height: 50px;
+  width: 20px;
+}
+/* line 403, ../scss/main.scss */
+#nav-controls button:hover {
+  cursor: pointer;
+}
+/* line 407, ../scss/main.scss */
 #nav-controls #back-button {
   position: absolute;
+  border: none;
 }
-/* line 404, ../scss/main.scss */
+/* line 411, ../scss/main.scss */
 #nav-controls #forward-button {
   right: 0;
+  border: none;
   position: absolute;
 }

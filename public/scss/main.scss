@@ -397,12 +397,20 @@ header{
 #nav-controls{
 	position:absolute;
 	width:100%;
-
+	button{
+		height:50px;
+		width:20px;
+		&:hover{
+			cursor: pointer;
+		}
+	}
 	#back-button{
 		position: absolute;
+		border:none;
 	}
 	#forward-button{
 		right:0;
+		border:none;
 		position:absolute;
 	}
 }

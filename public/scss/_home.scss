@@ -173,8 +173,16 @@
 				.icon{
 					height:65px;
 					width:65px;
-					background: #333;
+					background-image: url(../img/categoryicons.svg);
+					background-color: #333;
 					border-radius: 41px;
+
+					&:before{
+						background-position: 0 -.8%;
+					}
+					&.games{
+						background-position: 2px -9px;
+					}
 				}
 			}
 		}
