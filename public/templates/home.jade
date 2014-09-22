@@ -5,14 +5,14 @@ section#HOME(data-ng-controller="home",class="section ajax")
         div#search-home-result
             div.wrap
                 div.resultsbyname
-                    div.searchresult.app(data-ng-repeat="result in author_results")
+                    div.searchresult(data-ng-repeat="result in author_results")
                         a(data-ng-href="/app/{{result.id}}")
                             img.app-icon(data-ng-src="{{result.icon}}")
                         h1.result-title {{result.name}}
                         h2.result-author {{result.author}}
                         div(starrating,data-rating="{{app.rating}}")
 
-                    div.searchresult.app(data-ng-repeat="result in name_results")
+                    div.searchresult(data-ng-repeat="result in name_results")
                         a(data-ng-href="/app/{{result.id}}")
                             img.app-icon(data-ng-src="{{result.icon}}")
                         h1.result-title {{result.name}}
@@ -20,13 +20,13 @@ section#HOME(data-ng-controller="home",class="section ajax")
                         div(starrating,data-rating="{{app.rating}}")
 
 
-                    div.searchresult.app(data-ng-repeat="result in category_results")
+                    div.searchresult(data-ng-repeat="result in category_results")
                         a(data-ng-href="/app/{{result.id}}")
                             img.app-icon(data-ng-src="{{result.icon}}")
                         h1.result-title {{result.name}}
                         h2.result-author {{result.author}}
                         div(starrating,data-rating="{{app.rating}}")
-                    div.searchresult.app(data-ng-repeat="result in description_results")
+                    div.searchresult(data-ng-repeat="result in description_results")
                         a(data-ng-href="/app/{{result.id}}")
                             img.app-icon(data-ng-src="{{result.icon}}")
                         h1.result-title {{result.name}}

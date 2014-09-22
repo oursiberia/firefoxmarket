@@ -26,7 +26,7 @@ app.factory("MasterSearch",function($http){
          * @param $scope the scope to attach the end result to.
          * @returns {boolean}
          */
-        query:function(_$scope){
+        query:function(_$scope,limit){
             $scope = _$scope;
             //get the search term;
             var term = window.document.querySelector("#homesearch");
@@ -47,7 +47,7 @@ app.factory("MasterSearch",function($http){
                 method:"GET",
                 url:"https://marketplace.firefox.com/api/v1/apps/search/?q=" + query //+ "&device=desktop"
             }).success(function(data, status, headers, config){
-                console.log(data);
+           ;
                 //need to filter out unecessary content, make new array
                 var results = [];
 
@@ -57,12 +57,23 @@ app.factory("MasterSearch",function($http){
                 var description_results = API.filter(API.parseDescriptions(data.objects));
 
 
-                //set to the scope
-                $scope.author_results = author_results;
-                $scope.name_results = name_results;
-                $scope.category_results = category_results;
-                $scope.description_results = description_results;
 
+
+                if(limit === undefined) {
+
+                    //set to the scope
+                    $scope.author_results = author_results;
+                    $scope.name_results = name_results;
+                    $scope.category_results = category_results;
+                    $scope.description_results = description_results;
+
+                }else {
+
+
+                    for(var i = 0;i<limit;++i){
+                        console.log("results : ",author_results[i])
+                    }
+                }
 
 
             }).error(function(data, status, headers, config) {

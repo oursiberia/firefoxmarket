@@ -1,13 +1,27 @@
 
 <div id="mainsearch">
   <div class="wrap">
-    <input type="text" name="search" data-ng-model="searchbox" placeholder="Search for anything..." data-ng-change="searchApp()"/>
+    <input type="text" name="search" data-ng-model="searchbox" placeholder="Search for anything..." data-ng-change="searchApp($event)"/>
   </div>
   <div class="wrap">
-    <div class="resultsbyname">
-      <div data-ng-repeat="result in author_results" class="searchresult app"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a>
-        <h1 class="result-title">{{result.name}}</h1>
-        <h2 class="result-author">{{result.author}}</h2>
+    <div id="mainsearchresults" class="resultsbyname">
+      <div class="searchcolumn">
+        <div data-ng-repeat="result in author_results" class="searchresult app"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a>
+          <h1 class="result-title">{{result.name}}</h1>
+          <h2 class="result-author">{{result.author}}</h2>
+        </div>
+      </div>
+      <div class="searchcolumn">
+        <div data-ng-repeat="result in name_results" class="searchresult app"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a>
+          <h1 class="result-title">{{result.name}}</h1>
+          <h2 class="result-author">{{result.author}}</h2>
+        </div>
+      </div>
+      <div class="searchcolumn">
+        <div data-ng-repeat="result in category_results" class="searchresult app"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a>
+          <h1 class="result-title">{{result.name}}</h1>
+          <h2 class="result-author">{{result.author}}</h2>
+        </div>
       </div>
     </div>
   </div>

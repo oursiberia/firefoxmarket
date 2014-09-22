@@ -1666,7 +1666,13 @@ header .wrap div:last-child #menu-trigger img {
   transition: opacity 0.5s ease;
 }
 
-/* line 252, ../scss/main.scss */
+/* line 251, ../scss/main.scss */
+.searchcolumn {
+  display: inline-block;
+  vertical-align: top;
+}
+
+/* line 255, ../scss/main.scss */
 #searchresults {
   position: absolute;
   min-width: 100%;
@@ -1676,13 +1682,13 @@ header .wrap div:last-child #menu-trigger img {
   top: -99990px;
   z-index: 99;
 }
-/* line 260, ../scss/main.scss */
+/* line 263, ../scss/main.scss */
 #searchresults .search-wrap {
   display: block;
   padding: 30px;
   margin: 0 auto;
 }
-/* line 265, ../scss/main.scss */
+/* line 268, ../scss/main.scss */
 #searchresults .search-wrap #searchterm {
   background: none;
   border: none;
@@ -1691,11 +1697,11 @@ header .wrap div:last-child #menu-trigger img {
   color: #fff;
   font-size: 40px;
 }
-/* line 273, ../scss/main.scss */
+/* line 276, ../scss/main.scss */
 #searchresults .search-wrap #searchterm:focus {
   outline: 0;
 }
-/* line 281, ../scss/main.scss */
+/* line 284, ../scss/main.scss */
 #searchresults #results {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -1703,12 +1709,16 @@ header .wrap div:last-child #menu-trigger img {
   position: relative;
   top: 10px;
 }
-/* line 288, ../scss/main.scss */
+/* line 291, ../scss/main.scss */
 #searchresults #results .searchresult {
   border: solid 1px red;
   width: 200px;
   height: 200px;
   padding: 30px;
+  display: inline-block;
+}
+/* line 298, ../scss/main.scss */
+#searchresults #results .searchresult.app {
   display: inline-block;
 }
 
@@ -1718,7 +1728,7 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	Editorial content
  */
-/* line 310, ../scss/main.scss */
+/* line 317, ../scss/main.scss */
 .editorial-collections .collections .collection {
   width: 338px;
   height: 170px;
@@ -1734,16 +1744,16 @@ header .wrap div:last-child #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 322, ../scss/main.scss */
+/* line 329, ../scss/main.scss */
 .editorial-collections .collections .collection:last-child {
   width: 337px;
 }
-/* line 326, ../scss/main.scss */
+/* line 333, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps {
   max-width: 271px;
   margin: 0 auto;
 }
-/* line 329, ../scss/main.scss */
+/* line 336, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app {
   height: 70px;
   width: 70px;
@@ -1758,26 +1768,26 @@ header .wrap div:last-child #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 340, ../scss/main.scss */
+/* line 347, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app:last-child {
   margin: 0;
 }
-/* line 345, ../scss/main.scss */
+/* line 352, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy {
   margin-top: 24px;
 }
-/* line 347, ../scss/main.scss */
+/* line 354, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy h2 {
   font-size: 20px;
   letter-spacing: -.5px;
 }
-/* line 351, ../scss/main.scss */
+/* line 358, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy p {
   font-family: "FiraLight";
   font-size: 14px;
   margin-top: 8px;
 }
-/* line 361, ../scss/main.scss */
+/* line 368, ../scss/main.scss */
 .editorial-collections .collections .collection:last-child {
   margin: 0;
 }
@@ -1785,11 +1795,11 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	Ratings
  */
-/* line 370, ../scss/main.scss */
+/* line 377, ../scss/main.scss */
 .review {
   text-align: center;
 }
-/* line 373, ../scss/main.scss */
+/* line 380, ../scss/main.scss */
 .review .review-rating {
   max-width: 100px;
   margin: 0 auto;
@@ -1798,7 +1808,7 @@ header .wrap div:last-child #menu-trigger img {
 /**
  *	the Main search container
  */
-/* line 385, ../scss/main.scss */
+/* line 392, ../scss/main.scss */
 #mainsearch {
   position: absolute;
   top: 0;
@@ -1811,26 +1821,26 @@ header .wrap div:last-child #menu-trigger img {
   overflow: hidden;
 }
 
-/* line 397, ../scss/main.scss */
+/* line 404, ../scss/main.scss */
 #nav-controls {
   position: absolute;
   width: 100%;
 }
-/* line 400, ../scss/main.scss */
+/* line 407, ../scss/main.scss */
 #nav-controls button {
   height: 50px;
   width: 20px;
 }
-/* line 403, ../scss/main.scss */
+/* line 410, ../scss/main.scss */
 #nav-controls button:hover {
   cursor: pointer;
 }
-/* line 407, ../scss/main.scss */
+/* line 414, ../scss/main.scss */
 #nav-controls #back-button {
   position: absolute;
   border: none;
 }
-/* line 411, ../scss/main.scss */
+/* line 418, ../scss/main.scss */
 #nav-controls #forward-button {
   right: 0;
   border: none;
