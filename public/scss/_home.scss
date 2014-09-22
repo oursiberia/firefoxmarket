@@ -97,7 +97,9 @@
 				}
 			}
 			.app-copy {
-				margin-left: 60px;
+				height: 60px;
+				width: 188px;
+				margin-left: 70px;
 				.app-download-button {
 					position: absolute;
 					right: 0px;
@@ -105,6 +107,24 @@
 					width: 60px;
 					height: 24px;
 					@include border-radius(5px);
+					p {
+						color: #4CB1FF;
+						text-align: center;
+					}
+					&:hover {
+						p {
+							color: #fff;
+						}
+					}
+				}
+				h1 {
+					font-size: 14px;
+					letter-spacing: -.5px;
+				}
+				h2 {
+					font-size: 12px;
+					letter-spacing: -.5px;
+					font-family: "FiraLight";
 				}
 			}
 		}
