@@ -31,7 +31,7 @@ app.factory("MasterSearch",function($http){
             $scope = _$scope;
             if(term === undefined){
                 //get the search term;
-                var term = window.document.querySelector("#homesearch");
+                var term = window.document.querySelector("#homesearch") || window.document.querySelector("#search");
 
                 /**
                  * if theres no search term, reject search attempt.
@@ -44,7 +44,7 @@ app.factory("MasterSearch",function($http){
                     query = term.value;
                 }
             }
-
+            console.log("QUERY IS",query);
 
             //query api
             $http({
@@ -63,8 +63,6 @@ app.factory("MasterSearch",function($http){
 
 
 
-                if(limit === undefined) {
-
                     //set to the scope
                     $scope.author_results = author_results;
                     $scope.name_results = name_results;
@@ -73,51 +71,7 @@ app.factory("MasterSearch",function($http){
 
                     console.log(author_results[0],name_results[0],category_results[0],description_results[0]);
 
-                }else {
 
-                    var author_r = [];
-                    var name_r = [];
-                    var category_r = [];
-                    var description_r = [];
-
-                    if(author_results.length > 4){
-                        for( var i = 0;i<limit;++i){
-                            author_r.push(author_results[i]);
-                        }
-                    }else{
-                        author_r = author_results;
-                    }
-
-                    if(name_results.length > 4){
-                        for( var i = 0;i<limit;++i){
-                            name_r.push(name_results[i]);
-                        }
-                    }else{
-                        namer_r = name_results;
-                    }
-
-
-                    if(category_results.length > limit){
-                        for( var i = 0;i<limit;++i){
-                            category_r.push(category_results[i]);
-                        }
-                    }else{
-                        category_r = category_results;
-                    }
-
-                    if(description_results.length > limit){
-                        for( var i = 0;i<limit;++i){
-                            description_r.push(description_results[i]);
-                        }
-                    }else{
-                        description_r = description_results;
-                    }
-
-                    $scope.author_results = author_r;
-                    $scope.name_results = name_r;
-                    $scope.category_results = category_r;
-                    $scope.description_results = description_r;
-                }
 
 
             }).error(function(data, status, headers, config) {

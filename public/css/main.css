@@ -187,7 +187,7 @@
 }
 
 /* line 59, ../scss/_home.scss */
-#search-home-result {
+#search-home-result, #search-result {
   height: 0px;
   width: 100%;
   background: rgba(255, 255, 255, 0.95);
@@ -197,7 +197,7 @@
   overflow: scroll;
 }
 /* line 68, ../scss/_home.scss */
-#search-home-result .searchresult {
+#search-home-result .searchresult, #search-result .searchresult {
   display: inline-block;
   height: 60px;
   width: 258px;
@@ -211,17 +211,17 @@
   border-radius: 5px;
 }
 /* line 77, ../scss/_home.scss */
-#search-home-result .searchresult .app-details {
+#search-home-result .searchresult .app-details, #search-result .searchresult .app-details {
   position: relative;
 }
 /* line 79, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-image, #search-home-result .searchresult .app-details .app-copy {
+#search-home-result .searchresult .app-details .app-image, #search-home-result .searchresult .app-details .app-copy, #search-result .searchresult .app-details .app-image, #search-result .searchresult .app-details .app-copy {
   position: absolute;
   display: inline-block;
   vertical-align: top;
 }
 /* line 84, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-image {
+#search-home-result .searchresult .app-details .app-image, #search-result .searchresult .app-details .app-image {
   height: 60px;
   width: 60px;
   overflow: hidden;
@@ -231,24 +231,24 @@
   border-radius: 5px;
 }
 /* line 89, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-image a {
+#search-home-result .searchresult .app-details .app-image a, #search-result .searchresult .app-details .app-image a {
   height: 60px;
   width: 60px;
   display: inline-block;
 }
 /* line 94, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-image img {
+#search-home-result .searchresult .app-details .app-image img, #search-result .searchresult .app-details .app-image img {
   height: 100%;
   width: 100%;
 }
 /* line 99, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy {
+#search-home-result .searchresult .app-details .app-copy, #search-result .searchresult .app-details .app-copy {
   height: 60px;
   width: 188px;
   margin-left: 70px;
 }
 /* line 103, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy .app-download-button {
+#search-home-result .searchresult .app-details .app-copy .app-download-button, #search-result .searchresult .app-details .app-copy .app-download-button {
   position: absolute;
   right: 0px;
   bottom: 0px;
@@ -260,27 +260,27 @@
   border-radius: 5px;
 }
 /* line 110, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy .app-download-button p {
+#search-home-result .searchresult .app-details .app-copy .app-download-button p, #search-result .searchresult .app-details .app-copy .app-download-button p {
   color: #4CB1FF;
   text-align: center;
 }
 /* line 115, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy .app-download-button:hover p {
+#search-home-result .searchresult .app-details .app-copy .app-download-button:hover p, #search-result .searchresult .app-details .app-copy .app-download-button:hover p {
   color: #fff;
 }
 /* line 120, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy h1 {
+#search-home-result .searchresult .app-details .app-copy h1, #search-result .searchresult .app-details .app-copy h1 {
   font-size: 14px;
   letter-spacing: -.5px;
 }
 /* line 124, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy h2 {
+#search-home-result .searchresult .app-details .app-copy h2, #search-result .searchresult .app-details .app-copy h2 {
   font-size: 12px;
   letter-spacing: -.5px;
   font-family: "FiraLight";
 }
 /* line 133, ../scss/_home.scss */
-#search-home-result .resultsbyname {
+#search-home-result .resultsbyname, #search-result .resultsbyname {
   width: 400px;
 }
 

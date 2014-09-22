@@ -70,13 +70,13 @@ section#appview
                         a(data-ng-href="{{support_url}}",target="_blank",translate) Support Site &#9656;
 
                     li
-                        a(data-ng-href="#",translate,data-ng-click="showPrivacyPolicy()") Privacy Policy &#9656;
+                        a(data-ng-href="#",translate,data-ng-click='openModal("#privacy")') Privacy Policy &#9656;
 
                     li
-                        a(data-ng-href="{{report_abuse}}",translate,data-ng-click="reportAbuse()") Report Abuse &#9656;
+                        a(data-ng-href="{{report_abuse}}",translate,data-ng-click='openModal("#abused")') Report Abuse &#9656;
 
                     li
-                        a(data-ng-href="{{feedback}}",translate,data-ng-click="openFeedback()") Send Feedback &#9656;
+                        a(data-ng-href="{{feedback}}",translate,data-ng-click='openModal("#feedback")') Send Feedback &#9656;
 
             div#other-applications(ng-if="other_apps != false")
                 h2(translate) Apps By this developer
@@ -101,7 +101,7 @@ section#appview
         div#reviews
             div.reviews-header
                 h2(translate) Latest Reviews
-                div.write-a-review(data-ng-click="writeReview()") Write a Review
+                div.write-a-review(data-ng-click='openModal("#review")') Write a Review
                 div.view-all-reviews(translate) View All Reviews &#9656;
             div.app-reviews
                 div(data-ng-repeat="review in reviews",class="app-review")

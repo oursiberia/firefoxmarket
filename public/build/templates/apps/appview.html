@@ -61,9 +61,9 @@
         <ul>
           <li><a data-ng-href="mailto:{{support_email}}" translate="translate">Contact Support &#9656;</a></li>
           <li ng-if="support_url != false"><a data-ng-href="{{support_url}}" target="_blank" translate="translate">Support Site &#9656;</a></li>
-          <li><a data-ng-href="#" translate="translate" data-ng-click="showPrivacyPolicy()">Privacy Policy &#9656;</a></li>
-          <li><a data-ng-href="{{report_abuse}}" translate="translate" data-ng-click="reportAbuse()">Report Abuse &#9656;</a></li>
-          <li><a data-ng-href="{{feedback}}" translate="translate" data-ng-click="openFeedback()">Send Feedback &#9656;</a></li>
+          <li><a data-ng-href="#" translate="translate" data-ng-click="openModal(&quot;#privacy&quot;)">Privacy Policy &#9656;</a></li>
+          <li><a data-ng-href="{{report_abuse}}" translate="translate" data-ng-click="openModal(&quot;#abused&quot;)">Report Abuse &#9656;</a></li>
+          <li><a data-ng-href="{{feedback}}" translate="translate" data-ng-click="openModal(&quot;#feedback&quot;)">Send Feedback &#9656;</a></li>
         </ul>
       </div>
       <div id="other-applications" ng-if="other_apps != false">
@@ -84,7 +84,7 @@
     <div id="reviews">
       <div class="reviews-header">
         <h2 translate="translate">Latest Reviews</h2>
-        <div data-ng-click="writeReview()" class="write-a-review">Write a Review</div>
+        <div data-ng-click="openModal(&quot;#review&quot;)" class="write-a-review">Write a Review</div>
         <div translate="translate" class="view-all-reviews">View All Reviews &#9656;</div>
       </div>
       <div class="app-reviews">
