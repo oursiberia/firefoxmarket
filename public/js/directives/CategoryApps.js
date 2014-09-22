@@ -11,14 +11,14 @@ app.directive("categoryapps",["API",function(API) {
     return{
         templateUrl:"/build/templates/apps/categoryapps.html",
         controller:function($scope){
-           var popularSection = false;
+            var popularSection = false;
             $scope.$on("CATEGORY_RECENT",function(){
                 var popular = document.getElementsByClassName("popular-category");
                 var recent = document.getElementsByClassName("recent-category");
 
 
-                for(var i = 0;i<popular.length;++i){
-                    popular[i].style.display = "none";
+                for(var a = 0;a<popular.length;++a){
+                    popular[a].style.display = "none";
                 }
 
                 for(var i = 0;i<recent.length;++i){
@@ -30,12 +30,12 @@ app.directive("categoryapps",["API",function(API) {
                 var popular = document.getElementsByClassName("popular-category");
                 var recent = document.getElementsByClassName("recent-category");
 
-                for(var i = 0;i<popular.length;++i){
-                    popular[i].style.display = "block";
+                for(var a = 0;a<popular.length;++a){
+                    popular[a].style.display = "block";
                 }
 
-                for(var i = 0;i<recent.length;++i){
-                    recent[i].style.display = "none";
+                for(var b = 0;b<recent.length;++b){
+                    recent[b].style.display = "none";
                 }
 
             });
@@ -127,8 +127,8 @@ app.directive("categoryapps",["API",function(API) {
             /**
              * Run the next search for the most recent apps
              */
-            var params = "?cat=" + categoryname + "&sort=created";
-            API.request("search",params).then(function(data) {
+            var params2 = "?cat=" + categoryname + "&sort=created";
+            API.request("search",params2).then(function(data) {
                 var apps = data.objects;
                 var shown_apps = [];
 

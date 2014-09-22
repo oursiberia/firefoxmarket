@@ -45,27 +45,27 @@ app.directive("login",["$http",function($http) {
                 onlogin:function(assertation) {
                     //verify assertation
                     $http.post("/loginassert",{
-                         assertation:assertation,
+                        assertation:assertation,
                         audience:window.location.href
 
-                     })
-                     .success(function(data,status,headers,config){
-                        console.log(data);
-                     })
-                     .error(function(data,status,headers,config){
-                        console.log("issue with verification process");
-                         console.log(data);
-                     });
+                    })
+                        .success(function(data,status,headers,config){
+                            console.log(data);
+                        })
+                        .error(function(data,status,headers,config){
+                            console.log("issue with verification process");
+                            console.log(data);
+                        });
                 },
 
 
                 onlogout:function() {
                     currentUser = null;
                 }
-            })
+            });
 
 
         }
-    }
+    };
 
 }]);

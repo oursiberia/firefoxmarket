@@ -20,8 +20,8 @@ app.directive("appfeedback",["API",function(){
              */
             $scope.sendFeedback = function(){
 
-            }
+            };
         }
-    }
+    };
 
 }]);

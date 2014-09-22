@@ -27,7 +27,7 @@ app.directive("appreview",["$http",function($http){
                 var rating = $el[0].querySelector("input").value;
 
                 rating = parseInt(rating);
-                if((rating > 5) || (rating !== NaN)){
+                if((rating > 5) || (isNaN(rating))){
                     rating = 5;
                 }
 
@@ -36,7 +36,7 @@ app.directive("appreview",["$http",function($http){
                     app:id,
                     body:content.value,
                     rating:rating
-                }
+                };
 
                 $http({
                     method:"post",
@@ -46,10 +46,10 @@ app.directive("appreview",["$http",function($http){
                     console.log("success");
                 }).error(function(){
                     console.log("something went wrong");
-                })
-            }
+                });
+            };
         }
-    }
+    };
 
 
 }]);
