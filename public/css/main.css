@@ -243,9 +243,11 @@
 }
 /* line 99, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-copy {
-  margin-left: 60px;
+  height: 60px;
+  width: 188px;
+  margin-left: 70px;
 }
-/* line 101, ../scss/_home.scss */
+/* line 103, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-copy .app-download-button {
   position: absolute;
   right: 0px;
@@ -257,16 +259,36 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 113, ../scss/_home.scss */
+/* line 110, ../scss/_home.scss */
+#search-home-result .searchresult .app-details .app-copy .app-download-button p {
+  color: #4CB1FF;
+  text-align: center;
+}
+/* line 115, ../scss/_home.scss */
+#search-home-result .searchresult .app-details .app-copy .app-download-button:hover p {
+  color: #fff;
+}
+/* line 120, ../scss/_home.scss */
+#search-home-result .searchresult .app-details .app-copy h1 {
+  font-size: 14px;
+  letter-spacing: -.5px;
+}
+/* line 124, ../scss/_home.scss */
+#search-home-result .searchresult .app-details .app-copy h2 {
+  font-size: 12px;
+  letter-spacing: -.5px;
+  font-family: "FiraLight";
+}
+/* line 133, ../scss/_home.scss */
 #search-home-result .resultsbyname {
   width: 400px;
 }
 
-/* line 121, ../scss/_home.scss */
+/* line 141, ../scss/_home.scss */
 .home-main {
   margin-top: 50px;
 }
-/* line 123, ../scss/_home.scss */
+/* line 143, ../scss/_home.scss */
 .home-main .column {
   height: 40px;
   width: 40px;
@@ -275,17 +297,17 @@
   background: #333;
   margin-right: 21px;
 }
-/* line 131, ../scss/_home.scss */
+/* line 151, ../scss/_home.scss */
 .home-main .column.main {
   width: 620px;
   height: 366px;
 }
-/* line 136, ../scss/_home.scss */
+/* line 156, ../scss/_home.scss */
 .home-main .column.secondary {
   width: 300px;
   height: 366px;
 }
-/* line 142, ../scss/_home.scss */
+/* line 162, ../scss/_home.scss */
 .home-main .column.third .inner-box {
   width: 300px;
   height: 173px;
@@ -293,34 +315,34 @@
   margin-bottom: 20px;
 }
 
-/* line 153, ../scss/_home.scss */
+/* line 173, ../scss/_home.scss */
 #featured .app {
   display: inline-block;
   vertical-align: top;
 }
-/* line 157, ../scss/_home.scss */
+/* line 177, ../scss/_home.scss */
 #featured .app:last-child {
   margin: 0;
 }
 
-/* line 166, ../scss/_home.scss */
+/* line 186, ../scss/_home.scss */
 #category-list .wrap .controls {
   padding: 30px 0 44px 0;
 }
-/* line 168, ../scss/_home.scss */
+/* line 188, ../scss/_home.scss */
 #category-list .wrap .controls h1 {
   font-size: 18px;
   display: inline-block;
 }
-/* line 177, ../scss/_home.scss */
+/* line 197, ../scss/_home.scss */
 #category-list .wrap .controls h1:last-child {
   font-family: "FiraLight";
 }
-/* line 181, ../scss/_home.scss */
+/* line 201, ../scss/_home.scss */
 #category-list .wrap .controls .toggle {
   display: inline-block;
 }
-/* line 183, ../scss/_home.scss */
+/* line 203, ../scss/_home.scss */
 #category-list .wrap .controls .toggle span {
   font-size: 14px;
   color: #4CB1FF;
@@ -332,24 +354,24 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 191, ../scss/_home.scss */
+/* line 211, ../scss/_home.scss */
 #category-list .wrap .controls .toggle span:first-child {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-/* line 195, ../scss/_home.scss */
+/* line 215, ../scss/_home.scss */
 #category-list .wrap .controls .toggle span:last-child {
   margin-left: -1px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
-/* line 200, ../scss/_home.scss */
+/* line 220, ../scss/_home.scss */
 #category-list .wrap .controls .toggle .active {
   background: #4CB1FF;
   color: #fff;
   cursor: default;
 }
-/* line 207, ../scss/_home.scss */
+/* line 227, ../scss/_home.scss */
 #category-list .wrap .controls button {
   float: right;
   width: 178px;
@@ -368,11 +390,11 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 221, ../scss/_home.scss */
+/* line 241, ../scss/_home.scss */
 #category-list .wrap .controls button:hover {
   background: #42cafe;
 }
-/* line 227, ../scss/_home.scss */
+/* line 247, ../scss/_home.scss */
 #category-list .category {
   width: 298px;
   background: #F8F8F8;
@@ -385,7 +407,7 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 236, ../scss/_home.scss */
+/* line 256, ../scss/_home.scss */
 #category-list .category .category-title {
   background: #fff;
   width: 100%;
@@ -398,11 +420,11 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 248, ../scss/_home.scss */
+/* line 268, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap {
   padding: 20px;
 }
-/* line 250, ../scss/_home.scss */
+/* line 270, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon, #category-list .category .category-title .title-wrap .title-copy {
   display: inline-block;
   vertical-align: middle;
@@ -413,14 +435,14 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 261, ../scss/_home.scss */
+/* line 281, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon {
   height: 60px;
   width: 60px;
   border-radius: 30px;
   position: relative;
 }
-/* line 266, ../scss/_home.scss */
+/* line 286, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon .cat-icon {
   height: 38px;
   width: 40px;
@@ -430,74 +452,74 @@
   background-image: url(../img/category_iconography_white.svg);
   background-size: 40px 608px;
 }
-/* line 276, ../scss/_home.scss */
+/* line 296, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.games {
   background-color: #00953f;
 }
-/* line 278, ../scss/_home.scss */
+/* line 298, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.games .cat-icon {
   background-position: 0px 0px;
 }
-/* line 282, ../scss/_home.scss */
+/* line 302, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.productivity {
   background-color: #1e1e9c;
 }
-/* line 284, ../scss/_home.scss */
+/* line 304, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.productivity .cat-icon {
   background-position: 0px -418px;
 }
-/* line 288, ../scss/_home.scss */
+/* line 308, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.music {
   background-color: #5a197e;
 }
-/* line 290, ../scss/_home.scss */
+/* line 310, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.music .cat-icon {
   background-position: 0px -76px;
 }
-/* line 294, ../scss/_home.scss */
+/* line 314, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.social {
   background-color: #a20d55;
 }
-/* line 296, ../scss/_home.scss */
+/* line 316, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.social .cat-icon {
   background-position: 0px -456px;
 }
-/* line 302, ../scss/_home.scss */
+/* line 322, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy {
   margin-left: 5px;
 }
-/* line 304, ../scss/_home.scss */
+/* line 324, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy h3 {
   font-size: 20px;
   font-family: "FiraMedium";
   text-transform: capitalize;
 }
-/* line 309, ../scss/_home.scss */
+/* line 329, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy p {
   font-size: 12px;
   font-family: "FiraLight";
   padding-left: 2px;
 }
-/* line 313, ../scss/_home.scss */
+/* line 333, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy p:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-/* line 322, ../scss/_home.scss */
+/* line 342, ../scss/_home.scss */
 #category-list .category .app {
   border: 0;
   padding: 20px 20px 0 20px;
 }
-/* line 325, ../scss/_home.scss */
+/* line 345, ../scss/_home.scss */
 #category-list .category .app .app-details {
   padding: 0;
   border: 0;
 }
-/* line 329, ../scss/_home.scss */
+/* line 349, ../scss/_home.scss */
 #category-list .category .app:last-child {
   padding: 20px;
 }
-/* line 334, ../scss/_home.scss */
+/* line 354, ../scss/_home.scss */
 #category-list .category:last-child {
   margin: 0;
 }
