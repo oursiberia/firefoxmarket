@@ -346,6 +346,16 @@ $borderColor:rgb(211,211,211);
 				position: relative;
 				float: right;
 				top: 23px;
+				p {
+					color: #4CB1FF;
+					width: 100%;
+					text-align: center;
+				}
+				&:hover {
+					p {
+						color: #fff;
+					}
+				}
 			}
 
 		}
@@ -510,12 +520,14 @@ $borderColor:rgb(211,211,211);
 					}
 				}
 				.app-download-button {
-					background: $dark_gray;
 					height: 24px;
 					cursor: pointer;
 					position: absolute;
 					right: 0;
 					bottom: 0;
+					&:hover {
+						background: #4CB1FF;
+					}
 				}
 			}
 			&:last-child {

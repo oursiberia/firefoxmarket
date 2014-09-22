@@ -2,6 +2,7 @@ section#HOME(data-ng-controller="home",class="section ajax")
         div#search-home
             div.wrap
                 input#homesearch(type="text",name="search",data-ng-model="searchbox",placeholder="Search for anything...",data-ng-change="searchApp()")
+                div.close-search
         div#search-home-result
             div.wrap
                 div.resultsbyname
@@ -32,31 +33,6 @@ section#HOME(data-ng-controller="home",class="section ajax")
                         h1.result-title {{result.name}}
                         h2.result-author {{result.author}}
                         div(starrating,data-rating="{{app.rating}}")
-
-
-        div#featured
-            div.wrap
-                div(class="home-apps")
-                    div(class="{{app.classname}} featured {{app.showfirst}} with-description",data-ng-repeat="app in featured_apps")
-
-                        div.app-wrap
-                            div.app-details
-                                div.app-image
-                                    a(data-ng-href="/app/{{app.id}}")
-                                        img.app-icon(data-ng-src="{{app.icon}}")
-
-                                div.app-copy
-                                    div.app-download-button
-                                        p(data-ng-click="initPurchase(app.app_type,app.manifest_url)") {{app.premium_type}}
-                                    a(data-ng-href="/app/{{app.id}}")
-                                        h1.app-title {{app.name}}
-                                        h2.app-author {{app.author}}
-                                        div(starrating,data-rating="{{app.rating}}")
-
-
-                            div.app-description
-                                p(data-ng-bind-html="app.description | htmlRender ")
-
 
         div#ecollections(class="editorial-collections")
             div.wrap
@@ -104,11 +80,38 @@ section#HOME(data-ng-controller="home",class="section ajax")
                             h2(translate) Great Apps for the workplace
                             p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.
 
+
+        div#featured
+            div.wrap
+                div(class="home-apps")
+                    div(class="{{app.classname}} featured {{app.showfirst}} with-description",data-ng-repeat="app in featured_apps")
+
+                        div.app-wrap
+                            div.app-details
+                                div.app-image
+                                    a(data-ng-href="/app/{{app.id}}")
+                                        img.app-icon(data-ng-src="{{app.icon}}")
+
+                                div.app-copy
+                                    div.app-download-button
+                                        p(data-ng-click="initPurchase(app.app_type,app.manifest_url)") Install
+                                    a(data-ng-href="/app/{{app.id}}")
+                                        h1.app-title {{app.name}}
+                                        h2.app-author {{app.author}}
+                                        div(starrating,data-rating="{{app.rating}}")
+
+
+                            div.app-description
+                                p(data-ng-bind-html="app.description | htmlRender ")
+
+
         div#category-list
             div.wrap
                 div.controls
-                    h1 Most Popular
-                    h1.thin Recently Released
+                    h1 Categories: 
+                    div.toggle
+                        span.active Popular
+                        span Recent
                     button View All Categories
                 div.category(data-ng-repeat="item in appcategories")
                     div.category-title(data-name="{{item.name}}")

@@ -15,9 +15,8 @@ header
         div#logo(data-ng-click="returnHome()")
             img(src="/img/marketplace_logo.png" alt="marketplace-logo")
 
-        div#searchbutton(translate,data-ng-click="search()") Search
-
-        div
+        div#user-actions
+            div#searchbutton(translate,data-ng-click="search()") Search
             div#user
                 div#user-details
                     div#menu-trigger(data-ng-click="openMenu($event)")

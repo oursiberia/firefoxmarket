@@ -20,13 +20,15 @@ $grey:#e9e9e9;
 }
 
 .rating{
+	margin-top: 4px;
 	li{
 		float:left;
-		height: 15px;
-		width: 15px;
+		height: 14px;
+		width: 14px;
+		margin-right: 1px;
 		img{
-			height: 15px;
-			width: 15px;
+			height: 14px;
+			width: 14px;
 		}
 	}
 }
@@ -74,19 +76,31 @@ footer {
 		background-image: url(../img/header-background.png), url(../img/blueprint.png), url(../img/mdn-header-gradient.png);
 		background-repeat: repeat,repeat,repeat-x;
 		color: #fff;
+		h2 {
+			width: 400px;
+			font-family: "FiraLight";
+		}
+		img {
+			width: 70px;
+		}
 		#developer-link{
 			width:300px;
-			height:30px;
-			padding-top:15px;
-			padding-bottom:15px;
+			height: 24px;
+			padding-top: 19px;
+			padding-bottom: 17px;
 			position: relative;
 			bottom:13px;
 			background:#F8F8F8;
 			text-align: center;
 			border: none;
-			background: rgba(28, 80, 129, .9);
-			box-shadow: 0px -1px rgba(0, 0, 0, 0.1) inset;
+			background: #4CB1FF;
+			box-shadow: 0px 2px #3D86BD;
+			text-shadow: 0px 1px #3D86BD;
+			cursor: pointer;
 			@include border-radius(5px);
+			&:hover{
+				background: #42cafe;
+			}
 		}
 	}
 
@@ -159,40 +173,42 @@ header{
 			cursor: pointer;
 		}
 		#logo {
-			margin: -5px 0 0 -7px;
-			img {
-				height: 69px;
-			}
-		}
-		div:first-child{
+			margin: -4px 0 0 -7px;
 			display: inline-block;
-
 			img,h1{
 				vertical-align: middle;
 				display: inline-block;
 			}
-
-
+			img {
+				height: 69px;
+			}
 		}
 		/**======= SEARCH =============*/
 		#searchbutton{
-			border:solid 1px #333333;
+			border: solid 2px #4cb1ff;
+			color: #4cb1ff;
 			background: none;
-			width:100px;
-			padding-top:10px;
-			padding-bottom: 10px;
+			width: 82px;
+			padding: 5px 0 5px 19px;
 			border-radius: 4px;
 			position: relative;
-			left:30%;
 			text-align: center;
 			display: inline-block;
 			vertical-align: middle;
 			z-index: 100;
+			background-image: url(../img/search_icon_small.svg);
+			background-size: 15px 14px;
+			background-position: 14px 8px;
+			background-repeat: no-repeat;
+			&:hover {
+				border: solid 2px #42cafe;
+			}
 		}
-		div:last-child{
+		#user-actions{
 			float:right;
 			display: inline-block;
-
+			width: 425px;
+			margin-top: 12px;
 
 			#user{
 				img,p{
@@ -318,6 +334,10 @@ header{
  *	Editorial content
  */
 
+ #ecollections {
+ 	padding: 30px 0;	
+ }
+
 .editorial-collections {
 	.collections {
 
@@ -343,13 +363,17 @@ header{
 				.collection-app {
 					height: 70px;
 					width: 70px;
-					background: #333;
 					display: inline-block;
 					vertical-align: top;
 					position: relative;
 					z-index: 2;
 					margin-right: 26px;
+					overflow: hidden;
 					@include border-radius(5px);
+					img {
+						height: 70px;
+						width: 70px;
+					}
 				}
 				.collection-app:last-child {
 					margin: 0;

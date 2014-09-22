@@ -1,6 +1,6 @@
 #HOME {
 	background: #f6f6f6;
-	padding-bottom: 40px;
+	padding-bottom: 50px;
 }
 
 .all-trigger{
@@ -22,11 +22,15 @@
 #search-home{
 	height:200px;
 	width:100%;
-	background: $dark_gray;
+	// background-position: 0 0,0 0;
+	// background-image: url(../img/header-background.png), url(../img/mdn-header-gradient.png);
+	// background-repeat: repeat,repeat-x;
+	background-color: #3D86BD;
 	position: relative;
 	div.wrap{
 		padding:20px;
 		padding-top:50px;
+		position: relative;
 		#homesearch{
 			font-family: "FiraThin";
 			outline: none;
@@ -38,6 +42,15 @@
 			font-size:60px;
 			letter-spacing: -1.5px;
 		}
+		.close-search {
+			height: 34px;
+			width: 34px;
+			top: 30px;
+			right: 23px;
+			border-radius: 20px;
+			background: rgba(255,255,255,.2);
+			position: absolute;
+		}
 	}
 
 
@@ -46,7 +59,7 @@
 #search-home-result{
 	height:0px;
 	width:100%;
-	background: $blue;
+	background: rgba(255, 255, 255, 0.95);
 	position: absolute;
 	top:286px;
 	z-index: 99;
@@ -95,7 +108,6 @@
 }
 
 #featured {
-	padding: 30px 0;
 	.app {
 		display: inline-block;
 		vertical-align: top;
@@ -110,29 +122,63 @@
 #category-list{
 	.wrap{
 		.controls{
-			padding-top:30px;
-			padding-bottom: 30px;
+			padding: 30px 0 44px 0;
 			h1{
+				font-size: 18px;
 				display: inline-block;
 			}
 
-			h1:first-child:after{
-				content: "|";
-			}
+			// h1:first-child:after{
+			// 	content: "|";
+			// }
 
 			h1:last-child{
 				font-family: "FiraLight";
+			}
+
+			.toggle {
+				display: inline-block;
+				span {
+					font-size: 14px;
+					color: #4CB1FF;
+					border: 1px solid #4CB1FF;
+					padding: 7px 12px 6px 12px;
+					cursor: pointer;
+					@include border-radius(5px);
+				}
+				span:first-child {
+					border-top-right-radius: 0px;
+					border-bottom-right-radius: 0px;
+				}
+				span:last-child {
+					margin-left: -1px;
+					border-top-left-radius: 0px;
+					border-bottom-left-radius: 0px;
+				}
+				.active {
+					background: #4CB1FF;
+					color: #fff;
+					cursor: default;
+				}
 			}
 
 			button{
 				float:right;
 				width:178px;
 				height:42px;
-				background:#55575C;
+				background: #4CB1FF;
+				box-shadow: 0px 2px #3D86BD;
+				text-shadow: 0px 1px #3D86BD;
 				border:none;
 				padding:10px;
 				color:#fff;
-				border-radius: 4px;
+				font-size: 16px;
+				font-family: "FiraRegular";
+				cursor: pointer;
+				@include border-radius(5px);
+				&:hover {
+					background: #42cafe;
+				}
 			}
 		}
 	}
@@ -185,25 +231,25 @@
 						background-size: 40px 608px;
 					}
 
-					&.Games {
+					&.games {
 						background-color: #00953f;
 						.cat-icon {
 							background-position: 0px 0px;
 						}
 					}
-					&.Productivity {
+					&.productivity {
 						background-color: #1e1e9c;
 						.cat-icon {
 							background-position: 0px -418px;
 						}
 					}
-					&.Music {
+					&.music {
 						background-color: #5a197e;
 						.cat-icon {
 							background-position: 0px -76px;
 						}
 					}
-					&.Social {
+					&.social {
 						background-color: #a20d55;
 						.cat-icon {
 							background-position: 0px -456px;
@@ -216,6 +262,7 @@
 					h3 {
 						font-size: 20px;
 						font-family: "FiraMedium";
+						text-transform: capitalize;
 					}
 					p {
 						font-size: 12px;

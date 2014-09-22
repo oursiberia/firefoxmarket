@@ -75,7 +75,7 @@ app.directive("categoryapps",["API",function(API) {
                 for(var i = 0;i<limit;++i) {
                     var app = apps[i];
                     shown_apps.push({
-                        icon:app.icons["64"],
+                        icon:app.icons["128"],
                         id:app.id,
                         app_type:app.premium_type,
                         manifest_url:app.manifest_url,
