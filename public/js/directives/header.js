@@ -5,7 +5,7 @@
  * @description
  * Directive to show header.
  */
-app.directive("header",function(MasterSearch) {
+app.directive("header",function(MasterSearch,$rootScope) {
 
     return {
         templateUrl:"/build/templates/header.html",
@@ -40,12 +40,24 @@ app.directive("header",function(MasterSearch) {
                 var search = document.querySelector("#mainsearch");
                 TweenMax.to(search,1,{
                     height:"100%",
-                    ease:"Power3.easeInOut"
+                    ease:"Power3.easeInOut",
+                    onComplete:function(){
+                        $rootScope.lockBody();
+                    }
                 })
             };
 
-            $scope.closeSearch = function(){
 
+            $scope.closeSearch = function(){
+                var search = document.querySelector("#mainsearch");
+                TweenMax.to(search,1,{
+                    height:0,
+                    ease:"Power3.easeInOut",
+                    onComplete:function(){
+                        MasterSearch.query($scope);
+                        $rootScope.unlockBody();
+                    }
+                });
             };
 
             $scope.searchApp = function(e){

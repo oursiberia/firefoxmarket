@@ -286,7 +286,14 @@ app.controller("home",[
 
 
         $scope.closeSearch = function(){
-
+            var selector = document.querySelector("#search-home-result");
+            TweenMax.to(selector,1,{
+                height:0,
+                onComplete:function(){
+                    MasterSearch.query($scope);
+                    $rootScope.unlockBody();
+                }
+            });
         };
 
 
