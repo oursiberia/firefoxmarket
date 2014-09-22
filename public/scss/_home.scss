@@ -148,7 +148,7 @@
 		.category-title{
 			background:#fff;
 			width:100%;
-			height:103px;
+			height:100px;
 			border-bottom: 1px solid #D6D6D6;
 			-webkit-border-top-left-radius: 4px;
 			-webkit-border-top-right-radius: 4px;
@@ -171,17 +171,60 @@
 				}
 
 				.icon{
-					height:65px;
-					width:65px;
-					background-image: url(../img/categoryicons.svg);
-					background-color: #333;
-					border-radius: 41px;
-
-					&:before{
-						background-position: 0 -.8%;
+					height:60px;
+					width:60px;
+					border-radius: 30px;
+					position: relative;
+					.cat-icon {
+						height: 38px;
+						width: 40px;
+						left: 10px;
+						top: 11px;
+						position: absolute;
+						background-image: url(../img/category_iconography_white.svg);
+						background-size: 40px 608px;
 					}
-					&.games{
-						background-position: 2px -9px;
+
+					&.Games {
+						background-color: #00953f;
+						.cat-icon {
+							background-position: 0px 0px;
+						}
+					}
+					&.Productivity {
+						background-color: #1e1e9c;
+						.cat-icon {
+							background-position: 0px -418px;
+						}
+					}
+					&.Music {
+						background-color: #5a197e;
+						.cat-icon {
+							background-position: 0px -76px;
+						}
+					}
+					&.Social {
+						background-color: #a20d55;
+						.cat-icon {
+							background-position: 0px -456px;
+						}
+					}
+				}
+
+				.title-copy {
+					margin-left: 5px;
+					h3 {
+						font-size: 20px;
+						font-family: "FiraMedium";
+					}
+					p {
+						font-size: 12px;
+						font-family: "FiraLight";
+						padding-left: 2px;
+						&:hover {
+							cursor: pointer;
+							text-decoration: underline;
+						}
 					}
 				}
 			}
@@ -194,12 +237,15 @@
 				padding: 0;
 				border: 0;
 			}
+			&:last-child {
+				padding: 20px;
+			}
 		}
-		.app:last-child {
-			padding: 20px;
+
+		&:last-child {
+			margin: 0;
 		}
+
 	}
-	.category:last-child {
-		margin: 0;
-	}
+
 }

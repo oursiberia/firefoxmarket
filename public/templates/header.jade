@@ -12,11 +12,8 @@ div#mainsearch
 header
     div(uicontrols)
     div.wrap
-        div(data-ng-click="returnHome()")
-            img(src="/img/marketplace.png" alt="marketplace-logo")
-            h1
-                span.dark(translate) Firefox
-                span.thin(translate) Market
+        div#logo(data-ng-click="returnHome()")
+            img(src="/img/marketplace_logo.png" alt="marketplace-logo")
 
         div#searchbutton(translate,data-ng-click="search()") Search
 

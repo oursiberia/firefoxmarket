@@ -113,9 +113,12 @@ section#HOME(data-ng-controller="home",class="section ajax")
                 div.category(data-ng-repeat="item in appcategories")
                     div.category-title(data-name="{{item.name}}")
                         div.title-wrap
-                            div.icon
+                            div.icon(class="{{item.name}}")
+                                span.cat-icon
                             div.title-copy
                                 h3 {{item.name}}
+                                a(href="/category/{{item.name}}")
+                                    p View All From Category &#9656;
 
 
                     div(categoryapps,data-categoryname="{{item.slug}}")

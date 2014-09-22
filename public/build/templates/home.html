@@ -104,9 +104,10 @@
       <div data-ng-repeat="item in appcategories" class="category">
         <div data-name="{{item.name}}" class="category-title">
           <div class="title-wrap">
-            <div class="icon"></div>
+            <div class="icon {{item.name}}"><span class="cat-icon"></span></div>
             <div class="title-copy">
-              <h3>{{item.name}}</h3>
+              <h3>{{item.name}}</h3><a href="/category/{{item.name}}">
+                <p>View All From Category &#9656;</p></a>
             </div>
           </div>
         </div>
