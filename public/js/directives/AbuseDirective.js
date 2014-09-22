@@ -4,7 +4,7 @@
  *
  * @description
  */
-app.directive("abusedirective",["API",function(API){
+app.directive("abusedirective",["API","$http",function(API,$http){
 
     return {
         templateUrl:"/build/templates/Abuse.html",
@@ -14,7 +14,33 @@ app.directive("abusedirective",["API",function(API){
             };
         },
         link:function($scope,$el,$attr){
-            
+
+            $scope.submitAbuse = function(){
+                //get the id of the app
+                var id = window.location.href.split("/");
+                id = id[id.length - 1];
+
+                //get the text of the abuse
+                var abuse = $el[0].children[0].getElementsByTagName("textarea")[0];
+
+                console.log(abuse.value);
+                var request = $http({
+                    method:"post",
+                    url:"https://marketplace.firefox.com/api/v1/abuse/app/",
+                    data:{
+                        text:abuse.value,
+                        app:id,
+                        sprout:"potato"
+                    }
+                });
+
+                request.error(function(){
+                    console.log("problem submitting request");
+                });
+
+
+
+            }
 
         }
     }

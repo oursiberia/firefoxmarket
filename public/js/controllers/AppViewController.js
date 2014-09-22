@@ -387,8 +387,18 @@ app.controller("AppViewController",[
             box.className = box.className.replace("closed","");
 
 
+            if(box.style.opacity === "0"){
+                document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+
+                TweenMax.to(box, 0.4, {
+                    opacity: 1
+                });
+            }
+
             box.addEventListener("click",function(e){
-                if(e.target.tagName !== TEXAREA) {
+
+                if(e.target.tagName !== "TEXTAREA") {
                     TweenMax.to(box, 0.5, {
                         opacity: 0,
                         onComplete: function () {
@@ -412,9 +422,17 @@ app.controller("AppViewController",[
             //lock body
             document.getElementsByTagName("html")[0].style.overflow = "hidden";
 
+            if(box.style.opacity === "0"){
+                document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+
+                TweenMax.to(box, 0.4, {
+                    opacity: 1
+                });
+            }
 
             box.addEventListener("click",function(e){
-                if(e.target.tagName !== TEXTAREA) {
+                if(e.target.tagName !== "TEXTAREA") {
                     TweenMax.to(box, 0.5, {
                         opacity: 0,
                         onComplete: function () {
@@ -433,8 +451,20 @@ app.controller("AppViewController",[
             //lock body
             document.getElementsByTagName("html")[0].style.overflow = "hidden";
 
+
+
+            if(box.style.opacity === "0"){
+                document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+
+                TweenMax.to(box, 0.4, {
+                    opacity: 1
+                });
+            }
+
             box.addEventListener("click",function(e){
-                if(e.target.tagName !== TEXTAREA) {
+                console.log(e.target.tagName);
+                if(e.target.tagName !== "TEXTAREA") {
                     TweenMax.to(box, 0.5, {
                         opacity: 0,
                         onComplete: function () {
