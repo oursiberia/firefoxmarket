@@ -6,7 +6,7 @@
  * This handles making the modal for reviewers to submit a review and submittings.
  * Note : user needs to be logged in in order for this to trigger
  */
-app.directive("appreview",["API",function(){
+app.directive("appreview",["$http",function($http){
 
     return {
         templateUrl:"/build/templates/Review.html",
@@ -15,7 +15,39 @@ app.directive("appreview",["API",function(){
         },
 
         link:function($scope,$el,$attrs){
+            console.log($attrs);
+            $scope.name = $attrs.name;
 
+            //get the app id out of the url
+            var id = window.location.href.split("/");
+            id = id[id.length - 1];
+
+            $scope.submitReview = function(){
+                var content = $el[0].querySelector("textarea");
+                var rating = $el[0].querySelector("input").value;
+
+                rating = parseInt(rating);
+                if((rating > 5) || (rating !== NaN)){
+                    rating = 5;
+                }
+
+
+                var data = {
+                    app:id,
+                    body:content.value,
+                    rating:rating
+                }
+
+                $http({
+                    method:"post",
+                    url:"https://marketplace.firefox.com/api/v1/apps/rating/",
+                    data:data
+                }).success(function(){
+                    console.log("success");
+                }).error(function(){
+                    console.log("something went wrong");
+                })
+            }
         }
     }
 

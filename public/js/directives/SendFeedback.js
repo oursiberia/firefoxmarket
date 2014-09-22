@@ -15,6 +15,12 @@ app.directive("appfeedback",["API",function(){
 
         link:function($scope,$el,$attrs){
 
+            /**
+             * Sends feedback
+             */
+            $scope.sendFeedback = function(){
+
+            }
         }
     }
 

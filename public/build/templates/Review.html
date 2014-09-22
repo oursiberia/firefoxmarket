@@ -2,8 +2,10 @@
 <!--abuse starts out in a "closed" state.-->
 <div id="review" class="modal closed">
   <div class="modalBox">
-    <h2>Report Abuse</h2>
+    <h2>Write a review of {{name}}</h2>
     <div class="closeModal"></div>
-    <textarea name="review" placeholder="enter details of the abuse"></textarea>
+    <textarea name="review" placeholder="Write a nice review"></textarea>
+    <input type="text" name="star-rating" placeholder="enter a number between 1 and 5"/>
+    <button data-ng-click="submitReview()">Submit</button>
   </div>
 </div>

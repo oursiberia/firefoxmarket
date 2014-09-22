@@ -1,6 +1,8 @@
 //abuse starts out in a "closed" state.
 div#review(class="modal closed")
     div.modalBox
-        h2 Report Abuse
+        h2 Write a review of {{name}}
         div.closeModal
-        textarea(name="review",placeholder="enter details of the abuse")
+        textarea(name="review",placeholder="Write a nice review")
+        input(type="text" name="star-rating",placeholder="enter a number between 1 and 5")
+        button(data-ng-click="submitReview()") Submit

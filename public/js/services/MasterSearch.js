@@ -45,6 +45,7 @@ app.factory("MasterSearch",function($http){
                 }
             }
 
+
             //query api
             $http({
                 method:"GET",

@@ -398,7 +398,7 @@ app.controller("AppViewController",[
 
             box.addEventListener("click",function(e){
 
-                if(e.target.tagName !== "TEXTAREA") {
+                if(e.target.className === "modalBox") {
                     TweenMax.to(box, 0.5, {
                         opacity: 0,
                         onComplete: function () {
@@ -432,7 +432,7 @@ app.controller("AppViewController",[
             }
 
             box.addEventListener("click",function(e){
-                if(e.target.tagName !== "TEXTAREA") {
+                if(e.target.className === "modalBox") {
                     TweenMax.to(box, 0.5, {
                         opacity: 0,
                         onComplete: function () {
@@ -443,6 +443,37 @@ app.controller("AppViewController",[
                 }
             });
         };
+
+        $scope.openFeedback = function(){
+            var box = document.querySelector("#feedback");
+            box.className = box.className.replace("closed","");
+
+
+            //lock body
+            document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+            if(box.style.opacity === "0"){
+                document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+
+                TweenMax.to(box, 0.4, {
+                    opacity: 1
+                });
+            }
+
+            box.addEventListener("click",function(e){
+                if(e.target.className === "modalBox") {
+                    TweenMax.to(box, 0.5, {
+                        opacity: 0,
+                        onComplete: function () {
+                            document.getElementsByTagName("html")[0].style.overflow = "scroll";
+                            box.className = "modal closed";
+                        }
+                    });
+                }
+            });
+        };
+
 
         $scope.showPrivacyPolicy = function(){
             var box = document.querySelector("#privacy");
@@ -464,7 +495,7 @@ app.controller("AppViewController",[
 
             box.addEventListener("click",function(e){
                 console.log(e.target.tagName);
-                if(e.target.tagName !== "TEXTAREA") {
+                if(e.target.className === "modalBox") {
                     TweenMax.to(box, 0.5, {
                         opacity: 0,
                         onComplete: function () {
