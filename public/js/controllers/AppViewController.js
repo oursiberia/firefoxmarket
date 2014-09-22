@@ -379,7 +379,7 @@ app.controller("AppViewController",[
              * If we're not signed in, theres no point, flash message and stop running
              * function
              */
-            if(localStorage.getItem("loggedIn") !== "true"){
+            if((localStorage.getItem("username") === null)&&(localStorage.getItem("username") === undefined)){
                 alert("you must be logged in to write a review");
                 return;
             }
@@ -387,15 +387,16 @@ app.controller("AppViewController",[
             box.className = box.className.replace("closed","");
 
 
-            box.addEventListener("click",function(){
-
-                TweenMax.to(box,0.5,{
-                    opacity:0,
-                    onComplete:function(){
-                        document.getElementsByTagName("html")[0].style.overflow = "scroll";
-                        box.className = "modal closed";
-                    }
-                })
+            box.addEventListener("click",function(e){
+                if(e.target.tagName !== TEXAREA) {
+                    TweenMax.to(box, 0.5, {
+                        opacity: 0,
+                        onComplete: function () {
+                            document.getElementsByTagName("html")[0].style.overflow = "scroll";
+                            box.className = "modal closed";
+                        }
+                    });
+                }
             });
 
             //lock body
@@ -412,15 +413,16 @@ app.controller("AppViewController",[
             document.getElementsByTagName("html")[0].style.overflow = "hidden";
 
 
-            box.addEventListener("click",function(){
-
-                TweenMax.to(box,0.5,{
-                    opacity:0,
-                    onComplete:function(){
-                        document.getElementsByTagName("html")[0].style.overflow = "scroll";
-                        box.className = "modal closed";
-                    }
-                })
+            box.addEventListener("click",function(e){
+                if(e.target.tagName !== TEXTAREA) {
+                    TweenMax.to(box, 0.5, {
+                        opacity: 0,
+                        onComplete: function () {
+                            document.getElementsByTagName("html")[0].style.overflow = "scroll";
+                            box.className = "modal closed";
+                        }
+                    });
+                }
             });
         };
 
@@ -431,15 +433,16 @@ app.controller("AppViewController",[
             //lock body
             document.getElementsByTagName("html")[0].style.overflow = "hidden";
 
-            box.addEventListener("click",function(){
-
-                TweenMax.to(box,0.5,{
-                    opacity:0,
-                    onComplete:function(){
-                        document.getElementsByTagName("html")[0].style.overflow = "scroll";
-                        box.className = "modal closed";
-                    }
-                })
+            box.addEventListener("click",function(e){
+                if(e.target.tagName !== TEXTAREA) {
+                    TweenMax.to(box, 0.5, {
+                        opacity: 0,
+                        onComplete: function () {
+                            document.getElementsByTagName("html")[0].style.overflow = "scroll";
+                            box.className = "modal closed";
+                        }
+                    });
+                }
             });
 
             //get the policy
