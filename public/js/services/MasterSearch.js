@@ -168,8 +168,6 @@ app.factory("MasterSearch",function($http){
             for(var i = 0;i<len;++i){
                 var app = appset[i];
 
-                //pull name
-           ;
                 /**
                  * Some applications currently don't have the name of the application
                  * in all possible languages. If we run into a situation where we
@@ -177,19 +175,11 @@ app.factory("MasterSearch",function($http){
                  * that application outright. Otherwise we continue parsing.
                  */
 
-
                 if(app.name.hasOwnProperty(navigator.language)){
-                     console.log(app.name[navigator.language]);
-                    console.log(query);
-
                     if(app.name[navigator.language].search(query)){
-
                         newset.push(app);
                     }
                 }
-
-
-
             }
 
             return newset;
@@ -273,7 +263,7 @@ app.factory("MasterSearch",function($http){
                     icon:icon,
                     id:id,
                     author:app.author,
-                    ratings:ratings
+                    rating:ratings
                 });
             }
 
