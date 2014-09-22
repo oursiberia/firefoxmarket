@@ -27,7 +27,7 @@ app.factory("MasterSearch",function($http){
          * @returns {boolean}
          */
         query:function(_$scope,term,limit){
-            console.log("querying");
+
             $scope = _$scope;
             if(term === undefined){
                 //get the search term;
@@ -144,7 +144,7 @@ app.factory("MasterSearch",function($http){
                 var app = appset[i];
 
                 //just to make sure, convert both to lowercase and search for the query in the author name
-                if(app.author.toLowerCase().search(query.toLowerCase()) !== -1){
+                if(app.author.toLowerCase().search(query) !== -1){
                     newset.push(app);
                 }
             }
@@ -177,8 +177,13 @@ app.factory("MasterSearch",function($http){
                  * that application outright. Otherwise we continue parsing.
                  */
 
+
                 if(app.name.hasOwnProperty(navigator.language)){
-                    if(app.name[navigator.language].match("Games")){
+                     console.log(app.name[navigator.language]);
+                    console.log(query);
+
+                    if(app.name[navigator.language].search(query)){
+
                         newset.push(app);
                     }
                 }

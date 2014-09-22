@@ -1623,23 +1623,28 @@
 }
 
 /* line 23, ../scss/main.scss */
+button:focus, input:focus, textarea:focus {
+  outline: 0;
+}
+
+/* line 26, ../scss/main.scss */
 .rating {
   margin-top: 4px;
 }
-/* line 25, ../scss/main.scss */
+/* line 28, ../scss/main.scss */
 .rating li {
   float: left;
   height: 14px;
   width: 14px;
   margin-right: 1px;
 }
-/* line 30, ../scss/main.scss */
+/* line 33, ../scss/main.scss */
 .rating li img {
   height: 14px;
   width: 14px;
 }
 
-/* line 37, ../scss/main.scss */
+/* line 40, ../scss/main.scss */
 body, html {
   font-size: 100%;
   font-family: "FiraRegular",sans-serif;
@@ -1647,44 +1652,44 @@ body, html {
   color: #47484d;
 }
 
-/* line 44, ../scss/main.scss */
+/* line 47, ../scss/main.scss */
 .thin {
   font-family: "FiraThin";
 }
 
-/* line 48, ../scss/main.scss */
+/* line 51, ../scss/main.scss */
 h1, h2, h3, h4, h5, p {
   font-weight: normal;
 }
 
 /**======= COMMON =============*/
-/* line 53, ../scss/main.scss */
+/* line 56, ../scss/main.scss */
 ul, li {
   list-style: none;
 }
 
-/* line 57, ../scss/main.scss */
+/* line 60, ../scss/main.scss */
 .dark {
   color: #44474b;
 }
 
-/* line 61, ../scss/main.scss */
+/* line 64, ../scss/main.scss */
 .thin {
   font-family: "FiraLight";
 }
 
-/* line 65, ../scss/main.scss */
+/* line 68, ../scss/main.scss */
 a {
   text-decoration: none;
   color: #55575c;
   cursor: pointer;
 }
 
-/* line 71, ../scss/main.scss */
+/* line 74, ../scss/main.scss */
 footer {
   width: 100%;
 }
-/* line 74, ../scss/main.scss */
+/* line 77, ../scss/main.scss */
 footer#developers {
   background-position: 0 0,0 0,0 0;
   background: #00539f;
@@ -1692,16 +1697,16 @@ footer#developers {
   background-repeat: repeat,repeat,repeat-x;
   color: #fff;
 }
-/* line 80, ../scss/main.scss */
+/* line 83, ../scss/main.scss */
 footer#developers h2 {
   width: 400px;
   font-family: "FiraLight";
 }
-/* line 84, ../scss/main.scss */
+/* line 87, ../scss/main.scss */
 footer#developers img {
   width: 70px;
 }
-/* line 87, ../scss/main.scss */
+/* line 90, ../scss/main.scss */
 footer#developers #developer-link {
   width: 300px;
   height: 24px;
@@ -1721,67 +1726,67 @@ footer#developers #developer-link {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 102, ../scss/main.scss */
+/* line 105, ../scss/main.scss */
 footer#developers #developer-link:hover {
   background: #42cafe;
 }
-/* line 108, ../scss/main.scss */
+/* line 111, ../scss/main.scss */
 footer#mozilla {
   font-family: "FiraLight";
   font-size: 10px;
   color: #55575c;
 }
-/* line 112, ../scss/main.scss */
+/* line 115, ../scss/main.scss */
 footer#mozilla img {
   height: 20px;
   width: 78px;
   margin-right: 30px;
 }
-/* line 117, ../scss/main.scss */
+/* line 120, ../scss/main.scss */
 footer#mozilla p {
   max-width: 450px;
 }
-/* line 120, ../scss/main.scss */
+/* line 123, ../scss/main.scss */
 footer#mozilla .links {
   margin-top: 8px;
 }
-/* line 123, ../scss/main.scss */
+/* line 126, ../scss/main.scss */
 footer#mozilla a {
   margin-right: 10px;
   padding-right: 10px;
   border-right: 1px solid #55575C;
 }
-/* line 128, ../scss/main.scss */
+/* line 131, ../scss/main.scss */
 footer#mozilla a:last-child {
   margin: 0;
   padding: 0;
   border: 0;
 }
-/* line 135, ../scss/main.scss */
+/* line 138, ../scss/main.scss */
 footer .footer-wrapper {
   max-width: 1260px;
   margin: 0 auto;
   padding: 30px 0;
   display: block;
 }
-/* line 140, ../scss/main.scss */
+/* line 143, ../scss/main.scss */
 footer .footer-wrapper h2, footer .footer-wrapper p, footer .footer-wrapper div, footer .footer-wrapper img {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 145, ../scss/main.scss */
+/* line 148, ../scss/main.scss */
 footer .footer-wrapper p {
   position: relative;
   left: 40px;
   font-size: 14px;
 }
-/* line 151, ../scss/main.scss */
+/* line 154, ../scss/main.scss */
 footer .footer-wrapper div {
   float: right;
 }
 
 /**======= HEADER =============*/
-/* line 160, ../scss/main.scss */
+/* line 163, ../scss/main.scss */
 header {
   width: 100%;
   height: 59px;
@@ -1790,35 +1795,35 @@ header {
   padding-bottom: 20px;
   border-bottom: solid 1px lightgrey;
 }
-/* line 167, ../scss/main.scss */
+/* line 170, ../scss/main.scss */
 header h1 {
   font-family: "FiraRegular";
 }
-/* line 170, ../scss/main.scss */
+/* line 173, ../scss/main.scss */
 header .wrap {
   position: relative;
   /**======= SEARCH =============*/
 }
-/* line 172, ../scss/main.scss */
+/* line 175, ../scss/main.scss */
 header .wrap div {
   vertical-align: middle;
   cursor: pointer;
 }
-/* line 176, ../scss/main.scss */
+/* line 179, ../scss/main.scss */
 header .wrap #logo {
   margin: -4px 0 0 -7px;
   display: inline-block;
 }
-/* line 179, ../scss/main.scss */
+/* line 182, ../scss/main.scss */
 header .wrap #logo img, header .wrap #logo h1 {
   vertical-align: middle;
   display: inline-block;
 }
-/* line 183, ../scss/main.scss */
+/* line 186, ../scss/main.scss */
 header .wrap #logo img {
   height: 69px;
 }
-/* line 188, ../scss/main.scss */
+/* line 191, ../scss/main.scss */
 header .wrap #searchbutton {
   border: solid 2px #4cb1ff;
   color: #4cb1ff;
@@ -1836,23 +1841,23 @@ header .wrap #searchbutton {
   background-position: 14px 8px;
   background-repeat: no-repeat;
 }
-/* line 204, ../scss/main.scss */
+/* line 207, ../scss/main.scss */
 header .wrap #searchbutton:hover {
   border: solid 2px #42cafe;
 }
-/* line 208, ../scss/main.scss */
+/* line 211, ../scss/main.scss */
 header .wrap #user-actions {
   float: right;
   display: inline-block;
   width: 425px;
   margin-top: 12px;
 }
-/* line 215, ../scss/main.scss */
+/* line 218, ../scss/main.scss */
 header .wrap #user-actions #user img, header .wrap #user-actions #user p {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 221, ../scss/main.scss */
+/* line 224, ../scss/main.scss */
 header .wrap #user-actions #user-details {
   position: absolute;
   height: 45px;
@@ -1868,19 +1873,19 @@ header .wrap #user-actions #user-details {
   -o-transition: background 0.5s ease;
   transition: background 0.5s ease;
 }
-/* line 233, ../scss/main.scss */
+/* line 236, ../scss/main.scss */
 header .wrap #user-actions #user-details .identification {
   float: right;
 }
-/* line 235, ../scss/main.scss */
+/* line 238, ../scss/main.scss */
 header .wrap #user-actions #user-details .identification p {
   font-size: 13px;
 }
-/* line 238, ../scss/main.scss */
+/* line 241, ../scss/main.scss */
 header .wrap #user-actions #user-details .identification img {
   margin-left: 10px;
 }
-/* line 242, ../scss/main.scss */
+/* line 245, ../scss/main.scss */
 header .wrap #user-actions #user-details.open {
   -webkit-transition: background 0.5s ease;
   -moz-transition: background 0.5s ease;
@@ -1888,21 +1893,21 @@ header .wrap #user-actions #user-details.open {
   transition: background 0.5s ease;
   background: #4cb1ff;
 }
-/* line 247, ../scss/main.scss */
+/* line 250, ../scss/main.scss */
 header .wrap #user-actions #menu-trigger {
   float: right;
   margin-left: 30px;
 }
-/* line 250, ../scss/main.scss */
+/* line 253, ../scss/main.scss */
 header .wrap #user-actions #menu-trigger:hover {
   cursor: pointer;
 }
-/* line 253, ../scss/main.scss */
+/* line 256, ../scss/main.scss */
 header .wrap #user-actions #menu-trigger img {
   display: inline-block;
 }
 
-/* line 265, ../scss/main.scss */
+/* line 268, ../scss/main.scss */
 .wrap {
   max-width: 1260px;
   margin: 0 auto;
@@ -1911,7 +1916,7 @@ header .wrap #user-actions #menu-trigger img {
 /**
  *	References sections that are loading in content via AJAX
  */
-/* line 274, ../scss/main.scss */
+/* line 277, ../scss/main.scss */
 .section {
   opacity: 1;
   -webkit-transition: opacity 0.5s ease;
@@ -1919,7 +1924,7 @@ header .wrap #user-actions #menu-trigger img {
   -o-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-/* line 277, ../scss/main.scss */
+/* line 280, ../scss/main.scss */
 .section.ajax {
   opacity: 0;
   -webkit-transition: opacity 0.5s ease;
@@ -1928,13 +1933,13 @@ header .wrap #user-actions #menu-trigger img {
   transition: opacity 0.5s ease;
 }
 
-/* line 282, ../scss/main.scss */
+/* line 285, ../scss/main.scss */
 .searchcolumn {
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 286, ../scss/main.scss */
+/* line 289, ../scss/main.scss */
 #searchresults {
   position: absolute;
   min-width: 100%;
@@ -1944,13 +1949,13 @@ header .wrap #user-actions #menu-trigger img {
   top: -99990px;
   z-index: 99;
 }
-/* line 294, ../scss/main.scss */
+/* line 297, ../scss/main.scss */
 #searchresults .search-wrap {
   display: block;
   padding: 30px;
   margin: 0 auto;
 }
-/* line 299, ../scss/main.scss */
+/* line 302, ../scss/main.scss */
 #searchresults .search-wrap #searchterm {
   background: none;
   border: none;
@@ -1959,11 +1964,11 @@ header .wrap #user-actions #menu-trigger img {
   color: #fff;
   font-size: 40px;
 }
-/* line 307, ../scss/main.scss */
+/* line 310, ../scss/main.scss */
 #searchresults .search-wrap #searchterm:focus {
   outline: 0;
 }
-/* line 315, ../scss/main.scss */
+/* line 318, ../scss/main.scss */
 #searchresults #results {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -1971,7 +1976,7 @@ header .wrap #user-actions #menu-trigger img {
   position: relative;
   top: 10px;
 }
-/* line 322, ../scss/main.scss */
+/* line 325, ../scss/main.scss */
 #searchresults #results .searchresult {
   border: solid 1px red;
   width: 200px;
@@ -1979,7 +1984,7 @@ header .wrap #user-actions #menu-trigger img {
   padding: 30px;
   display: inline-block;
 }
-/* line 329, ../scss/main.scss */
+/* line 332, ../scss/main.scss */
 #searchresults #results .searchresult.app {
   display: inline-block;
 }
@@ -1990,12 +1995,12 @@ header .wrap #user-actions #menu-trigger img {
 /**
  *	Editorial content
  */
-/* line 345, ../scss/main.scss */
+/* line 348, ../scss/main.scss */
 #ecollections {
   padding: 30px 0;
 }
 
-/* line 352, ../scss/main.scss */
+/* line 355, ../scss/main.scss */
 .editorial-collections .collections .collection {
   width: 338px;
   height: 170px;
@@ -2011,16 +2016,16 @@ header .wrap #user-actions #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 364, ../scss/main.scss */
+/* line 367, ../scss/main.scss */
 .editorial-collections .collections .collection:last-child {
   width: 337px;
 }
-/* line 368, ../scss/main.scss */
+/* line 371, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps {
   max-width: 271px;
   margin: 0 auto;
 }
-/* line 371, ../scss/main.scss */
+/* line 374, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app {
   height: 70px;
   width: 70px;
@@ -2035,31 +2040,31 @@ header .wrap #user-actions #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 381, ../scss/main.scss */
+/* line 384, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app img {
   height: 70px;
   width: 70px;
 }
-/* line 386, ../scss/main.scss */
+/* line 389, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app:last-child {
   margin: 0;
 }
-/* line 391, ../scss/main.scss */
+/* line 394, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy {
   margin-top: 24px;
 }
-/* line 393, ../scss/main.scss */
+/* line 396, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy h2 {
   font-size: 20px;
   letter-spacing: -.5px;
 }
-/* line 397, ../scss/main.scss */
+/* line 400, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy p {
   font-family: "FiraLight";
   font-size: 14px;
   margin-top: 8px;
 }
-/* line 407, ../scss/main.scss */
+/* line 410, ../scss/main.scss */
 .editorial-collections .collections .collection:last-child {
   margin: 0;
 }
@@ -2067,11 +2072,11 @@ header .wrap #user-actions #menu-trigger img {
 /**
  *	Ratings
  */
-/* line 416, ../scss/main.scss */
+/* line 419, ../scss/main.scss */
 .review {
   text-align: center;
 }
-/* line 419, ../scss/main.scss */
+/* line 422, ../scss/main.scss */
 .review .review-rating {
   max-width: 100px;
   margin: 0 auto;
@@ -2080,7 +2085,7 @@ header .wrap #user-actions #menu-trigger img {
 /**
  *	the Main search container
  */
-/* line 431, ../scss/main.scss */
+/* line 434, ../scss/main.scss */
 #mainsearch {
   position: absolute;
   top: 0;
@@ -2093,32 +2098,32 @@ header .wrap #user-actions #menu-trigger img {
   overflow: hidden;
 }
 
-/* line 443, ../scss/main.scss */
+/* line 446, ../scss/main.scss */
 #nav-controls {
   position: absolute;
   width: 100%;
   top: 24px;
 }
-/* line 447, ../scss/main.scss */
+/* line 450, ../scss/main.scss */
 #nav-controls button {
   height: 50px;
   width: 25px;
   background: #4cb1ff;
   box-shadow: 0px 2px #3D86BD;
 }
-/* line 452, ../scss/main.scss */
+/* line 455, ../scss/main.scss */
 #nav-controls button:hover {
   cursor: pointer;
   background: #42cafe;
 }
-/* line 457, ../scss/main.scss */
+/* line 460, ../scss/main.scss */
 #nav-controls #back-button {
   position: absolute;
   border: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-/* line 463, ../scss/main.scss */
+/* line 466, ../scss/main.scss */
 #nav-controls #forward-button {
   right: 0;
   border: none;
@@ -2127,7 +2132,7 @@ header .wrap #user-actions #menu-trigger img {
   border-bottom-left-radius: 5px;
 }
 
-/* line 472, ../scss/main.scss */
+/* line 475, ../scss/main.scss */
 #menu-trigger {
   position: relative;
   vertical-align: middle;
@@ -2136,11 +2141,11 @@ header .wrap #user-actions #menu-trigger img {
   top: 13px;
   float: right;
 }
-/* line 480, ../scss/main.scss */
+/* line 483, ../scss/main.scss */
 #menu-trigger:hover {
   cursor: pointer;
 }
-/* line 483, ../scss/main.scss */
+/* line 486, ../scss/main.scss */
 #menu-trigger:hover .burger-element .innerfill {
   -webkit-transition: background-color 0.5s ease;
   -moz-transition: background-color 0.5s ease;
@@ -2153,14 +2158,14 @@ header .wrap #user-actions #menu-trigger img {
   border-radius: 4px;
   width: 20px;
 }
-/* line 492, ../scss/main.scss */
+/* line 495, ../scss/main.scss */
 #menu-trigger .burger-element {
   height: 4px;
   width: 25px;
   background: #000000;
   margin-bottom: 2px;
 }
-/* line 498, ../scss/main.scss */
+/* line 501, ../scss/main.scss */
 #menu-trigger .burger-element .innerfill {
   -webkit-transition: background-color 0.5s ease;
   -moz-transition: background-color 0.5s ease;
@@ -2173,7 +2178,7 @@ header .wrap #user-actions #menu-trigger img {
   width: 0px;
   height: 4px;
 }
-/* line 505, ../scss/main.scss */
+/* line 508, ../scss/main.scss */
 #menu-trigger .burger-element .innerfill.navopen {
   background-color: #333333;
   width: 0px;
