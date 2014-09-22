@@ -1,7 +1,7 @@
 section#HOME(data-ng-controller="home",class="section ajax")
         div.search-home
             div.wrap
-                div.close-search
+                div.close-search(data-ng-click="closeSearch()")
                 input.homesearch(id="homesearch",type="text",name="search",data-ng-model="searchbox",placeholder="Search for anything...",data-ng-change="searchApp()")
     
         div#search-home-result

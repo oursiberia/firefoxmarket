@@ -2,7 +2,7 @@
 <section id="HOME" data-ng-controller="home" class="section ajax">
   <div class="search-home">
     <div class="wrap">
-      <div class="close-search"></div>
+      <div data-ng-click="closeSearch()" class="close-search"></div>
       <input id="homesearch" type="text" name="search" data-ng-model="searchbox" placeholder="Search for anything..." data-ng-change="searchApp()" class="homesearch"/>
     </div>
   </div>

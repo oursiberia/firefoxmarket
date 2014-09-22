@@ -143,12 +143,15 @@ app.controller("CategoryViewController",[
             //  var apps = $filter("DesktopApps")(data.objects);
             var objects = data.objects;
             var popular = [];
+
+            //if we have a odd number of apps, pop the last one
+            if(objects.length % 4 !== 0){
+                objects.pop();
+            }
+
             for (var i = 0; i < objects.length; ++i) {
 
                 var obj = {};
-
-
-
 
                 obj.icon = objects[i].icons["64"];
                 obj.name =  objects[i].name["en-US"];
@@ -159,15 +162,7 @@ app.controller("CategoryViewController",[
 
 
                 popular.push(obj);
-
-
-
-
-
-
             }
-
-
 
             $scope.popularapps = popular;
 
@@ -184,11 +179,11 @@ app.controller("CategoryViewController",[
          */
         var timer = setInterval( function() {
             if (window.location.href.search("category") !== -1) {
-                swapApp();
+               // swapApp();
             } else {
                 clearInterval(timer);
             }
-        },50000);
+        },10000);
 
 
         /**
@@ -197,6 +192,7 @@ app.controller("CategoryViewController",[
          * @param first
          */
         function swapApp (first) {
+
             var selector = document.querySelector("#in-view-featured");
             var app = null;
             if (first) {
