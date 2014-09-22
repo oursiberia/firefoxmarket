@@ -31,11 +31,11 @@ app.controller("CollectionViewController",["$scope","API",function($scope,API){
                 background:collection.background_color,
                 slug:collection.slug,
                 url:collection.url
-            }
+            };
 
             //if there is a background image, lets add that
             if(collection.background_image !== null){
-                obj["background_image"] = collection.background_image;
+                obj.background_image = collection.background_image;
             }
 
             collections.push(obj);

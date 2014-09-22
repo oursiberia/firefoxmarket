@@ -169,7 +169,7 @@ app.controller("AppViewController",[
 
 
 
-    });//end main app details GET
+        });//end main app details GET
 
 
         /**================= TABS ==========================*/
@@ -218,7 +218,7 @@ app.controller("AppViewController",[
                                 content.innerHTML = $scope.description;
                                 clearInterval(s);
                             }
-                        }, 1000)
+                        }, 1000);
                     }else{
                         content.innerHTML = $scope.description;
 
@@ -309,13 +309,13 @@ app.controller("AppViewController",[
 
                 req = navigator.mozApps.install(final_manifest);
             }else if(app_type === "packaged"){
-                 req = navigator.mozApps.installPackage(final_manifest);
+                req = navigator.mozApps.installPackage(final_manifest);
             }
 
             req.onsuccess = function() {
                 console.log("Install process initiated");
             };
-            req.onerror = function(e) {
+            req.onerror = function() {
 
                 console.log("Install process failed");
             };
@@ -370,7 +370,7 @@ app.controller("AppViewController",[
                         document.getElementsByTagName("html")[0].style.overflow = "scroll";
                         box.className = "modal closed";
                     }
-                })
+                });
             });
         };
 
@@ -454,7 +454,7 @@ app.controller("AppViewController",[
             }).error(function(data,status,headers,config){
                 console.log("A error occured when fetching the privacy policy");
                 console.log(data);
-            })
+            });
         };
 
 
