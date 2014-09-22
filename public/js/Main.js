@@ -20,8 +20,15 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
      */
     $stateProvider.state("home",{
         url:"/",
-        templateUrl:"/build/templates/home.html"
+        templateUrl:"/build/templates/home.html",
+        onEnter:function(){
+            document.querySelector("#searchbutton").style.display = "none";
+        },
+        onExit:function(){
+            document.querySelector("#searchbutton").style.display = "inline-block";
+        }
     });
+
 
 
     /**
@@ -74,7 +81,8 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
     $rootScope.menuOpen = false;
 
 
-
+    //height the menu can expand to
+    var MENU_HEIGHT = 300;
     /////////////// LOGIN ////////////////////////
 
     /**
@@ -102,8 +110,11 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
         var username = document.querySelector("#username");
 
         if(username !== null){
-            if((localStorage.getItem("username") !== null)||(localStorage.getItem("username") !== undefined)){
+            if((localStorage.getItem("username") !== null)&&(localStorage.getItem("username") !== undefined)){
+                console.log("user is logged in",localStorage.getItem("username") );
                 username.innerHTML = localStorage.getItem("username");
+            }else{
+                console.log("user is not logged in");
             }
             clearInterval(s);
         }
@@ -121,7 +132,6 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
                 audience: window.location.origin
             },function(data) {
                 $rootScope.USER = data;
-                console.log(data);
 
                 var username = document.querySelector("#username");
 
@@ -129,6 +139,7 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
                     opacity:0,
                     onComplete:function(){
                         //change the username
+                        console.log("Username is :",data.settings.display_name);
                         username.innerHTML = data.settings.display_name;
 
                         /**
@@ -209,7 +220,7 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
             menu = document.querySelector("#user-details");
             menu.className = "open";
             TweenMax.to(menu,1,{
-                height:500
+                height:MENU_HEIGHT
             });
 
             $rootScope.menuOpen = true;

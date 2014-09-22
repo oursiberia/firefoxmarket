@@ -26,20 +26,23 @@ app.factory("MasterSearch",function($http){
          * @param $scope the scope to attach the end result to.
          * @returns {boolean}
          */
-        query:function(_$scope){
+        query:function(_$scope,term,limit){
+            console.log("querying");
             $scope = _$scope;
-            //get the search term;
-            var term = window.document.querySelector("#homesearch");
+            if(term === undefined){
+                //get the search term;
+                var term = window.document.querySelector("#homesearch");
 
-            /**
-             * if theres no search term, reject search attempt.
-             */
-            if(term.value === ""){
-                console.log("no search term entered");
-                // alert("please enter a search term");
-                return false;
-            }else{
-                query = term.value;
+                /**
+                 * if theres no search term, reject search attempt.
+                 */
+                if(term.value === ""){
+                    console.log("no search term entered");
+                    // alert("please enter a search term");
+                    return false;
+                }else{
+                    query = term.value;
+                }
             }
 
             //query api
@@ -47,7 +50,8 @@ app.factory("MasterSearch",function($http){
                 method:"GET",
                 url:"https://marketplace.firefox.com/api/v1/apps/search/?q=" + query //+ "&device=desktop"
             }).success(function(data, status, headers, config){
-                console.log(data);
+
+
                 //need to filter out unecessary content, make new array
                 var results = [];
 
@@ -57,12 +61,60 @@ app.factory("MasterSearch",function($http){
                 var description_results = API.filter(API.parseDescriptions(data.objects));
 
 
-                //set to the scope
-                $scope.author_results = author_results;
-                $scope.name_results = name_results;
-                $scope.category_results = category_results;
-                $scope.description_results = description_results;
 
+                if(limit === undefined) {
+
+                    //set to the scope
+                    $scope.author_results = author_results;
+                    $scope.name_results = name_results;
+                    $scope.category_results = category_results;
+                    $scope.description_results = description_results;
+
+                }else {
+
+                    var author_r = [];
+                    var name_r = [];
+                    var category_r = [];
+                    var description_r = [];
+
+                    if(author_results.length > 4){
+                        for( var i = 0;i<limit;++i){
+                            author_r.push(author_results[i]);
+                        }
+                    }else{
+                        author_r = author_results;
+                    }
+
+                    if(name_results.length > 4){
+                        for( var i = 0;i<limit;++i){
+                            name_r.push(name_results[i]);
+                        }
+                    }else{
+                        namer_r = name_results;
+                    }
+
+
+                    if(category_results.length > limit){
+                        for( var i = 0;i<limit;++i){
+                            category_r.push(category_results[i]);
+                        }
+                    }else{
+                        category_r = category_results;
+                    }
+
+                    if(description_results.length > limit){
+                        for( var i = 0;i<limit;++i){
+                            description_r.push(description_results[i]);
+                        }
+                    }else{
+                        description_r = description_results;
+                    }
+
+                    $scope.author_results = author_r;
+                    $scope.name_results = name_r;
+                    $scope.category_results = category_r;
+                    $scope.description_results = description_r;
+                }
 
 
             }).error(function(data, status, headers, config) {

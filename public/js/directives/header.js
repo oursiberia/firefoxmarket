@@ -14,7 +14,7 @@ app.directive("header",function(MasterSearch) {
         },
 
         link:function($scope,$el,$attrs) {
-
+            var hasSearched = false;
         	// Returns back home
         	$scope.returnHome = function() {
         		window.location = "/";
@@ -28,8 +28,10 @@ app.directive("header",function(MasterSearch) {
                 })
             };
 
-            $scope.searchApp = function(){
-                MasterSearch.query($scope,document.querySelector("#mainsearch .wrap input").value);
+            $scope.searchApp = function(e){
+
+
+                MasterSearch.query($scope,document.querySelector("#mainsearch .wrap input").value,4);
             };
         }
 

@@ -278,7 +278,10 @@ header{
 		@include transition((opacity));
 	}
 }
-
+.searchcolumn{
+	display: inline-block;
+	vertical-align: top;
+}
 #searchresults{
 	position: absolute;
 	min-width:100%;
@@ -321,6 +324,10 @@ header{
 			height: 200px;
 			padding: 30px;
 			display: inline-block;
+
+			&.app{
+				display: inline-block;
+			}
 		}
 	}
 }

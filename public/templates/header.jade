@@ -1,14 +1,32 @@
 div#mainsearch
-    div.wrap
-        input(type="text",name="search",data-ng-model="searchbox",placeholder="Search for anything...",data-ng-change="searchApp()")
+    div.search-home
+        div.wrap
+            input.homesearch(type="text",name="search",data-ng-model="searchbox",placeholder="Search for anything...",data-ng-change="searchApp()")
     div.wrap
 
-        div.resultsbyname
-            div.searchresult.app(data-ng-repeat="result in author_results")
-                a(data-ng-href="/app/{{result.id}}")
-                    img.app-icon(data-ng-src="{{result.icon}}")
-                h1.result-title {{result.name}}
-                h2.result-author {{result.author}}
+        div.resultsbyname(id="mainsearchresults")
+            div.searchcolumn
+                h2 Results by Developer
+                div.searchresult.app(data-ng-repeat="result in author_results")
+                    a(data-ng-href="/app/{{result.id}}")
+                        img.app-icon(data-ng-src="{{result.icon}}")
+                    h1.result-title {{result.name}}
+                    h2.result-author {{result.author}}
+            div.searchcolumn
+                h2 Results by Name
+                div.searchresult.app(data-ng-repeat="result in name_results")
+                    a(data-ng-href="/app/{{result.id}}")
+                        img.app-icon(data-ng-src="{{result.icon}}")
+                    h1.result-title {{result.name}}
+                    h2.result-author {{result.author}}
+
+            div.searchcolumn
+                h2 Results by Category
+                div.searchresult.app(data-ng-repeat="result in category_results")
+                    a(data-ng-href="/app/{{result.id}}")
+                        img.app-icon(data-ng-src="{{result.icon}}")
+                    h1.result-title {{result.name}}
+                    h2.result-author {{result.author}}
 header
     div(uicontrols)
     div.wrap

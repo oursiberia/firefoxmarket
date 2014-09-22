@@ -169,7 +169,7 @@ app.controller("AppViewController",[
 
 
 
-    });//end main app details GET
+        });//end main app details GET
 
 
         /**================= TABS ==========================*/
@@ -218,7 +218,7 @@ app.controller("AppViewController",[
                                 content.innerHTML = $scope.description;
                                 clearInterval(s);
                             }
-                        }, 1000)
+                        }, 1000);
                     }else{
                         content.innerHTML = $scope.description;
 
@@ -309,13 +309,13 @@ app.controller("AppViewController",[
 
                 req = navigator.mozApps.install(final_manifest);
             }else if(app_type === "packaged"){
-                 req = navigator.mozApps.installPackage(final_manifest);
+                req = navigator.mozApps.installPackage(final_manifest);
             }
 
             req.onsuccess = function() {
                 console.log("Install process initiated");
             };
-            req.onerror = function(e) {
+            req.onerror = function() {
 
                 console.log("Install process failed");
             };
@@ -370,7 +370,7 @@ app.controller("AppViewController",[
                         document.getElementsByTagName("html")[0].style.overflow = "scroll";
                         box.className = "modal closed";
                     }
-                })
+                });
             });
         };
 
@@ -379,7 +379,7 @@ app.controller("AppViewController",[
              * If we're not signed in, theres no point, flash message and stop running
              * function
              */
-            if(localStorage.getItem("loggedIn") !== "true"){
+            if((localStorage.getItem("username") === null)&&(localStorage.getItem("username") === undefined)){
                 alert("you must be logged in to write a review");
                 return;
             }
@@ -387,15 +387,26 @@ app.controller("AppViewController",[
             box.className = box.className.replace("closed","");
 
 
-            box.addEventListener("click",function(){
+            if(box.style.opacity === "0"){
+                document.getElementsByTagName("html")[0].style.overflow = "hidden";
 
-                TweenMax.to(box,0.5,{
-                    opacity:0,
-                    onComplete:function(){
-                        document.getElementsByTagName("html")[0].style.overflow = "scroll";
-                        box.className = "modal closed";
-                    }
-                })
+
+                TweenMax.to(box, 0.4, {
+                    opacity: 1
+                });
+            }
+
+            box.addEventListener("click",function(e){
+
+                if(e.target.tagName !== "TEXTAREA") {
+                    TweenMax.to(box, 0.5, {
+                        opacity: 0,
+                        onComplete: function () {
+                            document.getElementsByTagName("html")[0].style.overflow = "scroll";
+                            box.className = "modal closed";
+                        }
+                    });
+                }
             });
 
             //lock body
@@ -411,16 +422,25 @@ app.controller("AppViewController",[
             //lock body
             document.getElementsByTagName("html")[0].style.overflow = "hidden";
 
+            if(box.style.opacity === "0"){
+                document.getElementsByTagName("html")[0].style.overflow = "hidden";
 
-            box.addEventListener("click",function(){
 
-                TweenMax.to(box,0.5,{
-                    opacity:0,
-                    onComplete:function(){
-                        document.getElementsByTagName("html")[0].style.overflow = "scroll";
-                        box.className = "modal closed";
-                    }
-                })
+                TweenMax.to(box, 0.4, {
+                    opacity: 1
+                });
+            }
+
+            box.addEventListener("click",function(e){
+                if(e.target.tagName !== "TEXTAREA") {
+                    TweenMax.to(box, 0.5, {
+                        opacity: 0,
+                        onComplete: function () {
+                            document.getElementsByTagName("html")[0].style.overflow = "scroll";
+                            box.className = "modal closed";
+                        }
+                    });
+                }
             });
         };
 
@@ -431,15 +451,28 @@ app.controller("AppViewController",[
             //lock body
             document.getElementsByTagName("html")[0].style.overflow = "hidden";
 
-            box.addEventListener("click",function(){
 
-                TweenMax.to(box,0.5,{
-                    opacity:0,
-                    onComplete:function(){
-                        document.getElementsByTagName("html")[0].style.overflow = "scroll";
-                        box.className = "modal closed";
-                    }
-                })
+
+            if(box.style.opacity === "0"){
+                document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+
+                TweenMax.to(box, 0.4, {
+                    opacity: 1
+                });
+            }
+
+            box.addEventListener("click",function(e){
+                console.log(e.target.tagName);
+                if(e.target.tagName !== "TEXTAREA") {
+                    TweenMax.to(box, 0.5, {
+                        opacity: 0,
+                        onComplete: function () {
+                            document.getElementsByTagName("html")[0].style.overflow = "scroll";
+                            box.className = "modal closed";
+                        }
+                    });
+                }
             });
 
             //get the policy
@@ -451,7 +484,7 @@ app.controller("AppViewController",[
             }).error(function(data,status,headers,config){
                 console.log("A error occured when fetching the privacy policy");
                 console.log(data);
-            })
+            });
         };
 
 
