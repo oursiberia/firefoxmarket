@@ -16,6 +16,10 @@ app.directive("footer",function() {
 
         link:function($scope,$el,$attrs) {
 
+            $scope.toTheHub = function(){
+                //https://addons.mozilla.org/en-US/developers/
+                window.open("https://addons.mozilla.org/en-US/developers/","target=_blank");
+            }
         }
     }
 });
