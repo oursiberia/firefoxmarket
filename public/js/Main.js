@@ -196,25 +196,27 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
      */
     $rootScope.openMenu = function(e){
         // if(localStorageService.getItem("loggedin") != "true"){
+        var burger = document.querySelector("#menu-trigger");
         var el = 0;
         var menu = 0;
         if($rootScope.menuOpen === false){
 
-            if(e.target.tagName == "DIV"){
-                el = e.target.children[0];
-                TweenMax.to(el,1,{
-                    css:{
-                        rotation:180
-                    }
-                });
-            }else{
-                el = e.target;
-                TweenMax.to(el,1,{
-                    css:{
-                        rotation:180
-                    }
-                });
-            }
+            TweenMax.to(burger.children[0],0.5,{
+                transform:"rotateZ(45deg)",
+                marginTop:5 + "px",
+                ease:"Power3.easeInOut"
+            })
+
+            TweenMax.to(burger.children[2],0.5,{
+                opacity:0,
+                ease:"Power3.easeInOut"
+            })
+
+            TweenMax.to(burger.children[1],0.5,{
+                transform:"rotateZ(-45deg)",
+                marginTop:-6 + "px",
+                ease:"Power3.easeInOut"
+            })
 
 
             menu = document.querySelector("#user-details");
@@ -226,27 +228,29 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
             $rootScope.menuOpen = true;
         }else{
 
-            if(e.target.tagName == "DIV"){
-                el = e.target.children[0];
-                TweenMax.to(el,1,{
-                    css:{
-                        rotation:-180
-                    }
-                });
-            }else{
-                el = e.target;
-                TweenMax.to(el,1,{
-                    css:{
-                        rotation:-180
-                    }
-                });
-            }
 
+            TweenMax.to(burger.children[0],0.5,{
+                transform:"rotateZ(0deg)",
+                marginTop:0 + "px",
+                ease:"Power3.easeInOut"
+            })
+
+            TweenMax.to(burger.children[2],0.5,{
+                opacity:1,
+                ease:"Power3.easeInOut"
+            })
+
+            TweenMax.to(burger.children[1],0.5,{
+                transform:"rotateZ(0deg)",
+                marginTop:0 + "px",
+                ease:"Power3.easeInOut"
+            })
 
             menu = document.querySelector("#user-details");
             menu.className = "";
             TweenMax.to(menu,1,{
-                height:45
+                height:45,
+                ease:"Power3.easeInOut"
             });
 
 

@@ -71,6 +71,8 @@ app.factory("MasterSearch",function($http){
                     $scope.category_results = category_results;
                     $scope.description_results = description_results;
 
+                    console.log(author_results[0],name_results[0],category_results[0],description_results[0]);
+
                 }else {
 
                     var author_r = [];
@@ -265,6 +267,7 @@ app.factory("MasterSearch",function($http){
                     name:name,
                     icon:icon,
                     id:id,
+                    author:app.author,
                     ratings:ratings
                 });
             }

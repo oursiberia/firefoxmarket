@@ -1,6 +1,7 @@
 div#mainsearch
     div.search-home
         div.wrap
+            div.close-search(data-ng-click="closeSearch()")
             input.homesearch(type="text",name="search",data-ng-model="searchbox",placeholder="Search for anything...",data-ng-change="searchApp()")
     div.wrap
 
@@ -38,7 +39,7 @@ header
             div#user
                 div#user-details
                     div#menu-trigger(data-ng-click="openMenu($event)")
-                        img(src="/img/menu_gear.png")
+
                     div.identification
                         p#username(data-ng-click="login()",translate) Sign in
                         img(src="/img/test_user.svg")
