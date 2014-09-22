@@ -151,19 +151,19 @@
 }
 
 /* line 22, ../scss/_home.scss */
-#search-home {
+.search-home {
   height: 200px;
   width: 100%;
   background: #55575c;
   position: relative;
 }
 /* line 27, ../scss/_home.scss */
-#search-home div.wrap {
+.search-home div.wrap {
   padding: 20px;
   padding-top: 50px;
 }
 /* line 30, ../scss/_home.scss */
-#search-home div.wrap #homesearch {
+.search-home div.wrap .homesearch {
   font-family: "FiraThin";
   outline: none;
   background: none;

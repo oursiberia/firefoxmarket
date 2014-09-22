@@ -20,7 +20,13 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
      */
     $stateProvider.state("home",{
         url:"/",
-        templateUrl:"/build/templates/home.html"
+        templateUrl:"/build/templates/home.html",
+        onEnter:function(){
+            document.querySelector("#searchbutton").style.display = "none";
+        },
+        onExit:function(){
+            document.querySelector("#searchbutton").style.display = "inline-block";
+        }
     });
 
 

@@ -19,7 +19,7 @@
 	}
 }
 
-#search-home{
+.search-home{
 	height:200px;
 	width:100%;
 	background: $dark_gray;
@@ -27,7 +27,7 @@
 	div.wrap{
 		padding:20px;
 		padding-top:50px;
-		#homesearch{
+		.homesearch{
 			font-family: "FiraThin";
 			outline: none;
 			background: none;
