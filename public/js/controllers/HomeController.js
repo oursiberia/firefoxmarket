@@ -266,20 +266,20 @@ app.controller("home",[
 
         $scope.appcategories = [
             {
-                name:"Games",
+                name:"games",
                 slug:"games"
             },
             {
-                name:"Productivity",
+                name:"productivity",
                 slug:"productivity"
             },
 
             {
-                name:"Music",
+                name:"music",
                 slug:"music"
             },
             {
-                name:"Social",
+                name:"social",
                 slug:"social"
             }
         ];

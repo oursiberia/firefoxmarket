@@ -346,6 +346,16 @@ $borderColor:rgb(211,211,211);
 				position: relative;
 				float: right;
 				top: 23px;
+				p {
+					color: #4CB1FF;
+					width: 100%;
+					text-align: center;
+				}
+				&:hover {
+					p {
+						color: #fff;
+					}
+				}
 			}
 
 		}
@@ -462,6 +472,8 @@ $borderColor:rgb(211,211,211);
 	padding-top: 32px;
 	background: #47484D;
 	border-top: 1px solid #2C2C2F;
+	background-image: url(../img/header-background.png);
+	background-repeat: repeat;
 	h3 {color: #fff;}
 	.apps{
 		width: 100%;
@@ -508,12 +520,14 @@ $borderColor:rgb(211,211,211);
 					}
 				}
 				.app-download-button {
-					background: $dark_gray;
 					height: 24px;
 					cursor: pointer;
 					position: absolute;
 					right: 0;
 					bottom: 0;
+					&:hover {
+						background: #4CB1FF;
+					}
 				}
 			}
 			&:last-child {

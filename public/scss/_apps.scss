@@ -9,7 +9,7 @@
 	@include border-radius(5px);
 
 	&.with-description{
-		height:153px;
+		height:154px;
 	}
 
 	&.with-review{
@@ -24,7 +24,7 @@
 
 	.app-details{
 		border-bottom: solid 1px #D6D6D6;
-		padding-bottom: 20px;
+		padding-bottom: 12px;
 
 		.app-image,.app-copy{
 			display: inline-block;
@@ -41,18 +41,21 @@
 				position:absolute;
 				right:0;
 				bottom:0;
-				width:65px;
+				width:60px;
 				height:25px;
-				border-radius: 4px;
-				background: #333;
-				color:#fff;
+				@include border-radius(5px);
 				
-				&:hover{
+				&:hover {
 					cursor: pointer;
+					background: #4CB1FF;
+					p {
+						color: #fff;
+					}
 				}
 				p{
 					text-align: center;
 					font-size:13px;
+					color: #4CB1FF;
 				}
 			}
 
@@ -67,7 +70,7 @@
 					font-family: "FiraLight";
 				}
 				div {
-					height: 15px;
+					height: 18px;
 					width: 100%;
 				}
 			}
@@ -80,6 +83,7 @@
 		font-size:14px;
 		font-family: "FiraLight";
 		overflow: hidden;
+		margin-top: 16px;
 	}
 }
 
@@ -92,12 +96,12 @@
  */
 
 .app-download-button{
-	width:65px;
+	width:60px;
 	height:23px;
 	padding-top: 1px;
-	border-radius: 4px;
+	@include border-radius(5px);
 	position: relative;
-	background: $dark_gray;
+	border: 1px solid #4CB1FF;
 
 	/**
 	 *	For containers that are smaller(ie app view in the other applications category)
@@ -108,12 +112,19 @@
 	}
 	p{
 		position: absolute;
-		top:2px;
-		left:19px;
+		top: 3px;
 		font-size: 13px;
 		color:#fff;
 		color:#fff;
 		font-family: "FiraRegular";
+		width: 100%;
+	}
+	&:hover {
+		cursor: pointer;
+		background: #4CB1FF;
+		p {
+			color: #fff;
+		}
 	}
 }
 

@@ -2,6 +2,7 @@
 <section id="HOME" data-ng-controller="home" class="section ajax">
   <div class="search-home">
     <div class="wrap">
+      <div class="close-search"></div>
       <input id="homesearch" type="text" name="search" data-ng-model="searchbox" placeholder="Search for anything..." data-ng-change="searchApp()" class="homesearch"/>
     </div>
   </div>
@@ -27,30 +28,6 @@
           <h1 class="result-title">{{result.name}}</h1>
           <h2 class="result-author">{{result.author}}</h2>
           <div starrating="starrating" data-rating="{{app.rating}}"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="featured">
-    <div class="wrap">
-      <div class="home-apps">
-        <div data-ng-repeat="app in featured_apps" class="{{app.classname}} featured {{app.showfirst}} with-description">
-          <div class="app-wrap">
-            <div class="app-details">
-              <div class="app-image"><a data-ng-href="/app/{{app.id}}"><img data-ng-src="{{app.icon}}" class="app-icon"/></a></div>
-              <div class="app-copy">
-                <div class="app-download-button">
-                  <p data-ng-click="initPurchase(app.app_type,app.manifest_url)">{{app.premium_type}}</p>
-                </div><a data-ng-href="/app/{{app.id}}">
-                  <h1 class="app-title">{{app.name}}</h1>
-                  <h2 class="app-author">{{app.author}}</h2>
-                  <div starrating="starrating" data-rating="{{app.rating}}"></div></a>
-              </div>
-            </div>
-            <div class="app-description">
-              <p data-ng-bind-html="app.description | htmlRender "></p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -94,19 +71,44 @@
       </div>
     </div>
   </div>
+  <div id="featured">
+    <div class="wrap">
+      <div class="home-apps">
+        <div data-ng-repeat="app in featured_apps" class="{{app.classname}} featured {{app.showfirst}} with-description">
+          <div class="app-wrap">
+            <div class="app-details">
+              <div class="app-image"><a data-ng-href="/app/{{app.id}}"><img data-ng-src="{{app.icon}}" class="app-icon"/></a></div>
+              <div class="app-copy">
+                <div class="app-download-button">
+                  <p data-ng-click="initPurchase(app.app_type,app.manifest_url)">Install</p>
+                </div><a data-ng-href="/app/{{app.id}}">
+                  <h1 class="app-title">{{app.name}}</h1>
+                  <h2 class="app-author">{{app.author}}</h2>
+                  <div starrating="starrating" data-rating="{{app.rating}}"></div></a>
+              </div>
+            </div>
+            <div class="app-description">
+              <p data-ng-bind-html="app.description | htmlRender "></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <div id="category-list">
     <div class="wrap">
       <div class="controls">
-        <h1>Most Popular</h1>
-        <h1 class="thin">Recently Released</h1>
+        <h1>Categories:</h1>
+        <div class="toggle"><span class="active">Popular</span><span>Recent</span></div>
         <button>View All Categories</button>
       </div>
       <div data-ng-repeat="item in appcategories" class="category">
         <div data-name="{{item.name}}" class="category-title">
           <div class="title-wrap">
-            <div class="icon"></div>
+            <div class="icon {{item.name}}"><span class="cat-icon"></span></div>
             <div class="title-copy">
-              <h3>{{item.name}}</h3>
+              <h3>{{item.name}}</h3><a href="/category/{{item.name}}">
+                <p>View All From Category &#9656;</p></a>
             </div>
           </div>
         </div>
