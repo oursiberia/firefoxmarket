@@ -9,25 +9,65 @@
   <div id="search-home-result">
     <div class="wrap">
       <div class="resultsbyname">
-        <div data-ng-repeat="result in author_results" class="searchresult"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a>
-          <h1 class="result-title">{{result.name}}</h1>
-          <h2 class="result-author">{{result.author}}</h2>
-          <div starrating="starrating" data-rating="{{app.rating}}"></div>
+        <div data-ng-repeat="result in author_results" class="searchresult">
+          <div class="app-wrap">
+            <div class="app-details">
+              <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
+              <div class="app-copy">
+                <div class="app-download-button">
+                  <p data-ng-click="initPurchase(app.app_type,app.manifest_url)">Install</p>
+                </div><a data-ng-href="/app/{{app.id}}">
+                  <h1 class="app-title">{{result.name}}</h1>
+                  <h2 class="app-author">{{result.author}}</h2>
+                  <div starrating="starrating" data-rating="{{app.rating}}"></div></a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div data-ng-repeat="result in name_results" class="searchresult"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a>
-          <h1 class="result-title">{{result.name}}</h1>
-          <h2 class="result-author">{{result.author}}</h2>
-          <div starrating="starrating" data-rating="{{app.rating}}"></div>
+        <div data-ng-repeat="result in name_results" class="searchresult">
+          <div class="app-wrap">
+            <div class="app-details">
+              <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
+              <div class="app-copy">
+                <div class="app-download-button">
+                  <p data-ng-click="initPurchase(app.app_type,app.manifest_url)">Install</p>
+                </div><a data-ng-href="/app/{{app.id}}">
+                  <h1 class="app-title">{{result.name}}</h1>
+                  <h2 class="app-author">{{result.author}}</h2>
+                  <div starrating="starrating" data-rating="{{app.rating}}"></div></a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div data-ng-repeat="result in category_results" class="searchresult"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a>
-          <h1 class="result-title">{{result.name}}</h1>
-          <h2 class="result-author">{{result.author}}</h2>
-          <div starrating="starrating" data-rating="{{app.rating}}"></div>
+        <div data-ng-repeat="result in category_results" class="searchresult">
+          <div class="app-wrap">
+            <div class="app-details">
+              <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
+              <div class="app-copy">
+                <div class="app-download-button">
+                  <p data-ng-click="initPurchase(app.app_type,app.manifest_url)">Install</p>
+                </div><a data-ng-href="/app/{{app.id}}">
+                  <h1 class="app-title">{{result.name}}</h1>
+                  <h2 class="app-author">{{result.author}}</h2>
+                  <div starrating="starrating" data-rating="{{app.rating}}"></div></a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div data-ng-repeat="result in description_results" class="searchresult"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a>
-          <h1 class="result-title">{{result.name}}</h1>
-          <h2 class="result-author">{{result.author}}</h2>
-          <div starrating="starrating" data-rating="{{app.rating}}"></div>
+        <div data-ng-repeat="result in description_results" class="searchresult">
+          <div class="app-wrap">
+            <div class="app-details">
+              <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
+              <div class="app-copy">
+                <div class="app-download-button">
+                  <p data-ng-click="initPurchase(app.app_type,app.manifest_url)">Install</p>
+                </div><a data-ng-href="/app/{{app.id}}">
+                  <h1 class="app-title">{{result.name}}</h1>
+                  <h2 class="app-author">{{result.author}}</h2>
+                  <div starrating="starrating" data-rating="{{app.rating}}"></div></a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -66,6 +66,47 @@
 
 	.searchresult{
 		display: inline-block;
+		height: 60px;
+		width: 258px;
+		margin-bottom: 13px;
+		padding: 20px;
+		background: #fff;
+		border: 1px solid #D3D3D3;
+		@include border-radius(5px);
+		.app-details {
+			position: relative;
+			.app-image, .app-copy {
+				position: absolute;
+				display: inline-block;
+				vertical-align: top;
+			}
+			.app-image {
+				height: 60px;
+				width: 60px;
+				overflow: hidden;
+				@include border-radius(5px);
+				a {
+					height: 60px;
+					width: 60px;
+					display: inline-block;
+				}
+				img {
+					height: 100%;
+					width: 100%;
+				}
+			}
+			.app-copy {
+				margin-left: 60px;
+				.app-download-button {
+					position: absolute;
+					right: 0px;
+					bottom: 0px;
+					width: 60px;
+					height: 24px;
+					@include border-radius(5px);
+				}
+			}
+		}
 	}
 
 	.resultsbyname {
