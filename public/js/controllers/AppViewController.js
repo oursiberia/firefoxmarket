@@ -194,6 +194,13 @@ app.controller("AppViewController",[
                 target = e.target;
             }
 
+            //remove active status from all triggers
+            var triggers = document.getElementsByClassName("tabs")[0].children;
+            console.log(triggers);
+            for(var i = 0;i<3;++i){
+                triggers[i].className = "tab-trigger";
+            }
+
 
             /**
              * If we've clicked on the tab button but the copy node
@@ -203,6 +210,8 @@ app.controller("AppViewController",[
             if (target.tagName === "H4") {
                 target = e.target.parentNode;
             }
+
+            target.className = "tab-trigger active";
 
 
             /**
