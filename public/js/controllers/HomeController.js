@@ -285,5 +285,9 @@ app.controller("home",[
         ];
 
 
+        $scope.closeSearch = function(){
+
+        };
+
 
     }]);//end controller
