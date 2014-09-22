@@ -142,7 +142,7 @@ section#HOME(data-ng-controller="home",class="section ajax")
             div.wrap
                 div.controls
                     h1 Categories:
-                    div.toggle
+                    div.toggle(data-ng-click="toggleCategoryTypes($event)")
                         span.active Popular
                         span Recent
                     button View All Categories

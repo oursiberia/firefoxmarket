@@ -524,6 +524,11 @@
   margin: 0;
 }
 
+/* line 364, ../scss/_home.scss */
+.category-apps .recent-category {
+  display: none;
+}
+
 /* line 1, ../scss/_category.scss */
 #category-page {
   background: #F6F6F6;

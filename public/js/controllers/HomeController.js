@@ -296,5 +296,31 @@ app.controller("home",[
             });
         };
 
+        $scope.toggleCategoryTypes = function(e){
+            if(e.target.tagName === "SPAN"){
+                var parent = e.target.parentNode;
+                var target = e.target;
+
+                for(var i = 0; i<parent.children.length;++i){
+                    parent.children[i].className = "";
+
+                }
+
+                target.className = "active";
+
+                switch(target.innerHTML){
+                    case "Popular":
+                        $rootScope.$broadcast("CATEGORY_POPULAR");
+                        break;
+
+
+                    case "Recent":
+                            $rootScope.$broadcast("CATEGORY_RECENT");
+                        break;
+                }
+
+            }
+        }
+
 
     }]);//end controller
