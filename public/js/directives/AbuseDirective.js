@@ -40,8 +40,8 @@ app.directive("abusedirective",["API","$http",function(API,$http){
 
 
 
-            }
+            };
 
         }
-    }
+    };
 }]);

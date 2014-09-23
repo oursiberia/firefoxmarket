@@ -4,13 +4,13 @@ footer#developers
         h2(translate) 
             span Develop for the Open Web
         p(translate) Lorem ipsum apple mapple bop
-        div#developer-link Visit the Developer Hub
+        div#developer-link(data-ng-click="toTheHub()") Visit the Developer Hub
 
 footer#mozilla
     div.footer-wrapper
         img(src="/img/mozilla_logo.svg" alt="mozilla logo")
         p Except where otherwise noted, content on this site is licensed under the Creative Commons Attribution Share-Alike License v3.0 or any later version.
         div.links
-            a(translate) Privacy Policy
-            a(translate) Terms of Use
-            a(translate) Report Trademark Abuse
+            a(translate,href="https://www.mozilla.org/privacy/websites/",target="_blank") Privacy Policy
+            a(translate, href="https://www.mozilla.org/about/legal/",target="_blank") Terms of Use
+            a(translate, href="https://www.mozilla.org/legal/fraud-report/",target="_blank") Report Trademark Abuse

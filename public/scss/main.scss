@@ -20,6 +20,10 @@ $mainColor:#333;
 	}
 }
 
+::-webkit-scrollbar{
+	opacity:0;
+}
+
 button:focus,input:focus,textarea:focus{
 	outline: 0;
 }

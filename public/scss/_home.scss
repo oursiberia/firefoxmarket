@@ -56,10 +56,10 @@
 
 }//end #search-home
 
-#search-home-result{
-	height: 0px;
-	width: 100%;
-	background: rgba(255, 255, 255, 0.98);
+#search-home-result,#search-result{
+	height:0px;
+	width:100%;
+	background: rgba(255, 255, 255, 0.95);
 	position: absolute;
 	top: 300px;
 	z-index: 99;
@@ -406,4 +406,11 @@
 
 	}
 
+
+}
+
+.category-apps{
+	.recent-category{
+		display: none;
+	}
 }

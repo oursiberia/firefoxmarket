@@ -31,6 +31,7 @@ module.exports = function(grunt){
         base + "bower_components/angular-local-storage/LocalStorage.js",
         base + "bower_components/angular-gettext/dist/angular-gettext.js",
         jsdir + "/libs/plugins/CSSPlugin.js",
+        jsdir + "/libs/plugins/ScrollToPlugin.js",
         jsdir + "libs/TweenMax.js"
     ];
     console.log(__dirname + "/public/build/translation.html");

@@ -264,12 +264,23 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
      * we need to prevent scrolling
      */
     $rootScope.lockBody = function(){
+        console.log("body locked")
+        TweenMax.to(window,0.5,{
+            scrollTo:{
+                y:0
+            },
+            ease:"Power3.easeInOut"
+
+        });
+
         document.getElementsByTagName("html")[0].style.overflow = "hidden";
     };
 
     $rootScope.unlockBody = function(){
         document.getElementsByTagName("html")[0].style.overflow = "scroll";
     };
+
+
 
 
 });

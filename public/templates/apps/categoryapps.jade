@@ -1,6 +1,6 @@
 div.category-apps
     div.apps
-        div(data-ng-repeat="app in capps",class="app")
+        div(data-ng-repeat="app in capps",class="app", class="popular-category")
                 div.app-wrap
                     div.app-details
                         div.app-image
@@ -13,3 +13,18 @@ div.category-apps
                                 h1.app-title {{app.name}}
                                 h2.app-author {{app.author}}
                                 div(data-starrating,data-rating="{{app.rating}}")
+
+
+        div(data-ng-repeat="app in recent_capps",class="app" class="recent-category")
+            div.app-wrap
+                div.app-details
+                    div.app-image
+                        a(data-ng-href="/app/{{app.id}}")
+                            img.app-icon(ng-src="{{app.icon}}")
+                    div.app-copy
+                        div.app-download-button
+                            p(data-ng-click="initPurchase(app.app_type,app.manifest_url)") Install
+                        a(data-ng-href="/app/{{app.id}}")
+                            h1.app-title {{app.name}}
+                            h2.app-author {{app.author}}
+                            div(data-starrating,data-rating="{{app.rating}}")

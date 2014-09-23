@@ -34,6 +34,6 @@ app.directive("appreviews",["API","$filter",function(API,$filter) {
 
             });
         }
-    }
+    };
 
 }]);

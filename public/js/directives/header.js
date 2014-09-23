@@ -31,9 +31,9 @@ app.directive("header",function(MasterSearch,$rootScope) {
 
 
             var hasSearched = false;
-        	// Returns back home
-        	$scope.returnHome = function() {
-        		window.location = "/";
+            // Returns back home
+            $scope.returnHome = function() {
+                window.location = "/";
             };
 
             $scope.search = function(){
@@ -44,7 +44,7 @@ app.directive("header",function(MasterSearch,$rootScope) {
                     onComplete:function(){
                         $rootScope.lockBody();
                     }
-                })
+                });
             };
 
 

@@ -2,7 +2,7 @@
 <section id="HOME" data-ng-controller="home" class="section ajax">
   <div class="search-home">
     <div class="wrap">
-      <div class="close-search"></div>
+      <div data-ng-click="closeSearch()" class="close-search"></div>
       <input id="homesearch" type="text" name="search" data-ng-model="searchbox" placeholder="Search for anything..." data-ng-change="searchApp()" class="homesearch"/>
     </div>
   </div>
@@ -189,7 +189,7 @@
     <div class="wrap">
       <div class="controls">
         <h1>Categories:</h1>
-        <div class="toggle"><span class="active">Popular</span><span>Recent</span></div>
+        <div data-ng-click="toggleCategoryTypes($event)" class="toggle"><span class="active">Popular</span><span>Recent</span></div>
         <button>View All Categories</button>
       </div>
       <div data-ng-repeat="item in appcategories" class="category">
