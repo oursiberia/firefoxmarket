@@ -7,70 +7,99 @@ section#HOME(data-ng-controller="home",class="section ajax")
         div#search-home-result
             div.wrap
                 div.resultsbyname
-                    div.searchresult(data-ng-repeat="result in author_results")
-                        div.app-wrap
-                            div.app-details
-                                div.app-image
-                                    a(data-ng-href="/app/{{result.id}}")
-                                        img.app-icon(data-ng-src="{{result.icon}}")
+                    div.searchcolumn
+                        div.result-relevance
+                            div.relevance
+                                h1 Relevance:
+                                h2 Name
+                                div.total
+                                    p results
+                        div.searchresult(data-ng-repeat="result in name_results")
+                            div.app-wrap
+                                div.app-details
+                                    div.app-image
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            img.app-icon(data-ng-src="{{result.icon}}")
 
-                                div.app-copy
-                                    div.app-download-button
-                                        p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
-                                    a(data-ng-href="/app/{{app.id}}")
-                                        h1.app-title {{result.name}}
-                                        h2.app-author {{result.author}}
-                                        div(starrating,data-rating="{{result.rating}}",data-delay="true")
+                                    div.app-copy
+                                        div.app-download-button
+                                            p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            h1.app-title {{result.name}}
+                                            h2.app-author {{result.author}}
+                                            div(starrating,data-rating="{{result.rating}}",data-delay="true")
 
-                    div.searchresult(data-ng-repeat="result in name_results")
-                        div.app-wrap
-                            div.app-details
-                                div.app-image
-                                    a(data-ng-href="/app/{{result.id}}")
-                                        img.app-icon(data-ng-src="{{result.icon}}")
+                    div.searchcolumn
+                        div.result-relevance
+                            div.relevance
+                                h1 Relevance:
+                                h2 Developer
+                                div.total
+                                    p results
+                        div.searchresult(data-ng-repeat="result in author_results")
+                            div.app-wrap
+                                div.app-details
+                                    div.app-image
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            img.app-icon(data-ng-src="{{result.icon}}")
 
-                                div.app-copy
-                                    div.app-download-button
-                                        p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
-                                    a(data-ng-href="/app/{{app.id}}")
-                                        h1.app-title {{result.name}}
-                                        h2.app-author {{result.author}}
-                                        div(starrating,data-rating="{{result.rating}}",data-delay="true")
+                                    div.app-copy
+                                        div.app-download-button
+                                            p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            h1.app-title {{result.name}}
+                                            h2.app-author {{result.author}}
+                                            div(starrating,data-rating="{{result.rating}}",data-delay="true")
 
-                    div.searchresult(data-ng-repeat="result in category_results")
-                        div.app-wrap
-                            div.app-details
-                                div.app-image
-                                    a(data-ng-href="/app/{{result.id}}")
-                                        img.app-icon(data-ng-src="{{result.icon}}")
+                    div.searchcolumn
+                        div.result-relevance
+                            div.relevance
+                                h1 Relevance:
+                                h2 Category
+                                div.total
+                                    p results
+                        div.searchresult(data-ng-repeat="result in category_results")
+                            div.app-wrap
+                                div.app-details
+                                    div.app-image
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            img.app-icon(data-ng-src="{{result.icon}}")
 
-                                div.app-copy
-                                    div.app-download-button
-                                        p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
-                                    a(data-ng-href="/app/{{app.id}}")
-                                        h1.app-title {{result.name}}
-                                        h2.app-author {{result.author}}
-                                        div(starrating,data-rating="{{result.rating}}",data-delay="true")
-                                            
-                    div.searchresult(data-ng-repeat="result in description_results")
-                        div.app-wrap
-                            div.app-details
-                                div.app-image
-                                    a(data-ng-href="/app/{{result.id}}")
-                                        img.app-icon(data-ng-src="{{result.icon}}")
+                                    div.app-copy
+                                        div.app-download-button
+                                            p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            h1.app-title {{result.name}}
+                                            h2.app-author {{result.author}}
+                                            div(starrating,data-rating="{{result.rating}}",data-delay="true")
+                    
+                    div.searchcolumn
+                        div.result-relevance
+                            div.relevance
+                                h1 Relevance:
+                                h2 Description
+                                div.total
+                                    p results
+                        div.searchresult(data-ng-repeat="result in description_results")
+                            div.app-wrap
+                                div.app-details
+                                    div.app-image
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            img.app-icon(data-ng-src="{{result.icon}}")
 
-                                div.app-copy
-                                    div.app-download-button
-                                        p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
-                                    a(data-ng-href="/app/{{app.id}}")
-                                        h1.app-title {{result.name}}
-                                        h2.app-author {{result.author}}
-                                        div(starrating,data-rating="{{result.rating}}",data-delay="true")
+                                    div.app-copy
+                                        div.app-download-button
+                                            p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            h1.app-title {{result.name}}
+                                            h2.app-author {{result.author}}
+                                            div(starrating,data-rating="{{result.rating}}",data-delay="true")
 
         div#ecollections(class="editorial-collections")
             div.wrap
                 div.collections
                     div.collection
+                        div.curve
                         div.collection-apps
                             div.collection-app
                                 a(href="/app/{{staff_one.id}}")
@@ -81,10 +110,12 @@ section#HOME(data-ng-controller="home",class="section ajax")
                             div.collection-app
                                 a(href="/app/{{staff_three.id}}")
                                     img(src="{{staff_three.image}}")
+                        div.alt-curve
                         div.collection-copy
-                                h2(translate) Our Staff Picks
+                                h2(translate) Video On The Go
                                 p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.
                     div.collection
+                        div.curve
                         div.collection-apps
                             div.collection-app
                                 a(href="/app/{{games_one.id}}")
@@ -95,10 +126,12 @@ section#HOME(data-ng-controller="home",class="section ajax")
                             div.collection-app
                                 a(href="/app/{{games_three.id}}")
                                     img(src="{{games_three.image}}")
+                        div.alt-curve
                         div.collection-copy
                             h2(translate) Top three Games
                             p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.
                     div.collection
+                        div.curve
                         div.collection-apps
                             div.collection-app
                                 a(href="/app/{{workplace_one.id}}")
@@ -109,6 +142,7 @@ section#HOME(data-ng-controller="home",class="section ajax")
                             div.collection-app
                                 a(href="/app/{{workplace_three.id}}")
                                     img(src="{{workplace_three.image}}")
+                        div.alt-curve
                         div.collection-copy
                             h2(translate) Great Apps for the workplace
                             p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.

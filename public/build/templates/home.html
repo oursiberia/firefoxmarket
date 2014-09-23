@@ -9,62 +9,106 @@
   <div id="search-home-result">
     <div class="wrap">
       <div class="resultsbyname">
-        <div data-ng-repeat="result in author_results" class="searchresult">
-          <div class="app-wrap">
-            <div class="app-details">
-              <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
-              <div class="app-copy">
-                <div class="app-download-button">
-                  <p data-ng-click="initPurchase(result.app_type,result.manifest_url)">Install</p>
-                </div><a data-ng-href="/app/{{app.id}}">
-                  <h1 class="app-title">{{result.name}}</h1>
-                  <h2 class="app-author">{{result.author}}</h2>
-                  <div starrating="starrating" data-rating="{{result.rating}}" data-delay="true"></div></a>
+        <div class="searchcolumn">
+          <div class="result-relevance">
+            <div class="relevance">
+              <h1>Relevance:</h1>
+              <h2>Name</h2>
+              <div class="total">
+                <p>results</p>
+              </div>
+            </div>
+          </div>
+          <div data-ng-repeat="result in name_results" class="searchresult">
+            <div class="app-wrap">
+              <div class="app-details">
+                <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
+                <div class="app-copy">
+                  <div class="app-download-button">
+                    <p data-ng-click="initPurchase(result.app_type,result.manifest_url)">Install</p>
+                  </div><a data-ng-href="/app/{{result.id}}">
+                    <h1 class="app-title">{{result.name}}</h1>
+                    <h2 class="app-author">{{result.author}}</h2>
+                    <div starrating="starrating" data-rating="{{result.rating}}" data-delay="true"></div></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div data-ng-repeat="result in name_results" class="searchresult">
-          <div class="app-wrap">
-            <div class="app-details">
-              <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
-              <div class="app-copy">
-                <div class="app-download-button">
-                  <p data-ng-click="initPurchase(result.app_type,result.manifest_url)">Install</p>
-                </div><a data-ng-href="/app/{{app.id}}">
-                  <h1 class="app-title">{{result.name}}</h1>
-                  <h2 class="app-author">{{result.author}}</h2>
-                  <div starrating="starrating" data-rating="{{result.rating}}" data-delay="true"></div></a>
+        <div class="searchcolumn">
+          <div class="result-relevance">
+            <div class="relevance">
+              <h1>Relevance:</h1>
+              <h2>Developer</h2>
+              <div class="total">
+                <p>results</p>
+              </div>
+            </div>
+          </div>
+          <div data-ng-repeat="result in author_results" class="searchresult">
+            <div class="app-wrap">
+              <div class="app-details">
+                <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
+                <div class="app-copy">
+                  <div class="app-download-button">
+                    <p data-ng-click="initPurchase(result.app_type,result.manifest_url)">Install</p>
+                  </div><a data-ng-href="/app/{{result.id}}">
+                    <h1 class="app-title">{{result.name}}</h1>
+                    <h2 class="app-author">{{result.author}}</h2>
+                    <div starrating="starrating" data-rating="{{result.rating}}" data-delay="true"></div></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div data-ng-repeat="result in category_results" class="searchresult">
-          <div class="app-wrap">
-            <div class="app-details">
-              <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
-              <div class="app-copy">
-                <div class="app-download-button">
-                  <p data-ng-click="initPurchase(result.app_type,result.manifest_url)">Install</p>
-                </div><a data-ng-href="/app/{{app.id}}">
-                  <h1 class="app-title">{{result.name}}</h1>
-                  <h2 class="app-author">{{result.author}}</h2>
-                  <div starrating="starrating" data-rating="{{result.rating}}" data-delay="true"></div></a>
+        <div class="searchcolumn">
+          <div class="result-relevance">
+            <div class="relevance">
+              <h1>Relevance:</h1>
+              <h2>Category</h2>
+              <div class="total">
+                <p>results</p>
+              </div>
+            </div>
+          </div>
+          <div data-ng-repeat="result in category_results" class="searchresult">
+            <div class="app-wrap">
+              <div class="app-details">
+                <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
+                <div class="app-copy">
+                  <div class="app-download-button">
+                    <p data-ng-click="initPurchase(result.app_type,result.manifest_url)">Install</p>
+                  </div><a data-ng-href="/app/{{result.id}}">
+                    <h1 class="app-title">{{result.name}}</h1>
+                    <h2 class="app-author">{{result.author}}</h2>
+                    <div starrating="starrating" data-rating="{{result.rating}}" data-delay="true"></div></a>
+                </div>
               </div>
             </div>
           </div>
         </div>
-        <div data-ng-repeat="result in description_results" class="searchresult">
-          <div class="app-wrap">
-            <div class="app-details">
-              <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
-              <div class="app-copy">
-                <div class="app-download-button">
-                  <p data-ng-click="initPurchase(result.app_type,result.manifest_url)">Install</p>
-                </div><a data-ng-href="/app/{{app.id}}">
-                  <h1 class="app-title">{{result.name}}</h1>
-                  <h2 class="app-author">{{result.author}}</h2>
-                  <div starrating="starrating" data-rating="{{result.rating}}" data-delay="true"></div></a>
+        <div class="searchcolumn">
+          <div class="result-relevance">
+            <div class="relevance">
+              <h1>Relevance:</h1>
+              <h2>Description</h2>
+              <div class="total">
+                <p>results</p>
+              </div>
+            </div>
+          </div>
+          <div data-ng-repeat="result in description_results" class="searchresult">
+            <div class="app-wrap">
+              <div class="app-details">
+                <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
+                <div class="app-copy">
+                  <div class="app-download-button">
+                    <p data-ng-click="initPurchase(result.app_type,result.manifest_url)">Install</p>
+                  </div><a data-ng-href="/app/{{result.id}}">
+                    <h1 class="app-title">{{result.name}}</h1>
+                    <h2 class="app-author">{{result.author}}</h2>
+                    <div starrating="starrating" data-rating="{{result.rating}}" data-delay="true"></div></a>
+                </div>
               </div>
             </div>
           </div>
@@ -76,33 +120,39 @@
     <div class="wrap">
       <div class="collections">
         <div class="collection">
+          <div class="curve"></div>
           <div class="collection-apps">
             <div class="collection-app"><a href="/app/{{staff_one.id}}"><img src="{{staff_one.image}}"/></a></div>
             <div class="collection-app"><a href="/app/{{staff_two.id}}"><img src="{{staff_two.image}}"/></a></div>
             <div class="collection-app"><a href="/app/{{staff_three.id}}"><img src="{{staff_three.image}}"/></a></div>
           </div>
+          <div class="alt-curve"></div>
           <div class="collection-copy">
-            <h2 translate="translate">Our Staff Picks</h2>
+            <h2 translate="translate">Video On The Go</h2>
             <p>Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
           </div>
         </div>
         <div class="collection">
+          <div class="curve"></div>
           <div class="collection-apps">
             <div class="collection-app"><a href="/app/{{games_one.id}}"><img src="{{games_one.image}}"/></a></div>
             <div class="collection-app"><a href="/app/{{games_two.id}}"><img src="{{games_two.image}}"/></a></div>
             <div class="collection-app"><a href="/app/{{games_three.id}}"><img src="{{games_three.image}}"/></a></div>
           </div>
+          <div class="alt-curve"></div>
           <div class="collection-copy">
             <h2 translate="translate">Top three Games</h2>
             <p>Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
           </div>
         </div>
         <div class="collection">
+          <div class="curve"></div>
           <div class="collection-apps">
             <div class="collection-app"><a href="/app/{{workplace_one.id}}"><img src="{{workplace_one.image}}"/></a></div>
             <div class="collection-app"><a href="/app/{{workplace_two.id}}"><img src="{{workplace_two.image}}"/></a></div>
             <div class="collection-app"><a href="/app/{{workplace_three.id}}"><img src="{{workplace_three.image}}"/></a></div>
           </div>
+          <div class="alt-curve"></div>
           <div class="collection-copy">
             <h2 translate="translate">Great Apps for the workplace</h2>
             <p>Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
