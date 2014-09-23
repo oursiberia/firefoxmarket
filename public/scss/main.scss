@@ -28,7 +28,7 @@ button:focus,input:focus,textarea:focus{
 	outline: 0;
 }
 .rating{
-	margin-top: 4px;
+	margin-top: 2px;
 	li{
 		float:left;
 		height: 14px;
@@ -46,6 +46,10 @@ body,html{
 	font-family: "FiraRegular",sans-serif;
 	overflow-x: hidden;
 	color:rgba(71,72,77,1.0);
+}
+
+body {
+	padding-top: 100px;
 }
 
 .thin{
@@ -164,6 +168,15 @@ footer {
 
 
 /**======= HEADER =============*/
+
+#header {
+	position: fixed;
+	width: 100%;
+	background: #FFF;
+	top: 0px;
+	z-index: 9;
+}
+
 header{
 	width:100%;
 	height: 59px;
@@ -178,11 +191,11 @@ header{
 		position: relative;
 		div{
 			vertical-align: middle;
-			cursor: pointer;
 		}
 		#logo {
 			margin: -4px 0 0 -7px;
 			display: inline-block;
+			cursor: pointer;
 			img,h1{
 				vertical-align: middle;
 				display: inline-block;
@@ -240,6 +253,7 @@ header{
 				.identification{
 					float:right;
 					margin-top: -1px;
+					cursor: pointer;
 					p {
 						font-size: 13px;
 					}
@@ -368,7 +382,7 @@ header{
 			vertical-align: top;
 			margin-right: 26px;
 			position:relative;
-			border: 1px solid #D6D6D6;
+			border: 1px solid #0099D0;;
 			@include border-radius(5px);
 			overflow: hidden;
 
