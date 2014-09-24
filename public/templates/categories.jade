@@ -1,0 +1,14 @@
+div#categoriess
+    div.wrap
+        h1#categories-title All Categories from {{author}}
+        div#category-all
+            div.wrap
+                div.category(data-ng-repeat="item in appcategories")
+                    div.category-title(data-name="{{item.name}}")
+                        div.title-wrap
+                            div.icon(class="{{item.slug}}")
+                                span.cat-icon
+                            div.title-copy
+                                h3 {{item.name}}
+                                a(href="/category/{{item.slug}}")
+                                    p View All From Category &#9656;

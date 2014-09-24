@@ -56,7 +56,7 @@
 
 }//end #search-home
 
-#search-home-result,#search-result{
+#search-home-result{
 	height:0px;
 	width:100%;
 	background: rgba(255, 255, 255, 0.95);
@@ -142,6 +142,7 @@
 		}
 	}
 
+
 	.resultsbyname {
 		width: 100%;
 		.searchcolumn {
@@ -183,7 +184,134 @@
 	}
 
 }
+#search-result{
+	min-height: 100%;
+	width:100%;
+	background: rgba(255, 255, 255, 0.95);
+	position: absolute;
+	top: 300px;
+	z-index: 99;
+	overflow: scroll;
 
+	.searchresult{
+		display: inline-block;
+		height: 60px;
+		width: 258px;
+		margin-bottom: 13px;
+		padding: 20px;
+		background: #fff;
+		border: 1px solid #D3D3D3;
+		@include border-radius(5px);
+		.app-details {
+			position: relative;
+			.app-image, .app-copy {
+				position: absolute;
+				display: inline-block;
+				vertical-align: top;
+			}
+			.app-image {
+				height: 60px;
+				width: 60px;
+				overflow: hidden;
+				@include border-radius(5px);
+				a {
+					height: 60px;
+					width: 60px;
+					display: inline-block;
+				}
+				img {
+					height: 100%;
+					width: 100%;
+				}
+			}
+			.app-copy {
+				height: 60px;
+				width: 188px;
+				margin-left: 70px;
+				.app-download-button {
+					position: absolute;
+					right: 0px;
+					bottom: 0px;
+					width: 60px;
+					height: 24px;
+					@include border-radius(5px);
+					p {
+						color: #4CB1FF;
+						text-align: center;
+					}
+					&:hover {
+						p {
+							color: #fff;
+						}
+					}
+				}
+				h1, h2 {
+					white-space: nowrap;
+					overflow: hidden;
+					text-overflow: ellipsis;
+				}
+				h1 {
+					font-size: 14px;
+					letter-spacing: -.5px;
+					margin-top: -3px;
+				}
+				h2 {
+					font-size: 12px;
+					letter-spacing: -.5px;
+					font-family: "FiraLight";
+					margin-top: -3px;
+				}
+				a {
+					div {
+						margin-top: 12px;
+					}
+				}
+			}
+		}
+	}
+
+
+	.resultsbyname {
+		width: 100%;
+		margin-top:-70px;
+		.searchcolumn {
+			width: 298px;
+			margin-right: 18px;
+			&:last-child {
+				margin-right: 0;
+			}
+			div:nth-child(n+6) {
+				display: none;
+			}
+			.result-relevance {
+				padding-bottom: 20px;
+				margin: 25px 0 30px 0;
+				border-bottom: 1px solid #D3D3D3;
+				.relevance {
+					margin-bottom: 22px;
+					h1, h2 {
+						float: left;
+						text-transform: uppercase;
+						font-size: 14px;
+					}
+					div {
+						float: right;
+						font-size: 14px;
+					}
+					h1 {
+						color: #4CB1FF;
+					}
+					h2 {
+						margin-left: 5px;
+					}
+					p {
+						font-family: "FiraLight";
+					}
+				}
+			}
+		}
+	}
+}
 
 
 .home-main{
@@ -229,7 +357,7 @@
 
 
 
-#category-list{
+#category-list,#category-all{
 	.wrap{
 		.controls{
 			padding: 30px 0 44px 0;
@@ -365,6 +493,109 @@
 						background-color: #a20d55;
 						.cat-icon {
 							background-position: 0px -456px;
+						}
+					}
+
+					&.books {
+						background-color: #00953f;
+						.cat-icon{
+							background-position: 0px 113px;
+						}
+					}
+
+					&.entertainment {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 303px;
+						}
+					}
+
+					&.lifestyle{
+						background-color: #00953f;
+						.cat-icon{
+							background-position:1px 380px;
+						}
+					}
+
+					&.news-weather{
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 567px;
+						}
+					}
+
+					&.reference{
+						background-color: #00953f;
+						.cat-icon{
+							background-position: 0px 113px;
+						}
+					}
+
+					&.sports {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 303px;
+						}
+					}
+
+					&.buisness {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 303px;
+						}
+					}
+
+					&.utilities {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 416px;
+						}
+					}
+
+					&.health-fitness {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 493px;
+						}
+					}
+
+					&.maps-navigation {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 38px;
+						}
+					}
+
+					&.travel {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 77px;
+						}
+					}
+
+					&.photo-video {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 227px;
+						}
+					}
+					&.shopping {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 266px;
+						}
+					}
+					&.education {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px -153px;
+						}
+					}
+
+					&.business {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 341px;
 						}
 					}
 				}

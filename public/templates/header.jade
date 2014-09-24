@@ -2,32 +2,99 @@ div#mainsearch
     div.search-home
         div.wrap
             div.close-search(data-ng-click="closeSearch()")
-            input.homesearch(type="text",name="search",data-ng-model="searchbox",placeholder="Search for anything...",data-ng-change="searchApp()")
-    div.wrap
+            input.homesearch(id="search",type="text",name="search",data-ng-model="searchbox",placeholder="Search for anything...",data-ng-change="searchApp()")
 
-        div.resultsbyname(id="mainsearchresults")
-            div.searchcolumn
-                h2 Results by Developer
-                div.searchresult.app(data-ng-repeat="result in author_results")
-                    a(data-ng-href="/app/{{result.id}}")
-                        img.app-icon(data-ng-src="{{result.icon}}")
-                    h1.result-title {{result.name}}
-                    h2.result-author {{result.author}}
-            div.searchcolumn
-                h2 Results by Name
-                div.searchresult.app(data-ng-repeat="result in name_results")
-                    a(data-ng-href="/app/{{result.id}}")
-                        img.app-icon(data-ng-src="{{result.icon}}")
-                    h1.result-title {{result.name}}
-                    h2.result-author {{result.author}}
+        div#search-result
+            div.wrap
+                div.resultsbyname
+                    div.searchcolumn
+                        div.result-relevance
+                            div.relevance
+                                h1 Relevance:
+                                h2 Name
+                                div.total
+                                    p results
+                        div.searchresult(data-ng-repeat="result in name_results")
+                            div.app-wrap
+                                div.app-details
+                                    div.app-image
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            img.app-icon(data-ng-src="{{result.icon}}")
 
-            div.searchcolumn
-                h2 Results by Category
-                div.searchresult.app(data-ng-repeat="result in category_results")
-                    a(data-ng-href="/app/{{result.id}}")
-                        img.app-icon(data-ng-src="{{result.icon}}")
-                    h1.result-title {{result.name}}
-                    h2.result-author {{result.author}}
+                                    div.app-copy
+                                        div.app-download-button
+                                            p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            h1.app-title {{result.name}}
+                                            h2.app-author {{result.author}}
+                                            div(starrating,data-rating="{{result.rating}}",data-delay="true")
+
+                    div.searchcolumn
+                        div.result-relevance
+                            div.relevance
+                                h1 Relevance:
+                                h2 Developer
+                                div.total
+                                    p results
+                        div.searchresult(data-ng-repeat="result in author_results")
+                            div.app-wrap
+                                div.app-details
+                                    div.app-image
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            img.app-icon(data-ng-src="{{result.icon}}")
+
+                                    div.app-copy
+                                        div.app-download-button
+                                            p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            h1.app-title {{result.name}}
+                                            h2.app-author {{result.author}}
+                                            div(starrating,data-rating="{{result.rating}}",data-delay="true")
+
+                    div.searchcolumn
+                        div.result-relevance
+                            div.relevance
+                                h1 Relevance:
+                                h2 Category
+                                div.total
+                                    p results
+                        div.searchresult(data-ng-repeat="result in category_results")
+                            div.app-wrap
+                                div.app-details
+                                    div.app-image
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            img.app-icon(data-ng-src="{{result.icon}}")
+
+                                    div.app-copy
+                                        div.app-download-button
+                                            p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            h1.app-title {{result.name}}
+                                            h2.app-author {{result.author}}
+                                            div(starrating,data-rating="{{result.rating}}",data-delay="true")
+
+                    div.searchcolumn
+                        div.result-relevance
+                            div.relevance
+                                h1 Relevance:
+                                h2 Description
+                                div.total
+                                    p results
+                        div.searchresult(data-ng-repeat="result in description_results")
+                            div.app-wrap
+                                div.app-details
+                                    div.app-image
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            img.app-icon(data-ng-src="{{result.icon}}")
+
+                                    div.app-copy
+                                        div.app-download-button
+                                            p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
+                                        a(data-ng-href="/app/{{result.id}}")
+                                            h1.app-title {{result.name}}
+                                            h2.app-author {{result.author}}
+                                            div(starrating,data-rating="{{result.rating}}",data-delay="true")
+
 header
     div(uicontrols)
     div.wrap

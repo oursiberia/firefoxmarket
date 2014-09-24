@@ -26,7 +26,7 @@ app.directive("abusedirective",["API","$http",function(API,$http){
                 console.log(abuse.value);
                 var request = $http({
                     method:"post",
-                    url:"https://marketplace.firefox.com/api/v1/abuse/app/",
+                    url:"https://marketplace.firefox.com/api/v2/abuse/app/?lang=en-US&limit=25&region=us",
                     data:{
                         text:abuse.value,
                         app:id,

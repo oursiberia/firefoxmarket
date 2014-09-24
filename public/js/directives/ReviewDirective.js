@@ -15,12 +15,12 @@ app.directive("appreview",["$http",function($http){
         },
 
         link:function($scope,$el,$attrs){
-            console.log($attrs);
-            $scope.name = $attrs.name;
-
             //get the app id out of the url
             var id = window.location.href.split("/");
             id = id[id.length - 1];
+
+            $scope.name = $attrs.name;
+
 
             $scope.submitReview = function(){
                 var content = $el[0].querySelector("textarea");
@@ -31,9 +31,9 @@ app.directive("appreview",["$http",function($http){
                     rating = 5;
                 }
 
-
+                console.log(parseInt(id));
                 var data = {
-                    app:id,
+                    app:parseInt(id),
                     body:content.value,
                     rating:rating
                 };

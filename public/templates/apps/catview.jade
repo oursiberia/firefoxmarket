@@ -99,9 +99,13 @@ section#category-page
                             div(appreviews,data-appid="{{app.id}}")
 
     div.wrap
-        div#popular-in-category(class="category popular")
-            h3(translate) Popular |
-                span.light(translate,class="thin") New
+        div#popular-in-category(class="category popular",style="position:relative;")
+            div.wrap
+                div.controls
+                    h1 Categories:
+                    div.toggle(data-ng-click="toggleCategoryTypes($event)")
+                        span.active Popular
+                        span Recent
             div.app-grid
                 div(class="category",data-ng-repeat="app in popularapps")
                     div.app
@@ -115,3 +119,18 @@ section#category-page
                         a(data-ng-href="/app/{{app.id}}")
                             div.app-download-button
                                 p Install
+
+                hr
+                div.category-recent
+                    div(class="category",data-ng-repeat="app in recentapps")
+                        div.app
+                            a(data-ng-href="/app/{{app.id}}")
+                                img(data-ng-src="{{app.icon}}")
+                            div.app-details
+                                a(data-ng-href="/app/{{app.id}}")
+                                    h4 {{app.name}}
+                                p {{app.author}}
+                                div(starrating,data-rating="{{app.rating}}", data-delay="true")
+                            a(data-ng-href="/app/{{app.id}}")
+                                div.app-download-button
+                                    p Install

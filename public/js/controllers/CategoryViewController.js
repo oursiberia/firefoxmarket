@@ -172,6 +172,39 @@ app.controller("CategoryViewController",[
 
 
 
+        /**
+         * Get all the recent apps in this category
+         */
+        API.request("apps_in_category","&cat=" + category + "&sort=created").then(function (data) {
+            console.log("RECENT :",data.objects);
+            //  var apps = $filter("DesktopApps")(data.objects);
+            var objects = data.objects;
+            var popular = [];
+
+            //if we have a odd number of apps, pop the last one
+            if(objects.length % 4 !== 0){
+                objects.pop();
+            }
+
+            for (var i = 0; i < objects.length; ++i) {
+
+                var obj = {};
+
+                obj.icon = objects[i].icons["64"];
+                obj.name =  objects[i].name["en-US"];
+                obj.id = objects[i].id;
+                obj.author = objects[i].author;
+                obj.classname = "app";
+                obj.rating = objects[i].ratings.average;
+
+
+                popular.push(obj);
+            }
+
+            $scope.recentapps = popular;
+
+        });
+
 
         /**==================== FUNCTIONS ===========================*/
         /**
@@ -234,5 +267,29 @@ app.controller("CategoryViewController",[
 
 
         }
+        $scope.toggleCategoryTypes = function(e){
+            if(e.target.tagName === "SPAN"){
+                var parent = e.target.parentNode;
+                var target = e.target;
 
+                for(var i = 0; i<parent.children.length;++i){
+                    parent.children[i].className = "";
+
+                }
+                var recentapps = document.querySelector(".category-recent");
+                target.className = "active";
+
+                switch(target.innerHTML){
+                    case "Popular":
+                        recentapps.style.opacity = 0;
+                        break;
+
+
+                    case "Recent":
+                        recentapps.style.opacity = 1;
+                        break;
+                }
+
+            }
+        }
     }]);
