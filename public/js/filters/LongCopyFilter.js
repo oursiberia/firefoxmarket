@@ -22,10 +22,9 @@ app.filter("LongCopyFilter",function() {
         //split the sentence based on spaces
         var review = data.split(" ");
         var short_review = [];
-
+        var count = 0;
         for (var i = 0;i<review.length;++i) {
             var word = review[i];
-            var count = 0;
             /**
              * get the character count of the word
              */
@@ -35,7 +34,8 @@ app.filter("LongCopyFilter",function() {
                 short_review.push(word);
             }
         }
-        short_review = short_review.join(" ")+ delimiter;
+        short_review[short_review.length - 1] += delimiter;
+        short_review = short_review.join(" ");
         return short_review;
     };
 });

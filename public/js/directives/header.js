@@ -39,7 +39,7 @@ app.directive("header",function(MasterSearch,$rootScope) {
             $scope.search = function(){
                 var search = document.querySelector("#mainsearch");
                 TweenMax.to(search,1,{
-                    height:"100%",
+                    height:window.innerHeight,
                     ease:"Power3.easeInOut",
                     onComplete:function(){
                         $rootScope.lockBody();
@@ -63,7 +63,7 @@ app.directive("header",function(MasterSearch,$rootScope) {
             $scope.searchApp = function(e){
 
 
-                MasterSearch.query($scope,document.querySelector("#mainsearch .wrap input").value,4);
+                MasterSearch.query($scope);
             };
         }
 

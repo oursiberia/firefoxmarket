@@ -26,6 +26,9 @@ var routes = {
 }
 
 
+router.get("/test",function(req,res){
+    res.render("test",{});
+})
 /**
  * Triggers installation
  */
