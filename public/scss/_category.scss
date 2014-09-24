@@ -7,7 +7,7 @@
 	}
 
 	#featured {
-		padding: 25px 0;
+		padding: 25px 0 35px 0;
 		.app {
 			padding: 0;
 			width: 298px;
@@ -242,14 +242,16 @@
 			margin-left: 70px;
 			border-bottom: 0;
 			padding-bottom: 0;
+			h4, p {
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
+			}
 			h4 {
 				margin-top: 1px;
 				font-size: 14px;
 				letter-spacing: -.1px;
 				width: 200px;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
 				&:hover {
 					text-decoration: underline;
 				}
@@ -258,6 +260,7 @@
 				font-size: 12px;
 				font-family: "FiraLight";
 				margin: -1px 0 2px 0;
+				width: 135px;
 			}
 			ul.rating {
 				display: inline-block;
@@ -293,17 +296,27 @@
 .wrap{
 
 	#popular-in-category{
+		padding-top: 27px;
+		border-top: 1px solid #D6D6D6;
 		.wrap{
 			.controls{
-				padding: 30px 0 44px 0;
+				padding-bottom: 28px;
 				h1{
-					font-size: 18px;
+					font-family: "FiraLight";
+					font-size: 22px;
 					display: inline-block;
+					letter-spacing: -.2px;
+					padding-top: 3px;
 				}
 
-				// h1:first-child:after{
-				// 	content: "|";
-				// }
+				h2 {
+					font-size: 12px;
+					color: rgba(0, 0, 0, 0.4);
+					display: inline-block;
+					position: absolute;
+					right: 153px;
+					top: 36px;
+				}
 
 				h1:last-child{
 					font-family: "FiraLight";
@@ -311,12 +324,16 @@
 
 				.toggle {
 					display: inline-block;
+					position: absolute;
+					right: 0;
+					top: 33px;
 					span {
 						font-size: 14px;
 						color: #4CB1FF;
 						border: 1px solid #4CB1FF;
 						padding: 7px 12px 6px 12px;
 						cursor: pointer;
+						background: white;
 						@include border-radius(5px);
 					}
 					span:first-child {

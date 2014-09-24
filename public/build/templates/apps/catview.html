@@ -100,7 +100,8 @@
     <div id="popular-in-category" style="position:relative;" class="category popular">
       <div class="wrap">
         <div class="controls">
-          <h1>Categories:</h1>
+          <h1>Apps In Category</h1>
+          <h2>Sort By:</h2>
           <div data-ng-click="toggleCategoryTypes($event)" class="toggle"><span class="active">Popular</span><span>Recent</span></div>
         </div>
       </div>
@@ -117,7 +118,6 @@
               </div></a>
           </div>
         </div>
-        <hr/>
         <div class="category-recent">
           <div data-ng-repeat="app in recentapps" class="category">
             <div class="app"><a data-ng-href="/app/{{app.id}}"><img data-ng-src="{{app.icon}}"/></a>

@@ -102,7 +102,8 @@ section#category-page
         div#popular-in-category(class="category popular",style="position:relative;")
             div.wrap
                 div.controls
-                    h1 Categories:
+                    h1 Apps In Category
+                    h2 Sort By:
                     div.toggle(data-ng-click="toggleCategoryTypes($event)")
                         span.active Popular
                         span Recent
@@ -120,7 +121,6 @@ section#category-page
                             div.app-download-button
                                 p Install
 
-                hr
                 div.category-recent
                     div(class="category",data-ng-repeat="app in recentapps")
                         div.app
