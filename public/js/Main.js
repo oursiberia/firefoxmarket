@@ -29,6 +29,14 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
         }
     });
 
+    /**
+     * All category page
+     */
+    $stateProvider.state("categories",{
+        url:"/categories",
+        templateUrl:"/build/templates/categoreis.html",
+        controller:"AllCategoriesController"
+    })
 
 
     /**
