@@ -1,0 +1,21 @@
+
+<div id="categoriess">
+  <div class="wrap">
+    <h1 id="categories-title">All Categories from {{author}}</h1>
+    <div id="category-all">
+      <div class="wrap">
+        <div data-ng-repeat="item in appcategories" class="category">
+          <div data-name="{{item.name}}" class="category-title">
+            <div class="title-wrap">
+              <div class="icon {{item.slug}}"><span class="cat-icon"></span></div>
+              <div class="title-copy">
+                <h3>{{item.name}}</h3><a href="/category/{{item.slug}}">
+                  <p>View All From Category &#9656;</p></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

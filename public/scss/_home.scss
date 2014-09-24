@@ -229,7 +229,7 @@
 
 
 
-#category-list{
+#category-list,#category-all{
 	.wrap{
 		.controls{
 			padding: 30px 0 44px 0;
@@ -364,6 +364,109 @@
 						background-color: #a20d55;
 						.cat-icon {
 							background-position: 0px -456px;
+						}
+					}
+
+					&.books {
+						background-color: #00953f;
+						.cat-icon{
+							background-position: 0px 113px;
+						}
+					}
+
+					&.entertainment {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 303px;
+						}
+					}
+
+					&.lifestyle{
+						background-color: #00953f;
+						.cat-icon{
+							background-position:1px 380px;
+						}
+					}
+
+					&.news-weather{
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 567px;
+						}
+					}
+
+					&.reference{
+						background-color: #00953f;
+						.cat-icon{
+							background-position: 0px 113px;
+						}
+					}
+
+					&.sports {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 303px;
+						}
+					}
+
+					&.buisness {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 303px;
+						}
+					}
+
+					&.utilities {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 416px;
+						}
+					}
+
+					&.health-fitness {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 493px;
+						}
+					}
+
+					&.maps-navigation {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 38px;
+						}
+					}
+
+					&.travel {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 77px;
+						}
+					}
+
+					&.photo-video {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 227px;
+						}
+					}
+					&.shopping {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 266px;
+						}
+					}
+					&.education {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px -153px;
+						}
+					}
+
+					&.business {
+						background-color: #1e1e9c;
+						.cat-icon{
+							background-position: 0px 341px;
 						}
 					}
 				}

@@ -34,7 +34,7 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
      */
     $stateProvider.state("categories",{
         url:"/categories",
-        templateUrl:"/build/templates/categoreis.html",
+        templateUrl:"/build/templates/categories.html",
         controller:"AllCategoriesController"
     })
 
