@@ -30,17 +30,14 @@ app.directive("appreview",["$http",function($http){
                 if((rating > 5) || (isNaN(rating))){
                     rating = 5;
                 }
-
-                console.log(parseInt(id));
                 var data = {
                     app:parseInt(id),
                     body:content.value,
                     rating:rating
                 };
-
                 $http({
                     method:"post",
-                    url:"https://marketplace.firefox.com/api/v1/apps/rating/",
+                    url:"https://marketplace.firefox.com/api/v1/apps/rating/?_user=" + encodeURIComponent(localStorage.getItem("token")),
                     data:data
                 }).success(function(){
                     console.log("success");

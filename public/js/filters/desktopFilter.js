@@ -29,10 +29,25 @@ app.filter("DesktopApps",function(){
 
 
             for(var a = 0;a<data[i].device_types.length;++a){
+                var name = "";
+
+                /**
+                 * Save out the name. If there isn't something specified
+                 * for the language set in the browser, just loop
+                 * through the list of available languages and take the last one.
+                 */
+                if(data[i].name.hasOwnProperty(navigator.language)){
+                   name = data[i].name[navigator.language];
+                }else{
+                    for(var z in data[i].name){
+                        name = data[i].name[z];
+                    }
+                }
+
                 if(data[i].device_types[a] === "desktop"){
                     obj.icon = data[i].icons["64"];
                     obj.app_type = data[i].premium_type;
-                    obj.name =  data[i].name["en-US"];
+                    obj.name =  name;
                     obj.id = data[i].id;
                     obj.manifest_url = data[i].manifest_url;
                     obj.premium_type = data[i].premium_type.charAt(0).toUpperCase() + data[i].premium_type.slice(1);

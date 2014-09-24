@@ -289,6 +289,25 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
     };
 
 
+    $rootScope.filterName = function(app){
+        var name = "";
+        /**
+         * Save out the name. If there isn't something specified
+         * for the language set in the browser, just loop
+         * through the list of available languages and take the last one.
+         */
+        if(app.name.hasOwnProperty(navigator.language)){
+            name = app.name[navigator.language];
+        }else{
+            for(var z in app.name){
+                name = app.name[z];
+            }
+        }
+
+        return name;
+
+    }
+
 
 
 });

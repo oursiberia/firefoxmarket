@@ -60,9 +60,52 @@ app.directive("header",function(MasterSearch,$rootScope) {
                 });
             };
 
-            $scope.searchApp = function(e){
+            /**
+             * Initiates the install process
+             * @param app_type the type of app we're trying to download ("hosted" or "packaged")
+             * @param manifest the url to the manifest for download.
+             */
+            $scope.initPurchase = function(app_type,manifest){
+
+                var req = "";
+                /**
+                 * first make sure we're in Firefox.
+                 */
+                if(navigator.userAgent.search("Firefox") === -1){
+                    alert("We're sorry, but apps within the Firefox Marketplace can only be downloaded from the Firefox browser");
+                    return;
+                }
+
+                var final_manifest = "";
+
+                if(manifest !== undefined){
+                    final_manifest = manifest;
+                }else{
+                    final_manifest = $scope.manifest;
+                }
 
 
+                if(app_type === "hosted") {
+
+                    req = navigator.mozApps.install(final_manifest);
+                }else if(app_type === "packaged"){
+                    req = navigator.mozApps.installPackage(final_manifest);
+                }
+
+                req.onsuccess = function() {
+                    console.log("Install process initiated");
+                };
+                req.onerror = function(e) {
+
+                    console.log("Install process failed");
+                };
+
+            };
+
+            /**
+             * Runs a search
+             */
+            $scope.searchApp = function(){
                 MasterSearch.query($scope);
             };
         }

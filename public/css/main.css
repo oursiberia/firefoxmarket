@@ -1286,6 +1286,11 @@
 }
 
 /* line 378, ../scss/_category.scss */
+#categories-title {
+  margin-top: 40px;
+}
+
+/* line 382, ../scss/_category.scss */
 .category-recent {
   opacity: 0;
   position: absolute;
