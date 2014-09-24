@@ -363,47 +363,66 @@ app.controller("AppViewController",[
         };
 
         /**================= FEEDBACK/REVIEW/ABUSE/PRIVACY ==========================*/
-        $scope.openModal = function(modalName){
+        $scope.openModal = function(modalName) {
             console.log(modalName);
             var box = document.querySelector(modalName);
-            box.className = box.className.replace("closed","");
+            var token = localStorage.getItem("token");
+
+            //if the modal is the review one, stop things here since you need to be logged in
+            if (modalName === "#review") {
+
+                if ((token === null) || (token === undefined)) {
+                    alert("We're sorry but you need to be logged in in order to write a review");
+                }else{
+                    loadBox();
+                }
 
 
-            //lock body
-            $rootScope.lockBody();
+            } else if ((modalName !== "#review") || (token !== null) || (token !== undefined)){
+               loadBox();
+            }
 
-            if(box.style.opacity === "0"){
+            function loadBox(){
+                box.className = box.className.replace("closed", "");
+
+
+                //lock body
                 $rootScope.lockBody();
 
-                TweenMax.to(box, 0.4, {
-                    opacity: 1
-                });
-            }
+                if (box.style.opacity === "0") {
+                    $rootScope.lockBody();
 
-            if(modalName === "#privacy"){
-                //get the policy
-                $http({
-                    method:"GET",
-                    url:"https://marketplace.firefox.com/api/v1/apps/app/"+ $scope.appid + "/privacy/"
-                }).success(function(data,status,headers,config){
-                    $scope.privacy_policy = data.privacy_policy;
-                }).error(function(data,status,headers,config){
-                    console.log("A error occured when fetching the privacy policy");
-                    console.log(data);
-                });
-            }
-
-            box.addEventListener("click",function(e){
-                if(e.target.className === "modalBox") {
-                    TweenMax.to(box, 0.5, {
-                        opacity: 0,
-                        onComplete: function () {
-                            $rootScope.unlockBody();
-                            box.className = "modal closed";
-                        }
+                    TweenMax.to(box, 0.4, {
+                        opacity: 1
                     });
                 }
-            });
+
+                if (modalName === "#privacy") {
+                    //get the policy
+                    $http({
+                        method: "GET",
+                        url: "https://marketplace.firefox.com/api/v1/apps/app/" + $scope.appid + "/privacy/"
+                    }).success(function (data, status, headers, config) {
+                        $scope.privacy_policy = data.privacy_policy;
+                    }).error(function (data, status, headers, config) {
+                        console.log("A error occured when fetching the privacy policy");
+                        console.log(data);
+                    });
+                }
+
+
+                box.addEventListener("click", function (e) {
+                    if (e.target.className === "modalBox") {
+                        TweenMax.to(box, 0.5, {
+                            opacity: 0,
+                            onComplete: function () {
+                                $rootScope.unlockBody();
+                                box.className = "modal closed";
+                            }
+                        });
+                    }
+                });
+            }
         }
 
     }]);

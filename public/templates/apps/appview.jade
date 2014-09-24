@@ -91,8 +91,7 @@ section#appview
                             p {{app.author}}
                             div(starrating,data-rating="{{app.rating}}")
                         div.app-download-button.mini-container
-                            a(ng-href="/app/{{app.id}}")
-                                p Install
+                            p(data-ng-click="initPurchase(app.app_type,app.manifest)") Install
 
 
 
