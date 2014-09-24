@@ -16,8 +16,8 @@ app.filter("LongCopyFilter",function() {
      * @param{number} length the number of items to return from the query
      */
     return function(data,delimiter) {
-        var charlimit = 84;
-        delimiter = delimiter || " [...]";
+        var charlimit = 180;
+        delimiter = delimiter || '<span class="text-delimiter">[...]</span>';
 
         //split the sentence based on spaces
         var review = data.split(" ");
