@@ -44,7 +44,6 @@ app.factory("MasterSearch",function($http){
                     query = term.value;
                 }
             }
-            console.log("QUERY IS",query);
 
             //query api
             $http({
