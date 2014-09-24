@@ -7,7 +7,7 @@
  *  The category to search for should be specified as a data attribute using the name
  *  data-categoryname
  */
-app.directive("categoryapps",["API",function(API) {
+app.directive("categoryapps",["API","$rootScope",function(API,$rootScope) {
     return{
         templateUrl:"/build/templates/apps/categoryapps.html",
         controller:function($scope){
@@ -110,7 +110,7 @@ app.directive("categoryapps",["API",function(API) {
                         category_name:app.categories,
                         author:app.author,
                         premium_type:app.premium_type.charAt(0).toUpperCase() + app.premium_type.slice(1),
-                        name:app.name[navigator.language],
+                        name:$rootScope.filterName(app),
                         rating:app.ratings.average
                     });
 
@@ -152,7 +152,7 @@ app.directive("categoryapps",["API",function(API) {
                         category_name:app.categories,
                         author:app.author,
                         premium_type:app.premium_type.charAt(0).toUpperCase() + app.premium_type.slice(1),
-                        name:app.name[navigator.language],
+                        name:$rootScope.filterName(app),
                         rating:app.ratings.average
                     });
 
