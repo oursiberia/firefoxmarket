@@ -82,7 +82,7 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
 
 
     //height the menu can expand to
-    var MENU_HEIGHT = 300;
+    var MENU_HEIGHT = 240;
     /////////////// LOGIN ////////////////////////
 
     /**

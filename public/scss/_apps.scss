@@ -12,10 +12,6 @@
 		height:135px;
 	}
 
-	&.with-review{
-		height:255px;
-	}
-
 	.app-icon{
 		width:60px;
 		height:60px;
@@ -62,7 +58,7 @@
 
 			a{
 				h1, h2 {
-					letter-spacing: -.5px;
+					letter-spacing: -.1px;
 					white-space: nowrap;
 					overflow: hidden;
 					text-overflow: ellipsis;
@@ -75,7 +71,7 @@
 				h2{
 					font-size:12px;
 					font-family: "FiraLight";
-					margin-top: 1px;
+					margin: 1px 0 -1px 0;
 					width: 116px;
 				}
 				div {

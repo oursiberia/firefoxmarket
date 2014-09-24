@@ -124,7 +124,7 @@
 
 /* line 1, ../scss/_home.scss */
 #HOME {
-  background: #f6f6f6;
+  background: url("../img/header-background.png") repeat scroll 0% 0% #f6f6f6;
   padding-bottom: 50px;
 }
 
@@ -407,29 +407,30 @@
   border: 1px solid #4CB1FF;
   padding: 7px 12px 6px 12px;
   cursor: pointer;
+  background: #fff;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 259, ../scss/_home.scss */
+/* line 260, ../scss/_home.scss */
 #category-list .wrap .controls .toggle span:first-child {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-/* line 263, ../scss/_home.scss */
+/* line 264, ../scss/_home.scss */
 #category-list .wrap .controls .toggle span:last-child {
   margin-left: -1px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
-/* line 268, ../scss/_home.scss */
+/* line 269, ../scss/_home.scss */
 #category-list .wrap .controls .toggle .active {
   background: #4CB1FF;
   color: #fff;
   cursor: default;
 }
-/* line 275, ../scss/_home.scss */
+/* line 276, ../scss/_home.scss */
 #category-list .wrap .controls button {
   float: right;
   width: 178px;
@@ -448,11 +449,11 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 289, ../scss/_home.scss */
+/* line 290, ../scss/_home.scss */
 #category-list .wrap .controls button:hover {
   background: #42cafe;
 }
-/* line 295, ../scss/_home.scss */
+/* line 296, ../scss/_home.scss */
 #category-list .category {
   width: 298px;
   background: #F8F8F8;
@@ -466,7 +467,7 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 305, ../scss/_home.scss */
+/* line 306, ../scss/_home.scss */
 #category-list .category .category-title {
   background: #fff;
   width: 100%;
@@ -479,11 +480,11 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 317, ../scss/_home.scss */
+/* line 318, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap {
   padding: 20px;
 }
-/* line 319, ../scss/_home.scss */
+/* line 320, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon, #category-list .category .category-title .title-wrap .title-copy {
   display: inline-block;
   vertical-align: middle;
@@ -494,14 +495,14 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 330, ../scss/_home.scss */
+/* line 331, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon {
   height: 60px;
   width: 60px;
   border-radius: 30px;
   position: relative;
 }
-/* line 335, ../scss/_home.scss */
+/* line 336, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon .cat-icon {
   height: 38px;
   width: 40px;
@@ -511,87 +512,87 @@
   background-image: url(../img/category_iconography_white.svg);
   background-size: 40px 608px;
 }
-/* line 345, ../scss/_home.scss */
+/* line 346, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.games {
   background-color: #00953f;
 }
-/* line 347, ../scss/_home.scss */
+/* line 348, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.games .cat-icon {
   background-position: 0px 0px;
 }
-/* line 351, ../scss/_home.scss */
+/* line 352, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.productivity {
   background-color: #1e1e9c;
 }
-/* line 353, ../scss/_home.scss */
+/* line 354, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.productivity .cat-icon {
   background-position: 0px -418px;
 }
-/* line 357, ../scss/_home.scss */
+/* line 358, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.music {
   background-color: #5a197e;
 }
-/* line 359, ../scss/_home.scss */
+/* line 360, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.music .cat-icon {
   background-position: 0px -76px;
 }
-/* line 363, ../scss/_home.scss */
+/* line 364, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.social {
   background-color: #a20d55;
 }
-/* line 365, ../scss/_home.scss */
+/* line 366, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.social .cat-icon {
   background-position: 0px -456px;
 }
-/* line 371, ../scss/_home.scss */
+/* line 372, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy {
   margin-left: 5px;
 }
-/* line 373, ../scss/_home.scss */
+/* line 374, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy h3 {
   font-size: 20px;
   font-family: "FiraMedium";
   text-transform: capitalize;
 }
-/* line 378, ../scss/_home.scss */
+/* line 379, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy p {
   font-size: 12px;
   font-family: "FiraLight";
   padding-left: 2px;
 }
-/* line 382, ../scss/_home.scss */
+/* line 383, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy p:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-/* line 391, ../scss/_home.scss */
+/* line 392, ../scss/_home.scss */
 #category-list .category .apps {
   padding: 10px 0;
   background: #fff;
 }
-/* line 396, ../scss/_home.scss */
+/* line 397, ../scss/_home.scss */
 #category-list .category .app {
   border: 0;
   padding: 10px 20px;
 }
-/* line 399, ../scss/_home.scss */
+/* line 400, ../scss/_home.scss */
 #category-list .category .app .app-details {
   padding: 0;
   border: 0;
 }
-/* line 405, ../scss/_home.scss */
+/* line 406, ../scss/_home.scss */
 #category-list .category:last-child {
   margin: 0;
 }
 
-/* line 415, ../scss/_home.scss */
+/* line 416, ../scss/_home.scss */
 .category-apps .recent-category {
   display: none;
 }
 
 /* line 1, ../scss/_category.scss */
 #category-page {
-  background: #F6F6F6;
+  background: url("../img/header-background.png") repeat scroll 0% 0% #f6f6f6;
   padding-bottom: 32px;
 }
 /* line 5, ../scss/_category.scss */
@@ -603,12 +604,71 @@
   padding: 25px 0;
 }
 /* line 11, ../scss/_category.scss */
-#category-page #featured .wrap h1 {
-  font-size: 18px;
-  margin-bottom: 17px;
+#category-page #featured .app {
+  padding: 0;
+  width: 298px;
+}
+/* line 14, ../scss/_category.scss */
+#category-page #featured .app .app-details {
+  padding: 20px;
+}
+/* line 16, ../scss/_category.scss */
+#category-page #featured .app .app-details h1 {
+  margin-top: 1px;
+}
+/* line 19, ../scss/_category.scss */
+#category-page #featured .app .app-details h2 {
+  margin: 0 0 -1px 0;
+}
+/* line 23, ../scss/_category.scss */
+#category-page #featured .app .app-description {
+  height: 116px;
+  padding: 20px;
+  margin-top: 0;
+  background: #4CB1FF;
+  color: #fff;
+}
+/* line 29, ../scss/_category.scss */
+#category-page #featured .app .app-description .rating-copy {
+  height: 62px;
+  display: flex;
+  align-items: center;
+}
+/* line 33, ../scss/_category.scss */
+#category-page #featured .app .app-description .rating-copy p {
+  font-family: "FiraRegular", sans-serif;
+  width: 100%;
+}
+/* line 38, ../scss/_category.scss */
+#category-page #featured .app .app-description .username {
+  margin-top: 12px;
+}
+/* line 40, ../scss/_category.scss */
+#category-page #featured .app .app-description .username p {
+  font-family: "FiraMedium", sans-serif;
+  color: rgba(0, 0, 0, 0.4);
+}
+/* line 45, ../scss/_category.scss */
+#category-page #featured .app .app-description .review-rating {
+  max-width: 104px;
+  height: 20px;
+}
+/* line 49, ../scss/_category.scss */
+#category-page #featured .app .app-description .rating li {
+  height: 20px;
+  width: 20px;
+}
+/* line 52, ../scss/_category.scss */
+#category-page #featured .app .app-description .rating li img {
+  height: 100%;
+  width: 100%;
+}
+/* line 56, ../scss/_category.scss */
+#category-page #featured .app .app-description .rating li:last-child {
+  margin-right: 0;
 }
 
-/* line 19, ../scss/_category.scss */
+/* line 66, ../scss/_category.scss */
 #category-banner {
   width: 100%;
   padding: 50px 0;
@@ -617,7 +677,7 @@
   overflow: hidden;
   background: #55575C;
 }
-/* line 27, ../scss/_category.scss */
+/* line 74, ../scss/_category.scss */
 #category-banner #banner {
   position: absolute;
   top: 0;
@@ -626,7 +686,7 @@
   opacity: 0.4;
   background: url("/img/background1.jpg") no-repeat scroll center center/100% 250px transparent;
 }
-/* line 36, ../scss/_category.scss */
+/* line 83, ../scss/_category.scss */
 #category-banner #featured-category-apps {
   float: right;
   background: #fff;
@@ -638,15 +698,15 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 45, ../scss/_category.scss */
+/* line 92, ../scss/_category.scss */
 #category-banner #in-view-featured {
   opacity: 0;
 }
-/* line 48, ../scss/_category.scss */
+/* line 95, ../scss/_category.scss */
 #category-banner #in-view-featured img, #category-banner #in-view-featured h1, #category-banner #in-view-featured h3 {
   position: absolute;
 }
-/* line 51, ../scss/_category.scss */
+/* line 98, ../scss/_category.scss */
 #category-banner #in-view-featured img {
   height: 60px;
   width: 60px;
@@ -658,21 +718,21 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 60, ../scss/_category.scss */
+/* line 107, ../scss/_category.scss */
 #category-banner #in-view-featured h1 {
   font-size: 16px;
   font-family: "FiraRegular";
   top: 14px;
   left: 90px;
 }
-/* line 66, ../scss/_category.scss */
+/* line 113, ../scss/_category.scss */
 #category-banner #in-view-featured h3 {
   font-size: 14px;
   font-family: "FiraLight";
   top: 30px;
   left: 90px;
 }
-/* line 73, ../scss/_category.scss */
+/* line 120, ../scss/_category.scss */
 #category-banner #in-view-featured .star-rating {
   height: 20px;
   width: 100px;
@@ -680,29 +740,29 @@
   bottom: 20px;
   left: 90px;
 }
-/* line 83, ../scss/_category.scss */
+/* line 130, ../scss/_category.scss */
 #category-banner #in-view-featured .stars ul li img {
   height: 15px;
   width: 15px;
   top: 0;
   left: 0;
 }
-/* line 94, ../scss/_category.scss */
+/* line 141, ../scss/_category.scss */
 #category-banner #category-details {
   position: relative;
 }
-/* line 97, ../scss/_category.scss */
+/* line 144, ../scss/_category.scss */
 #category-banner #category-details img, #category-banner #category-details .category-copy {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 102, ../scss/_category.scss */
+/* line 149, ../scss/_category.scss */
 #category-banner #category-details .category-copy {
   position: relative;
   left: 39px;
   color: #fff;
 }
-/* line 106, ../scss/_category.scss */
+/* line 153, ../scss/_category.scss */
 #category-banner #category-details .category-copy h2 {
   font-size: 12px;
   border: 1px solid #fff;
@@ -712,14 +772,14 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 112, ../scss/_category.scss */
+/* line 159, ../scss/_category.scss */
 #category-banner #category-details .category-copy p {
   max-width: 370px;
   font-family: "FiraUltraLight";
   font-size: 14px;
   margin-top: -5px;
 }
-/* line 120, ../scss/_category.scss */
+/* line 167, ../scss/_category.scss */
 #category-banner #category-details #category-title {
   color: #fff;
   position: relative;
@@ -729,11 +789,11 @@
   font-family: "FiraMedium";
 }
 
-/* line 134, ../scss/_category.scss */
+/* line 181, ../scss/_category.scss */
 #popular-in-category h3 {
   margin-bottom: 15px;
 }
-/* line 138, ../scss/_category.scss */
+/* line 185, ../scss/_category.scss */
 #popular-in-category .app-grid {
   height: 100%;
   width: 1258px;
@@ -746,7 +806,7 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 147, ../scss/_category.scss */
+/* line 194, ../scss/_category.scss */
 #popular-in-category .app-grid .category {
   height: 60px;
   width: 274px;
@@ -756,16 +816,16 @@
   border-right: 1px solid #D6D6D6;
   border-bottom: 1px solid #D6D6D6;
 }
-/* line 156, ../scss/_category.scss */
+/* line 203, ../scss/_category.scss */
 #popular-in-category .app-grid .category:nth-child(4n+4) {
   border-right: none;
   width: 273px;
 }
-/* line 161, ../scss/_category.scss */
+/* line 208, ../scss/_category.scss */
 #popular-in-category .app-grid .category:nth-last-child(-n+4) {
   border-bottom: none;
 }
-/* line 166, ../scss/_category.scss */
+/* line 213, ../scss/_category.scss */
 #popular-in-category .app-grid .app {
   position: relative;
   height: 100%;
@@ -775,7 +835,7 @@
   border: none;
   background: none;
 }
-/* line 176, ../scss/_category.scss */
+/* line 223, ../scss/_category.scss */
 #popular-in-category .app-grid img {
   height: 60px;
   width: 60px;
@@ -784,51 +844,56 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 182, ../scss/_category.scss */
+/* line 229, ../scss/_category.scss */
 #popular-in-category .app-grid img, #popular-in-category .app-grid .app-details, #popular-in-category .app-grid .app-download-button {
   vertical-align: top;
   display: inline-block;
   position: absolute;
 }
-/* line 188, ../scss/_category.scss */
+/* line 235, ../scss/_category.scss */
 #popular-in-category .app-grid .app-download-button {
   right: 0;
   bottom: 0;
 }
-/* line 193, ../scss/_category.scss */
+/* line 240, ../scss/_category.scss */
 #popular-in-category .app-grid .app-details {
+  width: 100%;
   margin-left: 70px;
-  margin-top: -3px;
   border-bottom: 0;
   padding-bottom: 0;
 }
-/* line 198, ../scss/_category.scss */
+/* line 245, ../scss/_category.scss */
 #popular-in-category .app-grid .app-details h4 {
+  margin-top: 1px;
   font-size: 14px;
-  font-family: "FiraMedium";
+  letter-spacing: -.1px;
+  width: 200px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-/* line 201, ../scss/_category.scss */
+/* line 253, ../scss/_category.scss */
 #popular-in-category .app-grid .app-details h4:hover {
   text-decoration: underline;
 }
-/* line 205, ../scss/_category.scss */
+/* line 257, ../scss/_category.scss */
 #popular-in-category .app-grid .app-details p {
   font-size: 12px;
   font-family: "FiraLight";
-  margin-top: -2px;
+  margin: -1px 0 2px 0;
 }
-/* line 210, ../scss/_category.scss */
+/* line 262, ../scss/_category.scss */
 #popular-in-category .app-grid .app-details ul.rating {
   display: inline-block;
 }
-/* line 212, ../scss/_category.scss */
+/* line 264, ../scss/_category.scss */
 #popular-in-category .app-grid .app-details ul.rating li {
   height: 15px;
   width: 15px;
   display: inline-block;
   margin-right: 0;
 }
-/* line 217, ../scss/_category.scss */
+/* line 269, ../scss/_category.scss */
 #popular-in-category .app-grid .app-details ul.rating li img {
   height: 15px;
   width: 15px;
@@ -1509,10 +1574,6 @@
   height: 135px;
 }
 /* line 15, ../scss/_apps.scss */
-.app.with-review {
-  height: 255px;
-}
-/* line 19, ../scss/_apps.scss */
 .app .app-icon {
   width: 60px;
   height: 60px;
@@ -1521,24 +1582,24 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 25, ../scss/_apps.scss */
+/* line 21, ../scss/_apps.scss */
 .app .app-details {
   height: 60px;
 }
-/* line 28, ../scss/_apps.scss */
+/* line 24, ../scss/_apps.scss */
 .app .app-details .app-image, .app .app-details .app-copy {
   display: inline-block;
   vertical-align: top;
   height: 60px;
 }
-/* line 34, ../scss/_apps.scss */
+/* line 30, ../scss/_apps.scss */
 .app .app-details .app-copy {
   overflow: hidden;
   position: absolute;
   margin-left: 10px;
   width: 188px;
 }
-/* line 40, ../scss/_apps.scss */
+/* line 36, ../scss/_apps.scss */
 .app .app-details .app-copy .app-download-button {
   position: absolute;
   right: 0;
@@ -1551,46 +1612,46 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 49, ../scss/_apps.scss */
+/* line 45, ../scss/_apps.scss */
 .app .app-details .app-copy .app-download-button:hover {
   cursor: pointer;
   background: #4CB1FF;
 }
-/* line 52, ../scss/_apps.scss */
+/* line 48, ../scss/_apps.scss */
 .app .app-details .app-copy .app-download-button:hover p {
   color: #fff;
 }
-/* line 56, ../scss/_apps.scss */
+/* line 52, ../scss/_apps.scss */
 .app .app-details .app-copy .app-download-button p {
   text-align: center;
   font-size: 13px;
   color: #4CB1FF;
 }
-/* line 64, ../scss/_apps.scss */
+/* line 60, ../scss/_apps.scss */
 .app .app-details .app-copy a h1, .app .app-details .app-copy a h2 {
-  letter-spacing: -.5px;
+  letter-spacing: -.1px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 70, ../scss/_apps.scss */
+/* line 66, ../scss/_apps.scss */
 .app .app-details .app-copy a h1 {
   font-size: 14px;
   width: 188px;
 }
-/* line 75, ../scss/_apps.scss */
+/* line 71, ../scss/_apps.scss */
 .app .app-details .app-copy a h2 {
   font-size: 12px;
   font-family: "FiraLight";
-  margin-top: 1px;
+  margin: 1px 0 -1px 0;
   width: 116px;
 }
-/* line 81, ../scss/_apps.scss */
+/* line 77, ../scss/_apps.scss */
 .app .app-details .app-copy a div {
   height: 18px;
   width: 100%;
 }
-/* line 91, ../scss/_apps.scss */
+/* line 87, ../scss/_apps.scss */
 .app .app-description {
   font-size: 14px;
   font-family: "FiraLight";
@@ -1601,7 +1662,7 @@
 /**
  *	General App Download BUtton
  */
-/* line 107, ../scss/_apps.scss */
+/* line 103, ../scss/_apps.scss */
 .app-download-button {
   width: 60px;
   height: 23px;
@@ -1616,12 +1677,12 @@
    *	For containers that are smaller(ie app view in the other applications category)
    */
 }
-/* line 118, ../scss/_apps.scss */
+/* line 114, ../scss/_apps.scss */
 .app-download-button.mini-container {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 122, ../scss/_apps.scss */
+/* line 118, ../scss/_apps.scss */
 .app-download-button p {
   position: absolute;
   top: 3px;
@@ -1631,12 +1692,12 @@
   font-family: "FiraRegular";
   width: 100%;
 }
-/* line 131, ../scss/_apps.scss */
+/* line 127, ../scss/_apps.scss */
 .app-download-button:hover {
   cursor: pointer;
   background: #4CB1FF;
 }
-/* line 134, ../scss/_apps.scss */
+/* line 130, ../scss/_apps.scss */
 .app-download-button:hover p {
   color: #fff;
 }
@@ -1644,7 +1705,7 @@
 /**
  *	Abuse reporting
  */
-/* line 143, ../scss/_apps.scss */
+/* line 139, ../scss/_apps.scss */
 .modal {
   position: absolute;
   top: 0;
@@ -1659,7 +1720,7 @@
   transition: display 1 ease;
   display: block;
 }
-/* line 151, ../scss/_apps.scss */
+/* line 147, ../scss/_apps.scss */
 .modal.closed {
   -webkit-transition: display 1 ease;
   -moz-transition: display 1 ease;
@@ -1667,7 +1728,7 @@
   transition: display 1 ease;
   display: none;
 }
-/* line 158, ../scss/_apps.scss */
+/* line 154, ../scss/_apps.scss */
 .modal .modalBox {
   height: 500px;
   width: 700px;
@@ -1679,7 +1740,7 @@
   background: #fff;
   padding: 100px;
 }
-/* line 167, ../scss/_apps.scss */
+/* line 163, ../scss/_apps.scss */
 .modal .modalBox textarea {
   position: relative;
   width: 100%;
