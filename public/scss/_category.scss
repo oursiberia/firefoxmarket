@@ -1,5 +1,5 @@
 #category-page {
-	background: #F6F6F6;
+	background: url('../img/header-background.png') repeat scroll 0% 0% #F6F6F6;
 	padding-bottom: 32px;
 
 	.editorial-collections {
@@ -8,9 +8,56 @@
 
 	#featured {
 		padding: 25px 0;
-		.wrap h1 {
-			font-size: 18px;
-			margin-bottom: 17px;
+		.app {
+			padding: 0;
+			width: 298px;
+			.app-details {
+				padding: 20px;
+				h1 {
+					margin-top: 1px;
+				}
+				h2 {
+					margin: 0 0 -1px 0;
+				}
+			}
+			.app-description {
+				height: 116px;
+				padding: 20px;
+				margin-top: 0;
+				background: #4CB1FF;
+				color: #fff;
+				.rating-copy {
+					height: 62px;
+					display: flex;
+					align-items: center;
+					p {
+						font-family: "FiraRegular", sans-serif;
+						width: 100%;
+					}
+				}
+				.username {
+					margin-top: 12px;
+					p {
+						font-family: "FiraMedium", sans-serif;
+						color: rgba(0,0,0,.4);
+					}
+				}
+				.review-rating {
+					max-width: 104px;
+					height: 20px;
+				}
+				.rating li {
+					height: 20px;
+					width: 20px;
+					img {
+						height: 100%;
+						width: 100%;
+					}
+					&:last-child {
+						margin-right: 0;
+					}
+				}
+			}
 		}
 	}
 
@@ -191,13 +238,18 @@
 		}
 
 		.app-details{
+			width: 100%;
 			margin-left: 70px;
-			margin-top: -3px;
 			border-bottom: 0;
 			padding-bottom: 0;
 			h4 {
+				margin-top: 1px;
 				font-size: 14px;
-				font-family: "FiraMedium";
+				letter-spacing: -.1px;
+				width: 200px;
+				white-space: nowrap;
+				overflow: hidden;
+				text-overflow: ellipsis;
 				&:hover {
 					text-decoration: underline;
 				}
@@ -205,7 +257,7 @@
 			p {
 				font-size: 12px;
 				font-family: "FiraLight";
-				margin-top: -2px;
+				margin: -1px 0 2px 0;
 			}
 			ul.rating {
 				display: inline-block;

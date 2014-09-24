@@ -1,5 +1,5 @@
 #HOME {
-	background: #f6f6f6;
+	background: url('../img/header-background.png') repeat scroll 0% 0% #F6F6F6;
 	padding-bottom: 50px;
 }
 
@@ -382,6 +382,7 @@
 					border: 1px solid #4CB1FF;
 					padding: 7px 12px 6px 12px;
 					cursor: pointer;
+					background: #fff;
 					@include border-radius(5px);
 				}
 				span:first-child {
