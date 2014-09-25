@@ -346,6 +346,14 @@
 }
 
 #featured {
+	padding: 25px 0px 30px;
+	.header {
+		font-family: "FiraLight";
+	    font-size: 22px;
+	    display: inline-block;
+	    letter-spacing: -0.2px;
+	    margin-bottom: 25px;
+	}
 	.app {
 		display: inline-block;
 		vertical-align: top;
@@ -355,20 +363,29 @@
 	}
 }
 
-
-
 #category-list,#category-all{
 	.wrap{
+		padding-top: 27px;
+		border-top: 1px solid #D6D6D6;
 		.controls{
-			padding: 30px 0 44px 0;
+			position: relative;
+			padding-bottom: 28px;
 			h1{
-				font-size: 18px;
+				font-family: "FiraLight";
+				font-size: 22px;
 				display: inline-block;
+				letter-spacing: -.2px;
+				padding-top: 3px;
 			}
 
-			// h1:first-child:after{
-			// 	content: "|";
-			// }
+			h2 {
+				font-size: 12px;
+				color: rgba(0, 0, 0, 0.4);
+				display: inline-block;
+				position: absolute;
+				right: 153px;
+				top: 10px;
+			}
 
 			h1:last-child{
 				font-family: "FiraLight";
@@ -376,13 +393,16 @@
 
 			.toggle {
 				display: inline-block;
+				position: absolute;
+				right: 0;
+				top: 6px;
 				span {
 					font-size: 14px;
 					color: #4CB1FF;
 					border: 1px solid #4CB1FF;
 					padding: 7px 12px 6px 12px;
 					cursor: pointer;
-					background: #fff;
+					background: white;
 					@include border-radius(5px);
 				}
 				span:first-child {
@@ -402,7 +422,7 @@
 			}
 
 			button{
-				float:right;
+				float:left;
 				width:178px;
 				height:42px;
 				background: #4CB1FF;

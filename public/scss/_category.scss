@@ -7,7 +7,7 @@
 	}
 
 	#featured {
-		padding: 25px 0 35px 0;
+		padding: 25px 0 30px 0;
 		.header {
 			font-family: "FiraLight";
 		    font-size: 22px;
@@ -305,11 +305,12 @@
 
 .wrap{
 
-	#popular-in-category{
+	#popular-in-category {
 		padding-top: 27px;
 		border-top: 1px solid #D6D6D6;
 		.wrap{
 			.controls{
+				position: relative;
 				padding-bottom: 28px;
 				h1{
 					font-family: "FiraLight";
@@ -325,7 +326,7 @@
 					display: inline-block;
 					position: absolute;
 					right: 153px;
-					top: 36px;
+					top: 10px;
 				}
 
 				h1:last-child{
@@ -336,7 +337,7 @@
 					display: inline-block;
 					position: absolute;
 					right: 0;
-					top: 33px;
+					top: 6px;
 					span {
 						font-size: 14px;
 						color: #4CB1FF;

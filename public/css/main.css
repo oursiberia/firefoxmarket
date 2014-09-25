@@ -530,66 +530,99 @@
   margin-bottom: 20px;
 }
 
-/* line 349, ../scss/_home.scss */
+/* line 348, ../scss/_home.scss */
+#featured {
+  padding: 25px 0px 30px;
+}
+/* line 350, ../scss/_home.scss */
+#featured .header {
+  font-family: "FiraLight";
+  font-size: 22px;
+  display: inline-block;
+  letter-spacing: -0.2px;
+  margin-bottom: 25px;
+}
+/* line 357, ../scss/_home.scss */
 #featured .app {
   display: inline-block;
   vertical-align: top;
 }
-/* line 353, ../scss/_home.scss */
+/* line 361, ../scss/_home.scss */
 #featured .app:last-child {
   margin: 0;
 }
 
-/* line 362, ../scss/_home.scss */
-#category-list .wrap .controls, #category-all .wrap .controls {
-  padding: 30px 0 44px 0;
+/* line 367, ../scss/_home.scss */
+#category-list .wrap, #category-all .wrap {
+  padding-top: 27px;
+  border-top: 1px solid #D6D6D6;
 }
-/* line 364, ../scss/_home.scss */
-#category-list .wrap .controls h1, #category-all .wrap .controls h1 {
-  font-size: 18px;
-  display: inline-block;
+/* line 370, ../scss/_home.scss */
+#category-list .wrap .controls, #category-all .wrap .controls {
+  position: relative;
+  padding-bottom: 28px;
 }
 /* line 373, ../scss/_home.scss */
+#category-list .wrap .controls h1, #category-all .wrap .controls h1 {
+  font-family: "FiraLight";
+  font-size: 22px;
+  display: inline-block;
+  letter-spacing: -.2px;
+  padding-top: 3px;
+}
+/* line 381, ../scss/_home.scss */
+#category-list .wrap .controls h2, #category-all .wrap .controls h2 {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.4);
+  display: inline-block;
+  position: absolute;
+  right: 153px;
+  top: 10px;
+}
+/* line 390, ../scss/_home.scss */
 #category-list .wrap .controls h1:last-child, #category-all .wrap .controls h1:last-child {
   font-family: "FiraLight";
 }
-/* line 377, ../scss/_home.scss */
+/* line 394, ../scss/_home.scss */
 #category-list .wrap .controls .toggle, #category-all .wrap .controls .toggle {
   display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 6px;
 }
-/* line 379, ../scss/_home.scss */
+/* line 399, ../scss/_home.scss */
 #category-list .wrap .controls .toggle span, #category-all .wrap .controls .toggle span {
   font-size: 14px;
   color: #4CB1FF;
   border: 1px solid #4CB1FF;
   padding: 7px 12px 6px 12px;
   cursor: pointer;
-  background: #fff;
+  background: white;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 388, ../scss/_home.scss */
+/* line 408, ../scss/_home.scss */
 #category-list .wrap .controls .toggle span:first-child, #category-all .wrap .controls .toggle span:first-child {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-/* line 392, ../scss/_home.scss */
+/* line 412, ../scss/_home.scss */
 #category-list .wrap .controls .toggle span:last-child, #category-all .wrap .controls .toggle span:last-child {
   margin-left: -1px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
-/* line 397, ../scss/_home.scss */
+/* line 417, ../scss/_home.scss */
 #category-list .wrap .controls .toggle .active, #category-all .wrap .controls .toggle .active {
   background: #4CB1FF;
   color: #fff;
   cursor: default;
 }
-/* line 404, ../scss/_home.scss */
+/* line 424, ../scss/_home.scss */
 #category-list .wrap .controls button, #category-all .wrap .controls button {
-  float: right;
+  float: left;
   width: 178px;
   height: 42px;
   background: #4CB1FF;
@@ -606,11 +639,11 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 418, ../scss/_home.scss */
+/* line 438, ../scss/_home.scss */
 #category-list .wrap .controls button:hover, #category-all .wrap .controls button:hover {
   background: #42cafe;
 }
-/* line 424, ../scss/_home.scss */
+/* line 444, ../scss/_home.scss */
 #category-list .category, #category-all .category {
   width: 298px;
   background: #F8F8F8;
@@ -624,7 +657,7 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 434, ../scss/_home.scss */
+/* line 454, ../scss/_home.scss */
 #category-list .category .category-title, #category-all .category .category-title {
   background: #fff;
   width: 100%;
@@ -637,11 +670,11 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 446, ../scss/_home.scss */
+/* line 466, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap, #category-all .category .category-title .title-wrap {
   padding: 20px;
 }
-/* line 448, ../scss/_home.scss */
+/* line 468, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon, #category-list .category .category-title .title-wrap .title-copy, #category-all .category .category-title .title-wrap .icon, #category-all .category .category-title .title-wrap .title-copy {
   display: inline-block;
   vertical-align: middle;
@@ -652,14 +685,14 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 459, ../scss/_home.scss */
+/* line 479, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon, #category-all .category .category-title .title-wrap .icon {
   height: 60px;
   width: 60px;
   border-radius: 30px;
   position: relative;
 }
-/* line 464, ../scss/_home.scss */
+/* line 484, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon .cat-icon, #category-all .category .category-title .title-wrap .icon .cat-icon {
   height: 38px;
   width: 40px;
@@ -669,205 +702,205 @@
   background-image: url(../img/category_iconography_white.svg);
   background-size: 40px 608px;
 }
-/* line 474, ../scss/_home.scss */
+/* line 494, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.games, #category-all .category .category-title .title-wrap .icon.games {
   background-color: #00953f;
 }
-/* line 476, ../scss/_home.scss */
+/* line 496, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.games .cat-icon, #category-all .category .category-title .title-wrap .icon.games .cat-icon {
   background-position: 0px 0px;
 }
-/* line 480, ../scss/_home.scss */
+/* line 500, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.productivity, #category-all .category .category-title .title-wrap .icon.productivity {
   background-color: #1e1e9c;
 }
-/* line 482, ../scss/_home.scss */
+/* line 502, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.productivity .cat-icon, #category-all .category .category-title .title-wrap .icon.productivity .cat-icon {
   background-position: 0px -418px;
 }
-/* line 486, ../scss/_home.scss */
+/* line 506, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.music, #category-all .category .category-title .title-wrap .icon.music {
   background-color: #5a197e;
 }
-/* line 488, ../scss/_home.scss */
+/* line 508, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.music .cat-icon, #category-all .category .category-title .title-wrap .icon.music .cat-icon {
   background-position: 0px -76px;
 }
-/* line 492, ../scss/_home.scss */
+/* line 512, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.social, #category-all .category .category-title .title-wrap .icon.social {
   background-color: #a20d55;
 }
-/* line 494, ../scss/_home.scss */
+/* line 514, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.social .cat-icon, #category-all .category .category-title .title-wrap .icon.social .cat-icon {
   background-position: 0px -456px;
 }
-/* line 499, ../scss/_home.scss */
+/* line 519, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.books, #category-all .category .category-title .title-wrap .icon.books {
   background-color: #00953f;
 }
-/* line 501, ../scss/_home.scss */
+/* line 521, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.books .cat-icon, #category-all .category .category-title .title-wrap .icon.books .cat-icon {
   background-position: 0px 113px;
 }
-/* line 506, ../scss/_home.scss */
+/* line 526, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.entertainment, #category-all .category .category-title .title-wrap .icon.entertainment {
   background-color: #1e1e9c;
 }
-/* line 508, ../scss/_home.scss */
+/* line 528, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.entertainment .cat-icon, #category-all .category .category-title .title-wrap .icon.entertainment .cat-icon {
   background-position: 0px 303px;
 }
-/* line 513, ../scss/_home.scss */
+/* line 533, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.lifestyle, #category-all .category .category-title .title-wrap .icon.lifestyle {
   background-color: #00953f;
 }
-/* line 515, ../scss/_home.scss */
+/* line 535, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.lifestyle .cat-icon, #category-all .category .category-title .title-wrap .icon.lifestyle .cat-icon {
   background-position: 1px 380px;
 }
-/* line 520, ../scss/_home.scss */
+/* line 540, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.news-weather, #category-all .category .category-title .title-wrap .icon.news-weather {
   background-color: #1e1e9c;
 }
-/* line 522, ../scss/_home.scss */
+/* line 542, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.news-weather .cat-icon, #category-all .category .category-title .title-wrap .icon.news-weather .cat-icon {
   background-position: 0px 567px;
 }
-/* line 527, ../scss/_home.scss */
+/* line 547, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.reference, #category-all .category .category-title .title-wrap .icon.reference {
   background-color: #00953f;
 }
-/* line 529, ../scss/_home.scss */
+/* line 549, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.reference .cat-icon, #category-all .category .category-title .title-wrap .icon.reference .cat-icon {
   background-position: 0px 113px;
 }
-/* line 534, ../scss/_home.scss */
+/* line 554, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.sports, #category-all .category .category-title .title-wrap .icon.sports {
   background-color: #1e1e9c;
 }
-/* line 536, ../scss/_home.scss */
+/* line 556, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.sports .cat-icon, #category-all .category .category-title .title-wrap .icon.sports .cat-icon {
   background-position: 0px 303px;
 }
-/* line 541, ../scss/_home.scss */
+/* line 561, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.buisness, #category-all .category .category-title .title-wrap .icon.buisness {
   background-color: #1e1e9c;
 }
-/* line 543, ../scss/_home.scss */
+/* line 563, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.buisness .cat-icon, #category-all .category .category-title .title-wrap .icon.buisness .cat-icon {
   background-position: 0px 303px;
 }
-/* line 548, ../scss/_home.scss */
+/* line 568, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.utilities, #category-all .category .category-title .title-wrap .icon.utilities {
   background-color: #1e1e9c;
 }
-/* line 550, ../scss/_home.scss */
+/* line 570, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.utilities .cat-icon, #category-all .category .category-title .title-wrap .icon.utilities .cat-icon {
   background-position: 0px 416px;
 }
-/* line 555, ../scss/_home.scss */
+/* line 575, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.health-fitness, #category-all .category .category-title .title-wrap .icon.health-fitness {
   background-color: #1e1e9c;
 }
-/* line 557, ../scss/_home.scss */
+/* line 577, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.health-fitness .cat-icon, #category-all .category .category-title .title-wrap .icon.health-fitness .cat-icon {
   background-position: 0px 493px;
 }
-/* line 562, ../scss/_home.scss */
+/* line 582, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.maps-navigation, #category-all .category .category-title .title-wrap .icon.maps-navigation {
   background-color: #1e1e9c;
 }
-/* line 564, ../scss/_home.scss */
+/* line 584, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.maps-navigation .cat-icon, #category-all .category .category-title .title-wrap .icon.maps-navigation .cat-icon {
   background-position: 0px 38px;
 }
-/* line 569, ../scss/_home.scss */
+/* line 589, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.travel, #category-all .category .category-title .title-wrap .icon.travel {
   background-color: #1e1e9c;
 }
-/* line 571, ../scss/_home.scss */
+/* line 591, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.travel .cat-icon, #category-all .category .category-title .title-wrap .icon.travel .cat-icon {
   background-position: 0px 77px;
 }
-/* line 576, ../scss/_home.scss */
+/* line 596, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.photo-video, #category-all .category .category-title .title-wrap .icon.photo-video {
   background-color: #1e1e9c;
 }
-/* line 578, ../scss/_home.scss */
+/* line 598, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.photo-video .cat-icon, #category-all .category .category-title .title-wrap .icon.photo-video .cat-icon {
   background-position: 0px 227px;
 }
-/* line 582, ../scss/_home.scss */
+/* line 602, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.shopping, #category-all .category .category-title .title-wrap .icon.shopping {
   background-color: #1e1e9c;
 }
-/* line 584, ../scss/_home.scss */
+/* line 604, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.shopping .cat-icon, #category-all .category .category-title .title-wrap .icon.shopping .cat-icon {
   background-position: 0px 266px;
 }
-/* line 588, ../scss/_home.scss */
+/* line 608, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.education, #category-all .category .category-title .title-wrap .icon.education {
   background-color: #1e1e9c;
 }
-/* line 590, ../scss/_home.scss */
+/* line 610, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.education .cat-icon, #category-all .category .category-title .title-wrap .icon.education .cat-icon {
   background-position: 0px -153px;
 }
-/* line 595, ../scss/_home.scss */
+/* line 615, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.business, #category-all .category .category-title .title-wrap .icon.business {
   background-color: #1e1e9c;
 }
-/* line 597, ../scss/_home.scss */
+/* line 617, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.business .cat-icon, #category-all .category .category-title .title-wrap .icon.business .cat-icon {
   background-position: 0px 341px;
 }
-/* line 603, ../scss/_home.scss */
+/* line 623, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy, #category-all .category .category-title .title-wrap .title-copy {
   margin-left: 5px;
 }
-/* line 605, ../scss/_home.scss */
+/* line 625, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy h3, #category-all .category .category-title .title-wrap .title-copy h3 {
   font-size: 20px;
   font-family: "FiraMedium";
   text-transform: capitalize;
 }
-/* line 610, ../scss/_home.scss */
+/* line 630, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy p, #category-all .category .category-title .title-wrap .title-copy p {
   font-size: 12px;
   font-family: "FiraLight";
   padding-left: 2px;
 }
-/* line 614, ../scss/_home.scss */
+/* line 634, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy p:hover, #category-all .category .category-title .title-wrap .title-copy p:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-/* line 623, ../scss/_home.scss */
+/* line 643, ../scss/_home.scss */
 #category-list .category .apps, #category-all .category .apps {
   padding: 10px 0;
   background: #fff;
 }
-/* line 628, ../scss/_home.scss */
+/* line 648, ../scss/_home.scss */
 #category-list .category .app, #category-all .category .app {
   border: 0;
   padding: 10px 20px;
 }
-/* line 631, ../scss/_home.scss */
+/* line 651, ../scss/_home.scss */
 #category-list .category .app .app-details, #category-all .category .app .app-details {
   padding: 0;
   border: 0;
 }
-/* line 637, ../scss/_home.scss */
+/* line 657, ../scss/_home.scss */
 #category-list .category:last-child, #category-all .category:last-child {
   margin: 0;
 }
 
-/* line 647, ../scss/_home.scss */
+/* line 667, ../scss/_home.scss */
 .category-apps .recent-category {
   display: none;
 }
 
-/* line 652, ../scss/_home.scss */
+/* line 672, ../scss/_home.scss */
 .text-delimiter {
   font-family: "FiraMedium";
   letter-spacing: 1px;
@@ -886,7 +919,7 @@
 }
 /* line 9, ../scss/_category.scss */
 #category-page #featured {
-  padding: 25px 0 35px 0;
+  padding: 25px 0 30px 0;
 }
 /* line 11, ../scss/_category.scss */
 #category-page #featured .header {
@@ -1220,9 +1253,10 @@
 }
 /* line 312, ../scss/_category.scss */
 .wrap #popular-in-category .wrap .controls {
+  position: relative;
   padding-bottom: 28px;
 }
-/* line 314, ../scss/_category.scss */
+/* line 315, ../scss/_category.scss */
 .wrap #popular-in-category .wrap .controls h1 {
   font-family: "FiraLight";
   font-size: 22px;
@@ -1230,27 +1264,27 @@
   letter-spacing: -.2px;
   padding-top: 3px;
 }
-/* line 322, ../scss/_category.scss */
+/* line 323, ../scss/_category.scss */
 .wrap #popular-in-category .wrap .controls h2 {
   font-size: 12px;
   color: rgba(0, 0, 0, 0.4);
   display: inline-block;
   position: absolute;
   right: 153px;
-  top: 36px;
+  top: 10px;
 }
-/* line 331, ../scss/_category.scss */
+/* line 332, ../scss/_category.scss */
 .wrap #popular-in-category .wrap .controls h1:last-child {
   font-family: "FiraLight";
 }
-/* line 335, ../scss/_category.scss */
+/* line 336, ../scss/_category.scss */
 .wrap #popular-in-category .wrap .controls .toggle {
   display: inline-block;
   position: absolute;
   right: 0;
-  top: 33px;
+  top: 6px;
 }
-/* line 340, ../scss/_category.scss */
+/* line 341, ../scss/_category.scss */
 .wrap #popular-in-category .wrap .controls .toggle span {
   font-size: 14px;
   color: #4CB1FF;
@@ -1263,24 +1297,24 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 349, ../scss/_category.scss */
+/* line 350, ../scss/_category.scss */
 .wrap #popular-in-category .wrap .controls .toggle span:first-child {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-/* line 353, ../scss/_category.scss */
+/* line 354, ../scss/_category.scss */
 .wrap #popular-in-category .wrap .controls .toggle span:last-child {
   margin-left: -1px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
-/* line 358, ../scss/_category.scss */
+/* line 359, ../scss/_category.scss */
 .wrap #popular-in-category .wrap .controls .toggle .active {
   background: #4CB1FF;
   color: #fff;
   cursor: default;
 }
-/* line 365, ../scss/_category.scss */
+/* line 366, ../scss/_category.scss */
 .wrap #popular-in-category .wrap .controls button {
   float: right;
   width: 178px;
@@ -1299,17 +1333,17 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 379, ../scss/_category.scss */
+/* line 380, ../scss/_category.scss */
 .wrap #popular-in-category .wrap .controls button:hover {
   background: #42cafe;
 }
 
-/* line 388, ../scss/_category.scss */
+/* line 389, ../scss/_category.scss */
 #categories-title {
   margin-top: 40px;
 }
 
-/* line 392, ../scss/_category.scss */
+/* line 393, ../scss/_category.scss */
 .category-recent {
   opacity: 0;
   position: absolute;
@@ -2579,7 +2613,7 @@ header .wrap #user-actions #menu-trigger img {
  */
 /* line 370, ../scss/main.scss */
 #ecollections {
-  padding: 30px 0;
+  margin-top: 30px;
 }
 
 /* line 377, ../scss/main.scss */

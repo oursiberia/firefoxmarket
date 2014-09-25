@@ -150,6 +150,7 @@ section#HOME(data-ng-controller="home",class="section ajax")
 
         div#featured
             div.wrap
+                h1.header(translate) Featured Apps
                 div(class="home-apps")
                     div(class="{{app.classname}} featured {{app.showfirst}} with-description",data-ng-repeat="app in featured_apps")
 
@@ -174,11 +175,13 @@ section#HOME(data-ng-controller="home",class="section ajax")
         div#category-list
             div.wrap
                 div.controls
-                    h1 Categories:
+                    h1 Popular Categories
+                    //- button View All Categories
+                    h2 Sort By:
                     div.toggle(data-ng-click="toggleCategoryTypes($event)")
                         span.active Popular
                         span Recent
-                    button View All Categories
+                    
                 div.category(data-ng-repeat="item in appcategories")
                     div.category-title(data-name="{{item.name}}")
                         div.title-wrap

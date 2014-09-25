@@ -163,6 +163,7 @@
   </div>
   <div id="featured">
     <div class="wrap">
+      <h1 translate="translate" class="header">Featured Apps</h1>
       <div class="home-apps">
         <div data-ng-repeat="app in featured_apps" class="{{app.classname}} featured {{app.showfirst}} with-description">
           <div class="app-wrap">
@@ -188,9 +189,9 @@
   <div id="category-list">
     <div class="wrap">
       <div class="controls">
-        <h1>Categories:</h1>
+        <h1>Popular Categories</h1>
+        <h2>Sort By:</h2>
         <div data-ng-click="toggleCategoryTypes($event)" class="toggle"><span class="active">Popular</span><span>Recent</span></div>
-        <button>View All Categories</button>
       </div>
       <div data-ng-repeat="item in appcategories" class="category">
         <div data-name="{{item.name}}" class="category-title">
