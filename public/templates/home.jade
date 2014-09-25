@@ -14,7 +14,8 @@ section#HOME(data-ng-controller="home",class="section ajax")
                                 h2 Name
                                 div.total
                                     p results
-                        div.searchresult(data-ng-repeat="result in name_results")
+                        div(data-ng-click="viewSearchResults('name_results')") View All
+                        div.searchresult(data-ng-repeat="result in name_results",class="home-name")
                             div.app-wrap
                                 div.app-details
                                     div.app-image
@@ -36,6 +37,7 @@ section#HOME(data-ng-controller="home",class="section ajax")
                                 h2 Developer
                                 div.total
                                     p results
+                        div(data-ng-click="viewSearchResults('author_results')") View All
                         div.searchresult(data-ng-repeat="result in author_results")
                             div.app-wrap
                                 div.app-details
@@ -58,6 +60,7 @@ section#HOME(data-ng-controller="home",class="section ajax")
                                 h2 Category
                                 div.total
                                     p results
+                        div(data-ng-click="viewSearchResults('category_results')") View All
                         div.searchresult(data-ng-repeat="result in category_results")
                             div.app-wrap
                                 div.app-details
@@ -80,6 +83,8 @@ section#HOME(data-ng-controller="home",class="section ajax")
                                 h2 Description
                                 div.total
                                     p results
+
+                        div(data-ng-click="viewSearchResults('description_results')") View All
                         div.searchresult(data-ng-repeat="result in description_results")
                             div.app-wrap
                                 div.app-details

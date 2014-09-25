@@ -38,6 +38,14 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
         controller:"AllCategoriesController"
     })
 
+    /**
+     * Search results page
+     */
+    $stateProvider.state("SearchResults",{
+        url:"/searchresults",
+        templateUrl:"/build/templates/searchresults.html",
+        controller:"SearchResults"
+    });
 
     /**
      * 404 page

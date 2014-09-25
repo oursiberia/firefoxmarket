@@ -281,12 +281,12 @@ app.controller("CategoryViewController",[
 
                 switch(target.innerHTML){
                     case "Popular":
-                        recentapps.style.opacity = 0;
+                        recentapps.style.display = "none";
                         break;
 
 
                     case "Recent":
-                        recentapps.style.opacity = 1;
+                        recentapps.style.display = "block";
                         break;
                 }
 

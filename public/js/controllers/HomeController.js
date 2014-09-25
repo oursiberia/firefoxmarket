@@ -326,4 +326,21 @@ app.controller("home",[
         }
 
 
+        /**
+         * Redirects to view all search results
+         * @param classname
+         */
+        $scope.viewSearchResults = function(classname){
+            var column = document.getElementsByClassName(classname);
+
+            console.log("RESULTS ARE :",$scope[classname]);
+
+            var data = JSON.stringify($scope[classname]);
+
+            localStorage.setItem("search-results",data);
+
+            window.location = "/searchresults"
+
+        };
+
     }]);//end controller
