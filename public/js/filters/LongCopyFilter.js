@@ -16,7 +16,7 @@ app.filter("LongCopyFilter",function() {
      * @param{number} length the number of items to return from the query
      */
     return function(data,appid) {
-        var charlimit = 180;
+        var charlimit = 160;
         delimiter =  ' <a href="/app/' + appid + '\" class=\"text-delimiter\">[...]</a>';
 
         //split the sentence based on spaces
