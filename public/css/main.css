@@ -867,6 +867,14 @@
   display: none;
 }
 
+/* line 652, ../scss/_home.scss */
+.text-delimiter {
+  font-family: "FiraMedium";
+  letter-spacing: 1px;
+  color: #4CB1FF;
+  font-size: 11px;
+}
+
 /* line 1, ../scss/_category.scss */
 #category-page {
   background: url("../img/header-background.png") repeat scroll 0% 0% #f6f6f6;
