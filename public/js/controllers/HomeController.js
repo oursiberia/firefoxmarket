@@ -116,8 +116,11 @@ app.controller("home",[
             //hide everything in the beginning cept first 4 apps
             var first = [];
             for (var i = 0;i< 4;++i) {
+                console.log(apps[i].description);
+                apps[i].description = $filter("LongCopyFilter")(apps[i].description,apps[i].id);
                 first.push(apps[i]);
             }
+
 
             $scope.featured_apps = first;
 

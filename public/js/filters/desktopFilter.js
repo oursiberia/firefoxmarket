@@ -29,7 +29,7 @@ app.filter("DesktopApps",function(){
 
 
             for(var a = 0;a<data[i].device_types.length;++a){
-                var name = "";
+                var name = data[i].name;
 
                 /**
                  * Save out the name. If there isn't something specified
@@ -37,7 +37,7 @@ app.filter("DesktopApps",function(){
                  * through the list of available languages and take the last one.
                  */
                 if(data[i].name.hasOwnProperty(navigator.language)){
-                   name = data[i].name[navigator.language];
+                    var name = data[i].name[navigator.language];
                 }else{
                     for(var z in data[i].name){
                         name = data[i].name[z];
@@ -47,7 +47,7 @@ app.filter("DesktopApps",function(){
                 if(data[i].device_types[a] === "desktop"){
                     obj.icon = data[i].icons["64"];
                     obj.app_type = data[i].premium_type;
-                    obj.name =  name;
+                    obj.name =  data[i].name["en-US"];
                     obj.id = data[i].id;
                     obj.manifest_url = data[i].manifest_url;
                     obj.premium_type = data[i].premium_type.charAt(0).toUpperCase() + data[i].premium_type.slice(1);
