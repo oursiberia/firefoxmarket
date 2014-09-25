@@ -36,7 +36,9 @@ app.filter("LongCopyFilter",function() {
                 short_review.push(word);
             }
         }
-        short_review[short_review.length - 1] += delimiter;
+        if(count >= charlimit){
+            short_review[short_review.length - 1] += delimiter;
+        }
         short_review = short_review.join(" ");
         return short_review;
     };
