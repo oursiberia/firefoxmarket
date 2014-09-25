@@ -42,8 +42,10 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
      * Search results page
      */
     $stateProvider.state("SearchResults",{
-        url:"/searchresults",
-        templateUrl:"/build/templates/searchresults.html",
+        url:"/searchresults/:name",
+        templateUrl:function(urlattr){
+            return "/build/templates/searchresults.html"
+        },
         controller:"SearchResults"
     });
 

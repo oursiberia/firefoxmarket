@@ -9,8 +9,11 @@ app.controller("SearchResults",function($scope,$rootScope){
 
     //get the data to show
     var data = JSON.parse(localStorage.getItem("search-results"));
-    console.log(data);
+    var term = localStorage.getItem("search-term");
+
     $scope.search_results = data;
+    $scope.metric = localStorage.getItem("search-metric");
+    $scope.search_term = term;
 
     $rootScope.loaded();
 
