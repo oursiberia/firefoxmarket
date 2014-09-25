@@ -77,7 +77,7 @@ section#category-page
 
     div#featured
         div.wrap
-            h1(translate) Featured Apps
+            h1.header(translate) Featured Apps
             div.apps(class="home-apps")
                 div(class="{{app.classname}} featured {{app.showfirst}} with-review",data-ng-repeat="app in featuredapps")
 
@@ -108,18 +108,19 @@ section#category-page
                         span.active Popular
                         span Recent
             div.app-grid
-                div(class="category",data-ng-repeat="app in popularapps")
-                    div.app
-                        a(data-ng-href="/app/{{app.id}}")
-                            img(data-ng-src="{{app.icon}}")
-                        div.app-details
+                div.category-popular
+                    div(class="category",data-ng-repeat="app in popularapps")
+                        div.app
                             a(data-ng-href="/app/{{app.id}}")
-                                h4 {{app.name}}
-                            p {{app.author}}
-                            div(starrating,data-rating="{{app.rating}}", data-delay="true")
-                        a(data-ng-href="/app/{{app.id}}")
-                            div.app-download-button
-                                p Install
+                                img(data-ng-src="{{app.icon}}")
+                            div.app-details
+                                a(data-ng-href="/app/{{app.id}}")
+                                    h4 {{app.name}}
+                                p {{app.author}}
+                                div(starrating,data-rating="{{app.rating}}", data-delay="true")
+                            a(data-ng-href="/app/{{app.id}}")
+                                div.app-download-button
+                                    p Install
 
                 div.category-recent
                     div(class="category",data-ng-repeat="app in recentapps")

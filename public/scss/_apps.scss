@@ -9,7 +9,7 @@
 	@include border-radius(5px);
 
 	&.with-description{
-		height:135px;
+		height:144px;
 	}
 
 	.app-icon{
@@ -85,10 +85,11 @@
 	}// end .app-details
 
 	.app-description{
-		font-size:14px;
+		font-size: 12px;
 		font-family: "FiraLight";
 		overflow: hidden;
 		margin-top: 16px;
+		line-height: 18px;
 	}
 }
 

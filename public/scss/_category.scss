@@ -8,6 +8,13 @@
 
 	#featured {
 		padding: 25px 0 35px 0;
+		.header {
+			font-family: "FiraLight";
+		    font-size: 22px;
+		    display: inline-block;
+		    letter-spacing: -0.2px;
+		    margin-bottom: 25px;
+		}
 		.app {
 			padding: 0;
 			width: 298px;
@@ -21,22 +28,25 @@
 				}
 			}
 			.app-description {
-				height: 116px;
+				height: 118px;
 				padding: 20px;
 				margin-top: 0;
 				background: #4CB1FF;
 				color: #fff;
 				.rating-copy {
+					font-size: 16px;
 					height: 62px;
 					display: flex;
 					align-items: center;
+					line-height: 22px;
 					p {
 						font-family: "FiraRegular", sans-serif;
 						width: 100%;
 					}
 				}
 				.username {
-					margin-top: 12px;
+					margin-top: 16px;
+					font-size: 14px;
 					p {
 						font-family: "FiraMedium", sans-serif;
 						color: rgba(0,0,0,.4);
@@ -382,5 +392,7 @@
 .category-recent{
 	opacity: 0;
 	position:absolute;
-	top:100px;
+	top:91px;
+	@include border-radius(5px);
+	overflow: hidden;
 }
