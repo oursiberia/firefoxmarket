@@ -17,8 +17,6 @@ app.controller("AppDeveloperController",["$scope","API","$window",function($scop
     API.request ("search","?q=" + decodeURIComponent(id) ).then(function(data) {
         var objects = data.objects;
         var apps = [];
-        console.log(objects);
-
             for (var i = 0; i < objects.length; ++i) {
                 var oapp = objects[i];
 
@@ -32,14 +30,7 @@ app.controller("AppDeveloperController",["$scope","API","$window",function($scop
                             id: oapp.id
                         });
                     }
-
-
-
             }
-
-
-
-
         $scope.apps = apps;
     });
 

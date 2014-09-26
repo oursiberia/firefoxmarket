@@ -369,7 +369,6 @@ app.controller("AppViewController",[
 
         /**================= FEEDBACK/REVIEW/ABUSE/PRIVACY ==========================*/
         $scope.openModal = function(modalName) {
-            console.log(modalName);
             var box = document.querySelector(modalName);
             var token = localStorage.getItem("token");
 
@@ -412,6 +411,7 @@ app.controller("AppViewController",[
                     }).error(function (data, status, headers, config) {
                         console.log("A error occured when fetching the privacy policy");
                         console.log(data);
+
                     });
                 }
 

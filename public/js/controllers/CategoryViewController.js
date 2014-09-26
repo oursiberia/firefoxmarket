@@ -176,7 +176,6 @@ app.controller("CategoryViewController",[
          * Get all the recent apps in this category
          */
         API.request("apps_in_category","&cat=" + category + "&sort=created").then(function (data) {
-            console.log("RECENT :",data.objects);
             //  var apps = $filter("DesktopApps")(data.objects);
             var objects = data.objects;
             var popular = [];

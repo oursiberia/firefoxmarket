@@ -12,9 +12,6 @@ app.directive("appreviews",["API","$filter",function(API,$filter) {
         templateUrl:"/build/templates/apps/rating.html",
         link:function($scope,$el,$attr,$ctrl,$transclude) {
             var appid = $attr.appid;
-
-
-
             //pull the rating
             API.request("ratings","?app=" + appid).then(function(data) {
                 for(var i = 0;i<data.objects.length;++i){

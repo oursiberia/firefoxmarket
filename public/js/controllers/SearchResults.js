@@ -14,8 +14,6 @@ app.controller("SearchResults",function($scope,$rootScope){
     $scope.search_results = data;
     $scope.metric = localStorage.getItem("search-metric");
     $scope.search_term = term;
-
     $rootScope.loaded();
-
 
 });

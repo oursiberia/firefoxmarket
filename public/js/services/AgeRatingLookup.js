@@ -85,9 +85,7 @@ app.factory("AgeRatingLookup",function(){
                     var types = rules.bodies[0].rating_types;
 
                     for(var i = 0;i<types.length;++i){
-
                         if(types[i].rating === ratings.rating){
-                            console.log(types[i]);
                             image = types[i].img;
                         }else{
                             image = rules.general.img;

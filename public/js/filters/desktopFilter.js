@@ -25,8 +25,6 @@ app.filter("DesktopApps",function(){
 
         for (var i = 0; i < limit; ++i) {
             var obj = {};
-
-
             for(var a = 0;a<data[i].device_types.length;++a){
                 var name = "";
 
@@ -61,12 +59,7 @@ app.filter("DesktopApps",function(){
                     apps.push(obj);
                 }
             }
-
-
-
-
         }
-
         return apps;
     };
 });
