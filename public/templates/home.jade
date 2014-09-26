@@ -94,7 +94,7 @@ section#HOME(data-ng-controller="home",class="section ajax")
 
                                     div.app-copy
                                         div.app-download-button
-                                            p(translate,(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
+                                            p(translate,data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
                                         a(data-ng-href="/app/{{result.id}}")
                                             h1.app-title {{result.name}}
                                             h2.app-author {{result.author}}

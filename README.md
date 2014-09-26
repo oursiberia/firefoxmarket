@@ -7,7 +7,7 @@ Setup
 ==========
 a Node.js based project using Express. It's technically a client-side project but requires
 Node in order to prepare translations, generate documentation, and compile/minify scripts used
-in the appliation.
+in the application.
 
 
 
@@ -41,8 +41,6 @@ To install the app, once you start the Node server,  open up Firefox and from wi
 Currently, it seems that trying to deploy a packaged app doesn't quite work on a local machine. The same install process will happen but instead of things 
 being a seperate package, the app will end up "hosted" on the node server.
 
-
-
 Packaging
 ============
 Once the app is complete, you can run the compilie.sh script which will generate a deploy folder within the "public" directory. That folder should contain 
@@ -61,7 +59,9 @@ Additionally, you will need gettext which can be easily installed via homebrew o
     brew link gettext --force
 
 ```
-as mentioned here http://superuser.com/questions/747324/brew-install-gettext-should-i-force-link-it
+as mentioned here http://superuser.com/questions/747324/brew-install-gettext-should-i-force-link-it.
+It should be noted that it's entirely possible you already have gettext on your machine.
+
 
 __Specifying locales__
 Right now, all translations are set up to go into a single .pot file.
@@ -110,11 +110,7 @@ you'll have to be running some kind of a server setup to see the docs.
 
 Editorial Generator
 ============
-This can be found at 
-````javascript
-
-    localhost:3000/editorial
-````
+This files for this can be found at in the editorial folder.
 
 You will need the node server running in order to be able to save this out because
 the filesystem api is apparently going to be deprecated soon so things have 

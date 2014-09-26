@@ -12,14 +12,14 @@
         <div class="searchcolumn">
           <div class="result-relevance">
             <div class="relevance">
-              <h1>Relevance:</h1>
-              <h2>Name</h2>
+              <h1 translate="translate">Relevance:</h1>
+              <h2 translate="translate">Name</h2>
               <div class="total">
-                <p>results</p>
+                <p translate="translate">results</p>
               </div>
             </div>
           </div>
-          <div data-ng-click="viewSearchResults('name_results')">View All</div>
+          <div translate="translate" data-ng-click="viewSearchResults('name_results')">View All</div>
           <div data-ng-repeat="result in name_results" class="searchresult home-name">
             <div class="app-wrap">
               <div class="app-details">
@@ -39,14 +39,14 @@
         <div class="searchcolumn">
           <div class="result-relevance">
             <div class="relevance">
-              <h1>Relevance:</h1>
-              <h2>Developer</h2>
+              <h1 translate="translate">Relevance:</h1>
+              <h2 translate="translate">Developer</h2>
               <div class="total">
-                <p>results</p>
+                <p translate="translate">results</p>
               </div>
             </div>
           </div>
-          <div data-ng-click="viewSearchResults('author_results')">View All</div>
+          <div translate="translate" data-ng-click="viewSearchResults('author_results')">View All</div>
           <div data-ng-repeat="result in author_results" class="searchresult">
             <div class="app-wrap">
               <div class="app-details">
@@ -66,14 +66,14 @@
         <div class="searchcolumn">
           <div class="result-relevance">
             <div class="relevance">
-              <h1>Relevance:</h1>
-              <h2>Category</h2>
+              <h1 translate="translate">Relevance:</h1>
+              <h2 translate="translate">Category</h2>
               <div class="total">
-                <p>results</p>
+                <p translate="translate">results</p>
               </div>
             </div>
           </div>
-          <div data-ng-click="viewSearchResults('category_results')">View All</div>
+          <div translate="translate" data-ng-click="viewSearchResults('category_results')">View All</div>
           <div data-ng-repeat="result in category_results" class="searchresult">
             <div class="app-wrap">
               <div class="app-details">
@@ -93,21 +93,21 @@
         <div class="searchcolumn">
           <div class="result-relevance">
             <div class="relevance">
-              <h1>Relevance:</h1>
-              <h2>Description</h2>
+              <h1 translate="translate">Relevance:</h1>
+              <h2 translate="translate">Description</h2>
               <div class="total">
-                <p>results</p>
+                <p translate="translate">results</p>
               </div>
             </div>
           </div>
-          <div data-ng-click="viewSearchResults('description_results')">View All</div>
+          <div translate="translate" data-ng-click="viewSearchResults('description_results')">View All</div>
           <div data-ng-repeat="result in description_results" class="searchresult">
             <div class="app-wrap">
               <div class="app-details">
                 <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
                 <div class="app-copy">
                   <div class="app-download-button">
-                    <p data-ng-click="initPurchase(result.app_type,result.manifest_url)">Install</p>
+                    <p translate="translate" data-ng-click="initPurchase(result.app_type,result.manifest_url)">Install</p>
                   </div><a data-ng-href="/app/{{result.id}}">
                     <h1 class="app-title">{{result.name}}</h1>
                     <h2 class="app-author">{{result.author}}</h2>
@@ -133,7 +133,7 @@
           <div class="alt-curve"></div>
           <div class="collection-copy">
             <h2 translate="translate">Video On The Go</h2>
-            <p>Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
+            <p translate="translate">Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
           </div>
         </div>
         <div class="collection">
@@ -146,7 +146,7 @@
           <div class="alt-curve"></div>
           <div class="collection-copy">
             <h2 translate="translate">Top three Games</h2>
-            <p>Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
+            <p translate="translate">Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
           </div>
         </div>
         <div class="collection">
@@ -159,7 +159,7 @@
           <div class="alt-curve"></div>
           <div class="collection-copy">
             <h2 translate="translate">Great Apps for the workplace</h2>
-            <p>Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
+            <p translate="translate">Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
           </div>
         </div>
       </div>
@@ -193,8 +193,8 @@
   <div id="category-list">
     <div class="wrap">
       <div class="controls">
-        <h1>Popular Categories</h1>
-        <h2>Sort By</h2>
+        <h1 translate="translate">Popular Categories</h1>
+        <h2 translate="translate">Sort By:</h2>
         <div data-ng-click="toggleCategoryTypes($event)" class="toggle"><span class="active">Popular</span><span>Recent</span></div>
       </div>
       <div data-ng-repeat="item in appcategories" class="category">
@@ -203,7 +203,7 @@
             <div class="icon {{item.name}}"><span class="cat-icon"></span></div>
             <div class="title-copy">
               <h3>{{item.name}}</h3><a href="/category/{{item.name}}">
-                <p>View All From Category &#9656;</p></a>
+                <p translate="translate">View All From Category &#9656;</p></a>
             </div>
           </div>
         </div>

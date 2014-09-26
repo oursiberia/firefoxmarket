@@ -3,6 +3,10 @@
  * @name FirefoxMarket.directive:AbuseDirective
  *
  * @description
+ * This is a directive that handles submitting abuse reports to the
+ * marketplace.
+ *
+ * Note - currently there is a 500 server error that occurs when submitting.
  */
 app.directive("abusedirective",["API","$http",function(API,$http){
 

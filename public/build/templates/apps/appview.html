@@ -5,10 +5,10 @@
   <div class="wrap">
     <div class="app-category">
       <div class="category-label">
-        <h3>Categories &#9656;</h3><a data-ng-href="/category/{{category}}" translate="translate"><span>{{category}}</span></a>
+        <h3 translate="translate">Categories &#9656;</h3><a data-ng-href="/category/{{category}}" translate="translate"><span>{{category}}</span></a>
       </div>
       <div data-ng-click="shareApp()" class="share-app">
-        <p>Share App</p><img src="/img/share_icon.svg" alt="share icon"/>
+        <p translate="translate">Share App</p><img src="/img/share_icon.svg" alt="share icon"/>
         <div id="share-buttons"><span displayText="ShareThis" class="st_sharethis_large"></span><span displayText="Facebook" class="st_facebook_large"></span><span displayText="Tweet" class="st_twitter_large"></span><span displayText="LinkedIn" class="st_linkedin_large"></span><span displayText="Pinterest" class="st_pinterest_large"></span><span displayText="Email" class="st_email_large"></span></div>
       </div>
     </div>
@@ -19,10 +19,10 @@
           <p>{{ratings}}</p>
         </div>
         <div class="updates">
-          <h3>Updated</h3>
+          <h3 translate="translate">Updated</h3>
           <!--TODO need a way to get last updated date-->
           <p class="date">May 14, 2014</p>
-          <h3>Latest Version</h3>
+          <h3 translate="translate">Latest Version</h3>
           <p class="version">{{version}}</p>
         </div>
         <div class="govt-rating"><img ng-src="{{rating_image}}"/></div>
@@ -85,7 +85,7 @@
     <div id="reviews">
       <div class="reviews-header">
         <h2 translate="translate">Latest Reviews</h2>
-        <div data-ng-click="openModal(&quot;#review&quot;)" class="write-a-review">Write a Review</div>
+        <div data-ng-click="openModal(&quot;#review&quot;)" translate="translate" class="write-a-review">Write a Review</div>
         <div translate="translate" class="view-all-reviews">View All Reviews &#9656;</div>
       </div>
       <div class="app-reviews">
@@ -106,7 +106,7 @@
 </section>
 <div id="related-apps">
   <div class="wrap">
-    <h3>Related Apps</h3>
+    <h3 translate="translate">Related Apps</h3>
     <div class="apps">
       <div data-ng-repeat="app in relatedapps" class="app">
         <div class="app-details">
@@ -132,7 +132,7 @@
 <div appreview="appreview" data-name="{{name}}"></div>
 <div id="privacy" class="modal closed">
   <div class="modalBox">
-    <h2>Privacy Policy</h2>
+    <h2 translate="translate">Privacy Policy</h2>
     <div class="closeModal"></div>
     <p>{{privacy_policy}}</p>
   </div>
