@@ -1,7 +1,7 @@
 //abuse starts out in a "closed" state.
 div#feedback(class="modal closed")
     div.modalBox
-        h2 Send Feedback
+        h2(translate) Send Feedback
         div.closeModal
         textarea(name="review",placeholder="enter your feedback")
-        button(data-ng-click="submitFeedback()") Send
+        button(data-ng-click="submitFeedback()",translate) Send

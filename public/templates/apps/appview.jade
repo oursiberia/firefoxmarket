@@ -4,11 +4,11 @@ section#appview
     div.wrap
         div.app-category
             div.category-label
-                h3 Categories &#9656;
+                h3(translate) Categories &#9656;
                 a(data-ng-href="/category/{{category}}",translate)
                     span {{category}}
             div.share-app(data-ng-click="shareApp()")
-                p Share App
+                p(translate) Share App
                 img(src="/img/share_icon.svg" alt="share icon")
                 div#share-buttons
                     span( class='st_sharethis_large',displayText='ShareThis')
@@ -25,10 +25,10 @@ section#appview
                     div(starrating,data-rating="{{rating}}",data-delay="true")
                     p {{ratings}}
                 div.updates
-                    h3 Updated
+                    h3(translate) Updated
                     //TODO need a way to get last updated date
                     p.date May 14, 2014
-                    h3 Latest Version
+                    h3(translate) Latest Version
                     p.version {{version}}
 
                 div.govt-rating
@@ -100,7 +100,7 @@ section#appview
         div#reviews
             div.reviews-header
                 h2(translate) Latest Reviews
-                div.write-a-review(data-ng-click='openModal("#review")') Write a Review
+                div.write-a-review(data-ng-click='openModal("#review")',translate) Write a Review
                 div.view-all-reviews(translate) View All Reviews &#9656;
             div.app-reviews
                 div(data-ng-repeat="review in reviews",class="app-review")
@@ -113,7 +113,7 @@ section#appview
 
 div#related-apps
     div.wrap
-        h3 Related Apps
+        h3(translate) Related Apps
         div.apps
             div(class="app",data-ng-repeat="app in relatedapps")
                 div.app-details
@@ -139,6 +139,6 @@ div(appfeedback)
 div(appreview data-name="{{name}}")
 div#privacy(class="modal closed")
     div.modalBox
-        h2 Privacy Policy
+        h2(translate) Privacy Policy
         div.closeModal
         p {{privacy_policy}}

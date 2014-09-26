@@ -23,7 +23,7 @@ div.category-apps
                             img.app-icon(ng-src="{{app.icon}}")
                     div.app-copy
                         div.app-download-button
-                            p(data-ng-click="initPurchase(app.app_type,app.manifest_url)") Install
+                            p(data-ng-click="initPurchase(app.app_type,app.manifest_url)",translate) Install
                         a(data-ng-href="/app/{{app.id}}")
                             h1.app-title {{app.name}}
                             h2.app-author {{app.author}}

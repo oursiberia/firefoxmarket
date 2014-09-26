@@ -5,7 +5,7 @@ section#category-page
             div#category-details
                 img(src="/img/category-icon.png")
                 div.category-copy
-                    h2 View All Categories
+                    h2(translate) View All Categories
                     h1#category-title
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis risus viverra, placerat ante ut.
 
@@ -27,56 +27,56 @@ section#category-page
                                 div(class="star-rating", starrating, data-rating="{{fapp.rating}}",data-delay="true")
 
     div(class="editorial-collections")
-            div.wrap
-                div.collections
-                    div.collection
-                        div.curve
-                        div.collection-apps
-                            div.collection-app
-                                a(href="/app/{{staff_one.id}}")
-                                    img(src="{{staff_one.image}}")
-                            div.collection-app
-                                a(href="/app/{{staff_two.id}}")
-                                    img(src="{{staff_two.image}}")
-                            div.collection-app
-                                a(href="/app/{{staff_three.id}}")
-                                    img(src="{{staff_three.image}}")
-                        div.alt-curve
-                        div.collection-copy
-                            h2(translate) Our Staff Picks
-                            p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.
-                    div.collection
-                        div.curve
-                        div.collection-apps
-                            div.collection-app
-                                a(href="/app/{{games_one.id}}")
-                                    img(src="{{games_one.image}}")
-                            div.collection-app
-                                a(href="/app/{{games_two.id}}")
-                                    img(src="{{games_two.image}}")
-                            div.collection-app
-                                a(href="/app/{{games_three.id}}")
-                                    img(src="{{games_three.image}}")
-                        div.alt-curve
-                        div.collection-copy
-                            h2(translate) Top three Games
-                            p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.
-                    div.collection
-                        div.curve
-                        div.collection-apps
-                            div.collection-app
-                                a(href="/app/{{workplace_one.id}}")
-                                    img(src="{{workplace_one.image}}")
-                            div.collection-app
-                                a(href="/app/{{workplace_two.id}}")
-                                    img(src="{{workplace_two.image}}")
-                            div.collection-app
-                                a(href="/app/{{workplace_three.id}}")
-                                    img(src="{{workplace_three.image}}")
-                        div.alt-curve
-                        div.collection-copy
-                            h2(translate) Great Apps for the workplace
-                            p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.
+        div.wrap
+            div.collections
+                div.collection
+                    div.curve
+                    div.collection-apps
+                        div.collection-app
+                            a(href="/app/{{staff_one.id}}")
+                                img(src="{{staff_one.image}}")
+                        div.collection-app
+                            a(href="/app/{{staff_two.id}}")
+                                img(src="{{staff_two.image}}")
+                        div.collection-app
+                            a(href="/app/{{staff_three.id}}")
+                                img(src="{{staff_three.image}}")
+                    div.alt-curve
+                    div.collection-copy
+                        h2(translate) Our Staff Picks
+                        p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.
+                div.collection
+                    div.curve
+                    div.collection-apps
+                        div.collection-app
+                            a(href="/app/{{games_one.id}}")
+                                img(src="{{games_one.image}}")
+                        div.collection-app
+                            a(href="/app/{{games_two.id}}")
+                                img(src="{{games_two.image}}")
+                        div.collection-app
+                            a(href="/app/{{games_three.id}}")
+                                img(src="{{games_three.image}}")
+                    div.alt-curve
+                    div.collection-copy
+                        h2(translate) Top three Games
+                        p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.
+                div.collection
+                    div.curve
+                    div.collection-apps
+                        div.collection-app
+                            a(href="/app/{{workplace_one.id}}")
+                                img(src="{{workplace_one.image}}")
+                        div.collection-app
+                            a(href="/app/{{workplace_two.id}}")
+                                img(src="{{workplace_two.image}}")
+                        div.collection-app
+                            a(href="/app/{{workplace_three.id}}")
+                                img(src="{{workplace_three.image}}")
+                    div.alt-curve
+                    div.collection-copy
+                        h2(translate) Great Apps for the workplace
+                        p Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.
 
     div#featured
         div.wrap
@@ -106,11 +106,11 @@ section#category-page
             div#popular-in-category(class="category popular",style="position:relative;")
                 div.wrap
                     div.controls
-                        h1 Apps In Category
-                        h2 Sort By
+                        h1(translate) Apps In Category
+                        h2(translate) Sort By
                         div.toggle(data-ng-click="toggleCategoryTypes($event)")
-                            span.active Popular
-                            span Recent
+                            span.active(translate) Popular
+                            span(translate) Recent
                 div.app-grid
                     div.category-popular
                         div(class="category",data-ng-repeat="app in popularapps")
@@ -124,7 +124,7 @@ section#category-page
                                     div(starrating,data-rating="{{app.rating}}", data-delay="true")
                                 a(data-ng-href="/app/{{app.id}}")
                                     div.app-download-button
-                                        p Install
+                                        p(translate) Install
 
                     div.category-recent
                         div(class="category",data-ng-repeat="app in recentapps")
@@ -138,7 +138,6 @@ section#category-page
                                     div(starrating,data-rating="{{app.rating}}", data-delay="true")
                                 a(data-ng-href="/app/{{app.id}}")
                                     div.app-download-button
-                                        p Install
+                                        p(translate) Install
                 div.wrap
-                    h1 Apps In Category
-
+                    h1(translate) Apps In Category
