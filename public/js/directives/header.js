@@ -119,7 +119,7 @@ app.directive("header",function(MasterSearch,$rootScope,$location) {
 
                 var search = document.getElementById("search");
 
-                var metric = ""
+                var metric = "";
 
                 switch(classname){
                     case "name_results":

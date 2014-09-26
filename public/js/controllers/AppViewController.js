@@ -241,10 +241,10 @@ app.controller("AppViewController",[
 
                     var previews = $scope.previews;
 
-                    for(var i = 0;i<previews.length;++i){
+                    for(var a = 0;a<previews.length;++a){
                         var image = new Image();
-                        image.src = previews[i].image;
-                        image.setAttribute("large",previews[i].image);
+                        image.src = previews[a].image;
+                        image.setAttribute("large",previews[a].image);
                         previewWrap.appendChild(image);
                     }
 
@@ -379,7 +379,7 @@ app.controller("AppViewController",[
 
 
             } else if ((modalName !== "#review") || (token !== null) || (token !== undefined)){
-               loadBox();
+                loadBox();
             }
 
             function loadBox(){
@@ -423,6 +423,6 @@ app.controller("AppViewController",[
                     }
                 });
             }
-        }
+        };
 
     }]);

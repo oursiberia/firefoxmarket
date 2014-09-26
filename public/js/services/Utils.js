@@ -31,6 +31,6 @@ app.factory("Utils",function(){
         encodeURIComponent:encodeURIComponent,
         decodeURIComponent:decodeURIComponent,
         urlparams:urlparams
-    }
+    };
 
 });

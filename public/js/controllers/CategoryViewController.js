@@ -291,5 +291,5 @@ app.controller("CategoryViewController",[
                 }
 
             }
-        }
+        };
     }]);

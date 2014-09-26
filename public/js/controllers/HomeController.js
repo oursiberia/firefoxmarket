@@ -319,12 +319,12 @@ app.controller("home",[
 
 
                     case "Recent":
-                            $rootScope.$broadcast("CATEGORY_RECENT");
+                        $rootScope.$broadcast("CATEGORY_RECENT");
                         break;
                 }
 
             }
-        }
+        };
 
 
         /**
@@ -336,7 +336,7 @@ app.controller("home",[
 
             var search = document.getElementById("homesearch");
 
-            var metric = ""
+            var metric = "";
 
             switch(classname){
                 case "name_results":
