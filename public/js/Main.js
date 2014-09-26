@@ -36,14 +36,16 @@ app.config(function($stateProvider,$urlRouterProvider,$locationProvider,$httpPro
         url:"/categories",
         templateUrl:"/build/templates/categories.html",
         controller:"AllCategoriesController"
-    })
+    });
 
     /**
      * Search results page
      */
     $stateProvider.state("SearchResults",{
-        url:"/searchresults",
-        templateUrl:"/build/templates/searchresults.html",
+        url:"/searchresults/:name",
+        templateUrl:function(urlattr){
+            return "/build/templates/searchresults.html";
+        },
         controller:"SearchResults"
     });
 
@@ -221,18 +223,18 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
                 transform:"rotateZ(45deg)",
                 marginTop:5 + "px",
                 ease:"Power3.easeInOut"
-            })
+            });
 
             TweenMax.to(burger.children[2],0.5,{
                 opacity:0,
                 ease:"Power3.easeInOut"
-            })
+            });
 
             TweenMax.to(burger.children[1],0.5,{
                 transform:"rotateZ(-45deg)",
                 marginTop:-6 + "px",
                 ease:"Power3.easeInOut"
-            })
+            });
 
 
             menu = document.querySelector("#user-details");
@@ -249,18 +251,18 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
                 transform:"rotateZ(0deg)",
                 marginTop:0 + "px",
                 ease:"Power3.easeInOut"
-            })
+            });
 
             TweenMax.to(burger.children[2],0.5,{
                 opacity:1,
                 ease:"Power3.easeInOut"
-            })
+            });
 
             TweenMax.to(burger.children[1],0.5,{
                 transform:"rotateZ(0deg)",
                 marginTop:0 + "px",
                 ease:"Power3.easeInOut"
-            })
+            });
 
             menu = document.querySelector("#user-details");
             menu.className = "";
@@ -280,7 +282,8 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
      * we need to prevent scrolling
      */
     $rootScope.lockBody = function(){
-        console.log("body locked")
+        console.log("body locked");
+
         TweenMax.to(window,0.5,{
             scrollTo:{
                 y:0
@@ -288,16 +291,25 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
             ease:"Power3.easeInOut"
 
         });
-
         document.getElementsByTagName("html")[0].style.overflow = "hidden";
     };
 
+    /**
+     * Re-enables scrolling
+     */
     $rootScope.unlockBody = function(){
         document.getElementsByTagName("html")[0].style.overflow = "scroll";
     };
 
 
+    /**
+     * Filters a app's possible names so that a name for the application will show up
+     * if a translation in the specified locale isn't available.
+     * @param app the app object
+     * @returns {string} the name of the application
+     */
     $rootScope.filterName = function(app){
+
         var name = "";
         /**
          * Save out the name. If there isn't something specified
@@ -314,7 +326,7 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
 
         return name;
 
-    }
+    };
 
 
 

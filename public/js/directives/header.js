@@ -5,7 +5,7 @@
  * @description
  * Directive to show header.
  */
-app.directive("header",function(MasterSearch,$rootScope) {
+app.directive("header",function(MasterSearch,$rootScope,$location) {
 
     return {
         templateUrl:"/build/templates/header.html",
@@ -108,6 +108,50 @@ app.directive("header",function(MasterSearch,$rootScope) {
             $scope.searchApp = function(){
                 MasterSearch.query($scope);
             };
+
+
+            /**
+             * Redirects to view all search results
+             * @param classname
+             */
+            $scope.viewSearchResults = function(classname){
+                var column = document.getElementsByClassName(classname);
+
+                var search = document.getElementById("search");
+
+                var metric = "";
+
+                switch(classname){
+                    case "name_results":
+                        metric = "Name";
+                        break;
+
+                    case "author_results":
+                        metric = "Developoer";
+                        break;
+
+                    case "category_results":
+                        metric = "Category";
+                        break;
+
+                    case "description_results":
+                        metric = "Description";
+                        break;
+                }
+
+
+                if(search.value !== null) {
+                    var val = search.value.split("").join("");
+                    localStorage.setItem("search-term",search.value);
+                    var data = JSON.stringify($scope[classname]);
+
+                    localStorage.setItem("search-results",data);
+
+                    $location.path("/searchresults" + search.value);
+                }
+
+            };
+
         }
 
     };

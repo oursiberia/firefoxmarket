@@ -16,7 +16,7 @@ app.factory("AgeRatingLookup",function(){
      */
     var rules = {
         general:{
-          "img": "/img/content_ratings/generic/general.png"
+            "img": "/img/content_ratings/generic/general.png"
         },
         bodies:[
             {
@@ -65,7 +65,7 @@ app.factory("AgeRatingLookup",function(){
 
             }
         ]//end body
-    }
+    };
 
 
 
@@ -77,7 +77,7 @@ app.factory("AgeRatingLookup",function(){
          */
         getImage:function(app){
             var ratings = app.content_ratings;
-            var image = ""
+            var image = "";
 
             switch(ratings.body){
                 case "generic":
@@ -85,10 +85,8 @@ app.factory("AgeRatingLookup",function(){
                     var types = rules.bodies[0].rating_types;
 
                     for(var i = 0;i<types.length;++i){
-
                         if(types[i].rating === ratings.rating){
-                            console.log(types[i]);
-                            image = types[i].img
+                            image = types[i].img;
                         }else{
                             image = rules.general.img;
                         }
@@ -98,9 +96,9 @@ app.factory("AgeRatingLookup",function(){
 
                 case "esrb":
                     var rule = rules.bodies[1];
-                    for(var i = 0;i<rule.rating_types.length;++i){
-                        if(rule.rating_types[i].ratingNumber === ratings.rating ){
-                            image = rule.rating_types[i].img;
+                    for(var a = 0;a<rule.rating_types.length;++a){
+                        if(rule.rating_types[a].ratingNumber === ratings.rating ){
+                            image = rule.rating_types[a].img;
                         }else{
                             image = rules.general.img;
                         }

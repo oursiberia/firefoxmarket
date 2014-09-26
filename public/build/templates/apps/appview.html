@@ -67,7 +67,7 @@
         </ul>
       </div>
       <div id="other-applications" ng-if="other_apps != false">
-        <h2 translate="translate">Apps By this developer<a data-ng-href="/developer/{{author}}">{{more_other_apps}}</a></h2>
+        <h2 translate="translate">Apps By this developer<a data-ng-href="/developer/{{urisafe_author}}">{{more_other_apps}}</a></h2>
         <div id="other-applications-list">
           <div data-ng-repeat="app in other_apps" class="other-app"><a ng-href="/app/{{app.id}}"><img data-ng-src="{{app.icon}}" class="app-icon"/></a>
             <div class="details"><a data-ng-href="/app/{{app.id}}">

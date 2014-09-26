@@ -31,7 +31,7 @@ app.factory("MasterSearch",function($http){
             $scope = _$scope;
             if(term === undefined){
                 //get the search term;
-                var term = window.document.querySelector("#homesearch") || window.document.querySelector("#search");
+                term = window.document.querySelector("#homesearch") || window.document.querySelector("#search");
 
                 /**
                  * if theres no search term, reject search attempt.
@@ -62,15 +62,11 @@ app.factory("MasterSearch",function($http){
 
 
 
-                    //set to the scope
-                    $scope.author_results = author_results;
-                    $scope.name_results = name_results;
-                    $scope.category_results = category_results;
-                    $scope.description_results = description_results;
-
-                    console.log(author_results[0],name_results[0],category_results[0],description_results[0]);
-
-
+                //set to the scope
+                $scope.author_results = author_results;
+                $scope.name_results = name_results;
+                $scope.category_results = category_results;
+                $scope.description_results = description_results;
 
 
             }).error(function(data, status, headers, config) {
@@ -203,7 +199,7 @@ app.factory("MasterSearch",function($http){
         filter:function(appset){
             var len = appset.length;
 
-            var newset = []
+            var newset = [];
             for(var i = 0;i<len-1;++i){
                 var app = appset[i];
 

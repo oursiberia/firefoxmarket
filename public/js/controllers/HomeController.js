@@ -11,7 +11,8 @@ app.controller("home",[
     "$filter",
     "$http",
     "MasterSearch",
-    function($rootScope,API,$scope,$filter,$http,MasterSearch){
+    "$location",
+    function($rootScope,API,$scope,$filter,$http,MasterSearch,$location){
         /**
          * Editorial
          * TODO figure out how curated apps would better work.
@@ -318,12 +319,12 @@ app.controller("home",[
 
 
                     case "Recent":
-                            $rootScope.$broadcast("CATEGORY_RECENT");
+                        $rootScope.$broadcast("CATEGORY_RECENT");
                         break;
                 }
 
             }
-        }
+        };
 
 
         /**
@@ -333,13 +334,38 @@ app.controller("home",[
         $scope.viewSearchResults = function(classname){
             var column = document.getElementsByClassName(classname);
 
-            console.log("RESULTS ARE :",$scope[classname]);
+            var search = document.getElementById("homesearch");
 
-            var data = JSON.stringify($scope[classname]);
+            var metric = "";
 
-            localStorage.setItem("search-results",data);
+            switch(classname){
+                case "name_results":
+                    metric = "Name";
+                    break;
 
-            window.location = "/searchresults"
+                case "author_results":
+                    metric = "Developoer";
+                    break;
+
+                case "category_results":
+                    metric = "Category";
+                    break;
+
+                case "description_results":
+                    metric = "Description";
+                    break;
+            }
+
+            if(search.value !== ""){
+                var val = search.value.split("").join("");
+                localStorage.setItem("search-term",search.value);
+                localStorage.setItem("search-metric",metric);
+                var data = JSON.stringify($scope[classname]);
+
+                localStorage.setItem("search-results",data);
+
+                $location.path("/searchresults/" + val);
+            }
 
         };
 

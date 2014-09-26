@@ -19,7 +19,7 @@ app.factory("API",[
         "collections_detail":"/api/v2/feed/collections/",
         "categories":"/api/v1/apps/category/",
         "ratings":"/api/v1/apps/rating/",
-        "abuse":"/api/v1/abuse/app/", ////TODO not wired up for beta right now,
+        "abuse":"/api/v1/abuse/app/", ////TODO Getting 500 error currently even with _user param set
         "review":"/api/v1/apps/rating/?_user=" // takes app, body, and rating
     }; //end routes
 

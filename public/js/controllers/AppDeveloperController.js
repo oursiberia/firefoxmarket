@@ -12,32 +12,25 @@ app.controller("AppDeveloperController",["$scope","API","$window",function($scop
     var id = $window.location.href.split("/");
     id = id[id.length - 1];
 
-    $scope.author = id;
+    $scope.author = decodeURIComponent(id);
 
-    API.request ("search","?q=" + id ).then(function(data) {
+    API.request ("search","?q=" + decodeURIComponent(id) ).then(function(data) {
         var objects = data.objects;
         var apps = [];
-        console.log(objects);
-
             for (var i = 0; i < objects.length; ++i) {
                 var oapp = objects[i];
 
-
-                    apps.push({
-                        name: oapp.name[navigator.language],
-                        rating: oapp.ratings.average,
-                        author: oapp.author,
-                        purchase_type: oapp.premium_type.charAt(0).toUpperCase() + oapp.premium_type.slice(1),
-                        icon: oapp.icons["64"],
-                        id: oapp.id
-                    });
-
-
+                    if(oapp.author === decodeURIComponent(id)){
+                        apps.push({
+                            name: oapp.name[navigator.language],
+                            rating: oapp.ratings.average,
+                            author: oapp.author,
+                            purchase_type: oapp.premium_type.charAt(0).toUpperCase() + oapp.premium_type.slice(1),
+                            icon: oapp.icons["64"],
+                            id: oapp.id
+                        });
+                    }
             }
-
-
-
-
         $scope.apps = apps;
     });
 

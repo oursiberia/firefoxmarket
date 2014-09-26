@@ -33,6 +33,7 @@ app.controller("AppViewController",[
          */
         API.request ("app_detail",id + "/").then(function(data) {
             $scope.author = data.author;
+            $scope.urisafe_author = encodeURIComponent(data.author);
             $scope.categories = data.categories;
             $scope.category = data.categories[0];
             $scope.content_ratings = data.content_ratings;
@@ -109,15 +110,19 @@ app.controller("AppViewController",[
                     for(var i = 0;i<objects.length;++i){
                         var oapp = objects[i];
 
+                        //prevent duplicate apps
                         if (oapp.name[navigator.language] != data.name[navigator.language]) {
-                            apps.push({
-                                name:oapp.name[navigator.language],
-                                rating:oapp.ratings.average,
-                                author:data.author,
-                                purchase_type:data.premium_type.charAt(0).toUpperCase() + data.premium_type.slice(1),
-                                icon:oapp.icons["64"],
-                                id:oapp.id
-                            });
+                            //make sure to only show apps that by the same author
+                           if(oapp.author === $scope.author){
+                               apps.push({
+                                   name:$rootScope.filterName(oapp),
+                                   rating:oapp.ratings.average,
+                                   author:oapp.author,
+                                   purchase_type:data.premium_type.charAt(0).toUpperCase() + data.premium_type.slice(1),
+                                   icon:oapp.icons["64"],
+                                   id:oapp.id
+                               });
+                           }
                         }
 
                     }
@@ -152,7 +157,7 @@ app.controller("AppViewController",[
                 for(var i = 0;i<4;++i){
                     var oapp = objects[i];
                     relatedapps.push({
-                        name:oapp.name[navigator.language],
+                        name:$rootScope.filterName(oapp),
                         rating:oapp.ratings.average,
                         author:oapp.author,
                         purchase_type:oapp.premium_type.charAt(0).toUpperCase() + oapp.premium_type.slice(1),
@@ -241,10 +246,10 @@ app.controller("AppViewController",[
 
                     var previews = $scope.previews;
 
-                    for(var i = 0;i<previews.length;++i){
+                    for(var a = 0;a<previews.length;++a){
                         var image = new Image();
-                        image.src = previews[i].image;
-                        image.setAttribute("large",previews[i].image);
+                        image.src = previews[a].image;
+                        image.setAttribute("large",previews[a].image);
                         previewWrap.appendChild(image);
                     }
 
@@ -364,7 +369,6 @@ app.controller("AppViewController",[
 
         /**================= FEEDBACK/REVIEW/ABUSE/PRIVACY ==========================*/
         $scope.openModal = function(modalName) {
-            console.log(modalName);
             var box = document.querySelector(modalName);
             var token = localStorage.getItem("token");
 
@@ -379,7 +383,7 @@ app.controller("AppViewController",[
 
 
             } else if ((modalName !== "#review") || (token !== null) || (token !== undefined)){
-               loadBox();
+                loadBox();
             }
 
             function loadBox(){
@@ -407,6 +411,7 @@ app.controller("AppViewController",[
                     }).error(function (data, status, headers, config) {
                         console.log("A error occured when fetching the privacy policy");
                         console.log(data);
+
                     });
                 }
 
@@ -423,6 +428,6 @@ app.controller("AppViewController",[
                     }
                 });
             }
-        }
+        };
 
     }]);

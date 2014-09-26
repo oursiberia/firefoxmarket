@@ -24,12 +24,9 @@ app.filter("DesktopApps",function(){
         }
 
         for (var i = 0; i < limit; ++i) {
-            var name = data[i].name["en-US"];
             var obj = {};
-
-
             for(var a = 0;a<data[i].device_types.length;++a){
-                var name = data[i].name;
+                var name = "";
 
                 /**
                  * Save out the name. If there isn't something specified
@@ -37,7 +34,7 @@ app.filter("DesktopApps",function(){
                  * through the list of available languages and take the last one.
                  */
                 if(data[i].name.hasOwnProperty(navigator.language)){
-                    var name = data[i].name[navigator.language];
+                    name = data[i].name[navigator.language];
                 }else{
                     for(var z in data[i].name){
                         name = data[i].name[z];
@@ -62,12 +59,7 @@ app.filter("DesktopApps",function(){
                     apps.push(obj);
                 }
             }
-
-
-
-
         }
-
         return apps;
     };
 });
