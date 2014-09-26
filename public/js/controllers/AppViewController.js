@@ -33,6 +33,7 @@ app.controller("AppViewController",[
          */
         API.request ("app_detail",id + "/").then(function(data) {
             $scope.author = data.author;
+            $scope.urisafe_author = encodeURIComponent(data.author);
             $scope.categories = data.categories;
             $scope.category = data.categories[0];
             $scope.content_ratings = data.content_ratings;
@@ -109,15 +110,19 @@ app.controller("AppViewController",[
                     for(var i = 0;i<objects.length;++i){
                         var oapp = objects[i];
 
+                        //prevent duplicate apps
                         if (oapp.name[navigator.language] != data.name[navigator.language]) {
-                            apps.push({
-                                name:oapp.name[navigator.language],
-                                rating:oapp.ratings.average,
-                                author:data.author,
-                                purchase_type:data.premium_type.charAt(0).toUpperCase() + data.premium_type.slice(1),
-                                icon:oapp.icons["64"],
-                                id:oapp.id
-                            });
+                            //make sure to only show apps that by the same author
+                           if(oapp.author === $scope.author){
+                               apps.push({
+                                   name:$rootScope.filterName(oapp),
+                                   rating:oapp.ratings.average,
+                                   author:oapp.author,
+                                   purchase_type:data.premium_type.charAt(0).toUpperCase() + data.premium_type.slice(1),
+                                   icon:oapp.icons["64"],
+                                   id:oapp.id
+                               });
+                           }
                         }
 
                     }
@@ -152,7 +157,7 @@ app.controller("AppViewController",[
                 for(var i = 0;i<4;++i){
                     var oapp = objects[i];
                     relatedapps.push({
-                        name:oapp.name[navigator.language],
+                        name:$rootScope.filterName(oapp),
                         rating:oapp.ratings.average,
                         author:oapp.author,
                         purchase_type:oapp.premium_type.charAt(0).toUpperCase() + oapp.premium_type.slice(1),

@@ -300,6 +300,7 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
 
 
     $rootScope.filterName = function(app){
+
         var name = "";
         /**
          * Save out the name. If there isn't something specified
@@ -313,6 +314,7 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
                 name = app.name[z];
             }
         }
+        console.log(name);
 
         return name;
 

@@ -187,7 +187,7 @@
 }
 
 /* line 59, ../scss/_home.scss */
-#search-home-result, #all-search-results {
+#search-home-result, #all-search-results, #app-developer {
   height: 0px;
   width: 100%;
   background: rgba(255, 255, 255, 0.97);
@@ -197,7 +197,7 @@
   overflow: scroll;
 }
 /* line 68, ../scss/_home.scss */
-#search-home-result .searchresult, #all-search-results .searchresult {
+#search-home-result .searchresult, #all-search-results .searchresult, #app-developer .searchresult {
   display: inline-block;
   height: 60px;
   width: 258px;
@@ -211,17 +211,17 @@
   border-radius: 5px;
 }
 /* line 77, ../scss/_home.scss */
-#search-home-result .searchresult .app-details, #all-search-results .searchresult .app-details {
+#search-home-result .searchresult .app-details, #all-search-results .searchresult .app-details, #app-developer .searchresult .app-details {
   position: relative;
 }
 /* line 79, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-image, #search-home-result .searchresult .app-details .app-copy, #all-search-results .searchresult .app-details .app-image, #all-search-results .searchresult .app-details .app-copy {
+#search-home-result .searchresult .app-details .app-image, #search-home-result .searchresult .app-details .app-copy, #all-search-results .searchresult .app-details .app-image, #all-search-results .searchresult .app-details .app-copy, #app-developer .searchresult .app-details .app-image, #app-developer .searchresult .app-details .app-copy {
   position: absolute;
   display: inline-block;
   vertical-align: top;
 }
 /* line 84, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-image, #all-search-results .searchresult .app-details .app-image {
+#search-home-result .searchresult .app-details .app-image, #all-search-results .searchresult .app-details .app-image, #app-developer .searchresult .app-details .app-image {
   height: 60px;
   width: 60px;
   overflow: hidden;
@@ -231,24 +231,24 @@
   border-radius: 5px;
 }
 /* line 89, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-image a, #all-search-results .searchresult .app-details .app-image a {
+#search-home-result .searchresult .app-details .app-image a, #all-search-results .searchresult .app-details .app-image a, #app-developer .searchresult .app-details .app-image a {
   height: 60px;
   width: 60px;
   display: inline-block;
 }
 /* line 94, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-image img, #all-search-results .searchresult .app-details .app-image img {
+#search-home-result .searchresult .app-details .app-image img, #all-search-results .searchresult .app-details .app-image img, #app-developer .searchresult .app-details .app-image img {
   height: 100%;
   width: 100%;
 }
 /* line 99, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy, #all-search-results .searchresult .app-details .app-copy {
+#search-home-result .searchresult .app-details .app-copy, #all-search-results .searchresult .app-details .app-copy, #app-developer .searchresult .app-details .app-copy {
   height: 60px;
   width: 188px;
   margin-left: 70px;
 }
 /* line 103, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy .app-download-button, #all-search-results .searchresult .app-details .app-copy .app-download-button {
+#search-home-result .searchresult .app-details .app-copy .app-download-button, #all-search-results .searchresult .app-details .app-copy .app-download-button, #app-developer .searchresult .app-details .app-copy .app-download-button {
   position: absolute;
   right: 0px;
   bottom: 0px;
@@ -260,90 +260,90 @@
   border-radius: 5px;
 }
 /* line 110, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy .app-download-button p, #all-search-results .searchresult .app-details .app-copy .app-download-button p {
+#search-home-result .searchresult .app-details .app-copy .app-download-button p, #all-search-results .searchresult .app-details .app-copy .app-download-button p, #app-developer .searchresult .app-details .app-copy .app-download-button p {
   color: #4CB1FF;
   text-align: center;
 }
 /* line 115, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy .app-download-button:hover p, #all-search-results .searchresult .app-details .app-copy .app-download-button:hover p {
+#search-home-result .searchresult .app-details .app-copy .app-download-button:hover p, #all-search-results .searchresult .app-details .app-copy .app-download-button:hover p, #app-developer .searchresult .app-details .app-copy .app-download-button:hover p {
   color: #fff;
 }
 /* line 120, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy h1, #search-home-result .searchresult .app-details .app-copy h2, #all-search-results .searchresult .app-details .app-copy h1, #all-search-results .searchresult .app-details .app-copy h2 {
+#search-home-result .searchresult .app-details .app-copy h1, #search-home-result .searchresult .app-details .app-copy h2, #all-search-results .searchresult .app-details .app-copy h1, #all-search-results .searchresult .app-details .app-copy h2, #app-developer .searchresult .app-details .app-copy h1, #app-developer .searchresult .app-details .app-copy h2 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 /* line 125, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy h1, #all-search-results .searchresult .app-details .app-copy h1 {
+#search-home-result .searchresult .app-details .app-copy h1, #all-search-results .searchresult .app-details .app-copy h1, #app-developer .searchresult .app-details .app-copy h1 {
   font-size: 14px;
   letter-spacing: -.5px;
   margin-top: -3px;
 }
 /* line 130, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy h2, #all-search-results .searchresult .app-details .app-copy h2 {
+#search-home-result .searchresult .app-details .app-copy h2, #all-search-results .searchresult .app-details .app-copy h2, #app-developer .searchresult .app-details .app-copy h2 {
   font-size: 12px;
   letter-spacing: -.5px;
   font-family: "FiraLight";
   margin-top: -3px;
 }
 /* line 137, ../scss/_home.scss */
-#search-home-result .searchresult .app-details .app-copy a div, #all-search-results .searchresult .app-details .app-copy a div {
+#search-home-result .searchresult .app-details .app-copy a div, #all-search-results .searchresult .app-details .app-copy a div, #app-developer .searchresult .app-details .app-copy a div {
   margin-top: 12px;
 }
 /* line 146, ../scss/_home.scss */
-#search-home-result .resultsbyname, #all-search-results .resultsbyname {
+#search-home-result .resultsbyname, #all-search-results .resultsbyname, #app-developer .resultsbyname {
   width: 100%;
 }
 /* line 148, ../scss/_home.scss */
-#search-home-result .resultsbyname .searchcolumn, #all-search-results .resultsbyname .searchcolumn {
+#search-home-result .resultsbyname .searchcolumn, #all-search-results .resultsbyname .searchcolumn, #app-developer .resultsbyname .searchcolumn {
   width: 298px;
   margin-right: 18px;
 }
 /* line 151, ../scss/_home.scss */
-#search-home-result .resultsbyname .searchcolumn:last-child, #all-search-results .resultsbyname .searchcolumn:last-child {
+#search-home-result .resultsbyname .searchcolumn:last-child, #all-search-results .resultsbyname .searchcolumn:last-child, #app-developer .resultsbyname .searchcolumn:last-child {
   margin-right: 0;
 }
 /* line 154, ../scss/_home.scss */
-#search-home-result .resultsbyname .searchcolumn div:nth-child(n+7), #all-search-results .resultsbyname .searchcolumn div:nth-child(n+7) {
+#search-home-result .resultsbyname .searchcolumn div:nth-child(n+7), #all-search-results .resultsbyname .searchcolumn div:nth-child(n+7), #app-developer .resultsbyname .searchcolumn div:nth-child(n+7) {
   display: none;
 }
 /* line 157, ../scss/_home.scss */
-#search-home-result .resultsbyname .searchcolumn .result-relevance, #all-search-results .resultsbyname .searchcolumn .result-relevance {
+#search-home-result .resultsbyname .searchcolumn .result-relevance, #all-search-results .resultsbyname .searchcolumn .result-relevance, #app-developer .resultsbyname .searchcolumn .result-relevance {
   padding-bottom: 20px;
   margin: 25px 0 30px 0;
   border-bottom: 1px solid #D3D3D3;
 }
 /* line 161, ../scss/_home.scss */
-#search-home-result .resultsbyname .searchcolumn .result-relevance .relevance, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance {
+#search-home-result .resultsbyname .searchcolumn .result-relevance .relevance, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance {
   margin-bottom: 22px;
 }
 /* line 163, ../scss/_home.scss */
-#search-home-result .resultsbyname .searchcolumn .result-relevance .relevance h1, #search-home-result .resultsbyname .searchcolumn .result-relevance .relevance h2, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance h1, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance h2 {
+#search-home-result .resultsbyname .searchcolumn .result-relevance .relevance h1, #search-home-result .resultsbyname .searchcolumn .result-relevance .relevance h2, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance h1, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance h2, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance h1, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance h2 {
   float: left;
   text-transform: uppercase;
   font-size: 14px;
 }
 /* line 168, ../scss/_home.scss */
-#search-home-result .resultsbyname .searchcolumn .result-relevance .relevance div, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance div {
+#search-home-result .resultsbyname .searchcolumn .result-relevance .relevance div, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance div, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance div {
   float: right;
   font-size: 14px;
 }
 /* line 172, ../scss/_home.scss */
-#search-home-result .resultsbyname .searchcolumn .result-relevance .relevance h1, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance h1 {
+#search-home-result .resultsbyname .searchcolumn .result-relevance .relevance h1, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance h1, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance h1 {
   color: #4CB1FF;
 }
 /* line 175, ../scss/_home.scss */
-#search-home-result .resultsbyname .searchcolumn .result-relevance .relevance h2, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance h2 {
+#search-home-result .resultsbyname .searchcolumn .result-relevance .relevance h2, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance h2, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance h2 {
   margin-left: 5px;
 }
 /* line 178, ../scss/_home.scss */
-#search-home-result .resultsbyname .searchcolumn .result-relevance .relevance p, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance p {
+#search-home-result .resultsbyname .searchcolumn .result-relevance .relevance p, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance p, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance p {
   font-family: "FiraLight";
 }
 
 /* line 188, ../scss/_home.scss */
-#all-search-results {
+#all-search-results, #app-developer {
   height: 100%;
   width: 100%;
   background: rgba(255, 255, 255, 0.97);
