@@ -2,19 +2,6 @@ section#category-page
     div#category-banner
         div#banner
         div.wrap
-            div#featured-category-apps
-                div.wrap
-                    div#in-view-featured(class="category in-view-featured")
-
-                    div(class="category featuredapps",style="display:none")
-                        div(class="category",data-ng-repeat="fapp in featuredapps",data-index="{{fapp.index}}")
-                            div.featured-app
-                                img(data-ng-src="{{fapp.icon}}",class="icon")
-                                h1 {{fapp.name}}
-                                h3 {{fapp.author}}
-                                div(class="star-rating", starrating, data-rating="{{fapp.rating}}",data-delay="true")
-
-
             div#category-details
                 img(src="/img/category-icon.png")
                 div.category-copy
@@ -22,6 +9,22 @@ section#category-page
                     h1#category-title
                     p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis risus viverra, placerat ante ut.
 
+            div#featured-category-apps
+                div.wrap
+                    h1.spotlight Spotlight Apps
+                    div#in-view-featured(class="category in-view-featured")
+                    ul.pagination
+                        li.active
+                        li
+                        li
+
+                    div(class="category featuredapps",style="display:none")
+                        div(class="category",data-ng-repeat="fapp in featuredapps",data-index="{{fapp.index}}")
+                            div.featured-app
+                                img(data-ng-src="{{fapp.icon}}",class="icon")
+                                h1 {{fapp.name}}
+                                h2 {{fapp.author}}
+                                div(class="star-rating", starrating, data-rating="{{fapp.rating}}",data-delay="true")
 
     div(class="editorial-collections")
             div.wrap
@@ -98,40 +101,44 @@ section#category-page
                         div.app-description
                             div(appreviews,data-appid="{{app.id}}")
 
-    div.wrap
-        div#popular-in-category(class="category popular",style="position:relative;")
-            div.wrap
-                div.controls
-                    h1 Apps In Category
-                    h2 Sort By:
-                    div.toggle(data-ng-click="toggleCategoryTypes($event)")
-                        span.active Popular
-                        span Recent
-            div.app-grid
-                div.category-popular
-                    div(class="category",data-ng-repeat="app in popularapps")
-                        div.app
-                            a(data-ng-href="/app/{{app.id}}")
-                                img(data-ng-src="{{app.icon}}")
-                            div.app-details
+    div#apps-in-category
+        div.wrap
+            div#popular-in-category(class="category popular",style="position:relative;")
+                div.wrap
+                    div.controls
+                        h1 Apps In Category
+                        h2 Sort By
+                        div.toggle(data-ng-click="toggleCategoryTypes($event)")
+                            span.active Popular
+                            span Recent
+                div.app-grid
+                    div.category-popular
+                        div(class="category",data-ng-repeat="app in popularapps")
+                            div.app
                                 a(data-ng-href="/app/{{app.id}}")
-                                    h4 {{app.name}}
-                                p {{app.author}}
-                                div(starrating,data-rating="{{app.rating}}", data-delay="true")
-                            a(data-ng-href="/app/{{app.id}}")
-                                div.app-download-button
-                                    p Install
+                                    img(data-ng-src="{{app.icon}}")
+                                div.app-details
+                                    a(data-ng-href="/app/{{app.id}}")
+                                        h4 {{app.name}}
+                                    p {{app.author}}
+                                    div(starrating,data-rating="{{app.rating}}", data-delay="true")
+                                a(data-ng-href="/app/{{app.id}}")
+                                    div.app-download-button
+                                        p Install
 
-                div.category-recent
-                    div(class="category",data-ng-repeat="app in recentapps")
-                        div.app
-                            a(data-ng-href="/app/{{app.id}}")
-                                img(data-ng-src="{{app.icon}}")
-                            div.app-details
+                    div.category-recent
+                        div(class="category",data-ng-repeat="app in recentapps")
+                            div.app
                                 a(data-ng-href="/app/{{app.id}}")
-                                    h4 {{app.name}}
-                                p {{app.author}}
-                                div(starrating,data-rating="{{app.rating}}", data-delay="true")
-                            a(data-ng-href="/app/{{app.id}}")
-                                div.app-download-button
-                                    p Install
+                                    img(data-ng-src="{{app.icon}}")
+                                div.app-details
+                                    a(data-ng-href="/app/{{app.id}}")
+                                        h4 {{app.name}}
+                                    p {{app.author}}
+                                    div(starrating,data-rating="{{app.rating}}", data-delay="true")
+                                a(data-ng-href="/app/{{app.id}}")
+                                    div.app-download-button
+                                        p Install
+                div.wrap
+                    h1 Apps In Category
+

@@ -3,25 +3,31 @@
   <div id="category-banner">
     <div id="banner"></div>
     <div class="wrap">
-      <div id="featured-category-apps">
-        <div class="wrap">
-          <div id="in-view-featured" class="category in-view-featured"></div>
-          <div style="display:none" class="category featuredapps">
-            <div data-ng-repeat="fapp in featuredapps" data-index="{{fapp.index}}" class="category">
-              <div class="featured-app"><img data-ng-src="{{fapp.icon}}" class="icon"/>
-                <h1>{{fapp.name}}</h1>
-                <h3>{{fapp.author}}</h3>
-                <div starrating="starrating" data-rating="{{fapp.rating}}" data-delay="true" class="star-rating"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div id="category-details"><img src="/img/category-icon.png"/>
         <div class="category-copy">
           <h2>View All Categories</h2>
           <h1 id="category-title"></h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis risus viverra, placerat ante ut.</p>
+        </div>
+      </div>
+      <div id="featured-category-apps">
+        <div class="wrap">
+          <h1 class="spotlight">Spotlight Apps</h1>
+          <div id="in-view-featured" class="category in-view-featured"></div>
+          <ul class="pagination">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div style="display:none" class="category featuredapps">
+            <div data-ng-repeat="fapp in featuredapps" data-index="{{fapp.index}}" class="category">
+              <div class="featured-app"><img data-ng-src="{{fapp.icon}}" class="icon"/>
+                <h1>{{fapp.name}}</h1>
+                <h2>{{fapp.author}}</h2>
+                <div starrating="starrating" data-rating="{{fapp.rating}}" data-delay="true" class="star-rating"></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -96,43 +102,48 @@
       </div>
     </div>
   </div>
-  <div class="wrap">
-    <div id="popular-in-category" style="position:relative;" class="category popular">
-      <div class="wrap">
-        <div class="controls">
+  <div id="apps-in-category">
+    <div class="wrap">
+      <div id="popular-in-category" style="position:relative;" class="category popular">
+        <div class="wrap">
+          <div class="controls">
+            <h1>Apps In Category</h1>
+            <h2>Sort By</h2>
+            <div data-ng-click="toggleCategoryTypes($event)" class="toggle"><span class="active">Popular</span><span>Recent</span></div>
+          </div>
+        </div>
+        <div class="app-grid">
+          <div class="category-popular">
+            <div data-ng-repeat="app in popularapps" class="category">
+              <div class="app"><a data-ng-href="/app/{{app.id}}"><img data-ng-src="{{app.icon}}"/></a>
+                <div class="app-details"><a data-ng-href="/app/{{app.id}}">
+                    <h4>{{app.name}}</h4></a>
+                  <p>{{app.author}}</p>
+                  <div starrating="starrating" data-rating="{{app.rating}}" data-delay="true"></div>
+                </div><a data-ng-href="/app/{{app.id}}">
+                  <div class="app-download-button">
+                    <p>Install</p>
+                  </div></a>
+              </div>
+            </div>
+          </div>
+          <div class="category-recent">
+            <div data-ng-repeat="app in recentapps" class="category">
+              <div class="app"><a data-ng-href="/app/{{app.id}}"><img data-ng-src="{{app.icon}}"/></a>
+                <div class="app-details"><a data-ng-href="/app/{{app.id}}">
+                    <h4>{{app.name}}</h4></a>
+                  <p>{{app.author}}</p>
+                  <div starrating="starrating" data-rating="{{app.rating}}" data-delay="true"></div>
+                </div><a data-ng-href="/app/{{app.id}}">
+                  <div class="app-download-button">
+                    <p>Install</p>
+                  </div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrap">
           <h1>Apps In Category</h1>
-          <h2>Sort By:</h2>
-          <div data-ng-click="toggleCategoryTypes($event)" class="toggle"><span class="active">Popular</span><span>Recent</span></div>
-        </div>
-      </div>
-      <div class="app-grid">
-        <div class="category-popular">
-          <div data-ng-repeat="app in popularapps" class="category">
-            <div class="app"><a data-ng-href="/app/{{app.id}}"><img data-ng-src="{{app.icon}}"/></a>
-              <div class="app-details"><a data-ng-href="/app/{{app.id}}">
-                  <h4>{{app.name}}</h4></a>
-                <p>{{app.author}}</p>
-                <div starrating="starrating" data-rating="{{app.rating}}" data-delay="true"></div>
-              </div><a data-ng-href="/app/{{app.id}}">
-                <div class="app-download-button">
-                  <p>Install</p>
-                </div></a>
-            </div>
-          </div>
-        </div>
-        <div class="category-recent">
-          <div data-ng-repeat="app in recentapps" class="category">
-            <div class="app"><a data-ng-href="/app/{{app.id}}"><img data-ng-src="{{app.icon}}"/></a>
-              <div class="app-details"><a data-ng-href="/app/{{app.id}}">
-                  <h4>{{app.name}}</h4></a>
-                <p>{{app.author}}</p>
-                <div starrating="starrating" data-rating="{{app.rating}}" data-delay="true"></div>
-              </div><a data-ng-href="/app/{{app.id}}">
-                <div class="app-download-button">
-                  <p>Install</p>
-                </div></a>
-            </div>
-          </div>
         </div>
       </div>
     </div>
