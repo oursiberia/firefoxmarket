@@ -26,9 +26,6 @@ app.directive("starrating",function(){
     return {
         templateUrl:"/build/templates/stars.html",
         controller:function($scope){
-
-
-
         },
         link:function($scope,$el,$attr){
 

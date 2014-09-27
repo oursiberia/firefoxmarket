@@ -124,86 +124,131 @@ app.controller("CategoryViewController",[
             image:buildUrl(editorial.workplace_apps.three)
         };
 
-
-
-
-
-
         function buildUrl(app){
             //https://marketplace.cdn.mozilla.net/img/uploads/addon_icons/409/409214-64.png?modified=crushed
             var chars = app.split("");
             return "https://marketplace.cdn.mozilla.net/img/uploads/addon_icons/"+ chars[0] + chars[1] + chars[2] +"/" + app + "-64.png?modified=crushed";
         }
 
-        /**
-         * Get all the apps in this category
-         */
-        API.request("apps_in_category",category).then( function(data) {
 
-            //  var apps = $filter("DesktopApps")(data.objects);
-            var objects = data.objects;
-            var popular = [];
+        ///// App grid /////
+        var popular_offset = 0;
+        var recent_offset = 0;
 
-            //if we have a odd number of apps, pop the last one
-            if(objects.length % 4 !== 0){
-                objects.pop();
-            }
+        //current sets of apps
+        var popular_set = [];
+        var recent_set = [];
 
-            for (var i = 0; i < objects.length; ++i) {
-
-                var obj = {};
-
-                obj.icon = objects[i].icons["64"];
-                obj.name =  objects[i].name["en-US"];
-                obj.id = objects[i].id;
-                obj.author = objects[i].author;
-                obj.classname = "app";
-                obj.rating = objects[i].ratings.average;
+        //limit to return
+        var searchLimit = 16;
 
 
-                popular.push(obj);
-            }
+        loadCategoryApps();
+        loadRecentApps();
 
-            $scope.popularapps = popular;
+        var grid = document.querySelectorAll(".app-grid")[0];
+        var popular_grid = grid.children[0];
+        var recent_grid = grid.children[1];
 
-            //fade the loader
-            $rootScope.loaded();
-        });
+        function loadCategoryApps(){
+            /**
+             * Get all the apps in this category
+             */
+            API.request("apps_in_category",category + "&limit=" + searchLimit + "&offset=" + popular_offset).then( function(data) {
 
+                //  var apps = $filter("DesktopApps")(data.objects);
+                var objects = data.objects;
+                //var popular_set = [];
 
+                //if we have a odd number of apps, pop the last one
+                if(objects.length % 4 !== 0){
+                    objects.pop();
+                }
 
-        /**
-         * Get all the recent apps in this category
-         */
-        API.request("apps_in_category","&cat=" + category + "&sort=created").then(function (data) {
-            //  var apps = $filter("DesktopApps")(data.objects);
-            var objects = data.objects;
-            var popular = [];
+                for (var i = 0; i < objects.length; ++i) {
 
-            //if we have a odd number of apps, pop the last one
-            if(objects.length % 4 !== 0){
-                objects.pop();
-            }
+                    var obj = {};
 
-            for (var i = 0; i < objects.length; ++i) {
-
-                var obj = {};
-
-                obj.icon = objects[i].icons["64"];
-                obj.name =  objects[i].name["en-US"];
-                obj.id = objects[i].id;
-                obj.author = objects[i].author;
-                obj.classname = "app";
-                obj.rating = objects[i].ratings.average;
+                    obj.icon = objects[i].icons["64"];
+                    obj.name =  $rootScope.filterName(objects[i]);
+                    obj.id = objects[i].id;
+                    obj.author = objects[i].author;
+                    obj.classname = "app";
+                    obj.rating = objects[i].ratings.average;
 
 
-                popular.push(obj);
-            }
+                    popular_set.push(obj);
+                }
 
-            $scope.recentapps = popular;
 
-        });
 
+
+                if(popular_offset <= 0){
+                    $scope.popularapps = popular_set;
+                    console.log("HERE");
+                }else{
+                   setTimeout(function(){
+                       $scope.popularapps.concat(popular_set);
+
+                       $scope.$apply();
+                   },100);
+                }
+
+
+                //fade the loader
+                $rootScope.loaded();
+
+                //increase the offset count
+                popular_offset += searchLimit;
+
+            });
+        }
+
+
+
+      function loadRecentApps(){
+          /**
+           * Get all the recent apps in this category
+           */
+          API.request("apps_in_category","&cat=" + category + "&limit=" + searchLimit + "&sort=created&offset=" + recent_offset).then(function (data) {
+              //  var apps = $filter("DesktopApps")(data.objects);
+              var objects = data.objects;
+
+
+              //if we have a odd number of apps, pop the last one
+              if(objects.length % 4 !== 0){
+                  objects.pop();
+              }
+
+              for (var i = 0; i < objects.length; ++i) {
+                  var obj = {};
+                  obj.icon = objects[i].icons["64"];
+                  obj.name =  $rootScope.filterName(objects[i]);
+                  obj.id = objects[i].id;
+                  obj.author = objects[i].author;
+                  obj.classname = "app";
+                  obj.rating = objects[i].ratings.average;
+                  recent_set.push(obj);
+              }
+
+              if(recent_offset <= 0){
+                  $scope.recentapps = recent_set;
+              }else{
+                  setTimeout(function(){
+                      $scope.recentapps.concat(recent_set);
+
+                      $scope.$apply();
+                  },100);
+              }
+
+
+
+              //increase the offset
+              recent_offset += searchLimit;
+
+          });
+
+      }
 
         /**==================== FUNCTIONS ===========================*/
         /**
@@ -291,4 +336,9 @@ app.controller("CategoryViewController",[
 
             }
         };
+
+        $scope.getMessage = function() {
+            loadRecentApps();
+            loadCategoryApps();
+        }
     }]);
