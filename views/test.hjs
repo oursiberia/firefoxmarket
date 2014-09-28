@@ -7,31 +7,10 @@
 <body>
 
 <script>
-    var data = "Bacon ipsum dolor sit amet jerky sausage beef ribeye brisket turducken pork belly andouille shoulder. Pastrami kevin shankle, chicken pig corned beef turducken frankfurter cow meatloaf pork beef meatball jowl leberkas. Chuck kielbasa pork chop, jerky kevin turducken flank bacon tenderloin fatback doner. Pork belly brisket doner, meatloaf boudin pig jowl beef pork chop kevin tongue. Boudin drumstick pork belly, leberkas tongue flank beef ribs ground round meatloaf pork. Flank salami swine, kevin tri-tip landjaeger frankfurter t-bone. Hamburger porchetta sirloin tongue short ribs pork belly boudin.";
-    var charlimit = 150;
-    delimiter =" [...]";
+    var arr1 = ["a","b","d","e"];
+    var arr2 = ["f","g","h","i"];
 
-    //split the sentence based on spaces
-    var review = data.split(" ");
-    var short_review = [];
-    var count = 0;
-    for (var i = 0;i<review.length;++i) {
-        var word = review[i];
-
-        /**
-         * get the character count of the word
-         */
-        var len = word.split("").length;
-        count += len;
-
-        if (count < charlimit) {
-            short_review.push(word);
-        }
-
-    }
-    short_review[short_review.length - 1] += delimiter;
-    short_review = short_review.join(" ");
-    console.log(short_review)
+    console.log(arr1.concat(arr2));
 </script>
 </body>
 </html>

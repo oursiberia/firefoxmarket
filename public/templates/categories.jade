@@ -1,6 +1,6 @@
 div#categoriess
     div.wrap
-        h1#categories-title All Categories
+        h1#categories-title(translate) All Categories
         div#category-all
             div.wrap
                 div.category(data-ng-repeat="item in appcategories")
@@ -11,4 +11,4 @@ div#categoriess
                             div.title-copy
                                 h3 {{item.name}}
                                 a(href="/category/{{item.slug}}")
-                                    p View All From Category &#9656;
+                                    p(translate) View All From Category &#9656;

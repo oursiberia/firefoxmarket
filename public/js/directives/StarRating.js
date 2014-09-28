@@ -8,15 +8,24 @@
  *
  * If the rating is fractional and the value is at or above .5, the number will be rounded
  * up, if not, then the number is rounded down.
+ *
+ * Specify the rating using the data attribute rating.
+ * If you need to show ratings on content that is dynamically loaded,
+ * you can specify a "delay" data attribute that will defer loading until a
+ * rating value is available
+ *
+ * @example
+ * <example module="FirefoxMarket">
+ *  <file name="index.html">
+ *      <div starrating data-rating="3" data-delay="true"></div>
+ *  </file>
+ * </example>
  */
 app.directive("starrating",function(){
 
     return {
         templateUrl:"/build/templates/stars.html",
         controller:function($scope){
-
-
-
         },
         link:function($scope,$el,$attr){
 
