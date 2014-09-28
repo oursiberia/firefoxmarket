@@ -89,8 +89,23 @@ footer {
 		background-repeat: repeat,repeat,repeat-x;
 		color: #fff;
 		h2 {
-			width: 400px;
+			width: 200px;
+			height: 62px;
 			font-family: "FiraLight";
+			position: relative;
+			margin-left: 14px;
+			span {
+				top: -1px;
+				font-size: 18px;
+				position: absolute;
+				display: block;
+				&:last-child {
+					top: 15px;
+					font-size: 40px;
+					font-family: "FiraRegular";
+					letter-spacing: -1px;
+				}
+			}
 		}
 		img {
 			width: 70px;
@@ -100,8 +115,9 @@ footer {
 			height: 24px;
 			padding-top: 19px;
 			padding-bottom: 17px;
-			position: relative;
-			bottom:13px;
+			position: absolute;
+			top: 40px;
+			right: 0px;
 			background:#F8F8F8;
 			text-align: center;
 			border: none;
@@ -121,6 +137,7 @@ footer {
 		font-size: 10px;
 		color: $copy;
 		img {
+			margin-top: -2px;
 			height: 20px;
 			width: 78px;
 			margin-right: 30px;
@@ -132,9 +149,10 @@ footer {
 			margin-top: 8px;
 		}
 		a {
+			font-size: 12px;
 			margin-right: 10px;
 			padding-right: 10px;
-			border-right: 1px solid #55575C;
+			border-right: 1px solid #D6D6D6;
 		}
 		a:last-child {
 			margin: 0;
@@ -146,8 +164,9 @@ footer {
 	.footer-wrapper {
 		max-width: 1260px;
 		margin: 0 auto;
-		padding: 30px 0;
+		padding: 40px 0;
 		display: block;
+		position: relative;
 		h2, p, div, img {
 			display: inline-block;
 			vertical-align: middle;
@@ -157,7 +176,8 @@ footer {
 			position: relative;
 			left:40px;
 			font-size: 14px;
-
+			width: 420px;
+			font-size: 12px;
 		}
 		div {
 			float: right;

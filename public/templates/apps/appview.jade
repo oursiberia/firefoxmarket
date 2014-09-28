@@ -44,7 +44,8 @@ section#appview
                             | Ages
                             | 3+
                     h1 {{name}}
-                    h3 {{author}}
+                    a(data-ng-href="/developer/{{urisafe_author}}")
+                        h3 {{author}}
                     img(src="/img/developer_site.svg" alt="developer website icon")
 
                 div.tabs

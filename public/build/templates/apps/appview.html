@@ -38,8 +38,8 @@
               3+
             </p>
           </div>
-          <h1>{{name}}</h1>
-          <h3>{{author}}</h3><img src="/img/developer_site.svg" alt="developer website icon"/>
+          <h1>{{name}}</h1><a data-ng-href="/developer/{{urisafe_author}}">
+            <h3>{{author}}</h3></a><img src="/img/developer_site.svg" alt="developer website icon"/>
         </div>
         <div class="tabs">
           <div data-tabname="description" data-content="{{app.description}}" data-ng-click="changeTabContent($event)" class="tab-trigger active">
