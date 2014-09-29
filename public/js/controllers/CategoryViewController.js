@@ -9,7 +9,8 @@ app.controller("CategoryViewController",[
     "$scope",
     "API",
     "$rootScope",
-    "$filter",function($scope,API,$rootScope,$filter){
+    "$http",
+    "$filter",function($scope,API,$rootScope,$http,$filter){
 
         //get the category from the url
         var category = window.location.href.split("/");
@@ -46,83 +47,43 @@ app.controller("CategoryViewController",[
 
         /**
          * Editorial
-         * TODO figure out how curated apps would better work.
+         * See readme for the explanation about the editorial editor
+         * TODO real workflow ought to be implemented or move code to
+         * other server
+         * http://54.84.190.82:3000/editorial.json
          */
-        var editorial = {
-            "staff_pics": {
-                "one": "421872",
-                "two": "374841",
-                "three": "366345"
-            },
+        $http({
+            method:"get",
+            url:"/js/editorial.json"
+        }).success(function(data){
+           var editorials = data;
 
-            "top_three_games": {
-                "one": "427566",
-                "two": "502203",
-                "three": "490020"
-            },
-            "workplace_apps":{
-                "one":"429326",
-                "two":"468749",
-                "three":"478633"
+            //pick out the ones we want first
+            var sections = [];
+            for(var i = 0;i<editorials.length;++i){
+                var item = editorials[i];
+                if(item.type === category){
+                    sections.push(item);
+                }
+
             }
-        };
 
-        $scope.test = {
-            name:"apple",
-            id:"mapple"
-        };
+            for(var a = 0;a<sections.length;++a){
+                var section = sections[a];
 
-        $scope.editorial = editorial;
+                for(var c = 0;c<section.apps.length;++c){
+                    var app = section.apps[c];
+                    $scope["section_" + a + "_" + c] = {
+                        id:app,
+                        image:buildUrl(app)
+                    }
+                }
 
-        $scope.staff_one = {
-            id:editorial.staff_pics.one,
-            image:buildUrl(editorial.staff_pics.one)
-        };
+            }
 
-        $scope.staff_two = {
-            id:editorial.staff_pics.two,
-            image:buildUrl(editorial.staff_pics.two)
-        };
-        $scope.staff_three = {
-            id:editorial.staff_pics.three,
-            image:buildUrl(editorial.staff_pics.three)
-        };
+        }).error(function(){
 
-
-        $scope.games_one = {
-            id:editorial.top_three_games.one,
-            image:buildUrl(editorial.top_three_games.one)
-        };
-
-
-        $scope.games_two = {
-            id:editorial.top_three_games.two,
-            image:buildUrl(editorial.top_three_games.two)
-        };
-
-        $scope.games_three = {
-            id:editorial.top_three_games.three,
-            image:buildUrl(editorial.top_three_games.three)
-        };
-
-
-
-        $scope.workplace_one = {
-            id:editorial.workplace_apps.one,
-            image:buildUrl(editorial.workplace_apps.one)
-        };
-
-
-        $scope.workplace_two = {
-            id:editorial.workplace_apps.two,
-            image:buildUrl(editorial.workplace_apps.two)
-        };
-
-
-        $scope.workplace_three = {
-            id:editorial.workplace_apps.three,
-            image:buildUrl(editorial.workplace_apps.three)
-        };
+        });
 
         function buildUrl(app){
             //https://marketplace.cdn.mozilla.net/img/uploads/addon_icons/409/409214-64.png?modified=crushed
