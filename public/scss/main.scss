@@ -344,6 +344,11 @@ header{
 .searchcolumn{
 	display: inline-block;
 	vertical-align: top;
+	.load-more {
+		text-align: center;
+		color: $blue;
+		cursor: pointer;
+	}
 }
 #searchresults{
 	position: absolute;

@@ -42,13 +42,35 @@
 			letter-spacing: -1.5px;
 		}
 		.close-search {
-			height: 34px;
-			width: 34px;
-			top: 30px;
-			right: 23px;
+			height: 30px;
+			width: 30px;
+			top: 75px;
+			right: 20px;
 			border-radius: 20px;
 			background: rgba(255,255,255,.2);
 			position: absolute;
+			cursor: pointer;
+			span {
+				height: 15px;
+				width: 2px;
+				background: none repeat scroll 0% 0% #FFF;
+				display: inline-block;
+				top: 8px;
+				position: absolute;
+				left: 14px;
+				&:first-child {
+					transform: rotate(0.12turn);
+				}
+				&:last-child {
+					transform: rotate(-0.12turn);
+				}
+			}
+			&:hover {
+				background: #fff;
+				span {
+					background: #3D86BD;
+				}
+			}
 		}
 	}
 

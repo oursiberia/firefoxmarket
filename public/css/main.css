@@ -176,16 +176,43 @@
 }
 /* line 44, ../scss/_home.scss */
 .search-home div.wrap .close-search {
-  height: 34px;
-  width: 34px;
-  top: 30px;
-  right: 23px;
+  height: 30px;
+  width: 30px;
+  top: 75px;
+  right: 20px;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.2);
   position: absolute;
+  cursor: pointer;
+}
+/* line 53, ../scss/_home.scss */
+.search-home div.wrap .close-search span {
+  height: 15px;
+  width: 2px;
+  background: none repeat scroll 0% 0% #FFF;
+  display: inline-block;
+  top: 8px;
+  position: absolute;
+  left: 14px;
+}
+/* line 61, ../scss/_home.scss */
+.search-home div.wrap .close-search span:first-child {
+  transform: rotate(0.12turn);
+}
+/* line 64, ../scss/_home.scss */
+.search-home div.wrap .close-search span:last-child {
+  transform: rotate(-0.12turn);
+}
+/* line 68, ../scss/_home.scss */
+.search-home div.wrap .close-search:hover {
+  background: #fff;
+}
+/* line 70, ../scss/_home.scss */
+.search-home div.wrap .close-search:hover span {
+  background: #3D86BD;
 }
 
-/* line 58, ../scss/_home.scss */
+/* line 80, ../scss/_home.scss */
 #search-home-result, #all-search-results, #app-developer {
   height: 0px;
   width: 100%;
@@ -195,7 +222,7 @@
   z-index: 99;
   overflow: scroll;
 }
-/* line 67, ../scss/_home.scss */
+/* line 89, ../scss/_home.scss */
 #search-home-result .searchresult, #all-search-results .searchresult, #app-developer .searchresult {
   display: inline-block;
   height: 60px;
@@ -209,17 +236,17 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 76, ../scss/_home.scss */
+/* line 98, ../scss/_home.scss */
 #search-home-result .searchresult .app-details, #all-search-results .searchresult .app-details, #app-developer .searchresult .app-details {
   position: relative;
 }
-/* line 78, ../scss/_home.scss */
+/* line 100, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-image, #search-home-result .searchresult .app-details .app-copy, #all-search-results .searchresult .app-details .app-image, #all-search-results .searchresult .app-details .app-copy, #app-developer .searchresult .app-details .app-image, #app-developer .searchresult .app-details .app-copy {
   position: absolute;
   display: inline-block;
   vertical-align: top;
 }
-/* line 83, ../scss/_home.scss */
+/* line 105, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-image, #all-search-results .searchresult .app-details .app-image, #app-developer .searchresult .app-details .app-image {
   height: 60px;
   width: 60px;
@@ -229,24 +256,24 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 88, ../scss/_home.scss */
+/* line 110, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-image a, #all-search-results .searchresult .app-details .app-image a, #app-developer .searchresult .app-details .app-image a {
   height: 60px;
   width: 60px;
   display: inline-block;
 }
-/* line 93, ../scss/_home.scss */
+/* line 115, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-image img, #all-search-results .searchresult .app-details .app-image img, #app-developer .searchresult .app-details .app-image img {
   height: 100%;
   width: 100%;
 }
-/* line 98, ../scss/_home.scss */
+/* line 120, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-copy, #all-search-results .searchresult .app-details .app-copy, #app-developer .searchresult .app-details .app-copy {
   height: 60px;
   width: 188px;
   margin-left: 70px;
 }
-/* line 102, ../scss/_home.scss */
+/* line 124, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-copy .app-download-button, #all-search-results .searchresult .app-details .app-copy .app-download-button, #app-developer .searchresult .app-details .app-copy .app-download-button {
   position: absolute;
   right: 0px;
@@ -258,90 +285,90 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 109, ../scss/_home.scss */
+/* line 131, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-copy .app-download-button p, #all-search-results .searchresult .app-details .app-copy .app-download-button p, #app-developer .searchresult .app-details .app-copy .app-download-button p {
   color: #4CB1FF;
   text-align: center;
 }
-/* line 114, ../scss/_home.scss */
+/* line 136, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-copy .app-download-button:hover p, #all-search-results .searchresult .app-details .app-copy .app-download-button:hover p, #app-developer .searchresult .app-details .app-copy .app-download-button:hover p {
   color: #fff;
 }
-/* line 119, ../scss/_home.scss */
+/* line 141, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-copy h1, #search-home-result .searchresult .app-details .app-copy h2, #all-search-results .searchresult .app-details .app-copy h1, #all-search-results .searchresult .app-details .app-copy h2, #app-developer .searchresult .app-details .app-copy h1, #app-developer .searchresult .app-details .app-copy h2 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 124, ../scss/_home.scss */
+/* line 146, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-copy h1, #all-search-results .searchresult .app-details .app-copy h1, #app-developer .searchresult .app-details .app-copy h1 {
   font-size: 14px;
   letter-spacing: -.5px;
   margin-top: -3px;
 }
-/* line 129, ../scss/_home.scss */
+/* line 151, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-copy h2, #all-search-results .searchresult .app-details .app-copy h2, #app-developer .searchresult .app-details .app-copy h2 {
   font-size: 12px;
   letter-spacing: -.5px;
   font-family: "FiraLight";
   margin-top: -3px;
 }
-/* line 136, ../scss/_home.scss */
+/* line 158, ../scss/_home.scss */
 #search-home-result .searchresult .app-details .app-copy a div, #all-search-results .searchresult .app-details .app-copy a div, #app-developer .searchresult .app-details .app-copy a div {
   margin-top: 12px;
 }
-/* line 145, ../scss/_home.scss */
+/* line 167, ../scss/_home.scss */
 #search-home-result .resultsbyname, #all-search-results .resultsbyname, #app-developer .resultsbyname {
   width: 100%;
 }
-/* line 147, ../scss/_home.scss */
+/* line 169, ../scss/_home.scss */
 #search-home-result .resultsbyname .searchcolumn, #all-search-results .resultsbyname .searchcolumn, #app-developer .resultsbyname .searchcolumn {
   width: 298px;
   margin-right: 18px;
 }
-/* line 150, ../scss/_home.scss */
+/* line 172, ../scss/_home.scss */
 #search-home-result .resultsbyname .searchcolumn:last-child, #all-search-results .resultsbyname .searchcolumn:last-child, #app-developer .resultsbyname .searchcolumn:last-child {
   margin-right: 0;
 }
-/* line 153, ../scss/_home.scss */
+/* line 175, ../scss/_home.scss */
 #search-home-result .resultsbyname .searchcolumn .searchresult:nth-child(n+5), #all-search-results .resultsbyname .searchcolumn .searchresult:nth-child(n+5), #app-developer .resultsbyname .searchcolumn .searchresult:nth-child(n+5) {
   display: none;
 }
-/* line 156, ../scss/_home.scss */
+/* line 178, ../scss/_home.scss */
 #search-home-result .resultsbyname .searchcolumn .result-relevance, #all-search-results .resultsbyname .searchcolumn .result-relevance, #app-developer .resultsbyname .searchcolumn .result-relevance {
   padding-bottom: 20px;
   margin: 25px 0 30px 0;
   border-bottom: 1px solid #D3D3D3;
 }
-/* line 160, ../scss/_home.scss */
+/* line 182, ../scss/_home.scss */
 #search-home-result .resultsbyname .searchcolumn .result-relevance .relevance, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance {
   margin-bottom: 22px;
 }
-/* line 162, ../scss/_home.scss */
+/* line 184, ../scss/_home.scss */
 #search-home-result .resultsbyname .searchcolumn .result-relevance .relevance h1, #search-home-result .resultsbyname .searchcolumn .result-relevance .relevance h2, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance h1, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance h2, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance h1, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance h2 {
   float: left;
   text-transform: uppercase;
   font-size: 14px;
 }
-/* line 167, ../scss/_home.scss */
+/* line 189, ../scss/_home.scss */
 #search-home-result .resultsbyname .searchcolumn .result-relevance .relevance div, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance div, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance div {
   float: right;
   font-size: 14px;
 }
-/* line 171, ../scss/_home.scss */
+/* line 193, ../scss/_home.scss */
 #search-home-result .resultsbyname .searchcolumn .result-relevance .relevance h1, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance h1, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance h1 {
   color: #4CB1FF;
 }
-/* line 174, ../scss/_home.scss */
+/* line 196, ../scss/_home.scss */
 #search-home-result .resultsbyname .searchcolumn .result-relevance .relevance h2, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance h2, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance h2 {
   margin-left: 5px;
 }
-/* line 177, ../scss/_home.scss */
+/* line 199, ../scss/_home.scss */
 #search-home-result .resultsbyname .searchcolumn .result-relevance .relevance p, #all-search-results .resultsbyname .searchcolumn .result-relevance .relevance p, #app-developer .resultsbyname .searchcolumn .result-relevance .relevance p {
   font-family: "FiraLight";
 }
 
-/* line 187, ../scss/_home.scss */
+/* line 209, ../scss/_home.scss */
 #all-search-results, #app-developer {
   height: 100%;
   width: 100%;
@@ -352,7 +379,7 @@
   overflow: scroll;
 }
 
-/* line 196, ../scss/_home.scss */
+/* line 218, ../scss/_home.scss */
 #search-result {
   min-height: 100%;
   width: 100%;
@@ -362,7 +389,7 @@
   z-index: 99;
   overflow: scroll;
 }
-/* line 205, ../scss/_home.scss */
+/* line 227, ../scss/_home.scss */
 #search-result .searchresult {
   display: inline-block;
   height: 60px;
@@ -376,17 +403,17 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 214, ../scss/_home.scss */
+/* line 236, ../scss/_home.scss */
 #search-result .searchresult .app-details {
   position: relative;
 }
-/* line 216, ../scss/_home.scss */
+/* line 238, ../scss/_home.scss */
 #search-result .searchresult .app-details .app-image, #search-result .searchresult .app-details .app-copy {
   position: absolute;
   display: inline-block;
   vertical-align: top;
 }
-/* line 221, ../scss/_home.scss */
+/* line 243, ../scss/_home.scss */
 #search-result .searchresult .app-details .app-image {
   height: 60px;
   width: 60px;
@@ -396,24 +423,24 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 226, ../scss/_home.scss */
+/* line 248, ../scss/_home.scss */
 #search-result .searchresult .app-details .app-image a {
   height: 60px;
   width: 60px;
   display: inline-block;
 }
-/* line 231, ../scss/_home.scss */
+/* line 253, ../scss/_home.scss */
 #search-result .searchresult .app-details .app-image img {
   height: 100%;
   width: 100%;
 }
-/* line 236, ../scss/_home.scss */
+/* line 258, ../scss/_home.scss */
 #search-result .searchresult .app-details .app-copy {
   height: 60px;
   width: 188px;
   margin-left: 70px;
 }
-/* line 240, ../scss/_home.scss */
+/* line 262, ../scss/_home.scss */
 #search-result .searchresult .app-details .app-copy .app-download-button {
   position: absolute;
   right: 0px;
@@ -425,95 +452,95 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 247, ../scss/_home.scss */
+/* line 269, ../scss/_home.scss */
 #search-result .searchresult .app-details .app-copy .app-download-button p {
   color: #4CB1FF;
   text-align: center;
 }
-/* line 252, ../scss/_home.scss */
+/* line 274, ../scss/_home.scss */
 #search-result .searchresult .app-details .app-copy .app-download-button:hover p {
   color: #fff;
 }
-/* line 257, ../scss/_home.scss */
+/* line 279, ../scss/_home.scss */
 #search-result .searchresult .app-details .app-copy h1, #search-result .searchresult .app-details .app-copy h2 {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 262, ../scss/_home.scss */
+/* line 284, ../scss/_home.scss */
 #search-result .searchresult .app-details .app-copy h1 {
   font-size: 14px;
   letter-spacing: -.5px;
   margin-top: -3px;
 }
-/* line 267, ../scss/_home.scss */
+/* line 289, ../scss/_home.scss */
 #search-result .searchresult .app-details .app-copy h2 {
   font-size: 12px;
   letter-spacing: -.5px;
   font-family: "FiraLight";
   margin-top: -3px;
 }
-/* line 274, ../scss/_home.scss */
+/* line 296, ../scss/_home.scss */
 #search-result .searchresult .app-details .app-copy a div {
   margin-top: 12px;
 }
-/* line 283, ../scss/_home.scss */
+/* line 305, ../scss/_home.scss */
 #search-result .resultsbyname {
   width: 100%;
   margin-top: -70px;
 }
-/* line 286, ../scss/_home.scss */
+/* line 308, ../scss/_home.scss */
 #search-result .resultsbyname .searchcolumn {
   width: 298px;
   margin-right: 18px;
 }
-/* line 289, ../scss/_home.scss */
+/* line 311, ../scss/_home.scss */
 #search-result .resultsbyname .searchcolumn:last-child {
   margin-right: 0;
 }
-/* line 292, ../scss/_home.scss */
+/* line 314, ../scss/_home.scss */
 #search-result .resultsbyname .searchcolumn div:nth-child(n+6) {
   display: none;
 }
-/* line 295, ../scss/_home.scss */
+/* line 317, ../scss/_home.scss */
 #search-result .resultsbyname .searchcolumn .result-relevance {
   padding-bottom: 20px;
   margin: 25px 0 30px 0;
   border-bottom: 1px solid #D3D3D3;
 }
-/* line 299, ../scss/_home.scss */
+/* line 321, ../scss/_home.scss */
 #search-result .resultsbyname .searchcolumn .result-relevance .relevance {
   margin-bottom: 22px;
 }
-/* line 301, ../scss/_home.scss */
+/* line 323, ../scss/_home.scss */
 #search-result .resultsbyname .searchcolumn .result-relevance .relevance h1, #search-result .resultsbyname .searchcolumn .result-relevance .relevance h2 {
   float: left;
   text-transform: uppercase;
   font-size: 14px;
 }
-/* line 306, ../scss/_home.scss */
+/* line 328, ../scss/_home.scss */
 #search-result .resultsbyname .searchcolumn .result-relevance .relevance div {
   float: right;
   font-size: 14px;
 }
-/* line 310, ../scss/_home.scss */
+/* line 332, ../scss/_home.scss */
 #search-result .resultsbyname .searchcolumn .result-relevance .relevance h1 {
   color: #4CB1FF;
 }
-/* line 313, ../scss/_home.scss */
+/* line 335, ../scss/_home.scss */
 #search-result .resultsbyname .searchcolumn .result-relevance .relevance h2 {
   margin-left: 5px;
 }
-/* line 316, ../scss/_home.scss */
+/* line 338, ../scss/_home.scss */
 #search-result .resultsbyname .searchcolumn .result-relevance .relevance p {
   font-family: "FiraLight";
 }
 
-/* line 326, ../scss/_home.scss */
+/* line 348, ../scss/_home.scss */
 .home-main {
   margin-top: 50px;
 }
-/* line 328, ../scss/_home.scss */
+/* line 350, ../scss/_home.scss */
 .home-main .column {
   height: 40px;
   width: 40px;
@@ -522,17 +549,17 @@
   background: #333;
   margin-right: 21px;
 }
-/* line 336, ../scss/_home.scss */
+/* line 358, ../scss/_home.scss */
 .home-main .column.main {
   width: 620px;
   height: 366px;
 }
-/* line 341, ../scss/_home.scss */
+/* line 363, ../scss/_home.scss */
 .home-main .column.secondary {
   width: 300px;
   height: 366px;
 }
-/* line 347, ../scss/_home.scss */
+/* line 369, ../scss/_home.scss */
 .home-main .column.third .inner-box {
   width: 300px;
   height: 173px;
@@ -540,11 +567,11 @@
   margin-bottom: 20px;
 }
 
-/* line 357, ../scss/_home.scss */
+/* line 379, ../scss/_home.scss */
 #featured {
   padding: 25px 0px 30px;
 }
-/* line 359, ../scss/_home.scss */
+/* line 381, ../scss/_home.scss */
 #featured .header {
   font-family: "FiraLight";
   font-size: 22px;
@@ -552,33 +579,33 @@
   letter-spacing: -0.2px;
   margin-bottom: 25px;
 }
-/* line 366, ../scss/_home.scss */
+/* line 388, ../scss/_home.scss */
 #featured .app {
   display: inline-block;
   vertical-align: top;
 }
-/* line 370, ../scss/_home.scss */
+/* line 392, ../scss/_home.scss */
 #featured .app:last-child {
   margin: 0;
 }
 
-/* line 375, ../scss/_home.scss */
+/* line 397, ../scss/_home.scss */
 #category-list {
   background: url("../img/header-background.png") repeat scroll 0% 0% #f0f0f0;
   border-top: 1px solid #D6D6D6;
   padding-bottom: 50px;
 }
 
-/* line 382, ../scss/_home.scss */
+/* line 404, ../scss/_home.scss */
 #category-list .wrap, #category-all .wrap {
   padding-top: 27px;
 }
-/* line 384, ../scss/_home.scss */
+/* line 406, ../scss/_home.scss */
 #category-list .wrap .controls, #category-all .wrap .controls {
   position: relative;
   padding-bottom: 28px;
 }
-/* line 387, ../scss/_home.scss */
+/* line 409, ../scss/_home.scss */
 #category-list .wrap .controls h1, #category-all .wrap .controls h1 {
   font-family: "FiraLight";
   font-size: 22px;
@@ -586,7 +613,7 @@
   letter-spacing: -.2px;
   padding-top: 3px;
 }
-/* line 395, ../scss/_home.scss */
+/* line 417, ../scss/_home.scss */
 #category-list .wrap .controls h2, #category-all .wrap .controls h2 {
   font-size: 12px;
   display: inline-block;
@@ -594,18 +621,18 @@
   right: 153px;
   top: 10px;
 }
-/* line 403, ../scss/_home.scss */
+/* line 425, ../scss/_home.scss */
 #category-list .wrap .controls h1:last-child, #category-all .wrap .controls h1:last-child {
   font-family: "FiraLight";
 }
-/* line 407, ../scss/_home.scss */
+/* line 429, ../scss/_home.scss */
 #category-list .wrap .controls .toggle, #category-all .wrap .controls .toggle {
   display: inline-block;
   position: absolute;
   right: 0;
   top: 6px;
 }
-/* line 412, ../scss/_home.scss */
+/* line 434, ../scss/_home.scss */
 #category-list .wrap .controls .toggle span, #category-all .wrap .controls .toggle span {
   font-size: 14px;
   color: #4CB1FF;
@@ -618,24 +645,24 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 421, ../scss/_home.scss */
+/* line 443, ../scss/_home.scss */
 #category-list .wrap .controls .toggle span:first-child, #category-all .wrap .controls .toggle span:first-child {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-/* line 425, ../scss/_home.scss */
+/* line 447, ../scss/_home.scss */
 #category-list .wrap .controls .toggle span:last-child, #category-all .wrap .controls .toggle span:last-child {
   margin-left: -1px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
-/* line 430, ../scss/_home.scss */
+/* line 452, ../scss/_home.scss */
 #category-list .wrap .controls .toggle .active, #category-all .wrap .controls .toggle .active {
   background: #4CB1FF;
   color: #fff;
   cursor: default;
 }
-/* line 437, ../scss/_home.scss */
+/* line 459, ../scss/_home.scss */
 #category-list .wrap .controls button, #category-all .wrap .controls button {
   float: left;
   width: 178px;
@@ -654,11 +681,11 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 451, ../scss/_home.scss */
+/* line 473, ../scss/_home.scss */
 #category-list .wrap .controls button:hover, #category-all .wrap .controls button:hover {
   background: #42cafe;
 }
-/* line 457, ../scss/_home.scss */
+/* line 479, ../scss/_home.scss */
 #category-list .category, #category-all .category {
   width: 298px;
   background: #F8F8F8;
@@ -672,7 +699,7 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 467, ../scss/_home.scss */
+/* line 489, ../scss/_home.scss */
 #category-list .category .category-title, #category-all .category .category-title {
   background: #fff;
   width: 100%;
@@ -685,11 +712,11 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 479, ../scss/_home.scss */
+/* line 501, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap, #category-all .category .category-title .title-wrap {
   padding: 20px;
 }
-/* line 481, ../scss/_home.scss */
+/* line 503, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon, #category-list .category .category-title .title-wrap .title-copy, #category-all .category .category-title .title-wrap .icon, #category-all .category .category-title .title-wrap .title-copy {
   display: inline-block;
   vertical-align: middle;
@@ -700,14 +727,14 @@
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;
 }
-/* line 492, ../scss/_home.scss */
+/* line 514, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon, #category-all .category .category-title .title-wrap .icon {
   height: 60px;
   width: 60px;
   border-radius: 30px;
   position: relative;
 }
-/* line 497, ../scss/_home.scss */
+/* line 519, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon .cat-icon, #category-all .category .category-title .title-wrap .icon .cat-icon {
   height: 38px;
   width: 40px;
@@ -717,205 +744,205 @@
   background-image: url(../img/category_iconography_white.svg);
   background-size: 40px 608px;
 }
-/* line 507, ../scss/_home.scss */
+/* line 529, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.games, #category-all .category .category-title .title-wrap .icon.games {
   background-color: #00953f;
 }
-/* line 509, ../scss/_home.scss */
+/* line 531, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.games .cat-icon, #category-all .category .category-title .title-wrap .icon.games .cat-icon {
   background-position: 0px 0px;
 }
-/* line 513, ../scss/_home.scss */
+/* line 535, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.productivity, #category-all .category .category-title .title-wrap .icon.productivity {
   background-color: #1e1e9c;
 }
-/* line 515, ../scss/_home.scss */
+/* line 537, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.productivity .cat-icon, #category-all .category .category-title .title-wrap .icon.productivity .cat-icon {
   background-position: 0px -418px;
 }
-/* line 519, ../scss/_home.scss */
+/* line 541, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.music, #category-all .category .category-title .title-wrap .icon.music {
   background-color: #5a197e;
 }
-/* line 521, ../scss/_home.scss */
+/* line 543, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.music .cat-icon, #category-all .category .category-title .title-wrap .icon.music .cat-icon {
   background-position: 0px -76px;
 }
-/* line 525, ../scss/_home.scss */
+/* line 547, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.social, #category-all .category .category-title .title-wrap .icon.social {
   background-color: #a20d55;
 }
-/* line 527, ../scss/_home.scss */
+/* line 549, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.social .cat-icon, #category-all .category .category-title .title-wrap .icon.social .cat-icon {
   background-position: 0px -456px;
 }
-/* line 532, ../scss/_home.scss */
+/* line 554, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.books, #category-all .category .category-title .title-wrap .icon.books {
   background-color: #00953f;
 }
-/* line 534, ../scss/_home.scss */
+/* line 556, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.books .cat-icon, #category-all .category .category-title .title-wrap .icon.books .cat-icon {
   background-position: 0px 113px;
 }
-/* line 539, ../scss/_home.scss */
+/* line 561, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.entertainment, #category-all .category .category-title .title-wrap .icon.entertainment {
   background-color: #1e1e9c;
 }
-/* line 541, ../scss/_home.scss */
+/* line 563, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.entertainment .cat-icon, #category-all .category .category-title .title-wrap .icon.entertainment .cat-icon {
   background-position: 0px 303px;
 }
-/* line 546, ../scss/_home.scss */
+/* line 568, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.lifestyle, #category-all .category .category-title .title-wrap .icon.lifestyle {
   background-color: #00953f;
 }
-/* line 548, ../scss/_home.scss */
+/* line 570, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.lifestyle .cat-icon, #category-all .category .category-title .title-wrap .icon.lifestyle .cat-icon {
   background-position: 1px 380px;
 }
-/* line 553, ../scss/_home.scss */
+/* line 575, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.news-weather, #category-all .category .category-title .title-wrap .icon.news-weather {
   background-color: #1e1e9c;
 }
-/* line 555, ../scss/_home.scss */
+/* line 577, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.news-weather .cat-icon, #category-all .category .category-title .title-wrap .icon.news-weather .cat-icon {
   background-position: 0px 567px;
 }
-/* line 560, ../scss/_home.scss */
+/* line 582, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.reference, #category-all .category .category-title .title-wrap .icon.reference {
   background-color: #00953f;
 }
-/* line 562, ../scss/_home.scss */
+/* line 584, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.reference .cat-icon, #category-all .category .category-title .title-wrap .icon.reference .cat-icon {
   background-position: 0px 113px;
 }
-/* line 567, ../scss/_home.scss */
+/* line 589, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.sports, #category-all .category .category-title .title-wrap .icon.sports {
   background-color: #1e1e9c;
 }
-/* line 569, ../scss/_home.scss */
+/* line 591, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.sports .cat-icon, #category-all .category .category-title .title-wrap .icon.sports .cat-icon {
   background-position: 0px 303px;
 }
-/* line 574, ../scss/_home.scss */
+/* line 596, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.buisness, #category-all .category .category-title .title-wrap .icon.buisness {
   background-color: #1e1e9c;
 }
-/* line 576, ../scss/_home.scss */
+/* line 598, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.buisness .cat-icon, #category-all .category .category-title .title-wrap .icon.buisness .cat-icon {
   background-position: 0px 303px;
 }
-/* line 581, ../scss/_home.scss */
+/* line 603, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.utilities, #category-all .category .category-title .title-wrap .icon.utilities {
   background-color: #1e1e9c;
 }
-/* line 583, ../scss/_home.scss */
+/* line 605, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.utilities .cat-icon, #category-all .category .category-title .title-wrap .icon.utilities .cat-icon {
   background-position: 0px 416px;
 }
-/* line 588, ../scss/_home.scss */
+/* line 610, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.health-fitness, #category-all .category .category-title .title-wrap .icon.health-fitness {
   background-color: #1e1e9c;
 }
-/* line 590, ../scss/_home.scss */
+/* line 612, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.health-fitness .cat-icon, #category-all .category .category-title .title-wrap .icon.health-fitness .cat-icon {
   background-position: 0px 493px;
 }
-/* line 595, ../scss/_home.scss */
+/* line 617, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.maps-navigation, #category-all .category .category-title .title-wrap .icon.maps-navigation {
   background-color: #1e1e9c;
 }
-/* line 597, ../scss/_home.scss */
+/* line 619, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.maps-navigation .cat-icon, #category-all .category .category-title .title-wrap .icon.maps-navigation .cat-icon {
   background-position: 0px 38px;
 }
-/* line 602, ../scss/_home.scss */
+/* line 624, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.travel, #category-all .category .category-title .title-wrap .icon.travel {
   background-color: #1e1e9c;
 }
-/* line 604, ../scss/_home.scss */
+/* line 626, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.travel .cat-icon, #category-all .category .category-title .title-wrap .icon.travel .cat-icon {
   background-position: 0px 77px;
 }
-/* line 609, ../scss/_home.scss */
+/* line 631, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.photo-video, #category-all .category .category-title .title-wrap .icon.photo-video {
   background-color: #1e1e9c;
 }
-/* line 611, ../scss/_home.scss */
+/* line 633, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.photo-video .cat-icon, #category-all .category .category-title .title-wrap .icon.photo-video .cat-icon {
   background-position: 0px 227px;
 }
-/* line 615, ../scss/_home.scss */
+/* line 637, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.shopping, #category-all .category .category-title .title-wrap .icon.shopping {
   background-color: #1e1e9c;
 }
-/* line 617, ../scss/_home.scss */
+/* line 639, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.shopping .cat-icon, #category-all .category .category-title .title-wrap .icon.shopping .cat-icon {
   background-position: 0px 266px;
 }
-/* line 621, ../scss/_home.scss */
+/* line 643, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.education, #category-all .category .category-title .title-wrap .icon.education {
   background-color: #1e1e9c;
 }
-/* line 623, ../scss/_home.scss */
+/* line 645, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.education .cat-icon, #category-all .category .category-title .title-wrap .icon.education .cat-icon {
   background-position: 0px -153px;
 }
-/* line 628, ../scss/_home.scss */
+/* line 650, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.business, #category-all .category .category-title .title-wrap .icon.business {
   background-color: #1e1e9c;
 }
-/* line 630, ../scss/_home.scss */
+/* line 652, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .icon.business .cat-icon, #category-all .category .category-title .title-wrap .icon.business .cat-icon {
   background-position: 0px 341px;
 }
-/* line 636, ../scss/_home.scss */
+/* line 658, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy, #category-all .category .category-title .title-wrap .title-copy {
   margin-left: 5px;
 }
-/* line 638, ../scss/_home.scss */
+/* line 660, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy h3, #category-all .category .category-title .title-wrap .title-copy h3 {
   font-size: 20px;
   font-family: "FiraMedium";
   text-transform: capitalize;
 }
-/* line 643, ../scss/_home.scss */
+/* line 665, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy p, #category-all .category .category-title .title-wrap .title-copy p {
   font-size: 12px;
   font-family: "FiraLight";
   padding-left: 2px;
 }
-/* line 647, ../scss/_home.scss */
+/* line 669, ../scss/_home.scss */
 #category-list .category .category-title .title-wrap .title-copy p:hover, #category-all .category .category-title .title-wrap .title-copy p:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-/* line 656, ../scss/_home.scss */
+/* line 678, ../scss/_home.scss */
 #category-list .category .apps, #category-all .category .apps {
   padding: 10px 0;
   background: #fff;
 }
-/* line 661, ../scss/_home.scss */
+/* line 683, ../scss/_home.scss */
 #category-list .category .app, #category-all .category .app {
   border: 0;
   padding: 10px 20px;
 }
-/* line 664, ../scss/_home.scss */
+/* line 686, ../scss/_home.scss */
 #category-list .category .app .app-details, #category-all .category .app .app-details {
   padding: 0;
   border: 0;
 }
-/* line 670, ../scss/_home.scss */
+/* line 692, ../scss/_home.scss */
 #category-list .category:last-child, #category-all .category:last-child {
   margin: 0;
 }
 
-/* line 680, ../scss/_home.scss */
+/* line 702, ../scss/_home.scss */
 .category-apps .recent-category {
   display: none;
 }
 
-/* line 685, ../scss/_home.scss */
+/* line 707, ../scss/_home.scss */
 .text-delimiter {
   font-family: "FiraMedium";
   letter-spacing: 1px;
@@ -2829,8 +2856,14 @@ header .wrap #user-actions #menu-trigger img {
   display: inline-block;
   vertical-align: top;
 }
+/* line 347, ../scss/main.scss */
+.searchcolumn .load-more {
+  text-align: center;
+  color: #4cb1ff;
+  cursor: pointer;
+}
 
-/* line 348, ../scss/main.scss */
+/* line 353, ../scss/main.scss */
 #searchresults {
   position: absolute;
   min-width: 100%;
@@ -2840,13 +2873,13 @@ header .wrap #user-actions #menu-trigger img {
   top: -99990px;
   z-index: 99;
 }
-/* line 356, ../scss/main.scss */
+/* line 361, ../scss/main.scss */
 #searchresults .search-wrap {
   display: block;
   padding: 30px;
   margin: 0 auto;
 }
-/* line 361, ../scss/main.scss */
+/* line 366, ../scss/main.scss */
 #searchresults .search-wrap #searchterm {
   background: none;
   border: none;
@@ -2855,11 +2888,11 @@ header .wrap #user-actions #menu-trigger img {
   color: #fff;
   font-size: 40px;
 }
-/* line 369, ../scss/main.scss */
+/* line 374, ../scss/main.scss */
 #searchresults .search-wrap #searchterm:focus {
   outline: 0;
 }
-/* line 377, ../scss/main.scss */
+/* line 382, ../scss/main.scss */
 #searchresults #results {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -2867,7 +2900,7 @@ header .wrap #user-actions #menu-trigger img {
   position: relative;
   top: 10px;
 }
-/* line 384, ../scss/main.scss */
+/* line 389, ../scss/main.scss */
 #searchresults #results .searchresult {
   border: solid 1px red;
   width: 200px;
@@ -2875,7 +2908,7 @@ header .wrap #user-actions #menu-trigger img {
   padding: 30px;
   display: inline-block;
 }
-/* line 391, ../scss/main.scss */
+/* line 396, ../scss/main.scss */
 #searchresults #results .searchresult.app {
   display: inline-block;
 }
@@ -2886,12 +2919,12 @@ header .wrap #user-actions #menu-trigger img {
 /**
  *	Editorial content
  */
-/* line 407, ../scss/main.scss */
+/* line 412, ../scss/main.scss */
 #ecollections {
   margin-top: 30px;
 }
 
-/* line 414, ../scss/main.scss */
+/* line 419, ../scss/main.scss */
 .editorial-collections .collections .collection {
   width: 398px;
   height: 225px;
@@ -2907,11 +2940,11 @@ header .wrap #user-actions #menu-trigger img {
   border-radius: 5px;
   overflow: hidden;
 }
-/* line 426, ../scss/main.scss */
+/* line 431, ../scss/main.scss */
 .editorial-collections .collections .collection:last-child {
   width: 397px;
 }
-/* line 430, ../scss/main.scss */
+/* line 435, ../scss/main.scss */
 .editorial-collections .collections .collection .curve, .editorial-collections .collections .collection .alt-curve {
   height: 65px;
   width: 500px;
@@ -2921,17 +2954,17 @@ header .wrap #user-actions #menu-trigger img {
   border-radius: 50% 50% 0px 0px;
   position: absolute;
 }
-/* line 440, ../scss/main.scss */
+/* line 445, ../scss/main.scss */
 .editorial-collections .collections .collection .alt-curve {
   top: 102px;
   background: #0099D0;
 }
-/* line 445, ../scss/main.scss */
+/* line 450, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps {
   max-width: 231px;
   margin: 30px auto 0 auto;
 }
-/* line 448, ../scss/main.scss */
+/* line 453, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app {
   height: 60px;
   width: 60px;
@@ -2946,16 +2979,16 @@ header .wrap #user-actions #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 458, ../scss/main.scss */
+/* line 463, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app img {
   height: 60px;
   width: 60px;
 }
-/* line 463, ../scss/main.scss */
+/* line 468, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-apps .collection-app:last-child {
   margin: 0;
 }
-/* line 468, ../scss/main.scss */
+/* line 473, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy {
   margin-top: 30px;
   padding: 0 30px 30px 30px;
@@ -2963,18 +2996,18 @@ header .wrap #user-actions #menu-trigger img {
   background: #0099D0;
   color: #fff;
 }
-/* line 474, ../scss/main.scss */
+/* line 479, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy h2 {
   font-size: 20px;
   letter-spacing: -.5px;
 }
-/* line 478, ../scss/main.scss */
+/* line 483, ../scss/main.scss */
 .editorial-collections .collections .collection .collection-copy p {
   font-family: "FiraLight";
   font-size: 14px;
   margin-top: 8px;
 }
-/* line 488, ../scss/main.scss */
+/* line 493, ../scss/main.scss */
 .editorial-collections .collections .collection:last-child {
   margin: 0;
 }
@@ -2982,11 +3015,11 @@ header .wrap #user-actions #menu-trigger img {
 /**
  *	Ratings
  */
-/* line 497, ../scss/main.scss */
+/* line 502, ../scss/main.scss */
 .review {
   text-align: center;
 }
-/* line 500, ../scss/main.scss */
+/* line 505, ../scss/main.scss */
 .review .review-rating {
   max-width: 100px;
   margin: 0 auto;
@@ -2995,7 +3028,7 @@ header .wrap #user-actions #menu-trigger img {
 /**
  *	the Main search container
  */
-/* line 512, ../scss/main.scss */
+/* line 517, ../scss/main.scss */
 #mainsearch {
   position: absolute;
   top: 0;
@@ -3008,39 +3041,39 @@ header .wrap #user-actions #menu-trigger img {
   overflow: hidden;
 }
 
-/* line 524, ../scss/main.scss */
+/* line 529, ../scss/main.scss */
 #nav-controls {
   position: absolute;
   width: 100%;
   top: 24px;
 }
-/* line 528, ../scss/main.scss */
+/* line 533, ../scss/main.scss */
 #nav-controls button {
   height: 50px;
   width: 25px;
   background: #4cb1ff;
   box-shadow: 0px 2px #3D86BD;
 }
-/* line 533, ../scss/main.scss */
+/* line 538, ../scss/main.scss */
 #nav-controls button:hover {
   cursor: pointer;
   background: #42cafe;
 }
-/* line 538, ../scss/main.scss */
+/* line 543, ../scss/main.scss */
 #nav-controls #back-button {
   position: absolute;
   border: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-/* line 543, ../scss/main.scss */
+/* line 548, ../scss/main.scss */
 #nav-controls #back-button .arrow {
   height: 17px;
   width: 9px;
   background: url("../img/nav_back_arrow.png");
   margin-left: 3px;
 }
-/* line 550, ../scss/main.scss */
+/* line 555, ../scss/main.scss */
 #nav-controls #forward-button {
   right: 0;
   border: none;
@@ -3048,7 +3081,7 @@ header .wrap #user-actions #menu-trigger img {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
-/* line 556, ../scss/main.scss */
+/* line 561, ../scss/main.scss */
 #nav-controls #forward-button .arrow {
   height: 17px;
   width: 9px;
@@ -3056,7 +3089,7 @@ header .wrap #user-actions #menu-trigger img {
   margin-left: 7px;
 }
 
-/* line 565, ../scss/main.scss */
+/* line 570, ../scss/main.scss */
 #menu-trigger {
   position: relative;
   vertical-align: middle;
@@ -3065,11 +3098,11 @@ header .wrap #user-actions #menu-trigger img {
   top: 13px;
   float: right;
 }
-/* line 573, ../scss/main.scss */
+/* line 578, ../scss/main.scss */
 #menu-trigger:hover {
   cursor: pointer;
 }
-/* line 576, ../scss/main.scss */
+/* line 581, ../scss/main.scss */
 #menu-trigger:hover .burger-element .innerfill {
   -webkit-transition: background-color 0.5s ease;
   -moz-transition: background-color 0.5s ease;
@@ -3082,7 +3115,7 @@ header .wrap #user-actions #menu-trigger img {
   border-radius: 4px;
   width: 20px;
 }
-/* line 585, ../scss/main.scss */
+/* line 590, ../scss/main.scss */
 #menu-trigger .burger-element {
   height: 4px;
   width: 25px;
@@ -3093,7 +3126,7 @@ header .wrap #user-actions #menu-trigger img {
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 592, ../scss/main.scss */
+/* line 597, ../scss/main.scss */
 #menu-trigger .burger-element .innerfill {
   -webkit-transition: background-color 0.5s ease;
   -moz-transition: background-color 0.5s ease;
@@ -3106,7 +3139,7 @@ header .wrap #user-actions #menu-trigger img {
   width: 0px;
   height: 4px;
 }
-/* line 599, ../scss/main.scss */
+/* line 604, ../scss/main.scss */
 #menu-trigger .burger-element .innerfill.navopen {
   background-color: #333333;
   width: 0px;
