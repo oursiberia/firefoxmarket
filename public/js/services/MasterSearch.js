@@ -46,7 +46,9 @@ app.factory("MasterSearch",function($http){
                     //hide the results list if there is no search input
                     results.style.display = "none";
                     close.style.display = "none";
-                    homeclose.style.display = "none";
+                    if(homeclose !== null){
+                        homeclose.style.display = "none";
+                    }
                     return false;
                 }else{
                     query = term.value;
@@ -54,7 +56,9 @@ app.factory("MasterSearch",function($http){
                     //show the results list
                     results.style.display = "block";
                     close.style.display = "block";
-                    homeclose.style.display = "block";
+                    if(homeclose !== null){
+                        homeclose.style.display = "block";
+                    }
 
                 }
             }
