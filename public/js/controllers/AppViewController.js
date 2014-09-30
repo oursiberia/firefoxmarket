@@ -293,7 +293,7 @@ app.controller("AppViewController",[
                 var review = data.objects[i];
 
                 //filter out especially long reviews
-                review.body = $filter("LongCopyFilter")(review.body);
+               // review.body = $filter("LongCopyFilter")(review.body);
 
                 //push the filtered reviews into the array stack
                 all_reviews.push({

@@ -27,6 +27,7 @@ app.factory("MasterSearch",function($http){
          * @returns {boolean}
          */
         query:function(_$scope,term,limit){
+            //reference to search field.
             var results = document.getElementsByClassName("resultsbyname")[0];
 
             $scope = _$scope;
@@ -39,11 +40,15 @@ app.factory("MasterSearch",function($http){
                  */
                 if(term.value === ""){
                     console.log("no search term entered");
+
+                    //hide the results list if there is no search input
                     results.style.display = "none";
-                    // alert("please enter a search term");
+
                     return false;
                 }else{
                     query = term.value;
+
+                    //show the results list
                     results.style.display = "block";
                 }
             }
