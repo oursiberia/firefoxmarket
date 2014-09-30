@@ -233,7 +233,7 @@
 
 }
 
-#popular-in-category{
+#popular-in-category,.review-grid,#reviews{
 	position: relative;
 
 	.category-popular, .category-recent {
@@ -367,7 +367,7 @@
 
 .wrap{
 
-	#popular-in-category {
+	#popular-in-category,#reviews {
 		padding-top: 27px;
 		.wrap{
 			position: relative;

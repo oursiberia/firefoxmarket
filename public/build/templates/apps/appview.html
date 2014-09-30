@@ -93,6 +93,25 @@
           <div data-ng-click="toggleCategoryTypes($event)" class="toggle"><span translate="translate" class="active">Top Reviews</span><span translate="translate">All Reviews</span></div>
         </div>
       </div>
+      <div class="review-grid">
+        <div class="app-grid">
+          <div class="category-popular">
+            <div data-ng-repeat="review in all_reviews" class="category">
+              <div class="app">
+                <div class="app-details">
+                  <div class="rating-copy">
+                    <p>{{review.copy}}</p>
+                  </div>
+                  <div class="username">
+                    <p>- {{review.username}}</p>
+                  </div>
+                  <div starrating="starrating" data-rating="{{review.rating}}" data-delay="true" class="review-rating"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="app-reviews">
         <div data-ng-repeat="review in reviews" class="app-review">
           <div class="stars">

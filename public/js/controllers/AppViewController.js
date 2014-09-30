@@ -270,7 +270,8 @@ app.controller("AppViewController",[
          * Get the reviews
          */
         API.request ("ratings","?app=" + id).then(function(data) {
-            var reviews = [];
+            var featured_reviews = [];
+            var all_reviews = [];
 
             //loop through the first 4 reviews
             for (var i = 0;i<4;++i) {
@@ -280,14 +281,30 @@ app.controller("AppViewController",[
                 review.body = $filter("LongCopyFilter")(review.body);
 
                 //push the filtered reviews into the array stack
-                reviews.push({
+                featured_reviews.push({
+                    copy:review.body,
+                    rating:review.rating,
+                    username:review.user.display_name
+                });
+            }
+
+            //collect the rest of the reviews
+            for (var i = 0;i<data.objects.length;++i) {
+                var review = data.objects[i];
+
+                //filter out especially long reviews
+                review.body = $filter("LongCopyFilter")(review.body);
+
+                //push the filtered reviews into the array stack
+                all_reviews.push({
                     copy:review.body,
                     rating:review.rating,
                     username:review.user.display_name
                 });
             }
             //set the stack on the scope
-            $scope.reviews = reviews;
+            $scope.reviews = featured_reviews;
+            $scope.all_reviews = all_reviews;
         });
 
 
@@ -427,6 +444,35 @@ app.controller("AppViewController",[
                         });
                     }
                 });
+            }
+        };
+
+        $scope.toggleCategoryTypes = function(e){
+            if(e.target.tagName === "SPAN"){
+                var parent = e.target.parentNode;
+                var target = e.target;
+
+                for(var i = 0; i<parent.children.length;++i){
+                    parent.children[i].className = "";
+
+                }
+                var recentapps = document.querySelector(".app-reviews");
+                var allreviews = document.querySelector(".review-grid");
+                target.className = "active";
+
+                switch(target.innerHTML){
+                    case "Top Reviews":
+                        recentapps.style.display = "block";
+                        allreviews.style.display = "none";
+                        break;
+
+
+                    case "All Reviews":
+                        recentapps.style.display = "none";
+                        allreviews.style.display = "block";
+                        break;
+                }
+
             }
         };
 
