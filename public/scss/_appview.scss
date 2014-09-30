@@ -484,8 +484,9 @@ $borderColor:rgb(211,211,211);
 		height: 145px;
 		padding: 20px;
 		margin-right: 20px;
-		@include panel;
-		background: #fff;
+		background: #4CB1FF;
+		border: 1px solid #3D86BD;
+		@include border-radius(5px);
 		&:last-child { margin: 0;}
 		.stars, .rating-copy,.username {
 			display: inline-block;
@@ -515,22 +516,26 @@ $borderColor:rgb(211,211,211);
 			}
 		}
 		.rating-copy {
-			width: 100%;
-			margin-top: 10px;
-			word-wrap: break-word;
-		}
-		.rating-copy,.username {
-			font-size: 14px;
-			font-family: "FiraLight";
+			font-size: 16px;
+			height: 62px;
+			display: flex;
+			align-items: center;
+			line-height: 22px;
+			color: #fff;
 			text-align: center;
+			p {
+				font-family: "FiraRegular", sans-serif;
+				width: 100%;
+			}
 		}
 		.username {
-			position: absolute;
-			bottom: 15px;
-			left: 0px;
+			margin-top: 16px;
+			font-size: 14px;
+			text-align: center;
 			width: 100%;
 			p {
-				font-family: "FiraRegular";
+				font-family: "FiraMedium", sans-serif;
+				color: rgba(0,0,0,.5);
 			}
 		}
 	}

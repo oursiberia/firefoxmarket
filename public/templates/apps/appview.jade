@@ -120,12 +120,11 @@ section#appview
 
             div.app-reviews
                 div(data-ng-repeat="review in reviews",class="app-review")
-                    div.stars
-                        div(class="review-rating", starrating, data-rating="{{review.rating}}", data-delay="true")
                     div.rating-copy
                         p {{review.copy}}
                     div.username
                         p - {{review.username}}
+                    div(class="review-rating", starrating, data-rating="{{rating}}", data-delay="true")
 
 div#related-apps
     div.wrap
