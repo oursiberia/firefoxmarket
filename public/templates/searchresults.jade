@@ -1,16 +1,22 @@
-div#all-search-results(class="wrap")
-    h2(translate) Search results based on {{metric}} for the term {{search_term}}
-    div(class="searchresult home-name", data-ng-repeat="result in search_results")
-            div.app-wrap
-                div.app-details
-                    div.app-image
-                        a(data-ng-href="/app/{{result.id}}")
-                            img.app-icon(data-ng-src="{{result.icon}}")
+div#all-search-results
+    .wrap
+        h2.search-results-header(translate) 
+            span(translate) All apps whose&nbsp;
+            span(translate) {{metric}}&nbsp;
+            span(translate) includes the term(s)&nbsp;
+            span(translate) &quot{{search_term}}&quot
+        .search-results
+            div(class="searchresult home-name", data-ng-repeat="result in search_results")
+                    div.app-wrap
+                        div.app-details
+                            div.app-image
+                                a(data-ng-href="/app/{{result.id}}")
+                                    img.app-icon(data-ng-src="{{result.icon}}")
 
-                    div.app-copy
-                        div.app-download-button
-                            p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
-                        a(data-ng-href="/app/{{result.id}}")
-                            h1.app-title {{result.name}}
-                            h2.app-author {{result.author}}
-                            div(starrating,data-rating="{{result.rating}}",data-delay="true")
+                            div.app-copy
+                                div.app-download-button
+                                    p(data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
+                                a(data-ng-href="/app/{{result.id}}")
+                                    h1.app-title {{result.name}}
+                                    h2.app-author {{result.author}}
+                                    div(starrating,data-rating="{{result.rating}}",data-delay="true")

@@ -1,17 +1,21 @@
 
-<div id="app-developer" class="wrap">
-  <h2 translate="translate">Apps from {{author}}</h2>
-  <div data-ng-repeat="result in apps" class="searchresult home-name">
-    <div class="app-wrap">
-      <div class="app-details">
-        <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
-        <div class="app-copy">
-          <div class="app-download-button">
-            <p data-ng-click="initPurchase(result.app_type,result.manifest_url)" translate="translate">Install</p>
-          </div><a data-ng-href="/app/{{result.id}}">
-            <h1 class="app-title">{{result.name}}</h1>
-            <h2 class="app-author">{{result.author}}</h2>
-            <div starrating="starrating" data-rating="{{result.rating}}" data-delay="true"></div></a>
+<div id="app-developer">
+  <div class="wrap">
+    <h2 translate="translate" class="developer-header"><span translate="translate">All Apps from </span><span translate="translate">{{author}}</span></h2>
+    <div class="developer-apps">
+      <div data-ng-repeat="result in apps" class="searchresult home-name">
+        <div class="app-wrap">
+          <div class="app-details">
+            <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
+            <div class="app-copy">
+              <div class="app-download-button">
+                <p data-ng-click="initPurchase(result.app_type,result.manifest_url)" translate="translate">Install</p>
+              </div><a data-ng-href="/app/{{result.id}}">
+                <h1 class="app-title">{{result.name}}</h1>
+                <h2 class="app-author">{{result.author}}</h2>
+                <div starrating="starrating" data-rating="{{result.rating}}" data-delay="true"></div></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>

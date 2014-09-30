@@ -177,3 +177,41 @@
 	position: relative;
 	display: none;
 }
+
+#app-developer, #all-search-results {
+	background: url('../img/header-background.png') repeat scroll 0% 0% #F6F6F6;
+	padding: 30px 0;
+}
+
+.search-results-header {
+	font-size: 22px;
+	font-family: "FiraLight";
+	margin-bottom: 25px;
+	span:nth-child(2) {
+		font-family: "FiraRegular";
+		text-transform: lowercase;
+	}
+	span:nth-child(4) {
+		font-family: "FiraRegular";
+		color: $blue;
+		font-style: italic;
+	}
+}
+
+.developer-header {
+	font-size: 22px;
+	font-family: "FiraLight";
+	margin-bottom: 25px;
+	span:last-child {
+		font-family: "FiraRegular";
+	}
+}
+
+.developer-apps, .search-results {
+	.searchresult {
+		margin-right: 20px;
+	}
+	.searchresult:nth-child(4n) {
+		margin-right: 0;
+	}
+}

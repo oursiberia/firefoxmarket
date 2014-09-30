@@ -1,17 +1,21 @@
 
-<div id="all-search-results" class="wrap">
-  <h2 translate="translate">Search results based on {{metric}} for the term {{search_term}}</h2>
-  <div data-ng-repeat="result in search_results" class="searchresult home-name">
-    <div class="app-wrap">
-      <div class="app-details">
-        <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
-        <div class="app-copy">
-          <div class="app-download-button">
-            <p data-ng-click="initPurchase(result.app_type,result.manifest_url)">Install</p>
-          </div><a data-ng-href="/app/{{result.id}}">
-            <h1 class="app-title">{{result.name}}</h1>
-            <h2 class="app-author">{{result.author}}</h2>
-            <div starrating="starrating" data-rating="{{result.rating}}" data-delay="true"></div></a>
+<div id="all-search-results">
+  <div class="wrap">
+    <h2 translate="translate" class="search-results-header"><span translate="translate">All apps whose&nbsp;</span><span translate="translate">{{metric}}&nbsp;</span><span translate="translate">includes the term(s)&nbsp;</span><span translate="translate">&quot{{search_term}}&quot</span></h2>
+    <div class="search-results">
+      <div data-ng-repeat="result in search_results" class="searchresult home-name">
+        <div class="app-wrap">
+          <div class="app-details">
+            <div class="app-image"><a data-ng-href="/app/{{result.id}}"><img data-ng-src="{{result.icon}}" class="app-icon"/></a></div>
+            <div class="app-copy">
+              <div class="app-download-button">
+                <p data-ng-click="initPurchase(result.app_type,result.manifest_url)">Install</p>
+              </div><a data-ng-href="/app/{{result.id}}">
+                <h1 class="app-title">{{result.name}}</h1>
+                <h2 class="app-author">{{result.author}}</h2>
+                <div starrating="starrating" data-rating="{{result.rating}}" data-delay="true"></div></a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
