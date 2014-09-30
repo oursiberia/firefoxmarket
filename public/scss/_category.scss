@@ -207,11 +207,16 @@
 			position: relative;
 			left:39px;
 			color: #fff;
+			h1 {
+				margin-bottom: 4px;
+			}
 			h2 {
 				font-size: 12px;
-				border: 1px solid #fff;
-				padding: 3px 8px;
-				@include border-radius(5px);
+				cursor: pointer;
+				display: inline-block;
+				&:hover {
+					text-decoration: underline;
+				}
 			}
 			p {
 				max-width: 370px;
