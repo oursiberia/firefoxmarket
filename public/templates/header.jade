@@ -14,7 +14,6 @@ div#mainsearch
                                 h2(translate) Name
                                 div.total
                                     p(translate) results
-                        div(translate,data-ng-click="viewSearchResults('name_results')") View All
                         div.searchresult(translate,data-ng-repeat="result in name_results")
                             div.app-wrap
                                 div.app-details
@@ -29,6 +28,7 @@ div#mainsearch
                                             h1.app-title {{result.name}}
                                             h2.app-author {{result.author}}
                                             div(starrating,data-rating="{{result.rating}}",data-delay="true")
+                        div(translate,data-ng-click="viewSearchResults('name_results')") View All
 
                     div.searchcolumn
                         div.result-relevance
@@ -37,7 +37,6 @@ div#mainsearch
                                 h2(translate) Developer
                                 div.total
                                     p(translate) results
-                        div(translate,data-ng-click="viewSearchResults('name_results')") View All
                         div.searchresult(data-ng-repeat="result in author_results")
                             div.app-wrap
                                 div.app-details
@@ -52,6 +51,7 @@ div#mainsearch
                                             h1.app-title {{result.name}}
                                             h2.app-author {{result.author}}
                                             div(starrating,data-rating="{{result.rating}}",data-delay="true")
+                        div(translate,data-ng-click="viewSearchResults('name_results')") View All
 
                     div.searchcolumn
                         div.result-relevance
@@ -60,7 +60,6 @@ div#mainsearch
                                 h2(translate) Category
                                 div.total
                                     p(translate) results
-                        div(translate,data-ng-click="viewSearchResults('name_results')") View All
                         div.searchresult(data-ng-repeat="result in category_results")
                             div.app-wrap
                                 div.app-details
@@ -75,6 +74,7 @@ div#mainsearch
                                             h1.app-title {{result.name}}
                                             h2.app-author {{result.author}}
                                             div(starrating,data-rating="{{result.rating}}",data-delay="true")
+                        div(translate,data-ng-click="viewSearchResults('name_results')") View All
 
                     div.searchcolumn
                         div.result-relevance
@@ -83,7 +83,6 @@ div#mainsearch
                                 h2(translate) Description
                                 div.total
                                     p(translate) results
-                        div(translate,data-ng-click="viewSearchResults('name_results')") View All
                         div.searchresult(data-ng-repeat="result in description_results")
                             div.app-wrap
                                 div.app-details
@@ -98,6 +97,7 @@ div#mainsearch
                                             h1.app-title {{result.name}}
                                             h2.app-author {{result.author}}
                                             div(starrating,data-rating="{{result.rating}}",data-delay="true")
+                        div(translate,data-ng-click="viewSearchResults('name_results')") View All
 
 header
     div(uicontrols)

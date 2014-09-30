@@ -2,13 +2,18 @@ $borderColor:rgb(211,211,211);
 #appview{
 	position: relative;
 	min-height: 100%;
-	padding: 40px 0;
+	padding-top: 40px;
 	background: rgb(246,246,246);
 }
 .app-content-container,#vendor-information{
 	display: inline-block;
 	vertical-align: top;
 }
+
+.app-content-container {
+	min-height: 407px;
+}
+
 #vendor-information{
 	width: 300px;
 	position: relative;
@@ -75,7 +80,7 @@ $borderColor:rgb(211,211,211);
 	@include border-radius(5px);
 	border:solid 1px rgb(211,211,211);
 	position: relative;
-
+	overflow: hidden;
 
 	/**
 	 *	general meta info for the app, icon, rating etc.
@@ -83,7 +88,9 @@ $borderColor:rgb(211,211,211);
 	.app-meta{
 		width: 126px;
 		height: 100%;
+		min-height: 407px;
 		border-right: solid 1px rgb(211,211,211);
+		background: url('../img/header-background.png') repeat scroll 0% 0% #F5f5f5;
 		.img-rating{
 			padding: 20px;
 			img{
@@ -138,26 +145,32 @@ $borderColor:rgb(211,211,211);
 			cursor: pointer;
 			float: right;
 			width: 80px;
-			height: 30px;
+			height: 27px;
 			padding-top: 6px;
 			display: inline-block;
+			background: $blue;
+			box-shadow: 0px 2px #3D86BD;
+			text-shadow: 0px 1px #3D86BD;
+			margin-top: 1px;
 			@include border-radius(5px);
-			background: $dark_gray;
 			p {
 				font-size: 16px;
-				color: $white;
+				color: white;
 				font-family: "FiraRegular";
 				text-align: center;
+			}
+			&:hover {
+				background: #42cafe;
 			}
 		}
 		.ages {
 			float: right;
 			width: 64px;
-			height: 22px;
+			height: 21px;
 			padding-top: 4px;
-			border: 1px solid $dark_gray;
+			border: 1px solid $borderColor;
 			display: inline-block;
-			margin: 4px 20px 0 0;
+			margin: 5px 20px 0 0;
 			@include border-radius(5px);
 			p {
 				font-size: 12px;
@@ -194,44 +207,43 @@ $borderColor:rgb(211,211,211);
 		}
 
 		.tabs{
+			padding-top: 20px;
+			text-align: center;
 			.tab-trigger{
-				padding: 10px;
-				width: 250px;
+				padding: 7px 5px 5px 5px;
+				width: 100px;
 				text-align: center;
 				display: inline-block;
 				text-transform: uppercase;
-				margin: 0 -4px;
+				margin-right: 10px;
+				@include border-radius(5px);
+
+				&:last-child {
+					margin-right: 0;
+				}
 
 				h4{
-					font-size: 13px;
-					@include transition((color));
-					color:#333;
+					font-size: 12px;
+					font-family: "FiraMedium";
+					letter-spacing: .4px;
+					color: rgba(0, 0, 0, 0.2);
 				}
 
 				&:hover{
 					cursor: pointer;
-					h4{
+					h4 {
+						color: #47484D;
 						@include transition((color));
-						color:$blue;
 					}
 				}
 
 				&.active {
-					background: #E8E8E8;
+					background: url('../img/header-background.png') repeat scroll 0% 0% #F5F5F5;
+					h4 {
+						color: #47484D;
+					}
 				}
 
-			}
-
-			.tab-trigger:first-child {
-				border-right:solid 1px $borderColor;
-				width: 249px;
-				margin: 0;
-			}
-
-			.tab-trigger:last-child {
-				border-left: solid 1px $borderColor;
-				width: 249px;
-				margin: 0;
 			}
 
 		}
@@ -246,13 +258,13 @@ $borderColor:rgb(211,211,211);
 }// end .app-content-container
 
 #tab-content{
-	border-top: solid 1px $borderColor;
-	padding: 20px;
+	padding: 17px 20px 20px 20px;
 	font-size: 14px;
 	line-height: 22px;
 	font-family: "FiraLight";
+	text-transform: capitalize;
 	.screenshots {
-		height: 255px;
+		height: 244px;
 		overflow: hidden;
 		img {
 			height: 100%;
@@ -263,7 +275,7 @@ $borderColor:rgb(211,211,211);
 
 #app-links{
 	width: 258px;
-	height: 162px;
+	height: 163px;
 	padding: 16px 20px;
 	background: #fff;
 	border:solid 1px rgb(211,211,211);
@@ -292,6 +304,9 @@ $borderColor:rgb(211,211,211);
 			float: right;
 			font-family: "FiraLight";
 			text-transform: none;
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 	#other-applications-list{
@@ -371,38 +386,94 @@ $borderColor:rgb(211,211,211);
 	}
 }
 
+#app-reviews {
+	width: 100%;
+	border-top: 1px solid #D6D6D6;
+	background: url('../img/header-background.png') repeat scroll 0% 0% #F0F0F0;
+	margin-top: 40px;
+	padding-bottom: 40px;
+}
+
 #reviews{
-	margin-top: 20px;
+	margin: 34px auto 0 auto;
 	max-width: 1260px;
-	.reviews-header {
-		height: 43px;
-		margin-bottom: 20px;
-		h2, div {
-			display: inline-block;
-		}
-		h2 {
-			font-size: 18px;
-			margin-top: 8px;
-		}
-		.view-all-reviews, .write-a-review {
-			float:right;
-		}
-		.view-all-reviews {
-			font-size: 13px;
-			margin: 12px 20px 0 0;
-			font-family: "FiraLight";
-			&:hover {
-				cursor: pointer;
-				text-decoration: underline;
+	.wrap{
+		position: relative;
+		height: 70px;
+		.controls{
+			position: relative;
+			padding-bottom: 28px;
+			h1{
+				float: left;
+				font-family: "FiraLight";
+				font-size: 22px;
+				display: inline-block;
+				letter-spacing: -.2px;
+				padding: 3px 30px 0 0;
+				border-right: 1px solid #D3D3D3;
 			}
-		}
-		.write-a-review {
-			font-size: 16px;
-			padding: 10px 20px;
-			color: $white;
-			background: $dark_gray;
-			cursor: pointer;
-			@include border-radius(5px);
+
+			h2 {
+				font-size: 12px;
+				display: inline-block;
+				position: absolute;
+				right: 208px;
+				top: 10px;
+			}
+
+			h1:last-child{
+				font-family: "FiraLight";
+			}
+
+			.toggle {
+				display: inline-block;
+				position: absolute;
+				right: 0;
+				top: 6px;
+				span {
+					font-size: 14px;
+					color: #4CB1FF;
+					border: 1px solid #4CB1FF;
+					padding: 7px 12px 6px 12px;
+					cursor: pointer;
+					background: white;
+					@include border-radius(5px);
+				}
+				span:first-child {
+					border-top-right-radius: 0px;
+					border-bottom-right-radius: 0px;
+				}
+				span:last-child {
+					margin-left: -1px;
+					border-top-left-radius: 0px;
+					border-bottom-left-radius: 0px;
+				}
+				.active {
+					background: #4CB1FF;
+					color: #fff;
+					cursor: default;
+				}
+			}
+
+			button.write-a-review{
+				float:left;
+				width:160px;
+				height:42px;
+				background: #4CB1FF;
+				box-shadow: 0px 2px #3D86BD;
+				text-shadow: 0px 1px #3D86BD;
+				border:none;
+				padding:10px;
+				color:#fff;
+				font-size: 16px;
+				font-family: "FiraRegular";
+				cursor: pointer;
+				margin: -4px 0 0 32px;
+				@include border-radius(5px);
+				&:hover {
+					background: #42cafe;
+				}
+			}
 		}
 	}
 
@@ -468,23 +539,27 @@ $borderColor:rgb(211,211,211);
 
 #related-apps{
 	width: 100%;
-	height: 184px;
-	padding-top: 32px;
-	background: #47484D;
-	border-top: 1px solid #2C2C2F;
+	height: 198px;
+	padding-top: 24px;
+	background-color: #3D86BD;
+	border-top: 1px solid #2a6693;
 	background-image: url(../img/header-background.png);
 	background-repeat: repeat;
-	h3 {color: #fff;}
+	h3 {
+		font-size: 22px;
+		font-family: "FiraLight";
+		color: #fff;
+	}
 	.apps{
 		width: 100%;
 		background: #333;
 		border: $panelBorder;
-		margin-top: 15px;
+		margin-top: 24px;
 		.app {
 			float: left;
 			background: #fff;
 			padding: 20px;
-			border: 1px solid #2C2C2F;
+			border: 1px solid #2a6693;
 			.app-image {
 				height: 60px;
 				width: 60px;

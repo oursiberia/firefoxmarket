@@ -48,7 +48,7 @@
 					font-size: 14px;
 					p {
 						font-family: "FiraMedium", sans-serif;
-						color: rgba(0,0,0,.4);
+						color: rgba(0,0,0,.5);
 					}
 				}
 				.review-rating {
@@ -370,6 +370,7 @@
 	#popular-in-category {
 		padding-top: 27px;
 		.wrap{
+			position: relative;
 			.controls{
 				position: relative;
 				padding-bottom: 28px;
@@ -439,6 +440,36 @@
 					@include border-radius(5px);
 					&:hover {
 						background: #42cafe;
+					}
+				}
+			}
+			.load-more {
+				position: relative;
+				margin: 13px auto 0 auto;
+				height: 26px;
+				width: 260px;
+				text-align: center;
+				border-radius: 5px;
+				padding: 10px;
+				color: #4CB1FF;
+				font-family: "FiraRegular";
+				font-size: 12px;
+				cursor: pointer;
+				@include border-radius(5px);
+				h1 {
+					position: absolute;
+					height: 26px;
+					width: 280px;
+					top: 0px;
+					left: 0px;
+					text-align: center;
+					padding: 10px 0px;
+					&:hover {
+						border: 1px solid #D6D6D6;
+						margin: -1px;
+						background-color: #F6F6F6;
+						background-image: url('../img/header-background.png');
+						@include border-radius(5px);
 					}
 				}
 			}
