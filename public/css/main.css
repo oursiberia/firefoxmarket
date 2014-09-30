@@ -1187,23 +1187,23 @@
 }
 
 /* line 236, ../scss/_category.scss */
-#popular-in-category {
+#popular-in-category, .review-grid, #reviews {
   position: relative;
 }
 /* line 239, ../scss/_category.scss */
-#popular-in-category .category-popular, #popular-in-category .category-recent {
+#popular-in-category .category-popular, #popular-in-category .category-recent, .review-grid .category-popular, .review-grid .category-recent, #reviews .category-popular, #reviews .category-recent {
   margin-bottom: -1px;
 }
 /* line 241, ../scss/_category.scss */
-#popular-in-category .category-popular .category:nth-child(-n+4), #popular-in-category .category-recent .category:nth-child(-n+4) {
+#popular-in-category .category-popular .category:nth-child(-n+4), #popular-in-category .category-recent .category:nth-child(-n+4), .review-grid .category-popular .category:nth-child(-n+4), .review-grid .category-recent .category:nth-child(-n+4), #reviews .category-popular .category:nth-child(-n+4), #reviews .category-recent .category:nth-child(-n+4) {
   border-top: 0;
 }
 /* line 247, ../scss/_category.scss */
-#popular-in-category h3 {
+#popular-in-category h3, .review-grid h3, #reviews h3 {
   margin-bottom: 15px;
 }
 /* line 251, ../scss/_category.scss */
-#popular-in-category .app-grid {
+#popular-in-category .app-grid, .review-grid .app-grid, #reviews .app-grid {
   height: 100%;
   width: 1258px;
   background: #f6f6f6;
@@ -1216,7 +1216,7 @@
   border-radius: 5px;
 }
 /* line 260, ../scss/_category.scss */
-#popular-in-category .app-grid .category {
+#popular-in-category .app-grid .category, .review-grid .app-grid .category, #reviews .app-grid .category {
   height: 60px;
   width: 274px;
   display: inline-block;
@@ -1228,12 +1228,12 @@
   margin-top: -1px;
 }
 /* line 271, ../scss/_category.scss */
-#popular-in-category .app-grid .category:nth-child(4n+4) {
+#popular-in-category .app-grid .category:nth-child(4n+4), .review-grid .app-grid .category:nth-child(4n+4), #reviews .app-grid .category:nth-child(4n+4) {
   border-right: none;
   width: 273px;
 }
 /* line 278, ../scss/_category.scss */
-#popular-in-category .app-grid .app {
+#popular-in-category .app-grid .app, .review-grid .app-grid .app, #reviews .app-grid .app {
   position: relative;
   height: 100%;
   width: 100%;
@@ -1243,7 +1243,7 @@
   background: none;
 }
 /* line 288, ../scss/_category.scss */
-#popular-in-category .app-grid img {
+#popular-in-category .app-grid img, .review-grid .app-grid img, #reviews .app-grid img {
   height: 60px;
   width: 60px;
   -webkit-border-radius: 5px;
@@ -1252,31 +1252,31 @@
   border-radius: 5px;
 }
 /* line 294, ../scss/_category.scss */
-#popular-in-category .app-grid img, #popular-in-category .app-grid .app-details, #popular-in-category .app-grid .app-download-button {
+#popular-in-category .app-grid img, #popular-in-category .app-grid .app-details, #popular-in-category .app-grid .app-download-button, .review-grid .app-grid img, .review-grid .app-grid .app-details, .review-grid .app-grid .app-download-button, #reviews .app-grid img, #reviews .app-grid .app-details, #reviews .app-grid .app-download-button {
   vertical-align: top;
   display: inline-block;
   position: absolute;
 }
 /* line 300, ../scss/_category.scss */
-#popular-in-category .app-grid .app-download-button {
+#popular-in-category .app-grid .app-download-button, .review-grid .app-grid .app-download-button, #reviews .app-grid .app-download-button {
   right: 0;
   bottom: 0;
 }
 /* line 305, ../scss/_category.scss */
-#popular-in-category .app-grid .app-details {
+#popular-in-category .app-grid .app-details, .review-grid .app-grid .app-details, #reviews .app-grid .app-details {
   width: 100%;
   margin-left: 70px;
   border-bottom: 0;
   padding-bottom: 0;
 }
 /* line 310, ../scss/_category.scss */
-#popular-in-category .app-grid .app-details h4, #popular-in-category .app-grid .app-details p {
+#popular-in-category .app-grid .app-details h4, #popular-in-category .app-grid .app-details p, .review-grid .app-grid .app-details h4, .review-grid .app-grid .app-details p, #reviews .app-grid .app-details h4, #reviews .app-grid .app-details p {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 /* line 315, ../scss/_category.scss */
-#popular-in-category .app-grid .app-details h4 {
+#popular-in-category .app-grid .app-details h4, .review-grid .app-grid .app-details h4, #reviews .app-grid .app-details h4 {
   height: 21px;
   margin-top: 1px;
   font-size: 14px;
@@ -1284,29 +1284,29 @@
   width: 200px;
 }
 /* line 321, ../scss/_category.scss */
-#popular-in-category .app-grid .app-details h4:hover {
+#popular-in-category .app-grid .app-details h4:hover, .review-grid .app-grid .app-details h4:hover, #reviews .app-grid .app-details h4:hover {
   text-decoration: underline;
 }
 /* line 325, ../scss/_category.scss */
-#popular-in-category .app-grid .app-details p {
+#popular-in-category .app-grid .app-details p, .review-grid .app-grid .app-details p, #reviews .app-grid .app-details p {
   font-size: 12px;
   font-family: "FiraLight";
   margin: -4px 0px 4px;
   width: 135px;
 }
 /* line 331, ../scss/_category.scss */
-#popular-in-category .app-grid .app-details ul.rating {
+#popular-in-category .app-grid .app-details ul.rating, .review-grid .app-grid .app-details ul.rating, #reviews .app-grid .app-details ul.rating {
   display: inline-block;
 }
 /* line 333, ../scss/_category.scss */
-#popular-in-category .app-grid .app-details ul.rating li {
+#popular-in-category .app-grid .app-details ul.rating li, .review-grid .app-grid .app-details ul.rating li, #reviews .app-grid .app-details ul.rating li {
   height: 15px;
   width: 15px;
   display: inline-block;
   margin-right: 0;
 }
 /* line 338, ../scss/_category.scss */
-#popular-in-category .app-grid .app-details ul.rating li img {
+#popular-in-category .app-grid .app-details ul.rating li img, .review-grid .app-grid .app-details ul.rating li img, #reviews .app-grid .app-details ul.rating li img {
   height: 15px;
   width: 15px;
 }
@@ -1329,16 +1329,16 @@
 }
 
 /* line 370, ../scss/_category.scss */
-.wrap #popular-in-category {
+.wrap #popular-in-category, .wrap #reviews {
   padding-top: 27px;
 }
 /* line 373, ../scss/_category.scss */
-.wrap #popular-in-category .wrap .controls {
+.wrap #popular-in-category .wrap .controls, .wrap #reviews .wrap .controls {
   position: relative;
   padding-bottom: 28px;
 }
 /* line 376, ../scss/_category.scss */
-.wrap #popular-in-category .wrap .controls h1 {
+.wrap #popular-in-category .wrap .controls h1, .wrap #reviews .wrap .controls h1 {
   font-family: "FiraLight";
   font-size: 22px;
   display: inline-block;
@@ -1346,7 +1346,7 @@
   padding-top: 3px;
 }
 /* line 384, ../scss/_category.scss */
-.wrap #popular-in-category .wrap .controls h2 {
+.wrap #popular-in-category .wrap .controls h2, .wrap #reviews .wrap .controls h2 {
   font-size: 12px;
   display: inline-block;
   position: absolute;
@@ -1354,18 +1354,18 @@
   top: 10px;
 }
 /* line 392, ../scss/_category.scss */
-.wrap #popular-in-category .wrap .controls h1:last-child {
+.wrap #popular-in-category .wrap .controls h1:last-child, .wrap #reviews .wrap .controls h1:last-child {
   font-family: "FiraLight";
 }
 /* line 396, ../scss/_category.scss */
-.wrap #popular-in-category .wrap .controls .toggle {
+.wrap #popular-in-category .wrap .controls .toggle, .wrap #reviews .wrap .controls .toggle {
   display: inline-block;
   position: absolute;
   right: 0;
   top: 6px;
 }
 /* line 401, ../scss/_category.scss */
-.wrap #popular-in-category .wrap .controls .toggle span {
+.wrap #popular-in-category .wrap .controls .toggle span, .wrap #reviews .wrap .controls .toggle span {
   font-size: 14px;
   color: #4CB1FF;
   border: 1px solid #4CB1FF;
@@ -1378,24 +1378,24 @@
   border-radius: 5px;
 }
 /* line 410, ../scss/_category.scss */
-.wrap #popular-in-category .wrap .controls .toggle span:first-child {
+.wrap #popular-in-category .wrap .controls .toggle span:first-child, .wrap #reviews .wrap .controls .toggle span:first-child {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
 /* line 414, ../scss/_category.scss */
-.wrap #popular-in-category .wrap .controls .toggle span:last-child {
+.wrap #popular-in-category .wrap .controls .toggle span:last-child, .wrap #reviews .wrap .controls .toggle span:last-child {
   margin-left: -1px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
 /* line 419, ../scss/_category.scss */
-.wrap #popular-in-category .wrap .controls .toggle .active {
+.wrap #popular-in-category .wrap .controls .toggle .active, .wrap #reviews .wrap .controls .toggle .active {
   background: #4CB1FF;
   color: #fff;
   cursor: default;
 }
 /* line 426, ../scss/_category.scss */
-.wrap #popular-in-category .wrap .controls button {
+.wrap #popular-in-category .wrap .controls button, .wrap #reviews .wrap .controls button {
   float: right;
   width: 178px;
   height: 42px;
@@ -1414,7 +1414,7 @@
   border-radius: 5px;
 }
 /* line 440, ../scss/_category.scss */
-.wrap #popular-in-category .wrap .controls button:hover {
+.wrap #popular-in-category .wrap .controls button:hover, .wrap #reviews .wrap .controls button:hover {
   background: #42cafe;
 }
 
@@ -2282,6 +2282,17 @@
   position: relative;
   width: 100%;
   height: 90%;
+}
+
+/* line 173, ../scss/_apps.scss */
+#reviews {
+  position: relative;
+}
+
+/* line 176, ../scss/_apps.scss */
+.review-grid {
+  position: relative;
+  display: none;
 }
 
 /* line 13, ../scss/main.scss */

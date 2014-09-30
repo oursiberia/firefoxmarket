@@ -103,6 +103,26 @@ section#appview
                 h2(translate) Latest Reviews
                 div.write-a-review(data-ng-click='openModal("#review")',translate) Write a Review
                 div.view-all-reviews(translate) View All Reviews &#9656;
+            div.wrap
+                div.controls
+                    //- button View All Categories
+                    h2(translate) Sort By:
+                    div.toggle(data-ng-click="toggleCategoryTypes($event)")
+                        span.active Popular
+                        span Recent
+
+            div.review-grid
+                div.app-grid
+                    div.category-popular
+                        div(class="category",data-ng-repeat="review in all_reviews")
+                            div.app
+                                div.app-details
+                                    div.rating-copy
+                                        p {{review.copy}}
+                                    div.username
+                                        p - {{review.username}}
+                                    div(class="review-rating", starrating, data-rating="{{review.rating}}", data-delay="true")
+
             div.app-reviews
                 div(data-ng-repeat="review in reviews",class="app-review")
                     div.stars

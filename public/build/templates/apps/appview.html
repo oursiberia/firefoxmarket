@@ -88,6 +88,31 @@
         <div data-ng-click="openModal(&quot;#review&quot;)" translate="translate" class="write-a-review">Write a Review</div>
         <div translate="translate" class="view-all-reviews">View All Reviews &#9656;</div>
       </div>
+      <div class="wrap">
+        <div class="controls">
+          <h2 translate="translate">Sort By:</h2>
+          <div data-ng-click="toggleCategoryTypes($event)" class="toggle"><span class="active">Popular</span><span>Recent</span></div>
+        </div>
+      </div>
+      <div class="review-grid">
+        <div class="app-grid">
+          <div class="category-popular">
+            <div data-ng-repeat="review in all_reviews" class="category">
+              <div class="app">
+                <div class="app-details">
+                  <div class="rating-copy">
+                    <p>{{review.copy}}</p>
+                  </div>
+                  <div class="username">
+                    <p>- {{review.username}}</p>
+                  </div>
+                  <div starrating="starrating" data-rating="{{review.rating}}" data-delay="true" class="review-rating"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="app-reviews">
         <div data-ng-repeat="review in reviews" class="app-review">
           <div class="stars">
