@@ -15,7 +15,9 @@ app.controller("home",[
     function($rootScope,API,$scope,$filter,$http,MasterSearch,$location){
         /**
          * Editorial
-         * TODO figure out how curated apps would better work.
+         * See CategoryViewController.js and catview.jade for a example
+         * as to how to implement editorial content using the JSON generated from
+         * the app we came up with.
          */
         var editorial = {
             "staff_pics": {
@@ -189,28 +191,7 @@ app.controller("home",[
         };
 
 
-        /**
-         * Closes the search panel
-         */
-        function closeSearch() {
-            var selector = document.querySelector("#search-home-result");
-            TweenMax.to(selector,0.5,{
-                opacity:0,
-                onComplete:function() {
-                    TweenMax.to(selector,0.5,{
-                        height:0,
-                        onComplete:function(){
 
-                            $rootScope.unlockBody();
-                        }
-
-                    });
-                    selector.innerHTML = "";
-                }
-            });
-
-
-        }
 
 
         /**============ CATEGORIES =============*/
@@ -238,10 +219,22 @@ app.controller("home",[
 
         $scope.closeSearch = function(){
             var selector = document.querySelector("#search-home-result");
+            var inputs = document.getElementsByClassName("homesearch");
+            var close = document.getElementsByClassName("close-search");
             TweenMax.to(selector,1,{
                 height:0,
                 onComplete:function(){
-                    MasterSearch.query($scope);
+                    for(var i = 0;i<inputs.length;++i){
+                        if(inputs[i] !== null){
+                            inputs[i].value = "";
+                        }
+
+                        if(close[i] !== null){
+                            close[i].style.display = "none";
+                        }
+                    }
+
+                    //MasterSearch.query($scope);
                     $rootScope.unlockBody();
                 }
             });

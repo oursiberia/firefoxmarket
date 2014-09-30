@@ -50,11 +50,17 @@ app.directive("header",function(MasterSearch,$rootScope,$location) {
 
             $scope.closeSearch = function(){
                 var search = document.querySelector("#mainsearch");
+                var inputs = document.getElementsByClassName("homesearch");
                 TweenMax.to(search,1,{
                     height:0,
                     ease:"Power3.easeInOut",
                     onComplete:function(){
-                        MasterSearch.query($scope);
+                        //MasterSearch.query($scope);
+                        for(var i = 0;i<inputs.length;++i) {
+                            if (inputs[i] !== null) {
+                                inputs[i].value = "";
+                            }
+                        }
                         $rootScope.unlockBody();
                     }
                 });
