@@ -29,6 +29,7 @@ app.factory("MasterSearch",function($http){
         query:function(_$scope,term,limit){
             //reference to search field.
             var results = document.getElementsByClassName("resultsbyname")[0];
+            var close = document.getElementsByClassName("close-search")[0];
 
             $scope = _$scope;
             if(term === undefined){
@@ -43,13 +44,14 @@ app.factory("MasterSearch",function($http){
 
                     //hide the results list if there is no search input
                     results.style.display = "none";
-
+                    close.style.display = "none";
                     return false;
                 }else{
                     query = term.value;
 
                     //show the results list
                     results.style.display = "block";
+                    close.style.display = "block";
                 }
             }
 

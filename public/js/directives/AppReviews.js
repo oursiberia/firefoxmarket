@@ -6,7 +6,7 @@
  * This is a directive responsible for pulling and displaying a review of a
  * application.
  */
-app.directive("appreviews",["API","$filter",function(API,$filter) {
+app.directive("appreviews",["API","$filter","$sce",function(API,$filter,$sce) {
 
     return {
         templateUrl:"/build/templates/apps/rating.html",
@@ -19,6 +19,9 @@ app.directive("appreviews",["API","$filter",function(API,$filter) {
                     var review = data.objects[i];
 
                     review.body = $filter("LongCopyFilter")(review.body,"",length);
+
+                    //filter trust html so that delimiter isn't rendered as a string.
+                    review.body = $sce.trustAsHtml(review.body);
 
                     //set the values
                     $scope.copy = review.body;
