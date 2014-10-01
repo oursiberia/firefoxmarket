@@ -101,7 +101,8 @@ app.directive("starrating",function(){
                  */
                 for(var i = 0;i<starratings.length;++i){
                     if(i < rating){
-                        starratings[i].children[0].src = "/img/star_filled.svg";
+                        starratings[i].children[0].className = "starfilled";
+                        // starratings[i].children[0].src = "/img/star_filled.svg";
                     }
                 }
             }

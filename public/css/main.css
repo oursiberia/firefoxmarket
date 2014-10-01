@@ -385,7 +385,7 @@
   width: 100%;
   background: rgba(255, 255, 255, 0.95);
   position: absolute;
-  top: 300px;
+  top: 200px;
   z-index: 99;
   overflow: scroll;
 }
@@ -487,7 +487,7 @@
 /* line 305, ../scss/_home.scss */
 #search-result .resultsbyname {
   width: 100%;
-  margin-top: -70px;
+  margin-top: -50px;
 }
 /* line 308, ../scss/_home.scss */
 #search-result .resultsbyname .searchcolumn {
@@ -1638,65 +1638,110 @@
 }
 /* line 94, ../scss/_appview.scss */
 .app-content-container .app-meta .img-rating {
-  padding: 20px;
+  padding: 20px 20px 18px 20px;
 }
 /* line 96, ../scss/_appview.scss */
 .app-content-container .app-meta .img-rating img {
-  width: 100%;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  border-radius: 5px;
+  height: 86px;
+  width: 86px;
 }
 /* line 100, ../scss/_appview.scss */
+.app-content-container .app-meta .img-rating .rating-wrapper {
+  width: 86px;
+  height: 14px;
+}
+/* line 104, ../scss/_appview.scss */
+.app-content-container .app-meta .img-rating .stars {
+  width: 100%;
+  height: 14px;
+  margin: 0 auto;
+}
+/* line 108, ../scss/_appview.scss */
+.app-content-container .app-meta .img-rating .stars .review-rating {
+  height: 14px;
+}
+/* line 111, ../scss/_appview.scss */
+.app-content-container .app-meta .img-rating .stars ul {
+  width: 74px;
+  height: 14px;
+  margin: 0 auto;
+}
+/* line 116, ../scss/_appview.scss */
+.app-content-container .app-meta .img-rating .stars ul li {
+  height: 14px;
+  width: 14px;
+  margin-right: 1px;
+}
+/* line 120, ../scss/_appview.scss */
+.app-content-container .app-meta .img-rating .stars ul li:last-child {
+  margin: 0;
+}
+/* line 125, ../scss/_appview.scss */
+.app-content-container .app-meta .img-rating .stars .star svg, .app-content-container .app-meta .img-rating .stars .starfilled svg {
+  height: 14px;
+  width: 14px;
+  background-size: contain;
+}
+/* line 132, ../scss/_appview.scss */
+.app-content-container .app-meta .img-rating .stars .star polygon {
+  color: #ffffff;
+  fill: currentColor;
+}
+/* line 138, ../scss/_appview.scss */
+.app-content-container .app-meta .img-rating .stars .starfilled polygon {
+  color: #4CB1FF;
+  fill: currentColor;
+}
+/* line 144, ../scss/_appview.scss */
 .app-content-container .app-meta .img-rating p {
   cursor: pointer;
   width: 100%;
   font-size: 13px;
+  padding-top: 10px;
   text-align: center;
   display: inline-block;
   font-family: "FiraRegular";
 }
-/* line 107, ../scss/_appview.scss */
+/* line 152, ../scss/_appview.scss */
 .app-content-container .app-meta .img-rating p:hover {
   text-decoration: underline;
 }
-/* line 113, ../scss/_appview.scss */
+/* line 158, ../scss/_appview.scss */
 .app-content-container .app-meta .updates {
   padding: 20px;
   border-top: solid 1px lightgrey;
   border-bottom: solid 1px lightgrey;
 }
-/* line 117, ../scss/_appview.scss */
+/* line 162, ../scss/_appview.scss */
 .app-content-container .app-meta .updates h3, .app-content-container .app-meta .updates p {
   font-size: 12px;
 }
-/* line 120, ../scss/_appview.scss */
+/* line 165, ../scss/_appview.scss */
 .app-content-container .app-meta .updates h3 {
   letter-spacing: .3px;
 }
-/* line 123, ../scss/_appview.scss */
+/* line 168, ../scss/_appview.scss */
 .app-content-container .app-meta .updates .date {
   margin-bottom: 15px;
 }
-/* line 128, ../scss/_appview.scss */
+/* line 173, ../scss/_appview.scss */
 .app-content-container .app-meta .govt-rating {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-/* line 131, ../scss/_appview.scss */
+/* line 176, ../scss/_appview.scss */
 .app-content-container .app-meta .govt-rating img {
   display: block;
   max-width: 100%;
   margin: 0 auto;
 }
-/* line 140, ../scss/_appview.scss */
+/* line 185, ../scss/_appview.scss */
 .app-content-container .app-information {
   position: absolute;
   width: 811px;
   height: 100%;
 }
-/* line 144, ../scss/_appview.scss */
+/* line 189, ../scss/_appview.scss */
 .app-content-container .app-information .download {
   cursor: pointer;
   float: right;
@@ -1713,18 +1758,18 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 156, ../scss/_appview.scss */
+/* line 201, ../scss/_appview.scss */
 .app-content-container .app-information .download p {
   font-size: 16px;
   color: white;
   font-family: "FiraRegular";
   text-align: center;
 }
-/* line 162, ../scss/_appview.scss */
+/* line 207, ../scss/_appview.scss */
 .app-content-container .app-information .download:hover {
   background: #42cafe;
 }
-/* line 166, ../scss/_appview.scss */
+/* line 211, ../scss/_appview.scss */
 .app-content-container .app-information .ages {
   float: right;
   width: 64px;
@@ -1738,7 +1783,7 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 175, ../scss/_appview.scss */
+/* line 220, ../scss/_appview.scss */
 .app-content-container .app-information .ages p {
   font-size: 12px;
   color: #55575c;
@@ -1746,43 +1791,43 @@
   letter-spacing: .5px;
   text-align: center;
 }
-/* line 183, ../scss/_appview.scss */
+/* line 228, ../scss/_appview.scss */
 .app-content-container .app-information .name-author {
   border-bottom: solid 1px lightgrey;
   padding: 20px;
 }
-/* line 186, ../scss/_appview.scss */
+/* line 231, ../scss/_appview.scss */
 .app-content-container .app-information .name-author h1 {
   font-size: 24px;
   padding-right: 15px;
   letter-spacing: -.5px;
 }
-/* line 191, ../scss/_appview.scss */
+/* line 236, ../scss/_appview.scss */
 .app-content-container .app-information .name-author h3 {
   font-size: 14px;
   font-family: "FiraLight";
 }
-/* line 194, ../scss/_appview.scss */
+/* line 239, ../scss/_appview.scss */
 .app-content-container .app-information .name-author h3:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-/* line 199, ../scss/_appview.scss */
+/* line 244, ../scss/_appview.scss */
 .app-content-container .app-information .name-author h1, .app-content-container .app-information .name-author h3 {
   display: inline-block;
 }
-/* line 202, ../scss/_appview.scss */
+/* line 247, ../scss/_appview.scss */
 .app-content-container .app-information .name-author img {
   height: 11px;
   width: 11px;
   margin-left: 8px;
 }
-/* line 209, ../scss/_appview.scss */
+/* line 254, ../scss/_appview.scss */
 .app-content-container .app-information .tabs {
   padding-top: 20px;
   text-align: center;
 }
-/* line 212, ../scss/_appview.scss */
+/* line 257, ../scss/_appview.scss */
 .app-content-container .app-information .tabs .tab-trigger {
   padding: 7px 5px 5px 5px;
   width: 100px;
@@ -1795,22 +1840,22 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 221, ../scss/_appview.scss */
+/* line 266, ../scss/_appview.scss */
 .app-content-container .app-information .tabs .tab-trigger:last-child {
   margin-right: 0;
 }
-/* line 225, ../scss/_appview.scss */
+/* line 270, ../scss/_appview.scss */
 .app-content-container .app-information .tabs .tab-trigger h4 {
   font-size: 12px;
   font-family: "FiraMedium";
   letter-spacing: .4px;
   color: rgba(0, 0, 0, 0.2);
 }
-/* line 232, ../scss/_appview.scss */
+/* line 277, ../scss/_appview.scss */
 .app-content-container .app-information .tabs .tab-trigger:hover {
   cursor: pointer;
 }
-/* line 234, ../scss/_appview.scss */
+/* line 279, ../scss/_appview.scss */
 .app-content-container .app-information .tabs .tab-trigger:hover h4 {
   color: #47484D;
   -webkit-transition: color 0.5s ease;
@@ -1818,21 +1863,21 @@
   -o-transition: color 0.5s ease;
   transition: color 0.5s ease;
 }
-/* line 240, ../scss/_appview.scss */
+/* line 285, ../scss/_appview.scss */
 .app-content-container .app-information .tabs .tab-trigger.active {
   background: url("../img/header-background.png") repeat scroll 0% 0% whitesmoke;
 }
-/* line 242, ../scss/_appview.scss */
+/* line 287, ../scss/_appview.scss */
 .app-content-container .app-information .tabs .tab-trigger.active h4 {
   color: #47484D;
 }
-/* line 253, ../scss/_appview.scss */
+/* line 298, ../scss/_appview.scss */
 .app-content-container .app-information, .app-content-container .app-meta {
   display: inline-block;
   vertical-align: top;
 }
 
-/* line 260, ../scss/_appview.scss */
+/* line 305, ../scss/_appview.scss */
 #tab-content {
   padding: 17px 20px 20px 20px;
   font-size: 14px;
@@ -1840,18 +1885,18 @@
   font-family: "FiraLight";
   text-transform: capitalize;
 }
-/* line 266, ../scss/_appview.scss */
+/* line 311, ../scss/_appview.scss */
 #tab-content .screenshots {
   height: 244px;
   overflow: hidden;
 }
-/* line 269, ../scss/_appview.scss */
+/* line 314, ../scss/_appview.scss */
 #tab-content .screenshots img {
   height: 100%;
   margin-right: 20px;
 }
 
-/* line 276, ../scss/_appview.scss */
+/* line 321, ../scss/_appview.scss */
 #app-links {
   width: 258px;
   height: 163px;
@@ -1866,18 +1911,18 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 286, ../scss/_appview.scss */
+/* line 331, ../scss/_appview.scss */
 #app-links .title {
   text-transform: uppercase;
   font-family: "FiraRegular";
   margin-bottom: 10px;
 }
-/* line 291, ../scss/_appview.scss */
+/* line 336, ../scss/_appview.scss */
 #app-links ul li {
   margin: 10px 0;
 }
 
-/* line 297, ../scss/_appview.scss */
+/* line 342, ../scss/_appview.scss */
 #other-applications h2 {
   font-size: 13px;
   text-transform: uppercase;
@@ -1885,17 +1930,17 @@
   font-weight: normal;
   margin: 15px 0 5px 0;
 }
-/* line 303, ../scss/_appview.scss */
+/* line 348, ../scss/_appview.scss */
 #other-applications h2 a {
   float: right;
   font-family: "FiraLight";
   text-transform: none;
 }
-/* line 307, ../scss/_appview.scss */
+/* line 352, ../scss/_appview.scss */
 #other-applications h2 a:hover {
   text-decoration: underline;
 }
-/* line 312, ../scss/_appview.scss */
+/* line 357, ../scss/_appview.scss */
 #other-applications #other-applications-list {
   background: #f6f6f6;
   border-radius: 4px;
@@ -1905,13 +1950,21 @@
   height: 100%;
   background: #fff;
 }
-/* line 318, ../scss/_appview.scss */
+/* line 363, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app {
-  padding: 20px;
+  height: 85px;
   position: relative;
 }
-/* line 322, ../scss/_appview.scss */
+/* line 367, ../scss/_appview.scss */
+#other-applications #other-applications-list .other-app img, #other-applications #other-applications-list .other-app .details {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 372, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app .app-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
   height: 45px;
   width: 45px;
   -webkit-border-radius: 5px;
@@ -1919,11 +1972,46 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 328, ../scss/_appview.scss */
-#other-applications #other-applications-list .other-app h3 {
-  min-height: 19px;
+/* line 381, ../scss/_appview.scss */
+#other-applications #other-applications-list .other-app .details {
+  position: absolute;
+  height: 45px;
+  width: 100%;
+  top: 20px;
+  left: 75px;
 }
-/* line 332, ../scss/_appview.scss */
+/* line 387, ../scss/_appview.scss */
+#other-applications #other-applications-list .other-app .details div {
+  margin-top: -2px;
+}
+/* line 392, ../scss/_appview.scss */
+#other-applications #other-applications-list .other-app ul.rating li {
+  margin-right: 0px;
+}
+/* line 396, ../scss/_appview.scss */
+#other-applications #other-applications-list .other-app .stars, #other-applications #other-applications-list .other-app .rating {
+  margin: 0;
+}
+/* line 400, ../scss/_appview.scss */
+#other-applications #other-applications-list .other-app .starfilled svg, #other-applications #other-applications-list .other-app .star svg {
+  height: 13px;
+  width: 13px;
+}
+/* line 406, ../scss/_appview.scss */
+#other-applications #other-applications-list .other-app .starfilled polygon {
+  color: #4CB1FF;
+  fill: currentColor;
+}
+/* line 412, ../scss/_appview.scss */
+#other-applications #other-applications-list .other-app h3 {
+  margin-top: -4px;
+}
+/* line 416, ../scss/_appview.scss */
+#other-applications #other-applications-list .other-app p {
+  margin-top: -3px;
+  font-size: 12px;
+}
+/* line 421, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app h3, #other-applications #other-applications-list .other-app p {
   font-size: 13px;
   font-weight: normal;
@@ -1932,57 +2020,39 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 341, ../scss/_appview.scss */
-#other-applications #other-applications-list .other-app img, #other-applications #other-applications-list .other-app .details {
-  display: inline-block;
-  vertical-align: top;
-}
-/* line 346, ../scss/_appview.scss */
-#other-applications #other-applications-list .other-app .details {
-  position: absolute;
-  margin: -4px 0 0 10px;
-}
-/* line 349, ../scss/_appview.scss */
-#other-applications #other-applications-list .other-app .details p {
-  margin-top: -1px;
-  font-size: 12px;
-}
-/* line 353, ../scss/_appview.scss */
-#other-applications #other-applications-list .other-app .details div {
-  margin-top: 2px;
-}
-/* line 358, ../scss/_appview.scss */
+/* line 430, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app .app-download-button.mini-container {
   height: 24px;
   cursor: pointer;
-  position: relative;
-  float: right;
-  top: 23px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
 }
-/* line 364, ../scss/_appview.scss */
+/* line 436, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app .app-download-button.mini-container p {
+  margin-top: 0;
   color: #4CB1FF;
   width: 100%;
   text-align: center;
 }
-/* line 370, ../scss/_appview.scss */
+/* line 443, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app .app-download-button.mini-container:hover p {
   color: #fff;
 }
-/* line 377, ../scss/_appview.scss */
+/* line 450, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app:nth-child(n+3) {
   display: none;
 }
-/* line 380, ../scss/_appview.scss */
+/* line 453, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app:first-child {
   border-bottom: solid 1px lightgrey;
 }
-/* line 383, ../scss/_appview.scss */
+/* line 456, ../scss/_appview.scss */
 #other-applications #other-applications-list .other-app:last-child {
   border: none;
 }
 
-/* line 389, ../scss/_appview.scss */
+/* line 462, ../scss/_appview.scss */
 #app-reviews {
   width: 100%;
   border-top: 1px solid #D6D6D6;
@@ -1991,22 +2061,22 @@
   padding-bottom: 40px;
 }
 
-/* line 397, ../scss/_appview.scss */
+/* line 470, ../scss/_appview.scss */
 #reviews {
   margin: 34px auto 0 auto;
   max-width: 1260px;
 }
-/* line 400, ../scss/_appview.scss */
+/* line 473, ../scss/_appview.scss */
 #reviews .wrap {
   position: relative;
   height: 70px;
 }
-/* line 403, ../scss/_appview.scss */
+/* line 476, ../scss/_appview.scss */
 #reviews .wrap .controls {
   position: relative;
   padding-bottom: 28px;
 }
-/* line 406, ../scss/_appview.scss */
+/* line 479, ../scss/_appview.scss */
 #reviews .wrap .controls h1 {
   float: left;
   font-family: "FiraLight";
@@ -2016,7 +2086,7 @@
   padding: 3px 30px 0 0;
   border-right: 1px solid #D3D3D3;
 }
-/* line 416, ../scss/_appview.scss */
+/* line 489, ../scss/_appview.scss */
 #reviews .wrap .controls h2 {
   font-size: 12px;
   display: inline-block;
@@ -2024,18 +2094,18 @@
   right: 208px;
   top: 10px;
 }
-/* line 424, ../scss/_appview.scss */
+/* line 497, ../scss/_appview.scss */
 #reviews .wrap .controls h1:last-child {
   font-family: "FiraLight";
 }
-/* line 428, ../scss/_appview.scss */
+/* line 501, ../scss/_appview.scss */
 #reviews .wrap .controls .toggle {
   display: inline-block;
   position: absolute;
   right: 0;
   top: 6px;
 }
-/* line 433, ../scss/_appview.scss */
+/* line 506, ../scss/_appview.scss */
 #reviews .wrap .controls .toggle span {
   font-size: 14px;
   color: #4CB1FF;
@@ -2048,24 +2118,24 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 442, ../scss/_appview.scss */
+/* line 515, ../scss/_appview.scss */
 #reviews .wrap .controls .toggle span:first-child {
   border-top-right-radius: 0px;
   border-bottom-right-radius: 0px;
 }
-/* line 446, ../scss/_appview.scss */
+/* line 519, ../scss/_appview.scss */
 #reviews .wrap .controls .toggle span:last-child {
   margin-left: -1px;
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
 }
-/* line 451, ../scss/_appview.scss */
+/* line 524, ../scss/_appview.scss */
 #reviews .wrap .controls .toggle .active {
   background: #4CB1FF;
   color: #fff;
   cursor: default;
 }
-/* line 458, ../scss/_appview.scss */
+/* line 531, ../scss/_appview.scss */
 #reviews .wrap .controls button.write-a-review {
   float: left;
   width: 160px;
@@ -2085,12 +2155,13 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 473, ../scss/_appview.scss */
+/* line 546, ../scss/_appview.scss */
 #reviews .wrap .controls button.write-a-review:hover {
   background: #42cafe;
 }
-/* line 480, ../scss/_appview.scss */
+/* line 553, ../scss/_appview.scss */
 #reviews .app-review {
+  position: relative;
   display: inline-block;
   vertical-align: top;
   width: 258px;
@@ -2104,73 +2175,95 @@
   -ms-border-radius: 5px;
   border-radius: 5px;
 }
-/* line 490, ../scss/_appview.scss */
+/* line 564, ../scss/_appview.scss */
 #reviews .app-review:last-child {
   margin: 0;
 }
-/* line 491, ../scss/_appview.scss */
+/* line 565, ../scss/_appview.scss */
 #reviews .app-review .stars, #reviews .app-review .rating-copy, #reviews .app-review .username {
   display: inline-block;
 }
-/* line 494, ../scss/_appview.scss */
+/* line 568, ../scss/_appview.scss */
+#reviews .app-review .review-rating {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 21px;
+  height: 17px;
+}
+/* line 575, ../scss/_appview.scss */
 #reviews .app-review .stars {
   width: 100%;
   height: 17px;
   margin: 0 auto;
 }
-/* line 498, ../scss/_appview.scss */
+/* line 579, ../scss/_appview.scss */
 #reviews .app-review .stars .review-rating {
   height: 17px;
 }
-/* line 501, ../scss/_appview.scss */
+/* line 582, ../scss/_appview.scss */
 #reviews .app-review .stars ul {
   width: 97px;
   height: 17px;
   margin: 0 auto;
 }
-/* line 506, ../scss/_appview.scss */
+/* line 587, ../scss/_appview.scss */
 #reviews .app-review .stars ul li {
   height: 17px;
   width: 17px;
   margin-right: 3px;
 }
-/* line 510, ../scss/_appview.scss */
+/* line 591, ../scss/_appview.scss */
 #reviews .app-review .stars ul li:last-child {
-  margin: 0px;
+  margin: 0;
 }
-/* line 513, ../scss/_appview.scss */
-#reviews .app-review .stars ul li img {
-  max-width: none;
+/* line 596, ../scss/_appview.scss */
+#reviews .app-review .stars .star svg, #reviews .app-review .stars .starfilled svg {
+  height: 17px;
+  width: 17px;
+  background-size: contain;
 }
-/* line 518, ../scss/_appview.scss */
+/* line 603, ../scss/_appview.scss */
+#reviews .app-review .stars .star polygon {
+  color: #ffffff;
+  fill: currentColor;
+}
+/* line 609, ../scss/_appview.scss */
+#reviews .app-review .stars .starfilled polygon {
+  color: #26587f;
+  fill: currentColor;
+}
+/* line 615, ../scss/_appview.scss */
 #reviews .app-review .rating-copy {
   font-size: 16px;
-  height: 62px;
+  height: 97px;
   display: flex;
   align-items: center;
   line-height: 22px;
   color: #fff;
   text-align: center;
 }
-/* line 526, ../scss/_appview.scss */
+/* line 623, ../scss/_appview.scss */
 #reviews .app-review .rating-copy p {
   font-family: "FiraRegular", sans-serif;
   width: 100%;
 }
-/* line 531, ../scss/_appview.scss */
+/* line 628, ../scss/_appview.scss */
 #reviews .app-review .username {
-  margin-top: 16px;
   font-size: 14px;
   text-align: center;
-  width: 100%;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 41px;
 }
-/* line 536, ../scss/_appview.scss */
+/* line 635, ../scss/_appview.scss */
 #reviews .app-review .username p {
   font-family: "FiraMedium", sans-serif;
   color: rgba(0, 0, 0, 0.5);
 }
 
-/* line 545, ../scss/_appview.scss */
+/* line 644, ../scss/_appview.scss */
 #related-apps {
   width: 100%;
   height: 198px;
@@ -2180,82 +2273,103 @@
   background-image: url(../img/header-background.png);
   background-repeat: repeat;
 }
-/* line 553, ../scss/_appview.scss */
+/* line 652, ../scss/_appview.scss */
 #related-apps h3 {
   font-size: 22px;
   font-family: "FiraLight";
   color: #fff;
 }
-/* line 558, ../scss/_appview.scss */
+/* line 657, ../scss/_appview.scss */
 #related-apps .apps {
   width: 100%;
   background: #333;
   border: lightgrey;
   margin-top: 24px;
 }
-/* line 563, ../scss/_appview.scss */
+/* line 662, ../scss/_appview.scss */
 #related-apps .apps .app {
   float: left;
   background: #fff;
   padding: 20px;
   border: 1px solid #2a6693;
 }
-/* line 568, ../scss/_appview.scss */
+/* line 667, ../scss/_appview.scss */
 #related-apps .apps .app .app-image {
   height: 60px;
   width: 60px;
 }
-/* line 571, ../scss/_appview.scss */
+/* line 670, ../scss/_appview.scss */
 #related-apps .apps .app .app-image a, #related-apps .apps .app .app-image img {
   height: 60px;
   width: 60px;
   display: inline-block;
 }
-/* line 577, ../scss/_appview.scss */
+/* line 676, ../scss/_appview.scss */
 #related-apps .apps .app .app-details {
   border: none;
   padding: 0;
   position: relative;
 }
-/* line 581, ../scss/_appview.scss */
+/* line 680, ../scss/_appview.scss */
 #related-apps .apps .app .app-details .app-copy {
   position: absolute;
   width: 188px;
   height: 100%;
   margin-left: 10px;
 }
-/* line 586, ../scss/_appview.scss */
+/* line 685, ../scss/_appview.scss */
 #related-apps .apps .app .app-details .app-copy h2 {
   font-size: 14px;
   font-family: "FiraRegular";
-  margin-top: -4px;
 }
-/* line 590, ../scss/_appview.scss */
+/* line 688, ../scss/_appview.scss */
 #related-apps .apps .app .app-details .app-copy h2:hover {
   text-decoration: underline;
 }
-/* line 594, ../scss/_appview.scss */
+/* line 692, ../scss/_appview.scss */
 #related-apps .apps .app .app-details .app-copy p {
   font-size: 12px;
   font-family: "FiraLight";
+  margin-top: 1px;
 }
-/* line 598, ../scss/_appview.scss */
-#related-apps .apps .app .app-details .app-copy div {
-  margin-top: 10px;
+/* line 697, ../scss/_appview.scss */
+#related-apps .apps .app .app-details .app-copy .stars {
+  margin-top: -1px;
 }
-/* line 602, ../scss/_appview.scss */
+/* line 700, ../scss/_appview.scss */
+#related-apps .apps .app .app-details .app-copy .stars .starfilled polygon {
+  color: #4CB1FF;
+  fill: currentColor;
+}
+/* line 707, ../scss/_appview.scss */
 #related-apps .apps .app .app-details .app-download-button {
-  height: 24px;
-  cursor: pointer;
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 0px;
+  bottom: 0px;
+  width: 60px;
+  height: 24px;
+  text-align: center;
+  border-radius: 5px;
+  padding-top: 1px;
 }
-/* line 608, ../scss/_appview.scss */
+/* line 716, ../scss/_appview.scss */
+#related-apps .apps .app .app-details .app-download-button p {
+  text-align: center;
+  font-size: 13px;
+  color: #4CB1FF;
+  position: absolute;
+  top: 2px;
+  font-family: "FiraRegular";
+}
+/* line 724, ../scss/_appview.scss */
 #related-apps .apps .app .app-details .app-download-button:hover {
   background: #4CB1FF;
 }
-/* line 613, ../scss/_appview.scss */
+/* line 726, ../scss/_appview.scss */
+#related-apps .apps .app .app-details .app-download-button:hover p {
+  color: #fff;
+}
+/* line 732, ../scss/_appview.scss */
 #related-apps .apps .app:last-child {
   margin-right: 0;
 }
