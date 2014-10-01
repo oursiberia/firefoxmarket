@@ -15,7 +15,7 @@
               <h1 translate="translate">Relevance:</h1>
               <h2 translate="translate">Name</h2>
               <div class="total">
-                <p translate="translate">results</p>
+                <p translate="translate">results {{name_results_count}}</p>
               </div>
             </div>
           </div>
@@ -34,7 +34,7 @@
               </div>
             </div>
           </div>
-          <div translate="translate" data-ng-click="viewSearchResults('name_results')" class="load-more"><span>View All</span></div>
+          <div translate="translate" data-ng-if="name_results_count != 0" data-ng-click="viewSearchResults('name_results')" class="load-more"><span>View All</span></div>
         </div>
         <div class="searchcolumn">
           <div class="result-relevance">
@@ -42,7 +42,7 @@
               <h1 translate="translate">Relevance:</h1>
               <h2 translate="translate">Developer</h2>
               <div class="total">
-                <p translate="translate">results</p>
+                <p translate="translate">results {{ author_results_count }}</p>
               </div>
             </div>
           </div>
@@ -61,7 +61,7 @@
               </div>
             </div>
           </div>
-          <div translate="translate" data-ng-click="viewSearchResults('author_results')" class="load-more"><span>View All</span></div>
+          <div data-ng-if="author_results_count !=0 " translate="translate" data-ng-click="viewSearchResults('author_results')" class="load-more"><span>View All</span></div>
         </div>
         <div class="searchcolumn">
           <div class="result-relevance">
@@ -69,7 +69,7 @@
               <h1 translate="translate">Relevance:</h1>
               <h2 translate="translate">Category</h2>
               <div class="total">
-                <p translate="translate">results</p>
+                <p translate="translate">results {{ category_results_count }}</p>
               </div>
             </div>
           </div>
@@ -88,7 +88,7 @@
               </div>
             </div>
           </div>
-          <div translate="translate" data-ng-click="viewSearchResults('category_results')" class="load-more"><span>View All</span></div>
+          <div data-ng-if="category_results_count != 0" translate="translate" data-ng-click="viewSearchResults('category_results')" class="load-more"><span>View All</span></div>
         </div>
         <div class="searchcolumn">
           <div class="result-relevance">
@@ -96,7 +96,7 @@
               <h1 translate="translate">Relevance:</h1>
               <h2 translate="translate">Description</h2>
               <div class="total">
-                <p translate="translate">results</p>
+                <p translate="translate">results {{ description_results_count }}</p>
               </div>
             </div>
           </div>
@@ -115,7 +115,7 @@
               </div>
             </div>
           </div>
-          <div translate="translate" data-ng-click="viewSearchResults('description_results')" class="load-more"><span>View All</span></div>
+          <div data-ng-if="description_results_count != 0" translate="translate" data-ng-click="viewSearchResults('description_results')" class="load-more"><span>View All</span></div>
         </div>
       </div>
     </div>

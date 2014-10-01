@@ -14,10 +14,11 @@
                 <h1 translate="translate">Relevance:</h1>
                 <h2 translate="translate">Name</h2>
                 <div class="total">
-                  <p translate="translate">results</p>
+                  <p>results {{name_results_count}}</p>
                 </div>
               </div>
             </div>
+            <div translate="translate" data-ng-click="viewSearchResults('name_results')" data-ng-if="name_results_count != 0">View All</div>
             <div translate="translate" data-ng-repeat="result in name_results" class="searchresult">
               <div class="app-wrap">
                 <div class="app-details">
@@ -33,7 +34,6 @@
                 </div>
               </div>
             </div>
-            <div translate="translate" data-ng-click="viewSearchResults('name_results')">View All</div>
           </div>
           <div class="searchcolumn">
             <div class="result-relevance">
@@ -41,10 +41,11 @@
                 <h1 translate="translate">Relevance:</h1>
                 <h2 translate="translate">Developer</h2>
                 <div class="total">
-                  <p translate="translate">results</p>
+                  <p translate="translate">results {{ author_results_count }}</p>
                 </div>
               </div>
             </div>
+            <div translate="translate" data-ng-click="viewSearchResults('developer_results')" data-ng-if="author_results_count !=0 ">View All</div>
             <div data-ng-repeat="result in author_results" class="searchresult">
               <div class="app-wrap">
                 <div class="app-details">
@@ -60,7 +61,6 @@
                 </div>
               </div>
             </div>
-            <div translate="translate" data-ng-click="viewSearchResults('name_results')">View All</div>
           </div>
           <div class="searchcolumn">
             <div class="result-relevance">
@@ -68,10 +68,11 @@
                 <h1 translate="translate">Relevance:</h1>
                 <h2 translate="translate">Category</h2>
                 <div class="total">
-                  <p translate="translate">results</p>
+                  <p translate="translate">results {{ category_results_count }}</p>
                 </div>
               </div>
             </div>
+            <div translate="translate" data-ng-click="viewSearchResults('category_results')" data-ng-if="category_results_count != 0">View All</div>
             <div data-ng-repeat="result in category_results" class="searchresult">
               <div class="app-wrap">
                 <div class="app-details">
@@ -87,7 +88,6 @@
                 </div>
               </div>
             </div>
-            <div translate="translate" data-ng-click="viewSearchResults('name_results')">View All</div>
           </div>
           <div class="searchcolumn">
             <div class="result-relevance">
@@ -95,10 +95,11 @@
                 <h1 translate="translate">Relevance:</h1>
                 <h2 translate="translate">Description</h2>
                 <div class="total">
-                  <p translate="translate">results</p>
+                  <p translate="translate">results {{ description_results_count }}</p>
                 </div>
               </div>
             </div>
+            <div translate="translate" data-ng-click="viewSearchResults('description_results')" data-ng-if="description_results_count != 0">View All</div>
             <div data-ng-repeat="result in description_results" class="searchresult">
               <div class="app-wrap">
                 <div class="app-details">
@@ -114,7 +115,6 @@
                 </div>
               </div>
             </div>
-            <div translate="translate" data-ng-click="viewSearchResults('name_results')">View All</div>
           </div>
         </div>
       </div>

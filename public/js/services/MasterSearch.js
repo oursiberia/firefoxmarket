@@ -82,9 +82,32 @@ app.factory("MasterSearch",function($http){
 
                 //set to the scope
                 $scope.author_results = author_results;
+                if(author_results.length > 0){
+                    $scope.author_results_count = author_results.length;
+                }else{
+                    $scope.author_results_count = 0;
+                }
+
                 $scope.name_results = name_results;
+                if(name_results.length > 0){
+                    $scope.name_results_count = name_results.length;
+                }else{
+                    $scope.name_results_count = 0;
+                }
+
                 $scope.category_results = category_results;
+                if(category_results.length > 0){
+                    $scope.category_results_count  = category_results.length;
+                }else{
+                    $scope.category_results_count = 0;
+                }
+
                 $scope.description_results = description_results;
+                if(description_results.length > 0){
+                    $scope.description_results_count = description_results.length;
+                }else{
+                    $scope.description_results_count = 0;
+                }
 
 
             }).error(function(data, status, headers, config) {

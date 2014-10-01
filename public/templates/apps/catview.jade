@@ -27,8 +27,9 @@ section#category-page
                                 div(class="star-rating", starrating, data-rating="{{fapp.rating}}",data-delay="true")
 
 
-    // The way the editorial works is that a bunch of objects will get created based on the JSON.
-    // the formating of the vaiable will
+    // The way the editorial works is that a bunch of angular objects will get created based on the JSON.
+    // the formating of the name is as follows
+    // section_<the index of the section of the editorial type : ie "Staff picks", "Favorites" etc>_ <the index of the app within that section>
     div(class="editorial-collections")
         div.wrap
             div.collections
