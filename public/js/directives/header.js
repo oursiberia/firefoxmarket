@@ -133,7 +133,7 @@ app.directive("header",function(MasterSearch,$rootScope,$location) {
                         break;
 
                     case "author_results":
-                        metric = "Developoer";
+                        metric = "Developer";
                         break;
 
                     case "category_results":
@@ -147,13 +147,14 @@ app.directive("header",function(MasterSearch,$rootScope,$location) {
 
 
                 if(search.value !== null) {
+                    console.log("saving reesults for " + search.value);
                     var val = search.value.split("").join("");
                     localStorage.setItem("search-term",search.value);
                     var data = JSON.stringify($scope[classname]);
 
                     localStorage.setItem("search-results",data);
 
-                    $location.path("/searchresults" + search.value);
+                    $location.path("/searchresults/" + search.value);
                 }
 
             };
