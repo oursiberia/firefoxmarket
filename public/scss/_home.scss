@@ -160,6 +160,12 @@
 					}
 				}
 			}
+			.starfilled {
+				polygon {
+					color: #4CB1FF;
+					fill: currentColor;
+				}
+			}
 		}
 	}
 
@@ -296,6 +302,12 @@
 					div {
 						margin-top: 12px;
 					}
+				}
+			}
+			.starfilled {
+				polygon {
+					color: #4CB1FF;
+					fill: currentColor;
 				}
 			}
 		}

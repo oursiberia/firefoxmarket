@@ -79,7 +79,13 @@
 					width: 100%;
 				}
 			}
-
+		}
+		
+		.starfilled {
+			polygon {
+				color: #4CB1FF;
+				fill: currentColor;
+			}
 		}
 		
 	}// end .app-details
