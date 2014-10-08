@@ -25,7 +25,7 @@ div#mainsearch
 
                                     div.app-copy
                                         div.app-download-button
-                                            p(translate,data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
+                                            p(translate,data-ng-click="initPurchase(result.app_type,result.manifest_url,result.name,result.icon)") Install
                                         a(data-ng-href="/app/{{result.id}}")
                                             h1.app-title {{result.name}}
                                             h2.app-author {{result.author}}
@@ -49,7 +49,7 @@ div#mainsearch
 
                                     div.app-copy
                                         div.app-download-button
-                                            p(translate,data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
+                                            p(translate,data-ng-click="initPurchase(result.app_type,result.manifest_url,result.name,result.icon)") Install
                                         a(data-ng-href="/app/{{result.id}}")
                                             h1.app-title {{result.name}}
                                             h2.app-author {{result.author}}
@@ -72,7 +72,7 @@ div#mainsearch
 
                                     div.app-copy
                                         div.app-download-button
-                                            p(translate,data-ng-click="initPurchase(result.app_type,result.manifest_url)") Install
+                                            p(translate,data-ng-click="initPurchase(result.app_type,result.manifest_url,result.name,result.icon)") Install
                                         a(data-ng-href="/app/{{result.id}}")
                                             h1.app-title {{result.name}}
                                             h2.app-author {{result.author}}

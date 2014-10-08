@@ -70,12 +70,16 @@ app.controller("CategoryViewController",[
 
             for(var a = 0;a<sections.length;++a){
                 var section = sections[a];
-
+                $scope["section_" + a] = {
+                    title:section.title,
+                    copy:section.copy
+                }
                 for(var c = 0;c<section.apps.length;++c){
                     var app = section.apps[c];
+
                     $scope["section_" + a + "_" + c] = {
                         id:app,
-                        image:buildUrl(app)
+                        image:buildUrl(app),
                     }
                 }
 
@@ -135,6 +139,8 @@ app.controller("CategoryViewController",[
                     obj.id = objects[i].id;
                     obj.author = objects[i].author;
                     obj.classname = "app";
+                    obj.app_type = objects[i].app_type || "hosted";
+                    obj.manifest_url = objects[i].manifest_url;
                     obj.rating = objects[i].ratings.average;
 
 
@@ -188,6 +194,8 @@ app.controller("CategoryViewController",[
                   obj.id = objects[i].id;
                   obj.author = objects[i].author;
                   obj.classname = "app";
+                  obj.app_type = objects[i].app_type || "hosted";
+                  obj.manifest_url = objects[i].manifest_url;
                   obj.rating = objects[i].ratings.average;
                   recent_set.push(obj);
               }

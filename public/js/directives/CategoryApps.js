@@ -44,40 +44,9 @@ app.directive("categoryapps",["API","$rootScope",function(API,$rootScope) {
              * @param app_type the type of app we're trying to download ("hosted" or "packaged")
              * @param manifest the url to the manifest for download.
              */
-            $scope.initPurchase = function(app_type,manifest){
-                var req = "";
-                /**
-                 * first make sure we're in Firefox.
-                 */
-                if(navigator.userAgent.search("Firefox") === -1){
-                    alert("We're sorry, but apps within the Firefox Marketplace can only be downloaded from the Firefox browser");
-                    return;
-                }
+            $scope.initPurchase = function(app_type,manifest,appname,icon) {
 
-                var final_manifest = "";
-
-                if(manifest !== undefined){
-                    final_manifest = manifest;
-                }else{
-                    final_manifest = $scope.manifest;
-                }
-
-
-                if(app_type === "hosted") {
-
-                    req = navigator.mozApps.install(final_manifest);
-                }else if(app_type === "packaged"){
-                    req = navigator.mozApps.installPackage(final_manifest);
-                }
-
-                req.onsuccess = function() {
-                    console.log("Install process initiated");
-                };
-                req.onerror = function(e) {
-
-                    console.log("Install process failed");
-                };
-
+                $rootScope.initPurchase(app_type,manifest,appname,icon);
             };
         },
         link:function($scope,$el,$attrs) {
@@ -105,7 +74,7 @@ app.directive("categoryapps",["API","$rootScope",function(API,$rootScope) {
                     shown_apps.push({
                         icon:app.icons["128"],
                         id:app.id,
-                        app_type:app.premium_type,
+                        app_type:app.app_type || "hosted",
                         manifest_url:app.manifest_url,
                         category_name:app.categories,
                         author:app.author,
@@ -147,7 +116,7 @@ app.directive("categoryapps",["API","$rootScope",function(API,$rootScope) {
                     shown_apps.push({
                         icon:app.icons["128"],
                         id:app.id,
-                        app_type:app.premium_type,
+                        app_type:app.app_type || "hosted",
                         manifest_url:app.manifest_url,
                         category_name:app.categories,
                         author:app.author,

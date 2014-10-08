@@ -7,7 +7,7 @@
  * general category/status search
  */
 
-app.filter("DesktopApps",function(){
+app.filter("DesktopApps",function($rootScope){
 
     /**
      * Does the filtering.
@@ -41,10 +41,22 @@ app.filter("DesktopApps",function(){
                     }
                 }
 
+                /**
+                 * Is the app hosted or packaged?
+                 * TODO this might require some trickery later if the app turns out
+                 * to be packaged.
+                 * @type {app_type|*|$scope.app_type|obj.app_type}
+                 */
+                var type = data[i].app_type;
+
+                if(type === undefined){
+                    type = "hosted"
+                }
+
                 if(data[i].device_types[a] === "desktop"){
                     obj.icon = data[i].icons["64"];
-                    obj.app_type = data[i].premium_type;
-                    obj.name =  data[i].name["en-US"];
+                    obj.app_type = type,
+                    obj.name =  $rootScope.filterName(data[i]);
                     obj.id = data[i].id;
                     obj.manifest_url = data[i].manifest_url;
                     obj.premium_type = data[i].premium_type.charAt(0).toUpperCase() + data[i].premium_type.slice(1);

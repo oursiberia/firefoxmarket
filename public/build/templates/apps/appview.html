@@ -30,7 +30,7 @@
       <div class="app-information">
         <div class="name-author">
           <div class="download">
-            <p data-ng-click="initPurchase(app_type)">Install</p>
+            <p data-ng-click="initPurchase(app_type,manifest,name,icon)">Install</p>
           </div>
           <div class="ages">
             <p>
@@ -76,7 +76,7 @@
               <div starrating="starrating" data-rating="{{app.rating}}"></div>
             </div>
             <div class="app-download-button mini-container">
-              <p data-ng-click="initPurchase(app.app_type,app.manifest)">Install</p>
+              <p data-ng-click="initPurchase(app.app_type,app.manifest,app.name,app.icon)">Install</p>
             </div>
           </div>
         </div>
@@ -140,7 +140,7 @@
               <h2 class="app-title">{{app.name}}</h2></a>
             <p class="app-author">{{app.author}}</p>
             <div starrating="starrating" data-rating="{{app.rating}}"></div>
-            <div data-ng-click="initPurchase(app.app_type,app.manifest)" class="app-download-button">
+            <div data-ng-click="initPurchase(app.app_type,app.manifest,app.name,app.icon)" class="app-download-button">
               <p>Install</p>
             </div>
           </div>

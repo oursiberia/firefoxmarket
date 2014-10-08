@@ -38,11 +38,10 @@ app.controller("AppViewController",[
             $scope.category = data.categories[0];
             $scope.content_ratings = data.content_ratings;
             $scope.rating = data.ratings.average;
-
-            console.log(data);
+            $scope.manifest = data.manifest_url;
             $scope.rating_image = AgeRatingLookup.getImage(data);
 
-            $scope.name = data.name[navigator.language];
+            $scope.name = $rootScope.filterName(data);
             $scope.version = data.current_version;
 
             //set the main icon to be used
@@ -317,41 +316,11 @@ app.controller("AppViewController",[
 
         /**================= DOWNLOADING/INSTALLING ==========================*/
 
-        $scope.initPurchase = function(app_type,manifest){
-            var req = "";
-            /**
-             * first make sure we're in Firefox.
-             */
-            if(navigator.userAgent.search("Firefox") === -1){
-                alert("We're sorry, but apps within the Firefox Marketplace can only be downloaded from the Firefox browser");
-                return;
-            }
-
-            var final_manifest = "";
-
-            if(manifest !== undefined){
-                final_manifest = manifest;
-            }else{
-                final_manifest = $scope.manifest;
-            }
-
-
-            if(app_type === "hosted") {
-
-                req = navigator.mozApps.install(final_manifest);
-            }else if(app_type === "packaged"){
-                req = navigator.mozApps.installPackage(final_manifest);
-            }
-
-            req.onsuccess = function() {
-                console.log("Install process initiated");
-            };
-            req.onerror = function() {
-
-                console.log("Install process failed");
-            };
-
+        $scope.initPurchase = function(app_type,manifest,appname,icon){
+           $rootScope.initPurchase(app_type,manifest,appname,icon);
         };
+
+
 
         /**================= SHAREING ====================*/
         $scope.shareApp = function(){

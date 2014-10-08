@@ -329,5 +329,93 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
     };
 
 
+    /**
+     * Initiates the install process
+     * @param app_type the type of app we're trying to download ("hosted" or "packaged")
+     * @param manifest the url to the manifest for download.
+     * @param appname the name of the app so we can use it in the message
+     */
+    $rootScope.initPurchase = function(app_type,manifest,appname,icon){
+        console.log("CALLING");
+        var req = "";
+        /**
+         * first make sure we're in Firefox.
+         */
+        if(navigator.userAgent.search("Firefox") === -1){
+            alert("We're sorry, but apps within the Firefox Marketplace can only be downloaded from the Firefox browser");
+            return;
+        }
+
+        var final_manifest = "";
+
+        if(manifest !== undefined){
+            final_manifest = manifest;
+        }else{
+            final_manifest = $scope.manifest;
+        }
+
+
+        if(app_type === "hosted") {
+
+            req = navigator.mozApps.install(final_manifest);
+
+        }else if(app_type === "packaged"){
+            req = navigator.mozApps.installPackage(final_manifest);
+        }else{
+            req = navigator.mozApps.install(final_manifest);
+        }
+
+        req.onsuccess = function() {
+            console.log("Install process initiated");
+            notifyMe(appname + " was installed")
+        };
+        req.onerror = function(e) {
+
+            console.log("Install process failed");
+            notifyMe("The was a error with the installation process", this.error.name);
+        };
+
+
+        function notifyMe(message) {
+            // Let's check if the browser supports notifications
+            if (!("Notification" in window)) {
+                alert(message);
+            }
+
+            // Let's check if the user is okay to get some notification
+            else if (Notification.permission === "granted") {
+                // If it's okay let's create a notification
+                var notification = new Notification("Firefox Market",{
+                    icon:icon,
+                    body:message
+                });
+            }
+
+            // Otherwise, we need to ask the user for permission
+            // Note, Chrome does not implement the permission static property
+            // So we have to check for NOT 'denied' instead of 'default'
+            else if (Notification.permission !== 'denied') {
+                Notification.requestPermission(function (permission) {
+                    // Whatever the user answers, we make sure we store the information
+                    if (!('permission' in Notification)) {
+                        Notification.permission = permission;
+                    }
+
+                    // If the user is okay, let's create a notification
+                    if (permission === "granted") {
+                        var notification = new Notification("Firefox Market",{
+                            body:message,
+                            icon:icon
+                        });
+                    }
+                });
+            }
+
+            // At last, if the user already denied any notification, and you
+            // want to be respectful there is no need to bother them any more.
+        }
+
+    };
+
 
 });

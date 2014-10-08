@@ -7,7 +7,7 @@
           <div class="app-image"><a data-ng-href="/app/{{app.id}}"><img ng-src="{{app.icon}}" class="app-icon"/></a></div>
           <div class="app-copy">
             <div class="app-download-button">
-              <p data-ng-click="initPurchase(app.app_type,app.manifest_url)">Install</p>
+              <p data-ng-click="initPurchase(app.app_type,app.manifest_url,app.name,app.icon)">Install</p>
             </div><a data-ng-href="/app/{{app.id}}">
               <h1 class="app-title">{{app.name}}</h1>
               <h2 class="app-author">{{app.author}}</h2>
@@ -22,7 +22,7 @@
           <div class="app-image"><a data-ng-href="/app/{{app.id}}"><img ng-src="{{app.icon}}" class="app-icon"/></a></div>
           <div class="app-copy">
             <div class="app-download-button">
-              <p data-ng-click="initPurchase(app.app_type,app.manifest_url)" translate="translate">Install</p>
+              <p data-ng-click="initPurchase(app.app_type,app.manifest_url,app.name,app.icon)" translate="translate">Install</p>
             </div><a data-ng-href="/app/{{app.id}}">
               <h1 class="app-title">{{app.name}}</h1>
               <h2 class="app-author">{{app.author}}</h2>

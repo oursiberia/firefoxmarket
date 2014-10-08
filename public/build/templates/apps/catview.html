@@ -47,8 +47,8 @@
           </div>
           <div class="alt-curve"></div>
           <div class="collection-copy">
-            <h2 translate="translate">Our Staff Picks</h2>
-            <p>Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
+            <h2 translate="translate">{{section_0.title}}</h2>
+            <p>{{section_0.copy}}</p>
           </div>
         </div>
         <div class="collection">
@@ -60,8 +60,8 @@
           </div>
           <div class="alt-curve"></div>
           <div class="collection-copy">
-            <h2 translate="translate">Top three Games</h2>
-            <p>Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
+            <h2 translate="translate">{{section_1.title}}</h2>
+            <p>{{section_1.copy}}</p>
           </div>
         </div>
         <div class="collection">
@@ -73,8 +73,8 @@
           </div>
           <div class="alt-curve"></div>
           <div class="collection-copy">
-            <h2 translate="translate">Great Apps for the workplace</h2>
-            <p>Whether you’re into solving puzzles, playing strategy games, or blasting zombies, we’ve got games for all.</p>
+            <h2 translate="translate">{{section_2.title}}</h2>
+            <p>{{section_2.copy}}</p>
           </div>
         </div>
       </div>
@@ -90,7 +90,7 @@
               <div class="app-image"><a data-ng-href="/app/{{app.id}}"><img data-ng-src="{{app.icon}}" class="app-icon"/></a></div>
               <div class="app-copy">
                 <div class="app-download-button">
-                  <p data-ng-click="initPurchase(app.app_type,app.manifest_url)">Install</p>
+                  <p data-ng-click="initPurchase(app.app_type,app.manifest_url,app.name,app.icon)">Install</p>
                 </div><a data-ng-href="/app/{{app.id}}">
                   <h1 class="app-title">{{app.name}}</h1>
                   <h2 class="app-author">{{app.author}}</h2>
@@ -118,15 +118,15 @@
         <div class="app-grid">
           <div class="category-popular">
             <div data-ng-repeat="app in popularapps" class="category">
-              <div class="app"><a data-ng-href="/app/{{app.id}}"><img data-ng-src="{{app.icon}}"/></a>
+              <div data-type="{{app.app_type}}" data-url="{{app.manifest_url}}" class="app"><a data-ng-href="/app/{{app.id}}"><img data-ng-src="{{app.icon}}"/></a>
                 <div class="app-details"><a data-ng-href="/app/{{app.id}}">
                     <h4>{{app.name}}</h4></a>
                   <p>{{app.author}}</p>
                   <div starrating="starrating" data-rating="{{app.rating}}" data-delay="true"></div>
-                </div><a data-ng-href="/app/{{app.id}}">
-                  <div class="app-download-button">
-                    <p translate="translate">Install</p>
-                  </div></a>
+                </div>
+                <div class="app-download-button">
+                  <p translate="translate" data-ng-click="initPurchase(app.app_type,app.manifest_url,app.name,app.icon)">Install</p>
+                </div>
               </div>
             </div>
           </div>
@@ -137,10 +137,10 @@
                     <h4>{{app.name}}</h4></a>
                   <p>{{app.author}}</p>
                   <div starrating="starrating" data-rating="{{app.rating}}" data-delay="true"></div>
-                </div><a data-ng-href="/app/{{app.id}}">
-                  <div class="app-download-button">
-                    <p translate="translate">Install</p>
-                  </div></a>
+                </div>
+                <div class="app-download-button">
+                  <p translate="translate" data-ng-click="initPurchase(app.app_type,app.manifest_url,app.name,app.icon)">Install</p>
+                </div>
               </div>
             </div>
           </div>

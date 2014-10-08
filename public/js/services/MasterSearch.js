@@ -6,7 +6,7 @@
  * This is the service that pings the API when it comes to search and filters
  *
  */
-app.factory("MasterSearch",function($http){
+app.factory("MasterSearch",function($http,$rootScope){
 
     var query = "";
     var $scope = null;
@@ -244,13 +244,15 @@ app.factory("MasterSearch",function($http){
             for(var i = 0;i<len-1;++i){
                 var app = appset[i];
 
-                var name = app.name[navigator.language];
+                var name = $rootScope.filterName(app);
                 var icon = app.icons["64"];
                 var ratings = app.ratings.average;
                 var id = app.id;
                 newset.push({
                     name:name,
                     icon:icon,
+                    app_type:app.app_type || "hosted",
+                    manifest_url:app.manifest_url,
                     id:id,
                     author:app.author,
                     rating:ratings
