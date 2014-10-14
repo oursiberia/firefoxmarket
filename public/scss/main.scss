@@ -16,7 +16,6 @@ $mainColor:#333;
 
 	p{
 		font-family: "FiraLight";
-
 	}
 }
 
@@ -337,15 +336,16 @@ header{
 /**
  *	References sections that are loading in content via AJAX
  */
-.section{
+.section {
 	opacity: 1;
 	@include transition((opacity));
-	&.ajax{
+	&.ajax {
 		opacity: 0;
 		@include transition((opacity));
 	}
 }
-.searchcolumn{
+
+.searchcolumn {
 	display: inline-block;
 	vertical-align: top;
 	.load-more {
@@ -356,32 +356,28 @@ header{
 }
 #searchresults{
 	position: absolute;
-	min-width:100%;
+	min-width: 100%;
 	min-height: 100%;
-	background:rgba(3,169,244,0.9);
-	left:0;
-	top:-99990px;
+	background: rgba(3,169,244,0.9);
+	left: 0;
+	top: -99990px;
 	z-index: 99;
 	.search-wrap{
 		display: block;
-		padding:30px;
-		margin:0 auto;
-
+		padding: 30px;
+		margin: 0 auto;
 		#searchterm{
 			background: none;
-			border:none;
-			border-bottom:solid 1px #fff;
-			width:100%;
-			color:#fff;
-			font-size:40px;
-
+			border: none;
+			border-bottom: solid 1px #fff;
+			width: 100%;
+			color: #fff;
+			font-size: 40px;
 			&:focus{
 				outline: 0;
 			}
-
 		}
 	}
-
 
 	#results{
 		overflow-x: hidden;

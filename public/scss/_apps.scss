@@ -9,12 +9,12 @@
 	@include border-radius(5px);
 
 	&.with-description{
-		height:144px;
+		height: 144px;
 	}
 
-	.app-icon{
-		width:60px;
-		height:60px;
+	.app-icon {
+		width: 60px;
+		height: 60px;
 		@include border-radius(5px);
 	}
 
@@ -97,10 +97,6 @@
 		margin-top: 16px;
 		line-height: 18px;
 	}
-}
-
-.app-list {
-
 }
 
 /**

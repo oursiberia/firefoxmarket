@@ -1,1 +1,328 @@
-[{"title":"Great Games!","copy":"These are some greatgreatgreatgreatgreatgreatgreatgreat games!","apps":["421872","374841","366345"],"type":"games"},{"title":"GreatGames 2","copy":"More reatgreatgreatgreatgreatgreatgreatgreaeat Games!","apps":["421872","421872","421872"],"type":"games"},{"title":"Great Games 3","copy":"Even More eatgreatgreaeatgreatgreatgrtgreatgreatgreatgrea games!","apps":["421872","421872","421872"],"type":"games"},{"title":"","copy":"","apps":["","",""],"type":"lifestyle"},{"title":"","copy":"","apps":["","",""],"type":"lifestyle"},{"title":"","copy":"","apps":["","",""],"type":"lifestyle"},{"title":"","copy":"","apps":["","",""],"type":"reference"},{"title":"","copy":"","apps":["","",""],"type":"reference"},{"title":"","copy":"","apps":["","",""],"type":"reference"},{"title":"","copy":"","apps":["","",""],"type":"books"},{"title":"","copy":"","apps":["","",""],"type":"books"},{"title":"","copy":"","apps":["","",""],"type":"books"},{"title":"","copy":"","apps":["","",""],"type":"map-navigation"},{"title":"","copy":"","apps":["","",""],"type":"map-navigation"},{"title":"","copy":"","apps":["","",""],"type":"map-navigation"},{"title":"","copy":"","apps":["","",""],"type":"shopping"},{"title":"","copy":"","apps":["","",""],"type":"shopping"},{"title":"","copy":"","apps":["","",""],"type":"shopping"},{"title":"","copy":"","apps":["","",""],"type":"sports"},{"title":"","copy":"","apps":["","",""],"type":"sports"},{"title":"","copy":"","apps":["","",""],"type":"sports"},{"title":"","copy":"","apps":["","",""],"type":"utilities"},{"title":"","copy":"","apps":["","",""],"type":"utilities"},{"title":"","copy":"","apps":["","",""],"type":"utilities"}]
+[
+	{
+		"title":"Top 3 Book Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["474603","497562","366349"],
+		"type":"books"
+	},
+	{
+		"title":"This Season's Best Book Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["452976","397042","367847"],
+		"type":"books"
+	},
+	{
+		"title":"Book Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["452482","492252","501837"],
+		"type":"books"
+	},
+	{
+		"title":"Top 3 Business Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["367850","501331","457132"],
+		"type":"business"
+	},
+	{
+		"title":"This Season's Best Business Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["470092","501837","466167"],
+		"type":"business"
+	},
+	{
+		"title":"Business Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["438392","371865","366350"],
+		"type":"business"
+	},
+	{
+		"title":"Top 3 Education Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["474603","455776","459751"],
+		"type":"education"
+	},
+	{
+		"title":"This Season's Best Education Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["505625","482167","465849"],
+		"type":"education"
+	},
+	{
+		"title":"Education Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["452976","470534","397042"],
+		"type":"education"
+	},
+	{
+		"title":"Top 3 Entertainment Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["463139","366345","452888"],
+		"type":"entertainment"
+	},
+	{
+		"title":"This Season's Best Entertainment Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["467716","466113","462164"],
+		"type":"entertainment"
+	},
+	{
+		"title":"Entertainment Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["491294","427566","442464"],
+		"type":"entertainment"
+	},
+	{
+		"title":"Top 3 Games Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["449752","459023","404171"],
+		"type":"games"
+	},
+	{
+		"title":"This Season's Best Games",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["459309","478218","379491"],
+		"type":"games"
+	},
+	{
+		"title":"Games On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["491294","398558","466525"],
+		"type":"games"
+	},
+	{
+		"title":"Top 3 Health Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["478517","500349","503359"],
+		"type":"health-fitness"
+	},
+	{
+		"title":"This Season's Best Health Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["364714","464464","480538"],
+		"type":"health-fitness"
+	},
+	{
+		"title":"Fitness Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["499909","466787","459879"],
+		"type":"health-fitness"
+	},
+	{
+		"title":"Top 3 Lifestyle Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["448292","477640","444796"],
+		"type":"lifestyle"
+	},
+	{
+		"title":"This Season's Best Lifestyle Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["479740","440646","453484"],
+		"type":"lifestyle"
+	},
+	{
+		"title":"Lifestyle Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["478517","439086","432968"],
+		"type":"lifestyle"
+	},
+	{
+		"title":"Top 3 Maps Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["458731","469148","466288"],
+		"type":"maps-navigation"
+	},
+	{
+		"title":"This Season's Best Map Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["473398","452730","493722"],
+		"type":"maps-navigation"
+	},
+	{
+		"title":"Maps Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["418364","477377","472954"],
+		"type":"maps-navigation"
+	},
+	{
+		"title":"Top 3 Music Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["366345","374841","467716"],
+		"type":"music"
+	},
+	{
+		"title":"This Season's Best Music Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["432664","482162","478633"],
+		"type":"music"
+	},
+	{
+		"title":"Music Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["480732","496810","471519"],
+		"type":"music"
+	},
+	{
+		"title":"Top 3 News Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["483593","408212","488424"],
+		"type":"news-weather"
+	},
+	{
+		"title":"This Season's Best News Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["475937","429864","502173"],
+		"type":"news-weather"
+	},
+	{
+		"title":"Weather Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["432968","461456","405402"],
+		"type":"news-weather"
+	},
+	{
+		"title":"Top 3 Photo Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["473617","452888","477652"],
+		"type":"photo-video"
+	},
+	{
+		"title":"This Season's Best Photo Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["432664","462045","484846"],
+		"type":"photo-video"
+	},
+	{
+		"title":"Video Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["427484","466637","477003"],
+		"type":"photo-video"
+	},
+	{
+		"title":"Top 3 Productivity Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["463324","474085","477652"],
+		"type":"productivity"
+	},
+	{
+		"title":"This Season's Best Productivity Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["481588","442754","497360"],
+		"type":"productivity"
+	},
+	{
+		"title":"Productivity Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["461837","426430","367850"],
+		"type":"productivity"
+	},
+	{
+		"title":"Top 3 Reference Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["404807","488424","447144"],
+		"type":"reference"
+	},
+	{
+		"title":"This Season's Best Reference Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["475206","470561","490562"],
+		"type":"reference"
+	},
+	{
+		"title":"Reference Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["471077","500651","437588"],
+		"type":"reference"
+	},
+	{
+		"title":"Top 3 Shopping Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["433644","458976","501621"],
+		"type":"shopping"
+	},
+	{
+		"title":"This Season's Best Shopping Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["459909","477181","505667"],
+		"type":"shopping"
+	},
+	{
+		"title":"Shopping Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["476085","424988","477524"],
+		"type":"shopping"
+	},
+	{
+		"title":"Top 3 Social Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["463139","483593","448292"],
+		"type":"social"},
+	{
+		"title":"This Season's Best Social Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["421872","477640","473617"],
+		"type":"social"
+	},
+	{
+		"title":"Social Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["501355","374841","393011"],
+		"type":"social"
+	},
+	{
+		"title":"Top 3 Sports Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["477940","503797","501433"],
+		"type":"sports"},
+	{
+		"title":"This Season's Best Sports Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["473798","455422","468816"],
+		"type":"sports"
+	},
+	{
+		"title":"Sports Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["502129","466787","481191"],
+		"type":"sports"
+	},
+	{
+		"title":"Top 3 Travel Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["435200","504017","418054"],
+		"type":"travel"},
+	{
+		"title":"This Season's Best Travel Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["405402","364714","444314"],
+		"type":"travel"
+	},
+	{
+		"title":"Travel Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["420628","418364","481786"],
+		"type":"travel"
+	},
+	{
+		"title":"Top 3 Utility Apps!",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["463324","474085","462164"],
+		"type":"utilities"
+	},
+	{
+		"title":"This Season's Best Utility Apps",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["462045","461685","375680"],
+		"type":"utilities"
+	},
+	{
+		"title":"Utility Apps On The Rise",
+		"copy":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sit amet odio quis magna auctor viverra.",
+		"apps":["482162","364927","473585"],
+		"type":"utilities"
+	}
+]
+
+
+
+
+
