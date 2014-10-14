@@ -8,20 +8,17 @@
 app.controller("AllCategoriesController",["API","$rootScope","$scope",function(API,$rootScope,$scope){
 
 
-
+    /**
+     * Make a API request for all the categories
+     */
     API.request("categories").then(function(data){
         var categories = data.objects;
-
-
         for(var i = 0;i<categories.length;++i){
             var category = categories[i];
             API.request("search","?cat=" + category.slug).then(function(data){
 
-
-
             });
         }
-
 
         $scope.appcategories = categories;
 

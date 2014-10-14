@@ -1,7 +1,7 @@
 {
-    "name":"FirefoxMarketBeta",
+    "name":"FirefoxMarket",
     "description":"Beta for firefox market for desktop",
-    "package_path":"http://localhost:3000/package.zip",
+    "package_path":"<change url to package path>/package.zip",
     "launch_path":"/index.html",
     "icons":{
         "128":"/img/icon-128"

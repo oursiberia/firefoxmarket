@@ -27,11 +27,12 @@ app.controller("AppViewController",[
             $scope.ratings = data.objects.length + " Reviews";
         });
 
-
         /**
          *  Grab details about the app.
          */
         API.request ("app_detail",id + "/").then(function(data) {
+
+            //store the various values we might want to display
             $scope.author = data.author;
             $scope.urisafe_author = encodeURIComponent(data.author);
             $scope.categories = data.categories;
@@ -40,7 +41,6 @@ app.controller("AppViewController",[
             $scope.rating = data.ratings.average;
             $scope.manifest = data.manifest_url;
             $scope.rating_image = AgeRatingLookup.getImage(data);
-
             $scope.name = $rootScope.filterName(data);
             $scope.version = data.current_version;
 
@@ -54,7 +54,6 @@ app.controller("AppViewController",[
                     image:data.previews[i].image_url,
                     thumb:data.previews[i].thumbnail_url
                 };
-
                 previews.push(preview);
             }
 
@@ -67,18 +66,18 @@ app.controller("AppViewController",[
             //TODO come up with actual page or modal for privacy policy
             $scope.privacy = "http://marketplace.firefox.com" + data.privacy_policy;
 
-
             //support stuff;
             $scope.support_email = data.support_email[navigator.language];
 
-            //TODO Get people who don't have Support URLs set to add em.
+            //Set the support URLs
+            // TODO Get people who don't have Support URLs set to add em.
             if(data.support_url[navigator.language] !== ""){
                 $scope.support_url = data.support_url[navigator.language];
             }else{
                 $scope.support_url = false;
             }
 
-
+            //what kind of app is this, free / paid?
             $scope.purchase_type = data.premium_type.charAt(0).toUpperCase() + data.premium_type.slice(1);
 
             //versions of the app published.
@@ -94,13 +93,13 @@ app.controller("AppViewController",[
             //if the content has been loaded, trigger the hiding of the loading indicator
             $rootScope.loaded();
 
+            //store the type of app that this is
             $scope.app_type = data.app_type;
 
 
             /**
              * Search for other apps by the developer
              */
-
             API.request ("search","?q=" + data.author ).then(function(odata) {
                 var objects = odata.objects;
                 var apps = [];
@@ -126,23 +125,19 @@ app.controller("AppViewController",[
 
                     }
 
-
                     if (objects.length > 2) {
                         //TODO does this link anywhere? Modal? etc
                         $scope.more_other_apps = "View All \u25B8";
                     }
 
-
                     $scope.other_apps = apps;
+
                 } else {
                     //TODO copy aproval
                     $scope.other_apps = false;
                 }
 
-
             });
-
-
 
             /**
              * Get related apps
@@ -416,6 +411,10 @@ app.controller("AppViewController",[
             }
         };
 
+        /**
+         * Switch between the two different types of categories
+         * @param e
+         */
         $scope.toggleCategoryTypes = function(e){
             if(e.target.tagName === "SPAN"){
                 var parent = e.target.parentNode;

@@ -81,7 +81,7 @@ app.controller("CategoryViewController",[
 
                     $scope["section_" + a + "_" + c] = {
                         id:app,
-                        image:buildUrl(app),
+                        image:buildUrl(app)
                     }
                 }
 
@@ -148,8 +148,6 @@ app.controller("CategoryViewController",[
 
                     popular_set.push(obj);
                 }
-
-
 
 
                 if(popular_offset <= 0){
