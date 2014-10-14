@@ -18,7 +18,9 @@ app.controller("CategoryViewController",[
 
         //set the title of the category page
         var title = document.querySelector("#category-title");
+        var categoryIcon = document.querySelector("#category-icon");
         title.innerHTML = category.charAt(0).toUpperCase() + category.slice(1);
+        categoryIcon.src = "/img/category-icons/"+title.innerHTML+".svg";
 
 
         //index of the currently featured app
