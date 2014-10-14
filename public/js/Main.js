@@ -345,7 +345,7 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
             alert("We're sorry, but apps within the Firefox Marketplace can only be downloaded from the Firefox browser");
             return;
         }
-
+        console.log(app_type,manifest,appname,icon);
         var final_manifest = "";
 
         if(manifest !== undefined){
@@ -356,10 +356,13 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
 
 
         if(app_type === "hosted") {
-
+            console.log("installing as hosted app")
             req = navigator.mozApps.install(final_manifest);
-
         }else if(app_type === "packaged"){
+            console.log("installing as packaged app")
+            req = navigator.mozApps.installPackage(final_manifest);
+        }else if(app_type === "privileged"){
+            console.log("privialied or some other new type")
             req = navigator.mozApps.installPackage(final_manifest);
         }else{
             req = navigator.mozApps.install(final_manifest);
@@ -372,7 +375,9 @@ app.controller("main",function($window,$rootScope,API,localStorageService,$http,
         req.onerror = function(e) {
 
             console.log("Install process failed");
-            notifyMe("The was a error with the installation process", this.error.name);
+            console.log(this.error.name);
+            console.log(e);
+            notifyMe("The was a error with the installation process :" + this.error.name);
         };
 
 
