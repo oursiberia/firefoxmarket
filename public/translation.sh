@@ -12,7 +12,6 @@ while getopts ":ecb:" opt; do
         grunt nggettext_extract
       ;;
     c)
-        echo "here"
         cd pot
             for f in *.pot;
             do
@@ -35,4 +34,4 @@ while getopts ":ecb:" opt; do
   esac
 done
 
-exit 0
+exit 0gr

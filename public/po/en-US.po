@@ -3,16 +3,113 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Project-Id-Version: PACKAGE VERSION\n"
-"PO-Revision-Date: 2014-09-08 14:22-0700\n"
-"Last-Translator: Joseph Chow <EMAIL@ADDRESS>\n"
+"PO-Revision-Date: 2014-10-14 11:46-0700\n"
+"Last-Translator: Joseph Chow <sortofsleepy@josephs-macbook-pro.local>\n"
 "Language-Team: English\n"
 "Language: en_US\n"
 "MIME-Version: 1.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/searchresults.html
+msgid "&quot{{search_term}}&quot"
+msgstr "&quot{{search_term}}&quot"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/header.html
+msgid ""
+"<div class=\"app-wrap\">\n"
+"                <div class=\"app-details\">\n"
+"                  <div class=\"app-image\"><a data-ng-href=\"/app/{{result."
+"id}}\"><img data-ng-src=\"{{result.icon}}\" class=\"app-icon\"></a></div>\n"
+"                  <div class=\"app-copy\">\n"
+"                    <div class=\"app-download-button\">\n"
+"                      <p translate=\"translate\" data-ng-click="
+"\"initPurchase(result.app_type,result.manifest_url,result.name,result."
+"icon)\">Install</p>\n"
+"                    </div><a data-ng-href=\"/app/{{result.id}}\">\n"
+"                      <h1 class=\"app-title\">{{result.name}}</h1>\n"
+"                      <h2 class=\"app-author\">{{result.author}}</h2>\n"
+"                      <div starrating=\"starrating\" data-rating=\"{{result."
+"rating}}\" data-delay=\"true\"></div></a>\n"
+"                  </div>\n"
+"                </div>\n"
+"              </div>"
+msgstr ""
+"<div class=\"app-wrap\">\n"
+"                <div class=\"app-details\">\n"
+"                  <div class=\"app-image\"><a data-ng-href=\"/app/{{result."
+"id}}\"><img data-ng-src=\"{{result.icon}}\" class=\"app-icon\"></a></div>\n"
+"                  <div class=\"app-copy\">\n"
+"                    <div class=\"app-download-button\">\n"
+"                      <p translate=\"translate\" data-ng-click="
+"\"initPurchase(result.app_type,result.manifest_url,result.name,result."
+"icon)\">Install</p>\n"
+"                    </div><a data-ng-href=\"/app/{{result.id}}\">\n"
+"                      <h1 class=\"app-title\">{{result.name}}</h1>\n"
+"                      <h2 class=\"app-author\">{{result.author}}</h2>\n"
+"                      <div starrating=\"starrating\" data-rating=\"{{result."
+"rating}}\" data-delay=\"true\"></div></a>\n"
+"                  </div>\n"
+"                </div>\n"
+"              </div>"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/searchresults.html
+msgid ""
+"<span translate=\"translate\">All apps whose&nbsp;</span><span translate="
+"\"translate\">{{metric}}&nbsp;</span><span translate=\"translate\">includes "
+"the term(s)&nbsp;</span><span translate=\"translate\">&quot{{search_term}}"
+"&quot</span>"
+msgstr ""
+"<span translate=\"translate\">All apps whose&nbsp;</span><span translate="
+"\"translate\">{{metric}}&nbsp;</span><span translate=\"translate\">includes "
+"the term(s)&nbsp;</span><span translate=\"translate\">&quot{{search_term}}"
+"&quot</span>"
+
 #: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
-msgid "Develop For Firefox Marketplace"
-msgstr "Develop For Firefox Marketplace"
+msgid ""
+"<span translate=\"translate\">Develop for the</span><span translate="
+"\"translate\">Open Web</span>"
+msgstr ""
+"<span translate=\"translate\">Develop for the</span><span translate="
+"\"translate\">Open Web</span>"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "<span>View All</span>"
+msgstr "<span>View All</span>"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/categories.html
+msgid "All Categories"
+msgstr "All Categories"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/searchresults.html
+msgid "All apps whose&nbsp;"
+msgstr "All apps whose&nbsp;"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/header.html
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Category"
+msgstr "Category"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/header.html
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Description"
+msgstr "Description"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid "Develop for the"
+msgstr "Develop for the"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/header.html
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Developer"
+msgstr "Developer"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid ""
+"Except where otherwise noted, content on this site is licensed under the "
+"Creative Commons Attribution Share-Alike License v3.0 or any later version."
+msgstr ""
+"Except where otherwise noted, content on this site is licensed under the "
+"Creative Commons Attribution Share-Alike License v3.0 or any later version."
 
 #: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
 msgid "Featured Apps"
@@ -22,21 +119,71 @@ msgstr "Featured Apps"
 msgid "Great Apps for the workplace"
 msgstr "Great Apps for the workplace"
 
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/header.html
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Install"
+msgstr "Install"
+
 #: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
-msgid "Lorem ipsum apple mapple bop"
-msgstr "Lorem ipsum apple mapple bop"
+msgid ""
+"Learn how to create Open Web Apps — rich experiences that run across "
+"multiple devices and form factors — using the same Web standards and open "
+"technologies that you already know."
+msgstr ""
+"Learn how to create Open Web Apps — rich experiences that run across "
+"multiple devices and form factors — using the same Web standards and open "
+"technologies that you already know."
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/header.html
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Name"
+msgstr "Name"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid "Open Web"
+msgstr "Open Web"
 
 #: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
-msgid "Our Staff Picks"
-msgstr "Our Staff Picks"
+msgid "Popular Categories"
+msgstr "Popular Categories"
 
 #: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
 msgid "Privacy Policy"
 msgstr "Privacy Policy"
 
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/header.html
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Relevance:"
+msgstr "Relevance:"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/Abuse.html
+msgid "Report Abuse"
+msgstr "Report Abuse"
+
 #: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
 msgid "Report Trademark Abuse"
 msgstr "Report Trademark Abuse"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/header.html
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/searchbox.html
+msgid "Search"
+msgstr "Search"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/Feedback.html
+msgid "Send"
+msgstr "Send"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/Feedback.html
+msgid "Send Feedback"
+msgstr "Send Feedback"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/header.html
+msgid "Sign in"
+msgstr "Sign in"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Sort By:"
+msgstr "Sort By:"
 
 #: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
 msgid "Terms of Use"
@@ -45,3 +192,59 @@ msgstr "Terms of Use"
 #: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
 msgid "Top three Games"
 msgstr "Top three Games"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "Video On The Go"
+msgstr "Video On The Go"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/header.html
+msgid "View All"
+msgstr "View All"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/categories.html
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "View All From Category &#9656;"
+msgstr "View All From Category &#9656;"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/footer.html
+msgid "Visit the Developer Hub"
+msgstr "Visit the Developer Hub"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid ""
+"Whether you’re into solving puzzles, playing strategy games, or blasting "
+"zombies, we’ve got games for all."
+msgstr ""
+"Whether you’re into solving puzzles, playing strategy games, or blasting "
+"zombies, we’ve got games for all."
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/Review.html
+msgid "Write a review of {{name}}"
+msgstr "Write a review of {{name}}"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/searchresults.html
+msgid "includes the term(s)&nbsp;"
+msgstr "includes the term(s)&nbsp;"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/header.html
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "results {{ author_results_count }}"
+msgstr "results {{ author_results_count }}"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/header.html
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "results {{ category_results_count }}"
+msgstr "results {{ category_results_count }}"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/header.html
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "results {{ description_results_count }}"
+msgstr "results {{ description_results_count }}"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/home.html
+msgid "results {{name_results_count}}"
+msgstr "results {{name_results_count}}"
+
+#: /Users/sortofsleepy/Documents/Siberia/firefoxmarket/public/build/templates/searchresults.html
+msgid "{{metric}}&nbsp;"
+msgstr "{{metric}}&nbsp;"
