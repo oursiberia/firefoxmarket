@@ -35,7 +35,7 @@ from within the root of the project. The server will start at localhost:3000
 
 To run as Open Web App
 ============
-To install the app, run the deploy script called compilie.sh,  which will create a folder in the "public" directory called "deploy" and generate a static version of the website into that folder. You should have two html files, a index.html and a install.html which can be used to trigger the installation of the Marketplace. Remember to change the script in the install.html file to point to the final destination of the manifest.webapp file. 
+To install the app, run the deploy script called compilie.sh,  which will create a folder in the "public" directory called "deploy" and generate a static version of the website into that folder in addition to a package.zip. You should have two html files, a index.html and a install.html which can be used to trigger the installation of the Marketplace. Remember to change the script in the install.html file to point to the final destination of the manifest.webapp file. 
 
 When trying to install as a package, remember to change the package_path field to point to the location of the package.zip set.
 
